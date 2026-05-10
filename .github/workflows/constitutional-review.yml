@@ -348,32 +348,53 @@ jobs:
           $prRef = "Push to ${{ github.ref_name }}"
         }
         
-        $verdictReport = @"
-# Constitutional Review Report
-
-**Reference:** $prRef
-**Date:** $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')
-**Risk Level:** ${{ steps.changes.outputs.risk_level }}
-**Verdict:** $verdict
-
-## Violations
-$(if ($violations.Count -gt 0) { $violations | ForEach-Object { "- ❌ $_" } } else { "- None" })
-
-## Warnings
-$(if ($warnings.Count -gt 0) { $warnings | ForEach-Object { "- ⚠️ $_" } } else { "- None" })
-
-## Constitutional Rules Checked
-- R1 Immutability First: $(( $violations -match "R1" ).Count -eq 0 ? "✅ PASS" : "❌ FAIL")
-- R2 Determinism Mandate: $(( $warnings -match "R2" ).Count -eq 0 ? "✅ PASS" : "⚠️ WARNING")
-- R3 Forensic Continuity: $(( $warnings -match "R3" ).Count -eq 0 ? "✅ PASS" : "⚠️ WARNING")
-- R4 W11 Boundaries: $(( $violations -match "R4" ).Count -eq 0 ? "✅ PASS" : "❌ FAIL")
-- R5 Replay Integrity: $(( $warnings -match "R5" ).Count -eq 0 ? "✅ PASS" : "⚠️ WARNING")
-- R6 Executable Markdown: $(( $warnings -match "R6" ).Count -eq 0 ? "✅ PASS" : "⚠️ WARNING")
-
-## Recommendation
-$(if ($verdict -eq "FAIL") { "Reject PR. Fix violations before resubmission." } elseif ($verdict -eq "CONDITIONAL_PASS") { "Approve with conditions. Address warnings before merge." } else { "Approve for merge." })
-"@
+        # Build report line by line to avoid YAML parsing issues
+        $reportLines = @()
+        $reportLines += "# Constitutional Review Report"
+        $reportLines += ""
+        $reportLines += "**Reference:** $prRef"
+        $reportLines += "**Date:** $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')"
+        $reportLines += "**Risk Level:** ${{ steps.changes.outputs.risk_level }}"
+        $reportLines += "**Verdict:** $verdict"
+        $reportLines += ""
+        $reportLines += "## Violations"
+        if ($violations.Count -gt 0) {
+          $violations | ForEach-Object { $reportLines += "- ❌ $_" }
+        } else {
+          $reportLines += "- None"
+        }
+        $reportLines += ""
+        $reportLines += "## Warnings"
+        if ($warnings.Count -gt 0) {
+          $warnings | ForEach-Object { $reportLines += "- ⚠️ $_" }
+        } else {
+          $reportLines += "- None"
+        }
+        $reportLines += ""
+        $reportLines += "## Constitutional Rules Checked"
+        $r1Status = if (($violations -match "R1").Count -eq 0) { "✅ PASS" } else { "❌ FAIL" }
+        $r2Status = if (($warnings -match "R2").Count -eq 0) { "✅ PASS" } else { "⚠️ WARNING" }
+        $r3Status = if (($warnings -match "R3").Count -eq 0) { "✅ PASS" } else { "⚠️ WARNING" }
+        $r4Status = if (($violations -match "R4").Count -eq 0) { "✅ PASS" } else { "❌ FAIL" }
+        $r5Status = if (($warnings -match "R5").Count -eq 0) { "✅ PASS" } else { "⚠️ WARNING" }
+        $r6Status = if (($warnings -match "R6").Count -eq 0) { "✅ PASS" } else { "⚠️ WARNING" }
+        $reportLines += "- R1 Immutability First: $r1Status"
+        $reportLines += "- R2 Determinism Mandate: $r2Status"
+        $reportLines += "- R3 Forensic Continuity: $r3Status"
+        $reportLines += "- R4 W11 Boundaries: $r4Status"
+        $reportLines += "- R5 Replay Integrity: $r5Status"
+        $reportLines += "- R6 Executable Markdown: $r6Status"
+        $reportLines += ""
+        $reportLines += "## Recommendation"
+        if ($verdict -eq "FAIL") {
+          $reportLines += "Reject PR. Fix violations before resubmission."
+        } elseif ($verdict -eq "CONDITIONAL_PASS") {
+          $reportLines += "Approve with conditions. Address warnings before merge."
+        } else {
+          $reportLines += "Approve for merge."
+        }
         
+        $verdictReport = $reportLines -join "`n"
         $verdictReport | Out-File -FilePath "constitutional_review_report.md" -Encoding UTF8
         Write-Host ""
         Write-Host "Report saved to: constitutional_review_report.md"
@@ -388,27 +409,32 @@ $(if ($verdict -eq "FAIL") { "Reject PR. Fix violations before resubmission." } 
           Write-Host ""
           Write-Host "Setting verdict to FAIL due to execution error." -ForegroundColor Red
           
-          # Create error report
-          $errorReport = @"
-# Constitutional Review Report - EXECUTION ERROR
-
-**Reference:** $(if ($env:GITHUB_EVENT_NAME -eq 'pull_request') { "#${{ github.event.pull_request.number }}" } else { "Push to ${{ github.ref_name }}" })
-**Date:** $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')
-**Verdict:** 🔴 FAIL (Execution Error)
-
-## Error Details
-```
-$_
-```
-
-## Stack Trace
-```
-$_.ScriptStackTrace
-```
-
-## Recommendation
-Workflow execution failed. Check workflow logs for details. Fix the error and re-run.
-"@
+          # Create error report line by line
+          $errorLines = @()
+          $errorLines += "# Constitutional Review Report - EXECUTION ERROR"
+          $errorLines += ""
+          if ($env:GITHUB_EVENT_NAME -eq 'pull_request') {
+            $errorLines += "**Reference:** #${{ github.event.pull_request.number }}"
+          } else {
+            $errorLines += "**Reference:** Push to ${{ github.ref_name }}"
+          }
+          $errorLines += "**Date:** $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')"
+          $errorLines += "**Verdict:** 🔴 FAIL (Execution Error)"
+          $errorLines += ""
+          $errorLines += "## Error Details"
+          $errorLines += "```"
+          $errorLines += "$_"
+          $errorLines += "```"
+          $errorLines += ""
+          $errorLines += "## Stack Trace"
+          $errorLines += "```"
+          $errorLines += $_.ScriptStackTrace
+          $errorLines += "```"
+          $errorLines += ""
+          $errorLines += "## Recommendation"
+          $errorLines += "Workflow execution failed. Check workflow logs for details. Fix the error and re-run."
+          
+          $errorReport = $errorLines -join "`n"
           $errorReport | Out-File -FilePath "constitutional_review_report.md" -Encoding UTF8
           exit 1
         }
