@@ -1,0 +1,182 @@
+# W11 Enforcement Contract - P-OS Constitutional Constraints
+# Purpose: Define runtime governance constraints for sovereign operational integrity
+# Version: 1.0
+# Date: 2026-05-09
+# Status: DRAFT (requires Budowniczy + Nadzorca approval)
+
+constraints:
+  # R1: Schema Immutability
+  - id: "W11-C001"
+    name: "no_schema_drift"
+    type: "schema_immutability"
+    description: "Prevent unauthorized schema modifications without migration document"
+    enforcement: "BLOCK"
+    conditions:
+      - check: "migration_document_exists"
+        path: "docs/migrations/*.md"
+        required: true
+      - check: "rollback_procedure_documented"
+        pattern: "rollback|ROLLBACK"
+        required: true
+    action:
+      on_violation: "BLOCK_DEPLOYMENT"
+      log_level: "CRITICAL"
+      alert: "Schema drift detected without proper migration documentation"
+    
+  # R2: Determinism Mandate
+  - id: "W11-C002"
+    name: "deterministic_operations"
+    type: "code_determinism"
+    description: "Ensure all operations are deterministic and reproducible"
+    enforcement: "WARN"
+    conditions:
+      - check: "no_unseeded_random"
+        patterns:
+          - "random\\.uniform\\("
+          - "random\\.randint\\("
+          - "random\\.choice\\("
+        allowed_if_seeded: true
+      - check: "no_system_time_dependency"
+        patterns:
+          - "time\\.time\\(\\)"
+          - "datetime\\.now\\(\\)"
+        allowed_if_hashed: true
+    action:
+      on_violation: "WARN_AND_LOG"
+      log_level: "WARNING"
+      alert: "Non-deterministic code pattern detected"
+
+  # R3: Forensic Continuity
+  - id: "W11-C003"
+    name: "audit_trail_completeness"
+    type: "audit_continuity"
+    description: "All state-changing operations must emit audit events"
+    enforcement: "BLOCK"
+    conditions:
+      - check: "state_changes_have_audit"
+        operations:
+          - "INSERT"
+          - "UPDATE"
+          - "DELETE"
+          - "mutation"
+        requires:
+          - "emit_audit"
+          - "audit_event"
+          - "event_bus"
+    action:
+      on_violation: "BLOCK_OPERATION"
+      log_level: "CRITICAL"
+      alert: "State change detected without audit event emission"
+
+  # R4: W11 Boundary Integrity
+  - id: "W11-C004"
+    name: "no_w11_bypass"
+    type: "constraint_integrity"
+    description: "Prevent bypass or disablement of W11 constraint engine"
+    enforcement: "BLOCK"
+    conditions:
+      - check: "no_bypass_patterns"
+        patterns:
+          - "#.*w11.*skip"
+          - "#.*w11.*bypass"
+          - "#.*constraint.*disable"
+          - "w11_guard\\..*#\\s*disabled"
+        scope: "all_python_files"
+    action:
+      on_violation: "BLOCK_DEPLOYMENT"
+      log_level: "CRITICAL"
+      alert: "W11 bypass pattern detected - potential constitutional violation"
+
+  # R5: Replay Integrity
+  - id: "W11-C005"
+    name: "hash_chain_continuity"
+    type: "replay_verification"
+    description: "Maintain unbroken hash chain for forensic replay capability"
+    enforcement: "BLOCK"
+    conditions:
+      - check: "hash_chain_intact"
+        verification_query: "docs/drift_detection/schema_drift.sql"
+        required_fields:
+          - "CHAIN_BROKEN"
+          - "previous_hash"
+          - "payload_hash"
+    action:
+      on_violation: "BLOCK_AND_FREEZE"
+      log_level: "CRITICAL"
+      alert: "Hash chain broken - replay integrity compromised"
+
+  # R6: Executable Markdown Standards
+  - id: "W11-C006"
+    name: "documentation_executability"
+    type: "doc_standards"
+    description: "All documentation must meet Executable Markdown standards"
+    enforcement: "WARN"
+    conditions:
+      - check: "validate_docs_script_passes"
+        script: "scripts/validate_docs.py"
+        target: "docs/"
+        exit_code_required: 0
+    action:
+      on_violation: "WARN_AND_FLAG"
+      log_level: "WARNING"
+      alert: "Documentation validation failed - review required"
+
+  # Operational: Runtime Sovereignty
+  - id: "W11-C007"
+    name: "runtime_constitution_guard"
+    type: "operational_sovereignty"
+    description: "Runtime constitution guard must be active during all deployments"
+    enforcement: "BLOCK"
+    conditions:
+      - check: "guard_script_exists"
+        path: "scripts/runtime_constitution_guard.ps1"
+        required: true
+      - check: "constitutional_state_valid"
+        path: "runtime/constitutional_state.json"
+        required_states:
+          - "HEALTHY"
+          - "DEGRADED"  # Allow degraded with warnings
+    action:
+      on_violation: "BLOCK_DEPLOYMENT"
+      log_level: "CRITICAL"
+      alert: "Runtime constitution guard unavailable or in failure state"
+
+# Global Configuration
+global:
+  # Default action when constraint engine itself is unavailable
+  fail_closed_behavior: "BLOCK_ALL_MUTATIONS"
+  
+  # Override mechanism (requires BREAK_GLASS token)
+  override_allowed: true
+  override_requirements:
+    min_signatures: 3
+    total_authorities: 4
+    expiration_max_hours: 4
+  
+  # Logging configuration
+  logging:
+    structured_format: "JSON"
+    include_correlation_id: true
+    retention_days: 90
+  
+  # Monitoring integration
+  monitoring:
+    healthcheck_endpoint: "logs/healthcheck_result.json"
+    state_file: "runtime/constitutional_state.json"
+    alert_on_state_change: true
+    states_requiring_alert:
+      - "CONSTITUTIONAL_FAILURE"
+      - "IMMUTABLE_FREEZE"
+
+# Approval Metadata
+approval:
+  status: "DRAFT"
+  requires_signatures:
+    - role: "Budowniczy P-OS"
+      email: "ops@milejczyce.gov.pl"
+      approved: false
+    - role: "Nadzorca"
+      email: "security@milejczyce.gov.pl"
+      approved: false
+  created: "2026-05-09"
+  version: "1.0"

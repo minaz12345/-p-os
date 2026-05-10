@@ -1,0 +1,18 @@
+﻿{
+    "zombie_processes":  1,
+    "timestamp":  "2026-05-09T23:48:16Z",
+    "unique_states_observed":  {
+
+                               },
+    "total_transitions":  40,
+    "total_alerts_generated":  null,
+    "alert_frequency_percent":  0,
+    "success":  true,
+    "cognitive_load_managed":  true,
+    "transitions_per_second":  2.67,
+    "final_state":  "HEALTHY",
+    "duration_seconds":  14.9953522,
+    "alert_storm_detected":  false,
+    "state_oscillation_detected":  false,
+    "test_name":  "Operator_Overload_Protection"
+}

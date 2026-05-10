@@ -1,0 +1,282 @@
+﻿[
+    {
+        "iteration":  1,
+        "timestamp":  "2026-05-09T23:48:00.517Z",
+        "actual_state":  "HEALTHY",
+        "target_state":  "HEALTHY",
+        "exit_code":  0
+    },
+    {
+        "iteration":  2,
+        "timestamp":  "2026-05-09T23:48:00.883Z",
+        "actual_state":  "HEALTHY",
+        "target_state":  "DEGRADED",
+        "exit_code":  0
+    },
+    {
+        "iteration":  3,
+        "timestamp":  "2026-05-09T23:48:01.253Z",
+        "actual_state":  "HEALTHY",
+        "target_state":  "HEALTHY",
+        "exit_code":  0
+    },
+    {
+        "iteration":  4,
+        "timestamp":  "2026-05-09T23:48:01.609Z",
+        "actual_state":  "HEALTHY",
+        "target_state":  "DEGRADED",
+        "exit_code":  0
+    },
+    {
+        "iteration":  5,
+        "timestamp":  "2026-05-09T23:48:01.956Z",
+        "actual_state":  "HEALTHY",
+        "target_state":  "HEALTHY",
+        "exit_code":  0
+    },
+    {
+        "iteration":  6,
+        "timestamp":  "2026-05-09T23:48:02.307Z",
+        "actual_state":  "HEALTHY",
+        "target_state":  "DEGRADED",
+        "exit_code":  0
+    },
+    {
+        "iteration":  7,
+        "timestamp":  "2026-05-09T23:48:02.667Z",
+        "actual_state":  "HEALTHY",
+        "target_state":  "HEALTHY",
+        "exit_code":  0
+    },
+    {
+        "iteration":  8,
+        "timestamp":  "2026-05-09T23:48:03.020Z",
+        "actual_state":  "HEALTHY",
+        "target_state":  "DEGRADED",
+        "exit_code":  0
+    },
+    {
+        "iteration":  9,
+        "timestamp":  "2026-05-09T23:48:03.391Z",
+        "actual_state":  "HEALTHY",
+        "target_state":  "HEALTHY",
+        "exit_code":  0
+    },
+    {
+        "iteration":  10,
+        "timestamp":  "2026-05-09T23:48:03.759Z",
+        "actual_state":  "HEALTHY",
+        "target_state":  "DEGRADED",
+        "exit_code":  0
+    },
+    {
+        "iteration":  11,
+        "timestamp":  "2026-05-09T23:48:04.152Z",
+        "actual_state":  "HEALTHY",
+        "target_state":  "HEALTHY",
+        "exit_code":  0
+    },
+    {
+        "iteration":  12,
+        "timestamp":  "2026-05-09T23:48:04.511Z",
+        "actual_state":  "HEALTHY",
+        "target_state":  "DEGRADED",
+        "exit_code":  0
+    },
+    {
+        "iteration":  13,
+        "timestamp":  "2026-05-09T23:48:04.866Z",
+        "actual_state":  "HEALTHY",
+        "target_state":  "HEALTHY",
+        "exit_code":  0
+    },
+    {
+        "iteration":  14,
+        "timestamp":  "2026-05-09T23:48:05.225Z",
+        "actual_state":  "HEALTHY",
+        "target_state":  "DEGRADED",
+        "exit_code":  0
+    },
+    {
+        "iteration":  15,
+        "timestamp":  "2026-05-09T23:48:05.592Z",
+        "actual_state":  "HEALTHY",
+        "target_state":  "HEALTHY",
+        "exit_code":  0
+    },
+    {
+        "iteration":  16,
+        "timestamp":  "2026-05-09T23:48:05.959Z",
+        "actual_state":  "HEALTHY",
+        "target_state":  "DEGRADED",
+        "exit_code":  0
+    },
+    {
+        "iteration":  17,
+        "timestamp":  "2026-05-09T23:48:06.327Z",
+        "actual_state":  "HEALTHY",
+        "target_state":  "HEALTHY",
+        "exit_code":  0
+    },
+    {
+        "iteration":  18,
+        "timestamp":  "2026-05-09T23:48:06.678Z",
+        "actual_state":  "HEALTHY",
+        "target_state":  "DEGRADED",
+        "exit_code":  0
+    },
+    {
+        "iteration":  19,
+        "timestamp":  "2026-05-09T23:48:07.032Z",
+        "actual_state":  "HEALTHY",
+        "target_state":  "HEALTHY",
+        "exit_code":  0
+    },
+    {
+        "iteration":  20,
+        "timestamp":  "2026-05-09T23:48:07.396Z",
+        "actual_state":  "HEALTHY",
+        "target_state":  "DEGRADED",
+        "exit_code":  0
+    },
+    {
+        "iteration":  21,
+        "timestamp":  "2026-05-09T23:48:07.742Z",
+        "actual_state":  "HEALTHY",
+        "target_state":  "HEALTHY",
+        "exit_code":  0
+    },
+    {
+        "iteration":  22,
+        "timestamp":  "2026-05-09T23:48:08.081Z",
+        "actual_state":  "HEALTHY",
+        "target_state":  "DEGRADED",
+        "exit_code":  0
+    },
+    {
+        "iteration":  23,
+        "timestamp":  "2026-05-09T23:48:08.501Z",
+        "actual_state":  "HEALTHY",
+        "target_state":  "HEALTHY",
+        "exit_code":  0
+    },
+    {
+        "iteration":  24,
+        "timestamp":  "2026-05-09T23:48:08.845Z",
+        "actual_state":  "HEALTHY",
+        "target_state":  "DEGRADED",
+        "exit_code":  0
+    },
+    {
+        "iteration":  25,
+        "timestamp":  "2026-05-09T23:48:09.183Z",
+        "actual_state":  "HEALTHY",
+        "target_state":  "HEALTHY",
+        "exit_code":  0
+    },
+    {
+        "iteration":  26,
+        "timestamp":  "2026-05-09T23:48:09.533Z",
+        "actual_state":  "HEALTHY",
+        "target_state":  "DEGRADED",
+        "exit_code":  0
+    },
+    {
+        "iteration":  27,
+        "timestamp":  "2026-05-09T23:48:09.884Z",
+        "actual_state":  "HEALTHY",
+        "target_state":  "HEALTHY",
+        "exit_code":  0
+    },
+    {
+        "iteration":  28,
+        "timestamp":  "2026-05-09T23:48:10.238Z",
+        "actual_state":  "HEALTHY",
+        "target_state":  "DEGRADED",
+        "exit_code":  0
+    },
+    {
+        "iteration":  29,
+        "timestamp":  "2026-05-09T23:48:10.606Z",
+        "actual_state":  "HEALTHY",
+        "target_state":  "HEALTHY",
+        "exit_code":  0
+    },
+    {
+        "iteration":  30,
+        "timestamp":  "2026-05-09T23:48:10.970Z",
+        "actual_state":  "HEALTHY",
+        "target_state":  "DEGRADED",
+        "exit_code":  0
+    },
+    {
+        "iteration":  31,
+        "timestamp":  "2026-05-09T23:48:11.320Z",
+        "actual_state":  "HEALTHY",
+        "target_state":  "HEALTHY",
+        "exit_code":  0
+    },
+    {
+        "iteration":  32,
+        "timestamp":  "2026-05-09T23:48:11.675Z",
+        "actual_state":  "HEALTHY",
+        "target_state":  "DEGRADED",
+        "exit_code":  0
+    },
+    {
+        "iteration":  33,
+        "timestamp":  "2026-05-09T23:48:12.239Z",
+        "actual_state":  "HEALTHY",
+        "target_state":  "HEALTHY",
+        "exit_code":  0
+    },
+    {
+        "iteration":  34,
+        "timestamp":  "2026-05-09T23:48:12.605Z",
+        "actual_state":  "HEALTHY",
+        "target_state":  "DEGRADED",
+        "exit_code":  0
+    },
+    {
+        "iteration":  35,
+        "timestamp":  "2026-05-09T23:48:12.973Z",
+        "actual_state":  "HEALTHY",
+        "target_state":  "HEALTHY",
+        "exit_code":  0
+    },
+    {
+        "iteration":  36,
+        "timestamp":  "2026-05-09T23:48:13.312Z",
+        "actual_state":  "HEALTHY",
+        "target_state":  "DEGRADED",
+        "exit_code":  0
+    },
+    {
+        "iteration":  37,
+        "timestamp":  "2026-05-09T23:48:13.675Z",
+        "actual_state":  "HEALTHY",
+        "target_state":  "HEALTHY",
+        "exit_code":  0
+    },
+    {
+        "iteration":  38,
+        "timestamp":  "2026-05-09T23:48:14.078Z",
+        "actual_state":  "HEALTHY",
+        "target_state":  "DEGRADED",
+        "exit_code":  0
+    },
+    {
+        "iteration":  39,
+        "timestamp":  "2026-05-09T23:48:14.436Z",
+        "actual_state":  "HEALTHY",
+        "target_state":  "HEALTHY",
+        "exit_code":  0
+    },
+    {
+        "iteration":  40,
+        "timestamp":  "2026-05-09T23:48:14.878Z",
+        "actual_state":  "HEALTHY",
+        "target_state":  "DEGRADED",
+        "exit_code":  0
+    }
+]

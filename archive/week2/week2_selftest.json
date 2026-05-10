@@ -1,0 +1,45 @@
+
+=============================================================
+     P-OS Runtime Constitution Guard v7.6                  
+     Mode: self-test
+=============================================================
+{"mode":"self-test","state":"","severity":"INFO","event":"RUNTIME_GUARD_START","timestamp":"2026-05-09T22:43:59.407Z","pid":5188}
+
+=== RUNTIME SELF-TEST ===
+
+[SELF-TEST 1/5] W11 Constraint Lookup...
+
+[CHECK 1/4] W11 Constraint Engine...
+  â?O FAIL: W11 enforcement contract missing
+{"state":"","severity":"CRITICAL","event":"W11_CHECK","timestamp":"2026-05-09T22:43:59.473Z","pid":5188,"reason":"Contract file missing","result":"FAIL"}
+
+[SELF-TEST 2/5] Audit Append Simulation...
+  âo. PASS: Audit append successful
+
+[SELF-TEST 3/5] Hash Continuity Verification...
+  âo. PASS: Hash computation verified
+
+[SELF-TEST 4/5] Replay Capsule Reconstruction...
+  âo. PASS: Capsule extraction successful (3 files)
+
+[SELF-TEST 5/5] Rollback Readiness Check...
+  âs ï,? WARNING: Git working directory has changes
+
+=== SELF-TEST COMPLETE ===
+Result: FAIL (3/5 passed)
+Duration: 0.1675328s
+Report: D:\pos7\archive\selftest\selftest_9bb26100-71bc-4041-9096-125e9c2d6b1d.json
+
+=== STATE TRANSITION EVALUATION ===
+State unchanged: CONSTITUTIONAL_FAILURE
+CONSTITUTIONAL_FAILURE
+
+Name                           Value                                                                                              
+----                           -----                                                                                              
+duration_seconds               0,1675328                                                                                          
+timestamp                      2026-05-09T22:43:59Z                                                                               
+overall_result                 FAIL                                                                                               
+checks                         {rollback_readiness, hash_continuity, replay_reconstruction, audit_append...}                      
+selftest_id                    9bb26100-71bc-4041-9096-125e9c2d6b1d                                                               
+
+

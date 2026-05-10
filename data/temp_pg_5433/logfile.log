@@ -1,0 +1,13 @@
+2026-05-07 06:39:25.345 GMT [6112] LOG:  starting PostgreSQL 18.3 on x86_64-windows, compiled by msvc-19.44.35225, 64-bit
+2026-05-07 06:39:25.350 GMT [6112] LOG:  listening on IPv6 address "::1", port 5433
+2026-05-07 06:39:25.350 GMT [6112] LOG:  listening on IPv4 address "127.0.0.1", port 5433
+2026-05-07 06:39:25.584 GMT [3652] LOG:  database system was shut down at 2026-05-07 06:39:15 GMT
+2026-05-07 06:39:25.635 GMT [6112] LOG:  database system is ready to accept connections
+2026-05-07 06:40:45.839 GMT [7824] FATAL:  "D:/pos7/data/temp_pg_5433" is not a valid data directory
+2026-05-07 06:40:45.839 GMT [7824] DETAIL:  File "D:/pos7/data/temp_pg_5433/PG_VERSION" is missing.
+2026-05-07 06:41:45.820 GMT [10816] WARNING:  autovacuum worker took too long to start; canceled
+2026-05-07 06:41:45.823 GMT [6112] LOG:  could not open file "postmaster.pid": No such file or directory
+2026-05-07 06:41:45.823 GMT [6112] LOG:  performing immediate shutdown because data directory lock file is invalid
+2026-05-07 06:41:45.823 GMT [6112] LOG:  received immediate shutdown request
+2026-05-07 06:41:45.824 GMT [6112] LOG:  could not open file "postmaster.pid": No such file or directory
+2026-05-07 06:41:45.881 GMT [6112] LOG:  database system is shut down

@@ -1,0 +1,26 @@
+{
+  "week": 1,
+  "generated_at": "2026-05-10T06:45:06.946716Z",
+  "period": {
+    "start": "2026-05-10",
+    "end": "2026-05-10"
+  },
+  "data_points": 1,
+  "trends": {
+    "days_with_data": 1,
+    "avg_confidence": null,
+    "confidence_trend": "za malo danych",
+    "avg_dry_run_adoption": 85.4,
+    "audit_log_growth": 0,
+    "doc_consultation_rate": 0
+  },
+  "pain_points": [],
+  "feature_requests": [],
+  "insights": [
+    "Wysoka adopcja dry-run — operator ceni bezpieczeństwo",
+    "Rzadkie zaglądanie — operator działa z pamięci (dobry znak)"
+  ],
+  "recommendations": [
+    "Kontynuuj codzienne obserwacje do końca tygodnia 4"
+  ]
+}

@@ -1,0 +1,25 @@
+null
+{"pid":10100,"status":"WARNING","message":"DRY RUN MODE - No changes will be made","timestamp":"2026-05-08T12:12:59.829Z","correlation_id":"637c1f2f-954a-4c59-9a2d-fede5419e307","event":"STEP_WARNING","phase":""}
+{"pid":10100,"status":"STARTED","timestamp":"2026-05-08T12:12:59.842Z","correlation_id":"637c1f2f-954a-4c59-9a2d-fede5419e307","event":"PHASE_START","phase":"PHASE 1: Pre-Deployment Validation"}
+{"pid":10100,"status":"SUCCESS","message":"PASS","timestamp":"2026-05-08T12:12:59.866Z","correlation_id":"637c1f2f-954a-4c59-9a2d-fede5419e307","event":"STEP_SUCCESS","phase":""}
+{"pid":10100,"check":"Git repository","status":"PASS","timestamp":"2026-05-08T12:12:59.868Z","correlation_id":"637c1f2f-954a-4c59-9a2d-fede5419e307","event":"PREREQ_CHECK","phase":""}
+{"pid":10100,"status":"SUCCESS","message":"PASS","timestamp":"2026-05-08T12:12:59.884Z","correlation_id":"637c1f2f-954a-4c59-9a2d-fede5419e307","event":"STEP_SUCCESS","phase":""}
+{"pid":10100,"check":"Workflow file","status":"PASS","timestamp":"2026-05-08T12:12:59.886Z","correlation_id":"637c1f2f-954a-4c59-9a2d-fede5419e307","event":"PREREQ_CHECK","phase":""}
+{"pid":10100,"status":"WARNING","message":"No baseline hash found. Creating new baseline.","timestamp":"2026-05-08T12:12:59.918Z","correlation_id":"637c1f2f-954a-4c59-9a2d-fede5419e307","event":"STEP_WARNING","phase":""}
+{"pid":10100,"status":"SUCCESS","message":"Baseline hash created: D:\\pos7\\.github\\workflows\\constitutional-review.yml.sha256","timestamp":"2026-05-08T12:12:59.921Z","correlation_id":"637c1f2f-954a-4c59-9a2d-fede5419e307","event":"STEP_SUCCESS","phase":""}
+{"pid":10100,"status":"PASS","timestamp":"2026-05-08T12:12:59.924Z","correlation_id":"637c1f2f-954a-4c59-9a2d-fede5419e307","hash":"B042C142B70BCE0F","event":"INTEGRITY_VERIFIED","phase":""}
+{"pid":10100,"status":"SUCCESS","message":"PASS","timestamp":"2026-05-08T12:13:00.019Z","correlation_id":"637c1f2f-954a-4c59-9a2d-fede5419e307","event":"STEP_SUCCESS","phase":""}
+{"pid":10100,"check":"Approvals directory","status":"PASS","timestamp":"2026-05-08T12:13:00.021Z","correlation_id":"637c1f2f-954a-4c59-9a2d-fede5419e307","event":"PREREQ_CHECK","phase":""}
+{"pid":10100,"status":"SUCCESS","message":"PASS","timestamp":"2026-05-08T12:13:00.039Z","correlation_id":"637c1f2f-954a-4c59-9a2d-fede5419e307","event":"STEP_SUCCESS","phase":""}
+{"pid":10100,"check":"Approval form","status":"PASS","timestamp":"2026-05-08T12:13:00.041Z","correlation_id":"637c1f2f-954a-4c59-9a2d-fede5419e307","event":"PREREQ_CHECK","phase":""}
+{"pid":10100,"status":"ERROR","message":"FAIL","timestamp":"2026-05-08T12:13:00.060Z","correlation_id":"637c1f2f-954a-4c59-9a2d-fede5419e307","event":"STEP_ERROR","phase":""}
+{"pid":10100,"check":"GitHub environment","status":"FAIL","timestamp":"2026-05-08T12:13:00.062Z","correlation_id":"637c1f2f-954a-4c59-9a2d-fede5419e307","event":"PREREQ_CHECK","phase":""}
+{"pid":10100,"status":"WARNING","message":"Skipping signature check (--SkipSignatureCheck flag used)","timestamp":"2026-05-08T12:13:00.069Z","correlation_id":"637c1f2f-954a-4c59-9a2d-fede5419e307","event":"STEP_WARNING","phase":""}
+{"pid":10100,"status":"ERROR","message":"Pre-deployment validation FAILED. Fix issues before proceeding.","timestamp":"2026-05-08T12:13:00.072Z","correlation_id":"637c1f2f-954a-4c59-9a2d-fede5419e307","event":"STEP_ERROR","phase":""}
+{"pid":10100,"status":"ERROR","message":"Deployment ABORTED: Pre-deployment validation failed","timestamp":"2026-05-08T12:13:00.076Z","correlation_id":"637c1f2f-954a-4c59-9a2d-fede5419e307","event":"STEP_ERROR","phase":""}
+{"pid":10100,"status":"ERROR","message":"FATAL ERROR: Item has already been added. Key in dictionary: 'phase'  Key being added: 'phase'","timestamp":"2026-05-08T12:13:00.081Z","correlation_id":"637c1f2f-954a-4c59-9a2d-fede5419e307","event":"STEP_ERROR","phase":""}
+{"pid":10100,"error":"Item has already been added. Key in dictionary: 'phase'  Key being added: 'phase'","status":"CRITICAL","timestamp":"2026-05-08T12:13:00.084Z","correlation_id":"637c1f2f-954a-4c59-9a2d-fede5419e307","event":"DEPLOYMENT_FATAL","phase":""}
+{"pid":10100,"status":"ERROR","message":"INITIATING ROLLBACK: Fatal error during deployment: Item has already been added. Key in dictionary: 'phase'  Key being added: 'phase'","timestamp":"2026-05-08T12:13:00.092Z","correlation_id":"637c1f2f-954a-4c59-9a2d-fede5419e307","event":"STEP_ERROR","phase":""}
+{"pid":10100,"status":"CRITICAL","timestamp":"2026-05-08T12:13:00.094Z","correlation_id":"637c1f2f-954a-4c59-9a2d-fede5419e307","reason":"Fatal error during deployment: Item has already been added. Key in dictionary: 'phase'  Key being added: 'phase'","event":"ROLLBACK_INITIATED","phase":""}
+{"pid":10100,"status":"SUCCESS","message":"Rollback completed successfully","timestamp":"2026-05-08T12:13:01.106Z","correlation_id":"637c1f2f-954a-4c59-9a2d-fede5419e307","event":"STEP_SUCCESS","phase":""}
+{"pid":10100,"status":"COMPLETED","timestamp":"2026-05-08T12:13:01.109Z","correlation_id":"637c1f2f-954a-4c59-9a2d-fede5419e307","event":"ROLLBACK_COMPLETED","phase":""}

@@ -1,0 +1,38 @@
+﻿{
+    "baseline_diff_id":  "week3_chaos_test_baseline",
+    "chaos_tests_failed":  0,
+    "analysis":  "System remained in HEALTHY state throughout chaos testing. All 8 tests passed without triggering state transitions. Rollback mechanisms verified operational.",
+    "deterministic_rollback_verified":  true,
+    "post_chaos_state":  {
+                             "w11":  "ACTIVE",
+                             "last_self_test":  "2026-05-09T22:48:02Z",
+                             "audit_chain":  "VERIFIED",
+                             "last_state_transition":  {
+                                                           "timestamp":  "2026-05-09T22:48:02Z",
+                                                           "from":  "CONSTITUTIONAL_FAILURE",
+                                                           "to":  "HEALTHY",
+                                                           "reason":  "All components operational"
+                                                       },
+                             "state":  "HEALTHY",
+                             "replay_integrity":  "READY",
+                             "freeze_mode":  false
+                         },
+    "chaos_tests_passed":  8,
+    "timestamp":  "2026-05-09T23:26:02Z",
+    "pre_chaos_state":  {
+                            "w11":  "ACTIVE",
+                            "last_self_test":  "2026-05-09T22:48:02Z",
+                            "audit_chain":  "VERIFIED",
+                            "last_state_transition":  {
+                                                          "timestamp":  "2026-05-09T22:48:02Z",
+                                                          "from":  "CONSTITUTIONAL_FAILURE",
+                                                          "to":  "HEALTHY",
+                                                          "reason":  "All components operational"
+                                                      },
+                            "state":  "HEALTHY",
+                            "replay_integrity":  "READY",
+                            "freeze_mode":  false
+                        },
+    "state_changed":  false,
+    "git_commit_changed":  false
+}

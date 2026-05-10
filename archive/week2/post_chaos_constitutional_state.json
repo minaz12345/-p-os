@@ -1,0 +1,14 @@
+﻿{
+    "w11":  "ACTIVE",
+    "last_self_test":  "2026-05-09T22:48:02Z",
+    "audit_chain":  "VERIFIED",
+    "last_state_transition":  {
+                                  "timestamp":  "2026-05-09T22:48:02Z",
+                                  "from":  "CONSTITUTIONAL_FAILURE",
+                                  "to":  "HEALTHY",
+                                  "reason":  "All components operational"
+                              },
+    "state":  "HEALTHY",
+    "replay_integrity":  "READY",
+    "freeze_mode":  false
+}

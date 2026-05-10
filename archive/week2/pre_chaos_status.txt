@@ -1,0 +1,36 @@
+ M scripts/DEPLOY_CONSTITUTIONAL_AGENT.ps1
+ M scripts/MEASURE_BASELINE.ps1
+?? .env
+?? .env.auth
+?? .env.auth.sha
+?? .env.db
+?? .env.db.sha
+?? .env.example
+?? .env.grafana
+?? .env.runtime
+?? .env.runtime.sha
+?? .lingma/
+?? .vscode/
+?? __pycache__/
+?? agents/
+?? app/
+?? archive/
+?? archives/
+?? cert.pem
+?? certs/
+?? config/
+?? core/
+?? data/
+?? deployment/
+?? enterprise/
+?? key.pem
+?? logs/
+?? plugins/
+?? reports/DEPLOYMENT_COMPLETION_REPORT_2026-05-08.md
+?? reports/WEEK2_RUNTIME_SOVEREIGNTY_SUMMARY.md
+?? runtime/
+?? scripts/__pycache__/
+?? scripts/measure_baseline.bat
+?? scripts/runtime_constitution_guard.ps1
+?? scripts/scheduled_healthcheck.ps1
+?? tests/

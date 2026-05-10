@@ -1,0 +1,28 @@
+﻿{
+    "duration_seconds":  0.5269958,
+    "timestamp":  "2026-05-09T22:42:32Z",
+    "overall_result":  "FAIL",
+    "checks":  {
+                   "rollback_readiness":  {
+                                              "detail":  "Dirty working dir",
+                                              "result":  "WARNING"
+                                          },
+                   "hash_continuity":  {
+                                           "detail":  "SHA256 verified",
+                                           "result":  "PASS"
+                                       },
+                   "replay_reconstruction":  {
+                                                 "detail":  "3 files extracted",
+                                                 "result":  "PASS"
+                                             },
+                   "audit_append":  {
+                                        "detail":  "Event written",
+                                        "result":  "PASS"
+                                    },
+                   "w11_lookup":  {
+                                      "detail":  "Contract file missing",
+                                      "result":  "FAIL"
+                                  }
+               },
+    "selftest_id":  "5684eb87-f5ff-46e1-8389-c760f18b97b3"
+}

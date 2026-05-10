@@ -1,0 +1,12 @@
+﻿{
+    "test_name":  "Audit_Trail_Corruption_Detection",
+    "post_state":  "HEALTHY",
+    "detection_time_seconds":  0.85596759999999994,
+    "pre_state":  "HEALTHY",
+    "corruption_detected":  false,
+    "success":  false,
+    "recovery_state":  "HEALTHY",
+    "timestamp":  "2026-05-09T23:47:08Z",
+    "recovery_time_seconds":  1.5554242999999999,
+    "state_degraded":  false
+}

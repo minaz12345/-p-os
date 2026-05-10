@@ -4,6 +4,14 @@ on:
   pull_request:
     branches: [main, release/*]
     types: [opened, synchronize, reopened]
+  push:
+    branches: [main]
+    paths:
+      - '**.py'
+      - '**.sql'
+      - '**.yaml'
+      - '**.yml'
+      - '.github/workflows/**'
 
 jobs:
   constitutional-review:

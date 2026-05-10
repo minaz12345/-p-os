@@ -1,0 +1,255 @@
+{
+  "generated_at": "2026-04-27T03:13:52.686153",
+  "total_queries_profiled": 6,
+  "slow_queries": [
+    {
+      "sql": "SELECT * FROM tokens WHERE category = ? LIMIT 10",
+      "params": [
+        "INFRA"
+      ],
+      "description": "Category filter",
+      "timestamp": "2026-04-27T03:13:52.407318",
+      "execution_time_ms": 0.11929999163839966,
+      "query_plan": [
+        {
+          "id": 4,
+          "parent": 0,
+          "notused": 61,
+          "detail": "SEARCH tokens USING INDEX idx_tokens_category (category=?)"
+        }
+      ],
+      "uses_index": false,
+      "full_table_scan": false,
+      "rows_scanned": 0,
+      "rows_returned": 10,
+      "is_slow": false
+    },
+    {
+      "sql": "SELECT * FROM tokens ORDER BY weight DESC LIMIT 10",
+      "params": [],
+      "description": "Weight sort",
+      "timestamp": "2026-04-27T03:13:52.407506",
+      "execution_time_ms": 0.10309999925084412,
+      "query_plan": [
+        {
+          "id": 5,
+          "parent": 0,
+          "notused": 222,
+          "detail": "SCAN tokens USING INDEX idx_tokens_weight"
+        }
+      ],
+      "uses_index": false,
+      "full_table_scan": false,
+      "rows_scanned": 0,
+      "rows_returned": 10,
+      "is_slow": false
+    },
+    {
+      "sql": "SELECT * FROM agents WHERE active = 1",
+      "params": [],
+      "description": "Active agents",
+      "timestamp": "2026-04-27T03:13:52.407678",
+      "execution_time_ms": 0.08310000703204423,
+      "query_plan": [
+        {
+          "id": 2,
+          "parent": 0,
+          "notused": 216,
+          "detail": "SCAN agents"
+        }
+      ],
+      "uses_index": false,
+      "full_table_scan": false,
+      "rows_scanned": 0,
+      "rows_returned": 16,
+      "is_slow": false
+    },
+    {
+      "sql": "SELECT * FROM agent_messages WHERE status = 'pending' LIMIT 10",
+      "params": [],
+      "description": "Pending messages",
+      "timestamp": "2026-04-27T03:13:52.407899",
+      "execution_time_ms": 0.05869999586138874,
+      "query_plan": [
+        {
+          "id": 4,
+          "parent": 0,
+          "notused": 61,
+          "detail": "SEARCH agent_messages USING INDEX idx_agent_messages_pending (status=?)"
+        }
+      ],
+      "uses_index": false,
+      "full_table_scan": false,
+      "rows_scanned": 0,
+      "rows_returned": 1,
+      "is_slow": false
+    },
+    {
+      "sql": "SELECT COUNT(*) FROM events WHERE processed = 0",
+      "params": [],
+      "description": "Unprocessed events",
+      "timestamp": "2026-04-27T03:13:52.407813",
+      "execution_time_ms": 0.03950000973418355,
+      "query_plan": [
+        {
+          "id": 3,
+          "parent": 0,
+          "notused": 51,
+          "detail": "SEARCH events USING COVERING INDEX idx_events_unprocessed (processed=?)"
+        }
+      ],
+      "uses_index": false,
+      "full_table_scan": false,
+      "rows_scanned": 0,
+      "rows_returned": 1,
+      "is_slow": false
+    },
+    {
+      "sql": "SELECT COUNT(*) FROM tokens",
+      "params": [],
+      "description": "Token count",
+      "timestamp": "2026-04-27T03:13:52.407228",
+      "execution_time_ms": 0.02890000178012997,
+      "query_plan": [
+        {
+          "id": 4,
+          "parent": 0,
+          "notused": 0,
+          "detail": "SCAN tokens USING COVERING INDEX idx_tokens_weight"
+        }
+      ],
+      "uses_index": false,
+      "full_table_scan": false,
+      "rows_scanned": 0,
+      "rows_returned": 1,
+      "is_slow": false
+    }
+  ],
+  "full_table_scans": [],
+  "missing_indexes": [],
+  "average_execution_time_ms": 0.07210000088283171,
+  "queries": [
+    {
+      "sql": "SELECT COUNT(*) FROM tokens",
+      "params": [],
+      "description": "Token count",
+      "timestamp": "2026-04-27T03:13:52.407228",
+      "execution_time_ms": 0.02890000178012997,
+      "query_plan": [
+        {
+          "id": 4,
+          "parent": 0,
+          "notused": 0,
+          "detail": "SCAN tokens USING COVERING INDEX idx_tokens_weight"
+        }
+      ],
+      "uses_index": false,
+      "full_table_scan": false,
+      "rows_scanned": 0,
+      "rows_returned": 1,
+      "is_slow": false
+    },
+    {
+      "sql": "SELECT * FROM tokens WHERE category = ? LIMIT 10",
+      "params": [
+        "INFRA"
+      ],
+      "description": "Category filter",
+      "timestamp": "2026-04-27T03:13:52.407318",
+      "execution_time_ms": 0.11929999163839966,
+      "query_plan": [
+        {
+          "id": 4,
+          "parent": 0,
+          "notused": 61,
+          "detail": "SEARCH tokens USING INDEX idx_tokens_category (category=?)"
+        }
+      ],
+      "uses_index": false,
+      "full_table_scan": false,
+      "rows_scanned": 0,
+      "rows_returned": 10,
+      "is_slow": false
+    },
+    {
+      "sql": "SELECT * FROM tokens ORDER BY weight DESC LIMIT 10",
+      "params": [],
+      "description": "Weight sort",
+      "timestamp": "2026-04-27T03:13:52.407506",
+      "execution_time_ms": 0.10309999925084412,
+      "query_plan": [
+        {
+          "id": 5,
+          "parent": 0,
+          "notused": 222,
+          "detail": "SCAN tokens USING INDEX idx_tokens_weight"
+        }
+      ],
+      "uses_index": false,
+      "full_table_scan": false,
+      "rows_scanned": 0,
+      "rows_returned": 10,
+      "is_slow": false
+    },
+    {
+      "sql": "SELECT * FROM agents WHERE active = 1",
+      "params": [],
+      "description": "Active agents",
+      "timestamp": "2026-04-27T03:13:52.407678",
+      "execution_time_ms": 0.08310000703204423,
+      "query_plan": [
+        {
+          "id": 2,
+          "parent": 0,
+          "notused": 216,
+          "detail": "SCAN agents"
+        }
+      ],
+      "uses_index": false,
+      "full_table_scan": false,
+      "rows_scanned": 0,
+      "rows_returned": 16,
+      "is_slow": false
+    },
+    {
+      "sql": "SELECT COUNT(*) FROM events WHERE processed = 0",
+      "params": [],
+      "description": "Unprocessed events",
+      "timestamp": "2026-04-27T03:13:52.407813",
+      "execution_time_ms": 0.03950000973418355,
+      "query_plan": [
+        {
+          "id": 3,
+          "parent": 0,
+          "notused": 51,
+          "detail": "SEARCH events USING COVERING INDEX idx_events_unprocessed (processed=?)"
+        }
+      ],
+      "uses_index": false,
+      "full_table_scan": false,
+      "rows_scanned": 0,
+      "rows_returned": 1,
+      "is_slow": false
+    },
+    {
+      "sql": "SELECT * FROM agent_messages WHERE status = 'pending' LIMIT 10",
+      "params": [],
+      "description": "Pending messages",
+      "timestamp": "2026-04-27T03:13:52.407899",
+      "execution_time_ms": 0.05869999586138874,
+      "query_plan": [
+        {
+          "id": 4,
+          "parent": 0,
+          "notused": 61,
+          "detail": "SEARCH agent_messages USING INDEX idx_agent_messages_pending (status=?)"
+        }
+      ],
+      "uses_index": false,
+      "full_table_scan": false,
+      "rows_scanned": 0,
+      "rows_returned": 1,
+      "is_slow": false
+    }
+  ]
+}

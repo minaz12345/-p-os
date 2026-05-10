@@ -1,0 +1,26 @@
+
+=============================================================
+     P-OS Runtime Constitution Guard v7.6                  
+     Mode: deploy-check
+=============================================================
+{"mode":"deploy-check","state":"","severity":"INFO","event":"RUNTIME_GUARD_START","timestamp":"2026-05-09T22:43:51.758Z","pid":12440}
+
+[CHECK 1/4] W11 Constraint Engine...
+  â?O FAIL: W11 enforcement contract missing
+{"state":"","severity":"CRITICAL","event":"W11_CHECK","timestamp":"2026-05-09T22:43:51.812Z","pid":12440,"reason":"Contract file missing","result":"FAIL"}
+
+[CHECK 2/4] Audit Chain Integrity...
+  âo. PASS: Audit chain verified ( entries)
+{"state":"","entry_count":null,"severity":"INFO","event":"AUDIT_CHECK","timestamp":"2026-05-09T22:43:51.993Z","pid":12440,"result":"PASS"}
+
+[CHECK 3/4] Replay Continuity...
+  âo. PASS: Replay capsule valid (3 entries)
+{"state":"","capsule":"week1_replay_capsule_20260508_113529.zip","severity":"INFO","entries":3,"event":"REPLAY_CHECK","timestamp":"2026-05-09T22:43:52.182Z","pid":12440,"result":"PASS"}
+
+=== STATE TRANSITION EVALUATION ===
+State unchanged: CONSTITUTIONAL_FAILURE
+
+â?O CONSTITUTIONAL FAILURE DETECTED - BLOCKING OPERATIONS
+{"timestamp":"2026-05-09T22:43:52.225Z","pid":12440,"state":"CONSTITUTIONAL_FAILURE","event":"OPERATIONS_BLOCKED","severity":"CRITICAL"}
+
+dY>¡ï,? DEPLOYMENT BLOCKED BY CONSTITUTIONAL GUARD

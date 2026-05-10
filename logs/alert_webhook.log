@@ -1,0 +1,19 @@
+{
+  "timestamp": "2026-05-05T10:52:17.645752",
+  "alert": {
+    "status": "firing",
+    "alerts": [
+      {
+        "labels": {
+          "alertname": "Test Alert",
+          "severity": "info"
+        },
+        "annotations": {
+          "summary": "Manual test alert"
+        },
+        "state": "firing"
+      }
+    ]
+  }
+}
+================================================================================

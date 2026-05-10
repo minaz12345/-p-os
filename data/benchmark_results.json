@@ -1,0 +1,66 @@
+{
+  "timestamp": "2026-04-27 03:46:19",
+  "benchmarks": {
+    "insert_10k_tokens": {
+      "count": 10000,
+      "time_s": 0.29,
+      "throughput_per_sec": 34139.0,
+      "memory_mb": 0.03,
+      "peak_memory_mb": 0.05
+    },
+    "token_queries": {
+      "point_query_100": {
+        "time_ms": 1.09,
+        "avg_ms": 0.0109
+      },
+      "category_filter": {
+        "time_ms": 1.97,
+        "avg_ms": 0.3936
+      },
+      "weight_sort": {
+        "time_ms": 0.44
+      },
+      "count_agg_50": {
+        "time_ms": 27.7,
+        "avg_ms": 0.554
+      }
+    },
+    "append_100k_events": {
+      "count": 99999,
+      "time_s": 53.68,
+      "throughput_per_sec": 1863.0,
+      "memory_mb": 0.01,
+      "peak_memory_mb": 0.02
+    },
+    "event_queries": {
+      "aggregate_query_10": {
+        "time_ms": 11.41,
+        "avg_ms": 1.1408
+      },
+      "range_1000": {
+        "time_ms": 0.17,
+        "count": 0
+      },
+      "integrity_1000": {
+        "time_ms": 0.08,
+        "valid": true,
+        "positions_verified": 0
+      }
+    },
+    "cache_performance": {
+      "cached_reads_1000": {
+        "time_ms": 1.09,
+        "avg_ms": 0.0011,
+        "throughput_per_sec": 920726.0
+      },
+      "cache_hit_rate": 100.0
+    },
+    "concurrent_access": {
+      "threads": 4,
+      "operations_per_thread": 100,
+      "errors": 0,
+      "time_ms": 5783.77,
+      "throughput_ops_per_sec": 69.0
+    }
+  }
+}

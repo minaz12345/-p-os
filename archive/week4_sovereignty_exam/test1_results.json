@@ -1,0 +1,12 @@
+﻿{
+    "deployment_blocked":  true,
+    "test_name":  "W11_Removal_Constitutional_Failure",
+    "post_state":  "CONSTITUTIONAL_FAILURE",
+    "pre_state":  "HEALTHY",
+    "success":  true,
+    "transition_time_seconds":  0.7127296,
+    "recovery_state":  "HEALTHY",
+    "timestamp":  "2026-05-09T23:42:03Z",
+    "emergency_capsule_generated":  false,
+    "recovery_time_seconds":  1.4514075
+}

@@ -1,0 +1,114 @@
+﻿{"mode":"self-test","state":"","severity":"INFO","event":"RUNTIME_GUARD_START","timestamp":"2026-05-09T22:42:31.976Z","pid":12756}
+{"state":"","severity":"CRITICAL","event":"W11_CHECK","timestamp":"2026-05-09T22:42:32.432Z","pid":12756,"reason":"Contract file missing","result":"FAIL"}
+{"state":"","severity":"CRITICAL","error":"A null key is not allowed in a hash literal.","event":"RUNTIME_GUARD_FATAL","timestamp":"2026-05-09T22:42:33.338Z","pid":12756}
+{"state":"IMMUTABLE_FREEZE","from_state":"INIT","severity":"INFO","event":"STATE_TRANSITION","timestamp":"2026-05-09T22:42:33.353Z","pid":12756,"reason":"Runtime guard fatal error"}
+{"mode":"self-test","state":"","severity":"INFO","event":"RUNTIME_GUARD_START","timestamp":"2026-05-09T22:42:56.860Z","pid":9900}
+{"state":"","severity":"CRITICAL","event":"W11_CHECK","timestamp":"2026-05-09T22:42:56.925Z","pid":9900,"reason":"Contract file missing","result":"FAIL"}
+{"state":"","severity":"CRITICAL","error":"A null key is not allowed in a hash literal.","event":"RUNTIME_GUARD_FATAL","timestamp":"2026-05-09T22:42:57.387Z","pid":9900}
+{"state":"IMMUTABLE_FREEZE","from_state":"IMMUTABLE_FREEZE","severity":"INFO","event":"STATE_TRANSITION","timestamp":"2026-05-09T22:42:57.404Z","pid":9900,"reason":"Runtime guard fatal error"}
+{"mode":"self-test","state":"","severity":"INFO","event":"RUNTIME_GUARD_START","timestamp":"2026-05-09T22:43:27.980Z","pid":7084}
+{"state":"","severity":"CRITICAL","event":"W11_CHECK","timestamp":"2026-05-09T22:43:28.057Z","pid":7084,"reason":"Contract file missing","result":"FAIL"}
+{"state":"CONSTITUTIONAL_FAILURE","from_state":"IMMUTABLE_FREEZE","severity":"INFO","event":"STATE_TRANSITION","timestamp":"2026-05-09T22:43:28.398Z","pid":7084,"reason":"Critical component failure detected: w11"}
+{"mode":"deploy-check","state":"","severity":"INFO","event":"RUNTIME_GUARD_START","timestamp":"2026-05-09T22:43:51.758Z","pid":12440}
+{"state":"","severity":"CRITICAL","event":"W11_CHECK","timestamp":"2026-05-09T22:43:51.812Z","pid":12440,"reason":"Contract file missing","result":"FAIL"}
+{"state":"","entry_count":null,"severity":"INFO","event":"AUDIT_CHECK","timestamp":"2026-05-09T22:43:51.993Z","pid":12440,"result":"PASS"}
+{"state":"","capsule":"week1_replay_capsule_20260508_113529.zip","severity":"INFO","entries":3,"event":"REPLAY_CHECK","timestamp":"2026-05-09T22:43:52.182Z","pid":12440,"result":"PASS"}
+{"timestamp":"2026-05-09T22:43:52.225Z","pid":12440,"state":"CONSTITUTIONAL_FAILURE","event":"OPERATIONS_BLOCKED","severity":"CRITICAL"}
+{"mode":"self-test","state":"","severity":"INFO","event":"RUNTIME_GUARD_START","timestamp":"2026-05-09T22:43:59.407Z","pid":5188}
+{"state":"","severity":"CRITICAL","event":"W11_CHECK","timestamp":"2026-05-09T22:43:59.473Z","pid":5188,"reason":"Contract file missing","result":"FAIL"}
+{"mode":"self-test","state":"","severity":"INFO","event":"RUNTIME_GUARD_START","timestamp":"2026-05-09T22:48:01.633Z","pid":14004}
+{"state":"","severity":"INFO","event":"W11_CHECK","timestamp":"2026-05-09T22:48:01.776Z","pid":14004,"result":"PASS"}
+{"state":"HEALTHY","from_state":"CONSTITUTIONAL_FAILURE","severity":"INFO","event":"STATE_TRANSITION","timestamp":"2026-05-09T22:48:02.028Z","pid":14004,"reason":"All components operational"}
+{"mode":"deploy-check","state":"","severity":"INFO","event":"RUNTIME_GUARD_START","timestamp":"2026-05-09T23:42:02.343Z","pid":13584}
+{"state":"","severity":"CRITICAL","event":"W11_CHECK","timestamp":"2026-05-09T23:42:02.358Z","pid":13584,"reason":"Contract file missing","result":"FAIL"}
+{"state":"","entry_count":null,"severity":"INFO","event":"AUDIT_CHECK","timestamp":"2026-05-09T23:42:02.384Z","pid":13584,"result":"PASS"}
+{"state":"","capsule":"week1_replay_capsule_20260508_113529.zip","severity":"INFO","entries":3,"event":"REPLAY_CHECK","timestamp":"2026-05-09T23:42:02.433Z","pid":13584,"result":"PASS"}
+{"state":"CONSTITUTIONAL_FAILURE","from_state":"HEALTHY","severity":"INFO","event":"STATE_TRANSITION","timestamp":"2026-05-09T23:42:02.501Z","pid":13584,"reason":"Critical component failure detected: w11"}
+{"timestamp":"2026-05-09T23:42:02.501Z","pid":13584,"state":"CONSTITUTIONAL_FAILURE","event":"OPERATIONS_BLOCKED","severity":"CRITICAL"}
+{"mode":"self-test","state":"","severity":"INFO","event":"RUNTIME_GUARD_START","timestamp":"2026-05-09T23:42:03.549Z","pid":13584}
+{"state":"","severity":"INFO","event":"W11_CHECK","timestamp":"2026-05-09T23:42:03.602Z","pid":13584,"result":"PASS"}
+{"state":"HEALTHY","from_state":"CONSTITUTIONAL_FAILURE","severity":"INFO","event":"STATE_TRANSITION","timestamp":"2026-05-09T23:42:03.740Z","pid":13584,"reason":"All components operational"}
+{"mode":"self-test","state":"","severity":"INFO","event":"RUNTIME_GUARD_START","timestamp":"2026-05-09T23:47:06.596Z","pid":14220}
+{"state":"","severity":"INFO","event":"W11_CHECK","timestamp":"2026-05-09T23:47:06.626Z","pid":14220,"result":"PASS"}
+{"mode":"self-test","state":"","severity":"INFO","event":"RUNTIME_GUARD_START","timestamp":"2026-05-09T23:47:07.992Z","pid":14220}
+{"state":"","severity":"INFO","event":"W11_CHECK","timestamp":"2026-05-09T23:47:07.999Z","pid":14220,"result":"PASS"}
+{"mode":"self-test","state":"","severity":"INFO","event":"RUNTIME_GUARD_START","timestamp":"2026-05-09T23:47:59.935Z","pid":1412}
+{"state":"","severity":"INFO","event":"W11_CHECK","timestamp":"2026-05-09T23:47:59.973Z","pid":1412,"result":"PASS"}
+{"mode":"self-test","state":"","severity":"INFO","event":"RUNTIME_GUARD_START","timestamp":"2026-05-09T23:48:00.534Z","pid":1412}
+{"state":"","severity":"INFO","event":"W11_CHECK","timestamp":"2026-05-09T23:48:00.534Z","pid":1412,"result":"PASS"}
+{"mode":"self-test","state":"","severity":"INFO","event":"RUNTIME_GUARD_START","timestamp":"2026-05-09T23:48:00.888Z","pid":1412}
+{"state":"","severity":"INFO","event":"W11_CHECK","timestamp":"2026-05-09T23:48:00.888Z","pid":1412,"result":"PASS"}
+{"mode":"self-test","state":"","severity":"INFO","event":"RUNTIME_GUARD_START","timestamp":"2026-05-09T23:48:01.253Z","pid":1412}
+{"state":"","severity":"INFO","event":"W11_CHECK","timestamp":"2026-05-09T23:48:01.253Z","pid":1412,"result":"PASS"}
+{"mode":"self-test","state":"","severity":"INFO","event":"RUNTIME_GUARD_START","timestamp":"2026-05-09T23:48:01.609Z","pid":1412}
+{"state":"","severity":"INFO","event":"W11_CHECK","timestamp":"2026-05-09T23:48:01.609Z","pid":1412,"result":"PASS"}
+{"mode":"self-test","state":"","severity":"INFO","event":"RUNTIME_GUARD_START","timestamp":"2026-05-09T23:48:01.956Z","pid":1412}
+{"state":"","severity":"INFO","event":"W11_CHECK","timestamp":"2026-05-09T23:48:01.973Z","pid":1412,"result":"PASS"}
+{"mode":"self-test","state":"","severity":"INFO","event":"RUNTIME_GUARD_START","timestamp":"2026-05-09T23:48:02.307Z","pid":1412}
+{"state":"","severity":"INFO","event":"W11_CHECK","timestamp":"2026-05-09T23:48:02.319Z","pid":1412,"result":"PASS"}
+{"mode":"self-test","state":"","severity":"INFO","event":"RUNTIME_GUARD_START","timestamp":"2026-05-09T23:48:02.667Z","pid":1412}
+{"state":"","severity":"INFO","event":"W11_CHECK","timestamp":"2026-05-09T23:48:02.667Z","pid":1412,"result":"PASS"}
+{"mode":"self-test","state":"","severity":"INFO","event":"RUNTIME_GUARD_START","timestamp":"2026-05-09T23:48:03.020Z","pid":1412}
+{"state":"","severity":"INFO","event":"W11_CHECK","timestamp":"2026-05-09T23:48:03.028Z","pid":1412,"result":"PASS"}
+{"mode":"self-test","state":"","severity":"INFO","event":"RUNTIME_GUARD_START","timestamp":"2026-05-09T23:48:03.395Z","pid":1412}
+{"state":"","severity":"INFO","event":"W11_CHECK","timestamp":"2026-05-09T23:48:03.395Z","pid":1412,"result":"PASS"}
+{"mode":"self-test","state":"","severity":"INFO","event":"RUNTIME_GUARD_START","timestamp":"2026-05-09T23:48:03.761Z","pid":1412}
+{"state":"","severity":"INFO","event":"W11_CHECK","timestamp":"2026-05-09T23:48:03.772Z","pid":1412,"result":"PASS"}
+{"mode":"self-test","state":"","severity":"INFO","event":"RUNTIME_GUARD_START","timestamp":"2026-05-09T23:48:04.160Z","pid":1412}
+{"state":"","severity":"INFO","event":"W11_CHECK","timestamp":"2026-05-09T23:48:04.162Z","pid":1412,"result":"PASS"}
+{"mode":"self-test","state":"","severity":"INFO","event":"RUNTIME_GUARD_START","timestamp":"2026-05-09T23:48:04.511Z","pid":1412}
+{"state":"","severity":"INFO","event":"W11_CHECK","timestamp":"2026-05-09T23:48:04.519Z","pid":1412,"result":"PASS"}
+{"mode":"self-test","state":"","severity":"INFO","event":"RUNTIME_GUARD_START","timestamp":"2026-05-09T23:48:04.872Z","pid":1412}
+{"state":"","severity":"INFO","event":"W11_CHECK","timestamp":"2026-05-09T23:48:04.879Z","pid":1412,"result":"PASS"}
+{"mode":"self-test","state":"","severity":"INFO","event":"RUNTIME_GUARD_START","timestamp":"2026-05-09T23:48:05.230Z","pid":1412}
+{"state":"","severity":"INFO","event":"W11_CHECK","timestamp":"2026-05-09T23:48:05.235Z","pid":1412,"result":"PASS"}
+{"mode":"self-test","state":"","severity":"INFO","event":"RUNTIME_GUARD_START","timestamp":"2026-05-09T23:48:05.596Z","pid":1412}
+{"state":"","severity":"INFO","event":"W11_CHECK","timestamp":"2026-05-09T23:48:05.596Z","pid":1412,"result":"PASS"}
+{"mode":"self-test","state":"","severity":"INFO","event":"RUNTIME_GUARD_START","timestamp":"2026-05-09T23:48:05.964Z","pid":1412}
+{"state":"","severity":"INFO","event":"W11_CHECK","timestamp":"2026-05-09T23:48:05.966Z","pid":1412,"result":"PASS"}
+{"mode":"self-test","state":"","severity":"INFO","event":"RUNTIME_GUARD_START","timestamp":"2026-05-09T23:48:06.333Z","pid":1412}
+{"state":"","severity":"INFO","event":"W11_CHECK","timestamp":"2026-05-09T23:48:06.333Z","pid":1412,"result":"PASS"}
+{"mode":"self-test","state":"","severity":"INFO","event":"RUNTIME_GUARD_START","timestamp":"2026-05-09T23:48:06.682Z","pid":1412}
+{"state":"","severity":"INFO","event":"W11_CHECK","timestamp":"2026-05-09T23:48:06.682Z","pid":1412,"result":"PASS"}
+{"mode":"self-test","state":"","severity":"INFO","event":"RUNTIME_GUARD_START","timestamp":"2026-05-09T23:48:07.033Z","pid":1412}
+{"state":"","severity":"INFO","event":"W11_CHECK","timestamp":"2026-05-09T23:48:07.046Z","pid":1412,"result":"PASS"}
+{"mode":"self-test","state":"","severity":"INFO","event":"RUNTIME_GUARD_START","timestamp":"2026-05-09T23:48:07.401Z","pid":1412}
+{"state":"","severity":"INFO","event":"W11_CHECK","timestamp":"2026-05-09T23:48:07.401Z","pid":1412,"result":"PASS"}
+{"mode":"self-test","state":"","severity":"INFO","event":"RUNTIME_GUARD_START","timestamp":"2026-05-09T23:48:07.749Z","pid":1412}
+{"state":"","severity":"INFO","event":"W11_CHECK","timestamp":"2026-05-09T23:48:07.749Z","pid":1412,"result":"PASS"}
+{"mode":"self-test","state":"","severity":"INFO","event":"RUNTIME_GUARD_START","timestamp":"2026-05-09T23:48:08.149Z","pid":1412}
+{"state":"","severity":"INFO","event":"W11_CHECK","timestamp":"2026-05-09T23:48:08.165Z","pid":1412,"result":"PASS"}
+{"mode":"self-test","state":"","severity":"INFO","event":"RUNTIME_GUARD_START","timestamp":"2026-05-09T23:48:08.504Z","pid":1412}
+{"state":"","severity":"INFO","event":"W11_CHECK","timestamp":"2026-05-09T23:48:08.504Z","pid":1412,"result":"PASS"}
+{"mode":"self-test","state":"","severity":"INFO","event":"RUNTIME_GUARD_START","timestamp":"2026-05-09T23:48:08.852Z","pid":1412}
+{"state":"","severity":"INFO","event":"W11_CHECK","timestamp":"2026-05-09T23:48:08.852Z","pid":1412,"result":"PASS"}
+{"mode":"self-test","state":"","severity":"INFO","event":"RUNTIME_GUARD_START","timestamp":"2026-05-09T23:48:09.187Z","pid":1412}
+{"state":"","severity":"INFO","event":"W11_CHECK","timestamp":"2026-05-09T23:48:09.190Z","pid":1412,"result":"PASS"}
+{"mode":"self-test","state":"","severity":"INFO","event":"RUNTIME_GUARD_START","timestamp":"2026-05-09T23:48:09.538Z","pid":1412}
+{"state":"","severity":"INFO","event":"W11_CHECK","timestamp":"2026-05-09T23:48:09.538Z","pid":1412,"result":"PASS"}
+{"mode":"self-test","state":"","severity":"INFO","event":"RUNTIME_GUARD_START","timestamp":"2026-05-09T23:48:09.888Z","pid":1412}
+{"state":"","severity":"INFO","event":"W11_CHECK","timestamp":"2026-05-09T23:48:09.889Z","pid":1412,"result":"PASS"}
+{"mode":"self-test","state":"","severity":"INFO","event":"RUNTIME_GUARD_START","timestamp":"2026-05-09T23:48:10.242Z","pid":1412}
+{"state":"","severity":"INFO","event":"W11_CHECK","timestamp":"2026-05-09T23:48:10.242Z","pid":1412,"result":"PASS"}
+{"mode":"self-test","state":"","severity":"INFO","event":"RUNTIME_GUARD_START","timestamp":"2026-05-09T23:48:10.609Z","pid":1412}
+{"state":"","severity":"INFO","event":"W11_CHECK","timestamp":"2026-05-09T23:48:10.619Z","pid":1412,"result":"PASS"}
+{"mode":"self-test","state":"","severity":"INFO","event":"RUNTIME_GUARD_START","timestamp":"2026-05-09T23:48:10.974Z","pid":1412}
+{"state":"","severity":"INFO","event":"W11_CHECK","timestamp":"2026-05-09T23:48:10.978Z","pid":1412,"result":"PASS"}
+{"mode":"self-test","state":"","severity":"INFO","event":"RUNTIME_GUARD_START","timestamp":"2026-05-09T23:48:11.326Z","pid":1412}
+{"state":"","severity":"INFO","event":"W11_CHECK","timestamp":"2026-05-09T23:48:11.326Z","pid":1412,"result":"PASS"}
+{"mode":"self-test","state":"","severity":"INFO","event":"RUNTIME_GUARD_START","timestamp":"2026-05-09T23:48:11.679Z","pid":1412}
+{"state":"","severity":"INFO","event":"W11_CHECK","timestamp":"2026-05-09T23:48:11.812Z","pid":1412,"result":"PASS"}
+{"mode":"self-test","state":"","severity":"INFO","event":"RUNTIME_GUARD_START","timestamp":"2026-05-09T23:48:12.244Z","pid":1412}
+{"state":"","severity":"INFO","event":"W11_CHECK","timestamp":"2026-05-09T23:48:12.245Z","pid":1412,"result":"PASS"}
+{"mode":"self-test","state":"","severity":"INFO","event":"RUNTIME_GUARD_START","timestamp":"2026-05-09T23:48:12.611Z","pid":1412}
+{"state":"","severity":"INFO","event":"W11_CHECK","timestamp":"2026-05-09T23:48:12.611Z","pid":1412,"result":"PASS"}
+{"mode":"self-test","state":"","severity":"INFO","event":"RUNTIME_GUARD_START","timestamp":"2026-05-09T23:48:12.978Z","pid":1412}
+{"state":"","severity":"INFO","event":"W11_CHECK","timestamp":"2026-05-09T23:48:12.978Z","pid":1412,"result":"PASS"}
+{"mode":"self-test","state":"","severity":"INFO","event":"RUNTIME_GUARD_START","timestamp":"2026-05-09T23:48:13.312Z","pid":1412}
+{"state":"","severity":"INFO","event":"W11_CHECK","timestamp":"2026-05-09T23:48:13.325Z","pid":1412,"result":"PASS"}
+{"mode":"self-test","state":"","severity":"INFO","event":"RUNTIME_GUARD_START","timestamp":"2026-05-09T23:48:13.678Z","pid":1412}
+{"state":"","severity":"INFO","event":"W11_CHECK","timestamp":"2026-05-09T23:48:13.678Z","pid":1412,"result":"PASS"}
+{"mode":"self-test","state":"","severity":"INFO","event":"RUNTIME_GUARD_START","timestamp":"2026-05-09T23:48:14.080Z","pid":1412}
+{"state":"","severity":"INFO","event":"W11_CHECK","timestamp":"2026-05-09T23:48:14.080Z","pid":1412,"result":"PASS"}
+{"mode":"self-test","state":"","severity":"INFO","event":"RUNTIME_GUARD_START","timestamp":"2026-05-09T23:48:14.443Z","pid":1412}
+{"state":"","severity":"INFO","event":"W11_CHECK","timestamp":"2026-05-09T23:48:14.449Z","pid":1412,"result":"PASS"}

@@ -1,0 +1,14 @@
+﻿{
+    "w11":  "FAIL",
+    "last_self_test":  "2026-05-09T23:42:02Z",
+    "audit_chain":  "VERIFIED",
+    "last_state_transition":  {
+                                  "timestamp":  "2026-05-09T23:42:02Z",
+                                  "from":  "HEALTHY",
+                                  "to":  "CONSTITUTIONAL_FAILURE",
+                                  "reason":  "Critical component failure detected: w11"
+                              },
+    "state":  "CONSTITUTIONAL_FAILURE",
+    "replay_integrity":  "READY",
+    "freeze_mode":  false
+}

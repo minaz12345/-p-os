@@ -1,0 +1,22 @@
+[2026-05-05T17:25:26.829093+00:00] [INFO] ============================================================
+[2026-05-05T17:25:26.829787+00:00] [INFO] PHASE 0: PRE-FLIGHT CHECKS
+[2026-05-05T17:25:26.830364+00:00] [INFO] ============================================================
+[2026-05-05T17:25:28.869209+00:00] [INFO] Webhook server healthy: healthy
+[2026-05-05T17:25:28.870187+00:00] [✅ PASS] Webhook Server Running: ✅ PASS - Server is healthy
+[2026-05-05T17:25:30.260898+00:00] [INFO] Initial scheduler status: Running
+[2026-05-05T17:25:30.261981+00:00] [✅ PASS] Scheduler Initial Status: ✅ PASS - Status: Running
+[2026-05-05T17:25:30.262766+00:00] [INFO] 
+============================================================
+[2026-05-05T17:25:30.263720+00:00] [INFO] PHASE 1: TRIGGERING ALERT (Stopping Scheduler)
+[2026-05-05T17:25:30.264266+00:00] [INFO] ============================================================
+[2026-05-05T17:25:30.264721+00:00] [INFO] Stopping P-OS Healthcheck Loop task...
+[2026-05-05T17:25:31.145099+00:00] [❌ FAIL] Stop Scheduler: ❌ FAIL - Failed: Disable-ScheduledTask : Odmowa dostepu.
+At line:1 char:1
++ Disable-ScheduledTask -TaskName "P-OS Healthcheck Loop"
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : PermissionDenied: (PS_ScheduledTask:Root/Microsoft/...S_Sched 
+   uledTask) [Disable-ScheduledTask], CimException
+    + FullyQualifiedErrorId : HRESULT 0x80070005,Disable-ScheduledTask
+ 
+
+[2026-05-05T17:25:31.147592+00:00] [INFO] ❌ Cannot proceed - failed to stop scheduler
