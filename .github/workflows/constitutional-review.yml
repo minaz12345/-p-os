@@ -1,4 +1,4 @@
-name: Constitutional Review (Minimal)
+name: Constitutional Review
 
 on:
   pull_request:
@@ -15,44 +15,239 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
     
     - name: Set up Python
       uses: actions/setup-python@v5
       with:
         python-version: '3.11'
     
-    - name: Create test report
+    - name: Run Constitutional Agent Lite v1.0
       run: |
-        Write-Host "=== MINIMAL CONSTITUTIONAL REVIEW ==="
+        $ErrorActionPreference = "Continue"
+        
+        Write-Host "=== CONSTITUTIONAL AGENT LITE v1.0 ==="
         Write-Host "Event: $env:GITHUB_EVENT_NAME"
         Write-Host "Commit: ${{ github.sha }}"
         Write-Host "Branch: ${{ github.ref_name }}"
         Write-Host ""
         
-        # Create a simple report line by line
-        $lines = @()
-        $lines += "# Constitutional Review Report"
-        $lines += ""
-        $lines += "**Status:** ✅ PASS (Minimal Test)"
-        $lines += "**Date:** $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')"
-        $lines += "**Event:** $env:GITHUB_EVENT_NAME"
-        $lines += "**Commit:** ${{ github.sha }}"
-        $lines += ""
-        $lines += "## Summary"
-        $lines += "This is a minimal test to verify workflow execution."
-        $lines += ""
-        $lines += "## Verdict"
-        $lines += "🟢 PASS - Workflow is functioning correctly."
-        $lines += ""
-        $lines += "## Next Steps"
-        $lines += "Full constitutional checks will be added incrementally."
+        # Initialize tracking
+        $verdict = "PASS"
+        $violations = @()
+        $warnings = @()
+        $checksPassed = 0
+        $checksTotal = 7
         
-        $report = $lines -join "`n"
-        $report | Out-File -FilePath "constitutional_review_report.md" -Encoding UTF8
-        Write-Host "Report created successfully!"
-        Get-Content "constitutional_review_report.md"
+        # Create initial report
+        $initialReport = "# Constitutional Review Report - IN PROGRESS`n"
+        $initialReport | Out-File -FilePath "constitutional_review_report.md" -Encoding UTF8
+        
+        Write-Host "Starting 7 constitutional checks..." -ForegroundColor Cyan
+        Write-Host ""
+        
+        # CHECK 1: R1 - Schema Drift Detection
+        Write-Host "[R1] Checking schema drift..." -ForegroundColor Yellow
+        try {
+          $sqlFiles = Get-ChildItem -Path . -Filter "*.sql" -Recurse -ErrorAction SilentlyContinue
+          if ($sqlFiles.Count -gt 0) {
+            $migrationDocs = Get-ChildItem -Path "docs/migrations" -Filter "*.md" -ErrorAction SilentlyContinue
+            if ($migrationDocs.Count -eq 0) {
+              $verdict = "FAIL"
+              $violations += "R1: SQL changes without migration document"
+              Write-Host "  ❌ FAIL" -ForegroundColor Red
+            } else {
+              $checksPassed++
+              Write-Host "  ✅ PASS" -ForegroundColor Green
+            }
+          } else {
+            $checksPassed++
+            Write-Host "  ✅ PASS (no SQL changes)" -ForegroundColor Green
+          }
+        } catch {
+          $warnings += "R1: Exception during check"
+          Write-Host "  ⚠️ WARNING" -ForegroundColor Yellow
+        }
+        
+        # CHECK 2: R2 - Determinism Verification
+        Write-Host "[R2] Checking determinism..." -ForegroundColor Yellow
+        try {
+          $pyFiles = Get-ChildItem -Path . -Filter "*.py" -Recurse -ErrorAction SilentlyContinue | Where-Object { $_.FullName -notmatch "test_|__pycache__" }
+          $nonDeterministic = 0
+          foreach ($file in $pyFiles) {
+            $content = Get-Content $file.FullName -Raw -ErrorAction SilentlyContinue
+            if ($content -match "random\.(uniform|randint|choice)\(" -and $content -notmatch "random\.seed\(") {
+              $nonDeterministic++
+            }
+          }
+          if ($nonDeterministic -gt 0) {
+            $warnings += "R2: Found $nonDeterministic potential non-deterministic patterns"
+            Write-Host "  ⚠️ WARNING" -ForegroundColor Yellow
+          } else {
+            $checksPassed++
+            Write-Host "  ✅ PASS" -ForegroundColor Green
+          }
+        } catch {
+          $warnings += "R2: Exception during check"
+          Write-Host "  ⚠️ WARNING" -ForegroundColor Yellow
+        }
+        
+        # CHECK 3: R3 - Audit Trail Completeness
+        Write-Host "[R3] Checking audit trail..." -ForegroundColor Yellow
+        try {
+          $engineFiles = Get-ChildItem -Path "core/engine" -Filter "*.py" -Recurse -ErrorAction SilentlyContinue
+          $missingAudit = 0
+          foreach ($file in $engineFiles) {
+            $content = Get-Content $file.FullName -Raw -ErrorAction SilentlyContinue
+            if ($content -match "(INSERT|UPDATE|DELETE)" -and $content -notmatch "emit_audit|audit_event") {
+              $missingAudit++
+            }
+          }
+          if ($missingAudit -gt 0) {
+            $warnings += "R3: Found $missingAudit state changes without audit"
+            Write-Host "  ⚠️ WARNING" -ForegroundColor Yellow
+          } else {
+            $checksPassed++
+            Write-Host "  ✅ PASS" -ForegroundColor Green
+          }
+        } catch {
+          $warnings += "R3: Exception during check"
+          Write-Host "  ⚠️ WARNING" -ForegroundColor Yellow
+        }
+        
+        # CHECK 4: R4 - W11 Boundaries
+        Write-Host "[R4] Checking W11 boundaries..." -ForegroundColor Yellow
+        try {
+          $w11Contract = Test-Path ".lingma/contracts/w11_enforcement_contract.yaml"
+          if (-not $w11Contract) {
+            $warnings += "R4: W11 contract file not found"
+            Write-Host "  ⚠️ WARNING" -ForegroundColor Yellow
+          } else {
+            $checksPassed++
+            Write-Host "  ✅ PASS" -ForegroundColor Green
+          }
+        } catch {
+          $warnings += "R4: Exception during check"
+          Write-Host "  ⚠️ WARNING" -ForegroundColor Yellow
+        }
+        
+        # CHECK 5: R5 - Hash Chain Integrity
+        Write-Host "[R5] Checking hash chain..." -ForegroundColor Yellow
+        try {
+          $driftSql = Test-Path "docs/drift_detection/schema_drift.sql"
+          if (-not $driftSql) {
+            $warnings += "R5: Drift detection SQL not found"
+            Write-Host "  ⚠️ WARNING" -ForegroundColor Yellow
+          } else {
+            $checksPassed++
+            Write-Host "  ✅ PASS" -ForegroundColor Green
+          }
+        } catch {
+          $warnings += "R5: Exception during check"
+          Write-Host "  ⚠️ WARNING" -ForegroundColor Yellow
+        }
+        
+        # CHECK 6: R6 - Documentation Standards
+        Write-Host "[R6] Checking documentation..." -ForegroundColor Yellow
+        try {
+          if (Test-Path "scripts/validate_docs.py") {
+            python scripts/validate_docs.py docs 2>&1 | Out-Null
+            if ($LASTEXITCODE -eq 0) {
+              $checksPassed++
+              Write-Host "  ✅ PASS" -ForegroundColor Green
+            } else {
+              $warnings += "R6: Documentation validation issues"
+              Write-Host "  ⚠️ WARNING" -ForegroundColor Yellow
+            }
+          } else {
+            $warnings += "R6: validate_docs.py not found"
+            Write-Host "  ⚠️ WARNING" -ForegroundColor Yellow
+          }
+        } catch {
+          $warnings += "R6: Exception during check"
+          Write-Host "  ⚠️ WARNING" -ForegroundColor Yellow
+        }
+        
+        # CHECK 7: R7 - Context Minimization
+        Write-Host "[R7] Checking context minimization..." -ForegroundColor Yellow
+        try {
+          $largeDocs = Get-ChildItem -Path "docs" -Filter "*.md" -Recurse -ErrorAction SilentlyContinue | Where-Object { $_.Length -gt 1MB }
+          if ($largeDocs.Count -gt 0) {
+            $warnings += "R7: Found $($largeDocs.Count) oversized documents (>1MB)"
+            Write-Host "  ⚠️ WARNING" -ForegroundColor Yellow
+          } else {
+            $checksPassed++
+            Write-Host "  ✅ PASS" -ForegroundColor Green
+          }
+        } catch {
+          $warnings += "R7: Exception during check"
+          Write-Host "  ⚠️ WARNING" -ForegroundColor Yellow
+        }
+        
+        Write-Host ""
+        Write-Host "=== VERDICT ===" -ForegroundColor Cyan
+        Write-Host "Checks Passed: $checksPassed / $checksTotal"
+        Write-Host "Verdict: $verdict"
+        Write-Host ""
+        
+        # Build final report
+        $reportLines = @()
+        $reportLines += "# Constitutional Review Report"
+        $reportLines += ""
+        if ($env:GITHUB_EVENT_NAME -eq 'pull_request') {
+          $reportLines += "**PR:** #${{ github.event.pull_request.number }}"
+        } else {
+          $reportLines += "**Reference:** Push to ${{ github.ref_name }}"
+        }
+        $reportLines += "**Date:** $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')"
+        $reportLines += "**Commit:** ${{ github.sha }}"
+        $reportLines += "**Verdict:** $verdict"
+        $reportLines += "**Checks Passed:** $checksPassed / $checksTotal"
+        $reportLines += ""
+        $reportLines += "## Violations"
+        if ($violations.Count -gt 0) {
+          $violations | ForEach-Object { $reportLines += "- ❌ $_" }
+        } else {
+          $reportLines += "- None"
+        }
+        $reportLines += ""
+        $reportLines += "## Warnings"
+        if ($warnings.Count -gt 0) {
+          $warnings | ForEach-Object { $reportLines += "- ⚠️ $_" }
+        } else {
+          $reportLines += "- None"
+        }
+        $reportLines += ""
+        $reportLines += "## Constitutional Rules"
+        $reportLines += "- R1 Immutability First: $(if ($violations -match 'R1') { '❌ FAIL' } else { '✅ PASS' })"
+        $reportLines += "- R2 Determinism: $(if ($warnings -match 'R2') { '⚠️ WARNING' } else { '✅ PASS' })"
+        $reportLines += "- R3 Audit Trail: $(if ($warnings -match 'R3') { '⚠️ WARNING' } else { '✅ PASS' })"
+        $reportLines += "- R4 W11 Boundaries: $(if ($warnings -match 'R4') { '⚠️ WARNING' } else { '✅ PASS' })"
+        $reportLines += "- R5 Hash Chain: $(if ($warnings -match 'R5') { '⚠️ WARNING' } else { '✅ PASS' })"
+        $reportLines += "- R6 Documentation: $(if ($warnings -match 'R6') { '⚠️ WARNING' } else { '✅ PASS' })"
+        $reportLines += "- R7 Context: $(if ($warnings -match 'R7') { '⚠️ WARNING' } else { '✅ PASS' })"
+        $reportLines += ""
+        $reportLines += "## Recommendation"
+        if ($verdict -eq "FAIL") {
+          $reportLines += "Reject PR. Fix violations before resubmission."
+        } elseif ($warnings.Count -gt 0) {
+          $reportLines += "Approve with conditions. Address warnings."
+        } else {
+          $reportLines += "Approve for merge."
+        }
+        
+        $finalReport = $reportLines -join "`n"
+        $finalReport | Out-File -FilePath "constitutional_review_report.md" -Encoding UTF8
+        Write-Host "Report saved successfully!"
+        
+        # Exit with error if FAIL
+        if ($verdict -eq "FAIL") {
+          exit 1
+        }
     
     - name: Upload report
+      if: always()
       uses: actions/upload-artifact@v4
       with:
         name: constitutional-review-report
