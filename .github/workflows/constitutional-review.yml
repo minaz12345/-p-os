@@ -37,8 +37,19 @@ jobs:
     - name: Detect changed files
       id: changes
       run: |
-        # Get list of changed files in PR
-        $changedFiles = git diff --name-only ${{ github.event.pull_request.base.sha }} ${{ github.sha }}
+        # Get list of changed files (handle both PR and push events)
+        if ($env:GITHUB_EVENT_NAME -eq 'pull_request') {
+          $baseSha = '${{ github.event.pull_request.base.sha }}'
+          $headSha = '${{ github.sha }}'
+          Write-Host "PR event detected: comparing $baseSha to $headSha"
+        } else {
+          # For push events, compare with previous commit
+          $headSha = '${{ github.sha }}'
+          $baseSha = '${{ github.event.before }}'
+          Write-Host "Push event detected: comparing $baseSha to $headSha"
+        }
+        
+        $changedFiles = git diff --name-only $baseSha $headSha
         
         # Categorize changes
         $schemaChanges = $changedFiles | Where-Object { $_ -match '\.sql$|core/db/|migration' }
@@ -72,7 +83,11 @@ jobs:
     - name: Run constitutional checks
       run: |
         Write-Host "=== CONSTITUTIONAL REVIEW STARTED ==="
-        Write-Host "PR: #${{ github.event.pull_request.number }}"
+        if ($env:GITHUB_EVENT_NAME -eq 'pull_request') {
+          Write-Host "PR: #${{ github.event.pull_request.number }}"
+        } else {
+          Write-Host "Push event to branch: ${{ github.ref_name }}"
+        }
         Write-Host "Risk Level: ${{ steps.changes.outputs.risk_level }}"
         Write-Host ""
         
@@ -292,10 +307,16 @@ jobs:
         }
         
         # Save verdict to artifact
+        if ($env:GITHUB_EVENT_NAME -eq 'pull_request') {
+          $prRef = "#${{ github.event.pull_request.number }}"
+        } else {
+          $prRef = "Push to ${{ github.ref_name }}"
+        }
+        
         $verdictReport = @"
 # Constitutional Review Report
 
-**PR:** #${{ github.event.pull_request.number }}
+**Reference:** $prRef
 **Date:** $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')
 **Risk Level:** ${{ steps.changes.outputs.risk_level }}
 **Verdict:** $verdict
