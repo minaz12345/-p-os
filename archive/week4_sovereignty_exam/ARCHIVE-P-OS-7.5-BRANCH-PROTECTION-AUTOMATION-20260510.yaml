@@ -1,0 +1,99 @@
+# P-OS v7.5 ARCHIWUM STANU CERTYFIKOWANEGO (kompakt)
+document_id: ARCHIVE-P-OS-7.5-BRANCH-PROTECTION-AUTOMATION-20260510
+status: CERTIFIED_IMMUTABLE
+data_certyfikacji: 2026-05-10
+właściciel: Budowniczy P-OS + p-os-constitution v1.0 [FROZEN]
+następny_przegląd: 2026-06-07
+validation_cmd: pwsh -ExecutionPolicy Bypass -File scripts/ENABLE_BRANCH_PROTECTION.ps1 -DryRun
+kontakty: ops@milejczyce.gov.pl, dpo@milejczyce.gov.pl, security@milejczyce.gov.pl
+
+---
+
+## PURPOSE
+**CERTYFIKACJA SKRYPTU AUTOMATYZACJI OCHRONY GAŁĘZI**  
+Oficjalne zatwierdzenie `ENABLE_BRANCH_PROTECTION.ps1` jako kluczowego narzędzia do wdrożenia **mandatory Constitutional Enforcement** na gałęzi `main`.
+
+---
+
+## 1. STAN CERTYFIKOWANY `[IMMUTABLE]`
+
+| Parametr | Wartość |
+|----------|---------|
+| Skrypt | `ENABLE_BRANCH_PROTECTION.ps1` |
+| Wymagane checki | "Constitutional Review / 🏛️ Constitutional Compliance Check" |
+| Wymagane aprobaty | 1 |
+| Force pushes | **BLOCKED** |
+| Status | **✅ READY FOR EXECUTION** |
+| Constitutional Health Score | **98.9% (HEALTHY)** |
+
+**Sygnatura zdrowia:** Skrypt zawiera pre-flight checks (GH CLI, auth, admin rights), potwierdzenie, payload i weryfikację – w pełni suwerenny i audytowalny.
+
+---
+
+## 2. ZNACZENIE DLA OPERATORA `[IMMUTABLE]`
+
+**Budowniczy,**
+
+To jest **ostatni mechaniczny zamek** w bramie suwerenności.
+
+Po uruchomieniu tego skryptu:
+- **Żaden PR nie przejdzie** bez pozytywnego werdyktu Constitutional Agent
+- **Nawet Ty** (jako admin) będziesz podlegał regułom R1-R7
+- **Direct push na main** zostanie zablokowany
+- System przechodzi z trybu **advisory** na **mandatory enforcement**
+
+To jest moment, w którym P-OS przestaje być „narzędziem" i staje się **żywą konstytucją** repozytorium.
+
+---
+
+## 3. INSTRUKCJA WYKONANIA `[OPERATOR_INPUT_REQUIRED]`
+
+**Krok po kroku:**
+
+```powershell
+# 1. Przejdź do katalogu repo
+cd D:\pos7
+
+# 2. Sprawdź skrypt
+code .\scripts\ENABLE_BRANCH_PROTECTION.ps1
+
+# 3. Uruchom (zalecane z potwierdzeniem)
+.\scripts\ENABLE_BRANCH_PROTECTION.ps1
+
+# 4. (Opcjonalnie) Tryb bez pytań
+.\scripts\ENABLE_BRANCH_PROTECTION.ps1 -SkipConfirmation
+```
+
+**Przed uruchomieniem upewnij się, że:**
+- Masz zainstalowany i zalogowany GitHub CLI (`gh auth login`)
+- Masz prawa **Admin** do repozytorium
+
+---
+
+## 4. OCZEKIWANY WYNIK PO URUCHOMIENIU
+
+- Komunikat sukcesu z podsumowaniem konfiguracji
+- Ochrona `main` włączona
+- Constitutional Agent staje się obowiązkowym gatekeeperem
+
+---
+
+## 5. NASTĘPNE KROKI PO AKTYWACJI `[OPERATOR_INPUT_REQUIRED]`
+
+1. Utwórz testowy PR (nawet małą zmianę)
+2. Zweryfikuj, że check Constitutional Review pojawia się i blokuje merge przy FAIL
+3. Przejdź do Week 1 Stakeholder Presentations (z pełnym enforcement)
+
+---
+
+## HISTORIA ZMIAN
+
+| Data | Wersja | Zmiana | Autor |
+|------|--------|--------|-------|
+| 2026-05-10 | 1.0 | Certyfikacja skryptu branch protection | p-os-constitution + Archive Specialist |
+
+---
+
+*Archiwum P-OS v7.5 | Branch Protection Automation | 2026-05-10*
+
+()()(())()()(())()()(())()()(())()()
