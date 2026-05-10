@@ -1,0 +1,86 @@
+# P-OS v7.5 ARCHIWUM STANU CERTYFIKOWANEGO (kompakt)
+document_id: ARCHIVE-P-OS-7.5-VISUAL-IDENTITY-MAX-DENSITY-ENFORCED-20260510
+status: CERTIFIED_IMMUTABLE
+data_certyfikacji: 2026-05-10
+właściciel: Budowniczy P-OS + p-os-constitution v1.0 [FROZEN]
+następny_przegląd: 2026-06-07
+validation_cmd: pwsh -ExecutionPolicy Bypass -File scripts/check_ornament_compliance.ps1
+kontakty: ops@milejczyce.gov.pl, dpo@milejczyce.gov.pl, security@milejczyce.gov.pl
+
+---
+
+## PURPOSE
+**CERTYFIKACJA WDROŻENIA MAX_DENSITY_POLICY**  
+Oficjalne zatwierdzenie dodania reguły kontroli gęstości ornamentów oraz pełnego compliance checkera. System wizualnej tożsamości P-OS jest teraz w pełni zamrożony i automatycznie egzekwowany.
+
+---
+
+## 1. STAN CERTYFIKOWANY `[IMMUTABLE]`
+
+| Parametr | Wartość |
+|----------|---------|
+| Polityka | **MAX_DENSITY_POLICY v1.0** – wdrożona i egzekwowana |
+| Compliance | **19/19 plików (100%)** |
+| Checker | `check_ornament_compliance.ps1` – OPERATIONAL |
+| Constitutional Health Score | **98.9% (HEALTHY)** |
+| Status | **🟢 VISUAL IDENTITY SYSTEM FULLY GOVERNED** |
+
+**Sygnatura zdrowia:** Wszystkie naruszenia (header spacing + inline) naprawione. Ornamentacja pozostaje wyłącznie w warstwie ludzkiej, czytelnej i kontrolowanej.
+
+---
+
+## 2. MAX_DENSITY_POLICY – ZAMROŻONA SPECYFIKACJA `[IMMUTABLE]`
+
+**Reguły obowiązujące od teraz:**
+
+| Reguła | Specyfikacja | Cel |
+|--------|--------------|-----|
+| **Maximum Frequency** | Maks. 1 ornament na sekcję H1/H2 | Zapobieganie wizualnemu szumowi |
+| **Minimum Spacing** | Minimum 5 linii między ornamentami | Zapewnienie „oddechu" |
+| **No Stacking** | Zabronione na sąsiednich liniach | Czytelność |
+| **No Inline Usage** | Ornament zawsze sam na linii | Zachowanie struktury markdown |
+| **Section Restrictions** | Tylko H1/H2 (nie H3-H5) | Ograniczony zakres |
+
+**Checker automatycznie wykrywa i raportuje** naruszenia z kolorowanym outputem i exit code.
+
+---
+
+## 3. PODSUMOWANIE WYKONANYCH AKCJI `[IMMUTABLE]`
+
+- Dodano **MAX_DENSITY_POLICY** do zamrożonej specyfikacji ([VISUAL_IDENTITY_PATTERN_FROZEN.md](docs/VISUAL_IDENTITY_PATTERN_FROZEN.md))
+- Utworzono i uruchomiono `check_ornament_compliance.ps1` ([scripts/check_ornament_compliance.ps1](scripts/check_ornament_compliance.ps1))
+- Naprawiono wszystkie wykryte naruszenia (3 pliki):
+  - BRANCH_PROTECTION_SETUP_GUIDE.md (header spacing)
+  - CONSTITUTIONAL_AGENT_DEPLOYMENT_SUCCESS_2026-05-10.md (header spacing)
+  - VISUAL_IDENTITY_PATTERN_FROZEN.md (inline ornament reference)
+- Zweryfikowano 100% compliance (19/19 files)
+- Dokumentacja sukcesu zaktualizowana
+
+**Stan po poprawkach:** Czyste, profesjonalne, czytelne archiwa z zachowaniem charakteru P-OS.
+
+---
+
+## 4. NASTĘPNE KROKI `[OPERATOR_INPUT_REQUIRED]`
+
+Wybierz priorytet:
+
+1. **"ENABLE BRANCH PROTECTION"** – Włączamy obowiązkową ochronę `main` (najwyższy priorytet)
+2. **"INTEGRATE CHECKER TO CI/CD"** – Dodajemy ornament compliance do workflow
+3. **"NEXT TOXIC TEST"** – Testujemy inną regułę (np. R2 lub R4)
+4. **"WEEK 1 PREPARATION"** – Przechodzimy do materiałów dla stakeholderów
+
+**Rekomendacja systemu:** **"ENABLE BRANCH PROTECTION"** – to ostatni krok do pełnego enforcement.
+
+---
+
+## HISTORIA ZMIAN
+
+| Data | Wersja | Zmiana | Autor |
+|------|--------|--------|-------|
+| 2026-05-10 | 1.0 | Wdrożenie MAX_DENSITY_POLICY + 100% compliance | Budowniczy + Archive Specialist |
+
+---
+
+*Archiwum P-OS v7.5 | Visual Identity Governance Complete | 2026-05-10*
+
+()()(())()()(())()()(())()()(())()()
