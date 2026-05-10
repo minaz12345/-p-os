@@ -38,7 +38,7 @@ jobs:
         $violations = @()
         $warnings = @()
         $checksPassed = 0
-        $checksTotal = 7
+        $checksTotal = 8  # R1a + R1b + R2-R7
         
         # Create initial report immediately
         $initialReport = "# Constitutional Review Report - IN PROGRESS`n"
@@ -50,7 +50,7 @@ jobs:
           Write-Host "Starting 7 constitutional checks..." -ForegroundColor Cyan
           Write-Host ""
         
-        # CHECK 1: R1 - Schema Drift Detection
+        # CHECK 1: R1 - Schema Drift Detection + Document Immutability
         Write-Host "[R1] Checking schema drift..." -ForegroundColor Yellow
         try {
           # Exclude backup directories - only look for schema migration SQL files
@@ -68,11 +68,45 @@ jobs:
               Write-Host "  ✅ PASS" -ForegroundColor Green
             }
           } else {
-            $checksPassed++
             Write-Host "  ✅ PASS (no SQL changes)" -ForegroundColor Green
           }
         } catch {
-          $warnings += "R1: Exception during check"
+          $warnings += "R1-SQL: Exception during check"
+          Write-Host "  ⚠️ WARNING" -ForegroundColor Yellow
+        }
+        
+        # R1b - Document Immutability Check
+        Write-Host "[R1b] Checking document immutability..." -ForegroundColor Yellow
+        try {
+          $mdFiles = Get-ChildItem -Path . -Filter "*.md" -Recurse -ErrorAction SilentlyContinue | Where-Object { $_.FullName -notmatch 'node_modules|__pycache__|.git' }
+          $immutabilityViolations = 0
+          foreach ($file in $mdFiles) {
+            $content = Get-Content $file.FullName -Raw -ErrorAction SilentlyContinue
+            if ($content) {
+              # Check for modified immutable sections
+              if ($content -match '\[MODIFIED_WITHOUT_VALIDATION\]') {
+                $immutabilityViolations++
+                $violations += "R1: Immutable section modified without validation in $($file.Name)"
+                Write-Host "  ❌ Found violation in: $($file.Name)" -ForegroundColor Red
+              }
+              # Check for tampered CERTIFIED_IMMUTABLE markers
+              elseif ($content -match 'status:\s*MODIFIED' -and $content -match 'CERTIFIED_IMMUTABLE') {
+                $immutabilityViolations++
+                $violations += "R1: Status mismatch in certified document $($file.Name)"
+                Write-Host "  ❌ Status mismatch in: $($file.Name)" -ForegroundColor Red
+              }
+            }
+          }
+          
+          if ($immutabilityViolations -gt 0) {
+            $verdict = "FAIL"
+            Write-Host "  ❌ FAIL - $immutabilityViolations immutability violation(s) detected" -ForegroundColor Red
+          } else {
+            $checksPassed++
+            Write-Host "  ✅ PASS - No immutability violations" -ForegroundColor Green
+          }
+        } catch {
+          $warnings += "R1b: Exception during immutability check"
           Write-Host "  ⚠️ WARNING" -ForegroundColor Yellow
         }
         
