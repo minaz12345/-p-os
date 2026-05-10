@@ -152,12 +152,15 @@ jobs:
         Write-Host "[R6] Checking documentation..." -ForegroundColor Yellow
         try {
           if (Test-Path "scripts/validate_docs.py") {
+            Write-Host "Running validate_docs.py..."
             python scripts/validate_docs.py docs 2>&1 | Out-Null
-            if ($LASTEXITCODE -eq 0) {
+            $pyExitCode = $LASTEXITCODE
+            Write-Host "Python exit code: $pyExitCode"
+            if ($pyExitCode -eq 0) {
               $checksPassed++
               Write-Host "  ✅ PASS" -ForegroundColor Green
             } else {
-              $warnings += "R6: Documentation validation issues"
+              $warnings += "R6: Documentation validation issues (exit code $pyExitCode)"
               Write-Host "  ⚠️ WARNING" -ForegroundColor Yellow
             }
           } else {
