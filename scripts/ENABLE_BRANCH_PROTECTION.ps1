@@ -204,9 +204,17 @@ function Invoke-EnableProtection {
     
     try {
         Write-Host "Sending API request to GitHub... " -NoNewline
+        
+        # Write payload to temp file for API call
+        $tempFile = [System.IO.Path]::GetTempFileName()
+        $payload | Out-File $tempFile -Encoding UTF8 -NoNewline
+        
         $result = gh api repos/$Repo/branches/$Branch/protection `
             --method PUT `
-            --input - <<< $payload 2>&1
+            --input $tempFile 2>&1
+        
+        # Clean up temp file
+        Remove-Item $tempFile -Force -ErrorAction SilentlyContinue
         
         if ($LASTEXITCODE -eq 0) {
             Write-Success "Branch protection enabled successfully"
@@ -218,6 +226,10 @@ function Invoke-EnableProtection {
         }
     } catch {
         Write-Error-Custom "Exception: $_"
+        # Clean up temp file on error
+        if (Test-Path $tempFile) {
+            Remove-Item $tempFile -Force -ErrorAction SilentlyContinue
+        }
         return $false
     }
 }
