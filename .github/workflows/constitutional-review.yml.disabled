@@ -1,0 +1,487 @@
+name: Constitutional Review
+
+on:
+  pull_request:
+    branches: [main, release/*]
+    types: [opened, synchronize, reopened]
+  push:
+    branches: [main]
+    paths:
+      - '**.py'
+      - '**.sql'
+      - '**.yaml'
+      - '**.yml'
+      - '.github/workflows/**'
+
+jobs:
+  constitutional-review:
+    name: 🏛️ Constitutional Compliance Check
+    runs-on: windows-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0  # Full history for drift detection
+    
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        if (Test-Path requirements.txt) { pip install -r requirements.txt }
+    
+    - name: Detect changed files
+      id: changes
+      run: |
+        # Get list of changed files (handle both PR and push events)
+        if ($env:GITHUB_EVENT_NAME -eq 'pull_request') {
+          $baseSha = '${{ github.event.pull_request.base.sha }}'
+          $headSha = '${{ github.sha }}'
+          Write-Host "PR event detected: comparing $baseSha to $headSha"
+        } else {
+          # For push events, compare with previous commit
+          $headSha = '${{ github.sha }}'
+          $baseSha = '${{ github.event.before }}'
+          
+          # Handle edge case: first commit or invalid before SHA
+          if ($baseSha -eq '0000000000000000000000000000000000000000' -or [string]::IsNullOrEmpty($baseSha)) {
+            Write-Host "First commit or invalid base SHA detected. Using HEAD~1 as fallback."
+            $baseSha = "HEAD~1"
+          }
+          
+          Write-Host "Push event detected: comparing $baseSha to $headSha"
+        }
+        
+        # Execute git diff with error handling
+        try {
+          $changedFiles = git diff --name-only $baseSha $headSha 2>&1
+          if ($LASTEXITCODE -ne 0) {
+            Write-Host "WARNING: git diff failed with exit code $LASTEXITCODE"
+            Write-Host "Error output: $changedFiles"
+            Write-Host "Falling back to listing all tracked files..."
+            $changedFiles = git ls-files
+          }
+        } catch {
+          Write-Host "ERROR: Exception during git diff: $_"
+          Write-Host "Falling back to listing all tracked files..."
+          $changedFiles = git ls-files
+        }
+        
+        # Ensure changedFiles is an array
+        if ($null -eq $changedFiles) {
+          $changedFiles = @()
+        } elseif ($changedFiles -is [string]) {
+          $changedFiles = $changedFiles -split "`n" | Where-Object { $_ -ne '' }
+        }
+        
+        # Categorize changes
+        $schemaChanges = $changedFiles | Where-Object { $_ -match '\.sql$|core/db/|migration' }
+        $codeChanges = $changedFiles | Where-Object { $_ -match '\.py$|core/|app/' }
+        $configChanges = $changedFiles | Where-Object { $_ -match '\.yaml$|\.yml$|\.env|deployment/' }
+        $docChanges = $changedFiles | Where-Object { $_ -match '\.md$|docs/' }
+        $w11Changes = $changedFiles | Where-Object { $_ -match 'w11|constraint|flag|engine' }
+        
+        # Output change categories
+        echo "schema_changes=$($schemaChanges -join ',')" >> $env:GITHUB_OUTPUT
+        echo "code_changes=$($codeChanges -join ',')" >> $env:GITHUB_OUTPUT
+        echo "config_changes=$($configChanges -join ',')" >> $env:GITHUB_OUTPUT
+        echo "doc_changes=$($docChanges -join ',')" >> $env:GITHUB_OUTPUT
+        echo "w11_changes=$($w11Changes -join ',')" >> $env:GITHUB_OUTPUT
+        
+        # Determine risk level
+        if ($w11Changes.Count -gt 0 -or $schemaChanges.Count -gt 0) {
+          echo "risk_level=CRITICAL" >> $env:GITHUB_OUTPUT
+        } elseif ($codeChanges.Count -gt 0) {
+          echo "risk_level=HIGH" >> $env:GITHUB_OUTPUT
+        } elseif ($configChanges.Count -gt 0) {
+          echo "risk_level=MEDIUM" >> $env:GITHUB_OUTPUT
+        } else {
+          echo "risk_level=LOW" >> $env:GITHUB_OUTPUT
+        }
+        
+        Write-Host "Risk Level: $([Environment]::GetEnvironmentVariable('risk_level', 'Process'))"
+        Write-Host "Changed Files:"
+        $changedFiles | ForEach-Object { Write-Host "  - $_" }
+    
+    - name: Run constitutional checks
+      run: |
+        $ErrorActionPreference = "Continue"
+        
+        # Create initial report file immediately (will be overwritten later)
+        $initialReport = "# Constitutional Review Report - IN PROGRESS`n`n**Status:** Running...`n"
+        $initialReport | Out-File -FilePath "constitutional_review_report.md" -Encoding UTF8
+        Write-Host "Initial report file created"
+        
+        Write-Host "=== CONSTITUTIONAL REVIEW STARTED ==="
+        Write-Host "Event Type: $env:GITHUB_EVENT_NAME"
+        if ($env:GITHUB_EVENT_NAME -eq 'pull_request') {
+          Write-Host "PR: #${{ github.event.pull_request.number }}"
+        } else {
+          Write-Host "Push event to branch: ${{ github.ref_name }}"
+        }
+        Write-Host "Risk Level: ${{ steps.changes.outputs.risk_level }}"
+        Write-Host "Commit: ${{ github.sha }}"
+        Write-Host "Runner OS: $([Environment]::OSVersion.VersionString)"
+        Write-Host "Working Directory: $(Get-Location)"
+        Write-Host ""
+        
+        try {
+          # Initialize verdict
+          $verdict = "PASS"
+          $violations = @()
+          $warnings = @()
+          
+          Write-Host "Starting constitutional checks..." -ForegroundColor Cyan
+        
+        # Check 1: Schema Drift Detection (R1 Immutability)
+        if ("${{ steps.changes.outputs.schema_changes }}" -ne "") {
+          Write-Host "[CHECK 1] Schema Drift Detection..."
+          
+          # Verify migration document exists
+          $migrationDocs = Get-ChildItem -Path "docs/migrations/" -Filter "*.md" -ErrorAction SilentlyContinue
+          $recentMigrations = $migrationDocs | Where-Object { $_.LastWriteTime -gt (Get-Date).AddDays(-7) }
+          
+          if ($recentMigrations.Count -eq 0) {
+            $verdict = "FAIL"
+            $violations += "R1 VIOLATION: Schema changes detected without migration document in docs/migrations/"
+            Write-Host "  ❌ FAIL: No migration document found" -ForegroundColor Red
+          } else {
+            Write-Host "  ✅ PASS: Migration document exists" -ForegroundColor Green
+          }
+          
+          # Check for rollback procedure
+          $hasRollback = $false
+          foreach ($doc in $recentMigrations) {
+            $content = Get-Content $doc.FullName -Raw
+            if ($content -match "rollback|ROLLBACK") {
+              $hasRollback = $true
+              break
+            }
+          }
+          
+          if (-not $hasRollback) {
+            $verdict = "FAIL"
+            $violations += "R1 VIOLATION: Schema migration missing rollback procedure"
+            Write-Host "  ❌ FAIL: No rollback procedure documented" -ForegroundColor Red
+          } else {
+            Write-Host "  ✅ PASS: Rollback procedure documented" -ForegroundColor Green
+          }
+        }
+        
+        # Check 2: W11 Enforcement Integrity (R4 Boundaries)
+        if ("${{ steps.changes.outputs.w11_changes }}" -ne "") {
+          Write-Host "[CHECK 2] W11 Enforcement Integrity..."
+          
+          # Verify W11 contract file exists and is valid YAML
+          $contractFile = ".lingma/contracts/w11_enforcement_contract.yaml"
+          if (Test-Path $contractFile) {
+            Write-Host "  ✅ PASS: W11 enforcement contract exists" -ForegroundColor Green
+          } else {
+            $verdict = "FAIL"
+            $violations += "R4 VIOLATION: W11 enforcement contract missing"
+            Write-Host "  ❌ FAIL: W11 contract file not found" -ForegroundColor Red
+          }
+          
+          # Check for bypass patterns in code
+          $bypassPatterns = @(
+            "#.*w11.*skip",
+            "#.*w11.*bypass",
+            "#.*constraint.*disable",
+            "w11_guard\..*#\s*disabled"
+          )
+          
+          $changedPythonFiles = "${{ steps.changes.outputs.code_changes }}".Split(',') | Where-Object { $_ -ne "" }
+          foreach ($file in $changedPythonFiles) {
+            if (Test-Path $file) {
+              $content = Get-Content $file -Raw
+              foreach ($pattern in $bypassPatterns) {
+                if ($content -match $pattern) {
+                  $verdict = "FAIL"
+                  $violations += "R4 VIOLATION: W11 bypass pattern detected in $file"
+                  Write-Host "  ❌ FAIL: W11 bypass pattern found in $file" -ForegroundColor Red
+                }
+              }
+            }
+          }
+          
+          if ($verdict -eq "PASS") {
+            Write-Host "  ✅ PASS: No W11 bypass patterns detected" -ForegroundColor Green
+          }
+        }
+        
+        # Check 3: Determinism Verification (R2 Mandate)
+        if ("${{ steps.changes.outputs.code_changes }}" -ne "") {
+          Write-Host "[CHECK 3] Determinism Verification..."
+          
+          $nonDeterministicPatterns = @(
+            "random\.uniform\(",
+            "random\.randint\(",
+            "random\.choice\(",
+            "time\.time\(\)",
+            "datetime\.now\(\)"
+          )
+          
+          $changedPythonFiles = "${{ steps.changes.outputs.code_changes }}".Split(',') | Where-Object { $_ -ne "" }
+          $determinismViolations = @()
+          
+          foreach ($file in $changedPythonFiles) {
+            if (Test-Path $file -And $file -notmatch "test_|mock_") {
+              $content = Get-Content $file -Raw
+              foreach ($pattern in $nonDeterministicPatterns) {
+                if ($content -match $pattern) {
+                  # Check if it's seeded or deterministic
+                  if ($content -notmatch "random\.seed\(|hash\(") {
+                    $determinismViolations += "$file contains non-deterministic pattern: $pattern"
+                  }
+                }
+              }
+            }
+          }
+          
+          if ($determinismViolations.Count -gt 0) {
+            $verdict = "CONDITIONAL_PASS"
+            $warnings += "R2 WARNING: Potential non-deterministic code detected. Verify hash-based determinism or fixed seeds."
+            Write-Host "  ⚠️ WARNING: Non-deterministic patterns found" -ForegroundColor Yellow
+            $determinismViolations | ForEach-Object { Write-Host "    - $_" -ForegroundColor Yellow }
+          } else {
+            Write-Host "  ✅ PASS: No non-deterministic patterns detected" -ForegroundColor Green
+          }
+        }
+        
+        # Check 4: Audit Trail Completeness (R3 Continuity)
+        if ("${{ steps.changes.outputs.code_changes }}" -ne "") {
+          Write-Host "[CHECK 4] Audit Trail Completeness..."
+          
+          $changedPythonFiles = "${{ steps.changes.outputs.code_changes }}".Split(',') | Where-Object { $_ -ne "" }
+          $missingAuditEvents = @()
+          
+          foreach ($file in $changedPythonFiles) {
+            if (Test-Path $file -And $file -match "core/engine/|app/api/") {
+              $content = Get-Content $file -Raw
+              
+              # Check for state-changing operations without audit emission
+              if ($content -match "(INSERT|UPDATE|DELETE|mutation)" -And $content -notmatch "emit_audit|audit_event|event_bus") {
+                $missingAuditEvents += "$file has state changes without audit emission"
+              }
+            }
+          }
+          
+          if ($missingAuditEvents.Count -gt 0) {
+            $verdict = "CONDITIONAL_PASS"
+            $warnings += "R3 WARNING: State-changing operations detected without audit event emission"
+            Write-Host "  ⚠️ WARNING: Missing audit events" -ForegroundColor Yellow
+            $missingAuditEvents | ForEach-Object { Write-Host "    - $_" -ForegroundColor Yellow }
+          } else {
+            Write-Host "  ✅ PASS: Audit trail appears complete" -ForegroundColor Green
+          }
+        }
+        
+        # Check 5: Documentation Standards (R6 Compliance)
+        if ("${{ steps.changes.outputs.doc_changes }}" -ne "") {
+          Write-Host "[CHECK 5] Documentation Standards..."
+          
+          # Run documentation validation script
+          if (Test-Path "scripts/validate_docs.py") {
+            try {
+              Write-Host "Running validate_docs.py..."
+              $validationResult = python scripts/validate_docs.py docs 2>&1
+              Write-Host "Python exit code: $LASTEXITCODE"
+              
+              if ($LASTEXITCODE -eq 0) {
+                Write-Host "  ✅ PASS: Documentation meets Executable Markdown standards" -ForegroundColor Green
+              } else {
+                $verdict = "CONDITIONAL_PASS"
+                $warnings += "R6 WARNING: Documentation validation issues detected"
+                Write-Host "  ⚠️ WARNING: Documentation validation failed" -ForegroundColor Yellow
+                Write-Host $validationResult -ForegroundColor Yellow
+              }
+            } catch {
+              Write-Host "  ⚠️ WARNING: Exception running validate_docs.py: $_" -ForegroundColor Yellow
+              $warnings += "R6 WARNING: Exception during documentation validation"
+            }
+          } else {
+            Write-Host "  ℹ️ INFO: validate_docs.py not found, skipping R6 check" -ForegroundColor Cyan
+          }
+        } else {
+          Write-Host "[CHECK 5] SKIPPED - No documentation changes detected"
+        }
+        
+        # Check 6: Hash Chain Integrity (R5 Replay)
+        Write-Host "[CHECK 6] Hash Chain Integrity..."
+        
+        # Verify hash chain verification queries exist
+        if (Test-Path "docs/drift_detection/schema_drift.sql") {
+          $driftSql = Get-Content "docs/drift_detection/schema_drift.sql" -Raw
+          if ($driftSql -match "CHAIN_BROKEN|previous_hash|payload_hash") {
+            Write-Host "  ✅ PASS: Hash chain verification queries present" -ForegroundColor Green
+          } else {
+            $warnings += "R5 WARNING: Hash chain verification may be incomplete"
+            Write-Host "  ⚠️ WARNING: Hash chain queries need review" -ForegroundColor Yellow
+          }
+        } else {
+          $warnings += "R5 WARNING: Drift detection SQL not found"
+          Write-Host "  ⚠️ WARNING: schema_drift.sql not found" -ForegroundColor Yellow
+        }
+        
+        # Generate final verdict
+        Write-Host ""
+        Write-Host "=== CONSTITUTIONAL VERDICT ===" -ForegroundColor Cyan
+        
+        $shouldExitWithError = $false
+        
+        if ($verdict -eq "FAIL") {
+          Write-Host "VERDICT: 🔴 FAIL" -ForegroundColor Red
+          Write-Host ""
+          Write-Host "Constitutional Violations:" -ForegroundColor Red
+          $violations | ForEach-Object { Write-Host "  ❌ $_" -ForegroundColor Red }
+          Write-Host ""
+          Write-Host "RECOMMENDATION: Reject PR. Address all violations before resubmission." -ForegroundColor Red
+          $shouldExitWithError = $true
+        } elseif ($verdict -eq "CONDITIONAL_PASS") {
+          Write-Host "VERDICT: 🟡 CONDITIONAL_PASS" -ForegroundColor Yellow
+          Write-Host ""
+          if ($warnings.Count -gt 0) {
+            Write-Host "Warnings to Address:" -ForegroundColor Yellow
+            $warnings | ForEach-Object { Write-Host "  ⚠️ $_" -ForegroundColor Yellow }
+            Write-Host ""
+          }
+          Write-Host "RECOMMENDATION: Approve with conditions. Address warnings before merge." -ForegroundColor Yellow
+        } else {
+          Write-Host "VERDICT: 🟢 PASS" -ForegroundColor Green
+          Write-Host ""
+          Write-Host "All constitutional checks passed. No violations detected." -ForegroundColor Green
+          Write-Host ""
+          Write-Host "RECOMMENDATION: Approve for merge." -ForegroundColor Green
+        }
+        
+        # Save verdict to artifact
+        if ($env:GITHUB_EVENT_NAME -eq 'pull_request') {
+          $prRef = "#${{ github.event.pull_request.number }}"
+        } else {
+          $prRef = "Push to ${{ github.ref_name }}"
+        }
+        
+        # Build report line by line to avoid YAML parsing issues
+        $reportLines = @()
+        $reportLines += "# Constitutional Review Report"
+        $reportLines += ""
+        $reportLines += "**Reference:** $prRef"
+        $reportLines += "**Date:** $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')"
+        $reportLines += "**Risk Level:** ${{ steps.changes.outputs.risk_level }}"
+        $reportLines += "**Verdict:** $verdict"
+        $reportLines += ""
+        $reportLines += "## Violations"
+        if ($violations.Count -gt 0) {
+          $violations | ForEach-Object { $reportLines += "- ❌ $_" }
+        } else {
+          $reportLines += "- None"
+        }
+        $reportLines += ""
+        $reportLines += "## Warnings"
+        if ($warnings.Count -gt 0) {
+          $warnings | ForEach-Object { $reportLines += "- ⚠️ $_" }
+        } else {
+          $reportLines += "- None"
+        }
+        $reportLines += ""
+        $reportLines += "## Constitutional Rules Checked"
+        $r1Status = if (($violations -match "R1").Count -eq 0) { "✅ PASS" } else { "❌ FAIL" }
+        $r2Status = if (($warnings -match "R2").Count -eq 0) { "✅ PASS" } else { "⚠️ WARNING" }
+        $r3Status = if (($warnings -match "R3").Count -eq 0) { "✅ PASS" } else { "⚠️ WARNING" }
+        $r4Status = if (($violations -match "R4").Count -eq 0) { "✅ PASS" } else { "❌ FAIL" }
+        $r5Status = if (($warnings -match "R5").Count -eq 0) { "✅ PASS" } else { "⚠️ WARNING" }
+        $r6Status = if (($warnings -match "R6").Count -eq 0) { "✅ PASS" } else { "⚠️ WARNING" }
+        $reportLines += "- R1 Immutability First: $r1Status"
+        $reportLines += "- R2 Determinism Mandate: $r2Status"
+        $reportLines += "- R3 Forensic Continuity: $r3Status"
+        $reportLines += "- R4 W11 Boundaries: $r4Status"
+        $reportLines += "- R5 Replay Integrity: $r5Status"
+        $reportLines += "- R6 Executable Markdown: $r6Status"
+        $reportLines += ""
+        $reportLines += "## Recommendation"
+        if ($verdict -eq "FAIL") {
+          $reportLines += "Reject PR. Fix violations before resubmission."
+        } elseif ($verdict -eq "CONDITIONAL_PASS") {
+          $reportLines += "Approve with conditions. Address warnings before merge."
+        } else {
+          $reportLines += "Approve for merge."
+        }
+        
+        $verdictReport = $reportLines -join "`n"
+        $verdictReport | Out-File -FilePath "constitutional_review_report.md" -Encoding UTF8
+        Write-Host ""
+        Write-Host "Report saved to: constitutional_review_report.md"
+        
+        # Exit with error code if verdict is FAIL (AFTER report is created)
+        if ($shouldExitWithError) {
+          Write-Host ""
+          Write-Host "Exiting with error code 1 due to FAIL verdict." -ForegroundColor Red
+          exit 1
+        }
+        
+        } catch {
+          Write-Host ""
+          Write-Host "=== CRITICAL ERROR IN CONSTITUTIONAL CHECKS ===" -ForegroundColor Red
+          Write-Host "Error: $_" -ForegroundColor Red
+          Write-Host ""
+          Write-Host "Stack Trace:" -ForegroundColor Red
+          Write-Host $_.ScriptStackTrace -ForegroundColor Red
+          Write-Host ""
+          Write-Host "Setting verdict to FAIL due to execution error." -ForegroundColor Red
+          
+          # Create error report line by line
+          $errorLines = @()
+          $errorLines += "# Constitutional Review Report - EXECUTION ERROR"
+          $errorLines += ""
+          if ($env:GITHUB_EVENT_NAME -eq 'pull_request') {
+            $errorLines += "**Reference:** #${{ github.event.pull_request.number }}"
+          } else {
+            $errorLines += "**Reference:** Push to ${{ github.ref_name }}"
+          }
+          $errorLines += "**Date:** $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')"
+          $errorLines += "**Verdict:** 🔴 FAIL (Execution Error)"
+          $errorLines += ""
+          $errorLines += "## Error Details"
+          $errorLines += "```"
+          $errorLines += "$_"
+          $errorLines += "```"
+          $errorLines += ""
+          $errorLines += "## Stack Trace"
+          $errorLines += "```"
+          $errorLines += $_.ScriptStackTrace
+          $errorLines += "```"
+          $errorLines += ""
+          $errorLines += "## Recommendation"
+          $errorLines += "Workflow execution failed. Check workflow logs for details. Fix the error and re-run."
+          
+          $errorReport = $errorLines -join "`n"
+          $errorReport | Out-File -FilePath "constitutional_review_report.md" -Encoding UTF8
+          exit 1
+        }
+    
+    - name: Upload constitutional review report
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: constitutional-review-report
+        path: constitutional_review_report.md
+    
+    - name: Post verdict comment to PR
+      if: always()
+      uses: actions/github-script@v7
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        script: |
+          const fs = require('fs');
+          const report = fs.readFileSync('constitutional_review_report.md', 'utf8');
+          
+          github.rest.issues.createComment({
+            issue_number: context.issue.number,
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            body: report
+          });
