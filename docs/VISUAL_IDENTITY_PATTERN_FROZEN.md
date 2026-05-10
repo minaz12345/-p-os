@@ -165,7 +165,7 @@ done
 - **Version:** v1.0 (no further iterations planned)
 
 ### What Cannot Change:
-- ❌ Pattern sequence (must remain exactly `()()(())()()(())()()(())()()(())()()`)
+- ❌ Pattern sequence (must remain exactly as defined in Section 1)
 - ❌ Character composition (parentheses only)
 - ❌ Length (40 characters fixed)
 - ❌ Placement rules (headers, dividers, footers only)

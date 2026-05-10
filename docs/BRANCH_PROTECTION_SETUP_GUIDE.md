@@ -1,5 +1,10 @@
 ()()(())()()(())()()(())()()(())()()
+
 # Branch Protection Setup Guide - Constitutional Agent
+
+**Document Classification:** Governance Directive  
+**Enforcement Level:** Mandatory
+
 ()()(())()()(())()()(())()()(())()()
 
 **Purpose:** Enforce mandatory constitutional compliance checks before merging to main  
@@ -196,7 +201,8 @@ If you encounter issues during setup:
 
 **Status:** READY FOR EXECUTION  
 **Estimated Time:** 5-10 minutes  
-**Risk Level:** LOW (reversible - can edit/delete rule anytime)  
+**Risk Level:** LOW (reversible - can edit/delete rule anytime)
+
 ()()(())()()(())()()(())()()(())()()
 
 **Budowniczy, once this is configured, your Constitutional Agent becomes the GATEKEEPER of the main branch!** 🛡️🏛️
