@@ -46,10 +46,37 @@ jobs:
           # For push events, compare with previous commit
           $headSha = '${{ github.sha }}'
           $baseSha = '${{ github.event.before }}'
+          
+          # Handle edge case: first commit or invalid before SHA
+          if ($baseSha -eq '0000000000000000000000000000000000000000' -or [string]::IsNullOrEmpty($baseSha)) {
+            Write-Host "First commit or invalid base SHA detected. Using HEAD~1 as fallback."
+            $baseSha = "HEAD~1"
+          }
+          
           Write-Host "Push event detected: comparing $baseSha to $headSha"
         }
         
-        $changedFiles = git diff --name-only $baseSha $headSha
+        # Execute git diff with error handling
+        try {
+          $changedFiles = git diff --name-only $baseSha $headSha 2>&1
+          if ($LASTEXITCODE -ne 0) {
+            Write-Host "WARNING: git diff failed with exit code $LASTEXITCODE"
+            Write-Host "Error output: $changedFiles"
+            Write-Host "Falling back to listing all tracked files..."
+            $changedFiles = git ls-files
+          }
+        } catch {
+          Write-Host "ERROR: Exception during git diff: $_"
+          Write-Host "Falling back to listing all tracked files..."
+          $changedFiles = git ls-files
+        }
+        
+        # Ensure changedFiles is an array
+        if ($null -eq $changedFiles) {
+          $changedFiles = @()
+        } elseif ($changedFiles -is [string]) {
+          $changedFiles = $changedFiles -split "`n" | Where-Object { $_ -ne '' }
+        }
         
         # Categorize changes
         $schemaChanges = $changedFiles | Where-Object { $_ -match '\.sql$|core/db/|migration' }
@@ -82,19 +109,27 @@ jobs:
     
     - name: Run constitutional checks
       run: |
+        $ErrorActionPreference = "Continue"
+        
         Write-Host "=== CONSTITUTIONAL REVIEW STARTED ==="
+        Write-Host "Event Type: $env:GITHUB_EVENT_NAME"
         if ($env:GITHUB_EVENT_NAME -eq 'pull_request') {
           Write-Host "PR: #${{ github.event.pull_request.number }}"
         } else {
           Write-Host "Push event to branch: ${{ github.ref_name }}"
         }
         Write-Host "Risk Level: ${{ steps.changes.outputs.risk_level }}"
+        Write-Host "Commit: ${{ github.sha }}"
+        Write-Host "Runner OS: $([Environment]::OSVersion.VersionString)"
         Write-Host ""
         
-        # Initialize verdict
-        $verdict = "PASS"
-        $violations = @()
-        $warnings = @()
+        try {
+          # Initialize verdict
+          $verdict = "PASS"
+          $violations = @()
+          $warnings = @()
+          
+          Write-Host "Starting constitutional checks..." -ForegroundColor Cyan
         
         # Check 1: Schema Drift Detection (R1 Immutability)
         if ("${{ steps.changes.outputs.schema_changes }}" -ne "") {
@@ -342,6 +377,41 @@ $(if ($verdict -eq "FAIL") { "Reject PR. Fix violations before resubmission." } 
         $verdictReport | Out-File -FilePath "constitutional_review_report.md" -Encoding UTF8
         Write-Host ""
         Write-Host "Report saved to: constitutional_review_report.md"
+        
+        } catch {
+          Write-Host ""
+          Write-Host "=== CRITICAL ERROR IN CONSTITUTIONAL CHECKS ===" -ForegroundColor Red
+          Write-Host "Error: $_" -ForegroundColor Red
+          Write-Host ""
+          Write-Host "Stack Trace:" -ForegroundColor Red
+          Write-Host $_.ScriptStackTrace -ForegroundColor Red
+          Write-Host ""
+          Write-Host "Setting verdict to FAIL due to execution error." -ForegroundColor Red
+          
+          # Create error report
+          $errorReport = @"
+# Constitutional Review Report - EXECUTION ERROR
+
+**Reference:** $(if ($env:GITHUB_EVENT_NAME -eq 'pull_request') { "#${{ github.event.pull_request.number }}" } else { "Push to ${{ github.ref_name }}" })
+**Date:** $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')
+**Verdict:** 🔴 FAIL (Execution Error)
+
+## Error Details
+```
+$_
+```
+
+## Stack Trace
+```
+$_.ScriptStackTrace
+```
+
+## Recommendation
+Workflow execution failed. Check workflow logs for details. Fix the error and re-run.
+"@
+          $errorReport | Out-File -FilePath "constitutional_review_report.md" -Encoding UTF8
+          exit 1
+        }
     
     - name: Upload constitutional review report
       if: always()
