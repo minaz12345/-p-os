@@ -1,16 +1,20 @@
+()()(())()()(())()()(())()()(())()()
 # Branch Protection Setup Guide - Constitutional Agent
+()()(())()()(())()()(())()()(())()()
 
 **Purpose:** Enforce mandatory constitutional compliance checks before merging to main  
 **Date:** 2026-05-10  
 **Priority:** HIGH (Critical Security Enhancement)  
 
 ---
+()()(())()()(())()()(())()()(())()()
 
 ## 🎯 Objective
 
 Configure GitHub branch protection rules to ensure **NO pull request can merge to main** without passing the Constitutional Agent review.
 
 ---
+()()(())()()(())()()(())()()(())()()
 
 ## 📋 Step-by-Step Instructions
 
@@ -67,6 +71,7 @@ Enable the following settings (check these boxes):
 3. Confirm the rule is active (should show in branch protection rules list)
 
 ---
+()()(())()()(())()()(())()()(())()()
 
 ## ✅ Verification Steps
 
@@ -96,6 +101,7 @@ git push origin main
 4. **Expected Result:** ✅ Merge button enabled (all checks passed)
 
 ---
+()()(())()()(())()()(())()()(())()()
 
 ## 🔍 Troubleshooting
 
@@ -129,6 +135,7 @@ git push origin main
 3. Save changes
 
 ---
+()()(())()()(())()()(())()()(())()()
 
 ## 📊 Expected Behavior After Configuration
 
@@ -141,6 +148,7 @@ git push origin main
 | Force push | ✅ Possible | ❌ Blocked |
 
 ---
+()()(())()()(())()()(())()()(())()()
 
 ## 🛡️ Security Impact
 
@@ -158,6 +166,7 @@ git push origin main
 - ✅ Cryptographically verified compliance
 
 ---
+()()(())()()(())()()(())()()(())()()
 
 ## 📞 Support
 
@@ -168,6 +177,7 @@ If you encounter issues during setup:
 3. **Technical Support:** ops@milejczyce.gov.pl
 
 ---
+()()(())()()(())()()(())()()(())()()
 
 ## ✅ Completion Checklist
 
@@ -182,9 +192,11 @@ If you encounter issues during setup:
 - [ ] Documented configuration in team wiki
 
 ---
+()()(())()()(())()()(())()()(())()()
 
 **Status:** READY FOR EXECUTION  
 **Estimated Time:** 5-10 minutes  
 **Risk Level:** LOW (reversible - can edit/delete rule anytime)  
+()()(())()()(())()()(())()()(())()()
 
 **Budowniczy, once this is configured, your Constitutional Agent becomes the GATEKEEPER of the main branch!** 🛡️🏛️
