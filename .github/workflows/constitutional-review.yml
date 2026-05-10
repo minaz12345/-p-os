@@ -40,12 +40,15 @@ jobs:
         $checksPassed = 0
         $checksTotal = 7
         
-        # Create initial report
+        # Create initial report immediately
         $initialReport = "# Constitutional Review Report - IN PROGRESS`n"
         $initialReport | Out-File -FilePath "constitutional_review_report.md" -Encoding UTF8
+        Write-Host "Initial report created"
         
-        Write-Host "Starting 7 constitutional checks..." -ForegroundColor Cyan
-        Write-Host ""
+        # Wrap ALL checks in try-catch to prevent script crash
+        try {
+          Write-Host "Starting 7 constitutional checks..." -ForegroundColor Cyan
+          Write-Host ""
         
         # CHECK 1: R1 - Schema Drift Detection
         Write-Host "[R1] Checking schema drift..." -ForegroundColor Yellow
@@ -184,6 +187,15 @@ jobs:
         } catch {
           $warnings += "R7: Exception during check"
           Write-Host "  ⚠️ WARNING" -ForegroundColor Yellow
+        }
+        
+        } catch {
+          # CATCH ANY UNHANDLED EXCEPTION FROM CHECKS
+          Write-Host "" -ForegroundColor Red
+          Write-Host "CRITICAL ERROR: Unhandled exception during constitutional checks" -ForegroundColor Red
+          Write-Host "Error: $_" -ForegroundColor Red
+          $verdict = "CONDITIONAL_PASS"
+          $warnings += "CRITICAL: Script encountered unexpected error: $_"
         }
         
         Write-Host ""
