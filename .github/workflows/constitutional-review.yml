@@ -53,8 +53,11 @@ jobs:
         # CHECK 1: R1 - Schema Drift Detection
         Write-Host "[R1] Checking schema drift..." -ForegroundColor Yellow
         try {
-          $sqlFiles = Get-ChildItem -Path . -Filter "*.sql" -Recurse -ErrorAction SilentlyContinue
+          # Exclude backup directories - only look for schema migration SQL files
+          $sqlFiles = Get-ChildItem -Path . -Filter "*.sql" -Recurse -ErrorAction SilentlyContinue | Where-Object { $_.FullName -notmatch 'data[/\\]backups' }
           if ($sqlFiles.Count -gt 0) {
+            Write-Host "  Found $($sqlFiles.Count) SQL file(s):"
+            $sqlFiles | ForEach-Object { Write-Host "    - $($_.Name)" }
             $migrationDocs = Get-ChildItem -Path "docs/migrations" -Filter "*.md" -ErrorAction SilentlyContinue
             if ($migrationDocs.Count -eq 0) {
               $verdict = "FAIL"
