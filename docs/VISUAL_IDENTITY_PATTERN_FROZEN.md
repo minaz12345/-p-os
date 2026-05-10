@@ -69,6 +69,94 @@
 
 ---
 
+## 📏 Density Control Policy (MAX_DENSITY_POLICY)
+
+### Purpose
+Prevent **ornament saturation drift** that would dilute signal value and reduce cognitive ergonomics effectiveness.
+
+### Rules
+
+#### 1. Maximum Frequency
+- **Rule:** Max 1 ornament per major section
+- **Definition:** A "major section" = H1/H2 heading level (`#` or `##`)
+- **Rationale:** Prevents visual noise, maintains signal-to-noise ratio
+
+#### 2. Minimum Spacing
+- **Rule:** Min 5 lines between consecutive ornaments
+- **Enforcement:** Count blank lines + content lines between ornament markers
+- **Rationale:** Ensures visual breathing room, prevents clutter
+
+#### 3. No Stacking
+- **Rule:** Never place ornaments on adjacent lines
+- **Example (PROHIBITED):**
+  ```markdown
+  ()()(())()()(())()()(())()()(())()()
+  ()()(())()()(())()()(())()()(())()()
+  ```
+- **Rationale:** Stacking creates visual weight imbalance, reduces readability
+
+#### 4. No Inline Usage
+- **Rule:** Ornaments must be on their own line, never inline with text
+- **Example (PROHIBITED):**
+  ```markdown
+  ## Section Title ()()(())()()(())()()(())()()(())()()
+  ```
+- **Correct Usage:**
+  ```markdown
+  ()()(())()()(())()()(())()()(())()()
+  ## Section Title
+  ()()(())()()(())()()(())()()(())()()
+  ```
+- **Rationale:** Preserves markdown structure, prevents parser confusion
+
+#### 5. Section-Type Restrictions
+- **Allowed Sections:**
+  - Document title headers (H1)
+  - Major section dividers (H2)
+  - Document footer closures
+  - Ceremonial status blocks
+  
+- **Prohibited Sections:**
+  - Minor subsections (H3/H4/H5)
+  - List items or bullet points
+  - Code blocks or examples
+  - Table cells
+  - Footnotes or references
+
+### Violation Detection
+
+```bash
+# Check for stacked ornaments (violation)
+grep -A1 "()()(())" docs/*.md | grep "()()(())"
+# Should return NO results
+
+# Check for inline ornaments (violation)
+grep -E "\S.*\(\)\(\)\(\(\)\)" docs/*.md
+# Should return NO results (ornaments should be alone on line)
+
+# Check density per file
+for file in docs/*.md; do
+  count=$(grep -c "()()(())" "$file")
+  lines=$(wc -l < "$file")
+  echo "$file: $count ornaments / $lines lines"
+done
+# Manual review if ratio exceeds 1 ornament per 20 lines
+```
+
+### Current Compliance Status
+
+| Document | Ornaments | Lines | Ratio | Status |
+|----------|-----------|-------|-------|--------|
+| BRANCH_PROTECTION_SETUP_GUIDE.md | 10 | ~191 | 1:19 | ✅ HEALTHY |
+| CONSTITUTIONAL_AGENT_DEPLOYMENT_SUCCESS_2026-05-10.md | 14 | ~253 | 1:18 | ✅ HEALTHY |
+| VISUAL_IDENTITY_PATTERN_FROZEN.md | 2 | ~205 | 1:102 | ✅ MINIMAL |
+
+**Overall Saturation:** 🟢 HEALTHY (well below threshold)
+**Warning Threshold:** 1 ornament per 15 lines
+**Critical Threshold:** 1 ornament per 10 lines (requires immediate review)
+
+---
+
 ## 🔒 Frozen State Rules
 
 ### Modification Policy
@@ -142,14 +230,19 @@
 ### For Future Contributors:
 
 1. **When adding new documentation:**
-   - Apply ornament to headers and major sections
+   - Apply ornament to headers and major sections ONLY
+   - Follow MAX_DENSITY_POLICY (max 1 per H1/H2 section, min 5 lines spacing)
    - Follow existing examples in frozen documents
    - Maintain consistent spacing (blank line before/after)
+   - Verify density ratio stays above 1:20 (ornaments:lines)
 
 2. **When reviewing PRs:**
    - Verify ornament not added to code/config files
    - Check pattern matches frozen specification exactly
    - Ensure placement follows approved contexts
+   - **Check density compliance** (run violation detection commands)
+   - Reject if stacked or inline ornaments detected
+   - Reject if density exceeds warning threshold (1:15)
 
 3. **When proposing changes:**
    - Submit constitutional review request
