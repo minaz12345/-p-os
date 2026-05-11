@@ -1,0 +1,211 @@
+# P-OS v7.5 ARCHIWUM STANU CERTYFIKOWANEGO (kompakt)
+document_id: ARCHIVE-P-OS-7.5-OPERATIONAL-DIRECTIVE-QUIETNESS-SEMANTIC-FREEZE-20260511
+status: CERTIFIED_IMMUTABLE
+data_certyfikacji: 2026-05-11T18:00:00Z
+właściciel: Budowniczy P-OS + p-os-constitution v1.0 [FROZEN]
+następny_przegląd: 2026-06-10 (koniec okresu quiet operations)
+validation_cmd: python scripts/validate_docs.py --strict
+kontakty: ops@milejczyce.gov.pl, dpo@milejczyce.gov.pl, security@milejczyce.gov.pl
+
+> **ZASADA ARCHIWALNA:** Sekcje `[IMMUTABLE]` – nie edytować. `[OPERATOR_INPUT_REQUIRED]` – uzupełnić przed v8.0. Sekrety poza dokumentem.
+
+## PURPOSE
+**DYREKTYWA OPERACYJNA: CONSTITUTIONAL QUIETNESS — SEMANTIC FREEZE**  
+Oficjalne zatwierdzenie zasad operacyjnych dla okresu quiet operations. Utrzymanie v7.5 w stanie zamrożonym przy jednoczesnym przygotowaniu kandydatury architektonicznej dla v8.0 (hybrid enforcement model).
+
+---
+
+## 1. ROZKAZ OPERACYJNY `[IMMUTABLE]`
+
+### Klasyfikacja
+- **Typ:** OPERATIONAL DIRECTIVE
+- **Status:** AKTYWNY
+- **Data:** 2026-05-11
+- **Autoryzacja:** Budowniczy P-OS
+
+### Zasady Operacyjne
+
+1. **UTRZYMAĆ v7.5 W STANIE ZAMROŻONYM**
+   - Brak nowych reguł R8+
+   - Brak rozszerzeń ontologii Layer 9
+   - Brak zwiększania złożoności runtime
+
+2. **DOPUŚCIĆ WYŁĄCZNIE:**
+   - Poprawki stabilności
+   - Redukcję tarcia operacyjnego
+   - Dokumentację
+   - Refinements enforcement semantics
+
+3. **PRZYJĄĆ DOKTRYNĘ:**
+   
+   ```text
+   FULL SCAN + SCOPED ENFORCEMENT
+   ```
+   
+   Jako kandydaturę architektoniczną dla v8.0, **BEZ** wdrażania przed zakończeniem Quiet Period.
+
+4. **ZABRONIĆ:**
+   - Force merge
+   - Temporary bypass
+   - Emergency admin exception
+   - Autonomicznej ekspansji ontologii
+   - Governance creep
+
+5. **KAŻDE NOWE NARUSZENIE:**
+   → **BLOCKING**
+
+6. **NARUSZENIA HISTORYCZNE:**
+   → Raportować
+   → Katalogować
+   → Naprawiać wyłącznie dedykowanymi PR cleanup
+
+7. **OPERATORZY MAJĄ:**
+   - Obserwować tarcie runtime
+   - Dokumentować punkty frustracji
+   - **NIE** reagować impulsywną rozbudową systemu
+
+8. **GŁÓWNA ZASADA OPERACYJNA:**
+
+   > **"System ma być nudny, przewidywalny i prawie niewidoczny."**
+
+---
+
+## 2. TRYB SYSTEMU `[IMMUTABLE]`
+
+```
+QUIET OPERATIONS ACTIVE
+BOUNDEDNESS PRESERVED
+SOVEREIGNTY MAINTAINED
+MUTATION LOCK ENGAGED
+```
+
+### Parametry Operacyjne
+
+| Parametr | Wartość |
+|----------|---------|
+| Okres quiet operations | 2026-05-11 do 2026-06-10 |
+| Mutation lock | ENGAGED |
+| Enforcement model | Full scan + scoped enforcement (kandydat v8.0) |
+| Constitutional Health Score | 99.5% (HEALTHY) |
+| Graph maturity (Neo4j) | 7.3/10 (GOOD) |
+| Sovereign Maturity | 9.5/10 |
+
+---
+
+## 3. KANDYDATURA ARCHITEKTONICZNA v8.0 `[IMMUTABLE]`
+
+### Hybrid Enforcement Model
+
+**Problem zidentyfikowany:** Full repository purity model tworzy ryzyko constitutional deadlock.
+
+**Rozwiązanie proponowane:**
+
+```text
+FULL SCAN + SCOPED ENFORCEMENT
+
+Agent skanuje całe repo (awareness)
+ALE blokuje tylko:
+- Nowe naruszenia w zmienionych plikach
+- Degradację health score
+- Mutacje sekcji immutable
+- Schema drift bez migracji
+
+Raportuje ale NIE blokuje:
+- Historyczne znane naruszenia
+- Udokumentowane wyjątki
+- Legacy artifacts oznaczone do cleanup
+```
+
+### Dokumentacja Referencyjna
+
+- `docs/DESIGN_NOTE_P-OS_v8.0_ENFORCEMENT_SEMANTICS.md` - Pełna specyfikacja techniczna
+- `.github/workflows/constitutional-review.yml` - Obecna implementacja agenta
+- PR #8 incident report - Trigger dla tej analizy
+
+### Decyzja Wymagana
+
+**Pytanie dla planowania v8.0:** Czy P-OS powinien przyjąć hybrydowy model egzekucji?
+
+**Opcje:**
+1. **Przyjąć model hybrydowy** (Rekomendowane) - Zrównoważone podejście
+2. **Utrzymać pełną czystość** - Obecne zachowanie v7.5
+3. **Przejść na delta-only** - Skanowanie tylko zmienionych plików
+
+**Rekomendacja:** Opcja 1 - Model hybrydowy zapewnia najlepsze zrównoważenie suwerenności i wykonalności operacyjnej.
+
+---
+
+## 4. ZAKAZY OPERACYJNE `[IMMUTABLE]`
+
+Podczas okresu quiet operations **ZABRONIONE** są następujące działania:
+
+| Zakazane Działanie | Powód | Ryzyko |
+|-------------------|-------|--------|
+| Force merge | Narusza suwerenność konstytucyjną | Death of sovereignty |
+| Temporary bypass | Tworzy precedens obejść | Governance theater |
+| Emergency admin exception | Admin ≠ wyjątek od reguł | Constitutional collapse |
+| Autonomiczna ekspansja ontologii | Narusza boundedness | Semantic obesity |
+| Governance creep | Dodawanie reguł bez potrzeby | Compliance cathedral |
+| Impulsywna rozbudowa systemu | Reakcja na tarcie | Unbounded growth |
+
+---
+
+## 5. OBOWIĄZKI OPERATORÓW `[OPERATOR_INPUT_REQUIRED]`
+
+Podczas okresu quiet operations operatorzy mają następujące obowiązki:
+
+### Obserwacja
+- Monitorować naturalny rytm systemu
+- Rejestrować punkty tarcia operacyjnego
+- Dokumentować frustracje użytkowników
+
+### Dokumentacja
+- Zapisywać obserwacje w observation logs
+- Przygotować raport podsumowujący na 2026-06-10
+- Identyfikować wzorce wymagające uwagi
+
+### Restrykcja
+- **NIE** dodawać nowych funkcji
+- **NIE** rozszerzać ontologii
+- **NIE** zwiększać złożoności
+- **NIE** reagować impulsywnie na problemy
+
+### Cel
+Zebranie danych empirycznych dla decyzji v8.0, nie rozwiązywanie problemów przez ekspansję.
+
+---
+
+## 6. HARMONOGRAM `[IMMUTABLE]`
+
+| Data | Wydarzenie | Status |
+|------|-----------|--------|
+| 2026-05-11 | Dyrektywa wydana | ✅ COMPLETE |
+| 2026-05-11 do 2026-06-10 | Okres quiet operations | 🔄 ACTIVE |
+| 2026-06-10 | Koniec quiet period | ⏳ PENDING |
+| 2026-06-10 do 2026-06-17 | Analiza obserwacji | ⏳ PENDING |
+| 2026-06-17 do 2026-06-30 | Planowanie v8.0 | ⏳ PENDING |
+| 2026-07-01 | Start v8.0 development | ⏳ PENDING |
+
+---
+
+## 7. ZGODNOŚĆ AUDYTOWA `[IMMUTABLE]`
+
+**RACI:**
+- Dyrektywa operacyjna → **Accountable:** Budowniczy P-OS
+- Egzekucja reguł → p-os-constitution v1.0 [FROZEN]
+- Przestrzeganie zakazów → All Operators
+
+**Stan systemu:** v7.5 w stanie semantic freeze. System znajduje się w trybie quiet operations z engaged mutation lock.
+
+**Filozofia:** 
+> **"This is not stagnation. This is maturity."**
+
+---
+
+**HISTORIA ZMIAN**
+| Data | Wersja | Zmiana | Autor |
+|------|--------|--------|-------|
+| 2026-05-11 | 1.0 | Wydanie dyrektywy operational directive | Budowniczy P-OS |
+
+---
+*Archiwum P-OS v7.5 | Operational Directive - Constitutional Quietness | 2026-05-11*
