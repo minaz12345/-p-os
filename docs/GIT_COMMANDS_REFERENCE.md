@@ -274,6 +274,160 @@ git pull origin main
 
 ---
 
+## 🏛️ Pull Requests: Constitutional Gateway
+
+### What is a Pull Request (PR)?
+
+**Simple Definition:**
+```text
+"Request to merge changes into the main branch"
+```
+
+**In P-OS Context:**
+```text
+Controlled entry point for changes into the sovereign runtime
+```
+
+---
+
+### Why PRs Are Mandatory in P-OS
+
+1. **Constitution Requires Audit** - Every change must be verified by the Constitutional Agent
+2. **Branch Protection Enforces Process** - GitHub blocks direct pushes to main
+3. **Operational Sovereignty** - System defends itself, doesn't rely on human attention
+4. **Forensic Trail** - Every PR remains in history as proof of passing through the gateway
+
+---
+
+### Standard Workflow vs P-OS Constitutional Workflow
+
+#### ❌ Without PR (Dangerous)
+```text
+edit → push → immediately lands on main
+```
+
+**Risks:**
+- Can break production
+- Bypass controls
+- Introduce sabotage or errors
+
+---
+
+#### ✅ With PR (P-OS Constitutional Workflow)
+```text
+create branch
+↓
+make changes
+↓
+push branch
+↓
+create PR
+↓
+Constitutional Agent checks R1-R7
+↓
+PASS ✅ or FAIL ❌
+↓
+only then merge to main
+```
+
+---
+
+### Architectural Significance
+
+**Most Systems:**
+```text
+admin = exception to rules
+```
+
+**P-OS:**
+```text
+admin also subject to constitution
+```
+
+This creates **sovereign governance runtime** instead of ordinary CI/CD.
+
+The moment that proves this:
+```text
+System rejected privileged operator
+```
+
+When documentation describing previous test violations contained literal violation markers,
+the Constitutional Agent flagged them - regardless of intent or context. This demonstrates:
+
+- **No Human Exception Layer** - Even architects submit to constitutional review
+- **State Enforcement vs Narrative Interpretation** - Checks literal repository state, not intentions
+- **Deterministic Runtime Enforcement** - Pattern matching, not AI interpretation
+- **Meta-Sovereignty** - Rules apply universally, including to documentation about rules themselves
+
+---
+
+### Real Example: PR #6
+
+**Forensic Learning Example:** [PR #6 - Archive toxic PR test results](https://github.com/minaz12345/-p-os/pull/6)
+
+This PR demonstrates the complete constitutional workflow:
+
+1. **Initial Submission:** 7 documentation files added
+2. **First Review:** 🔴 FAIL - Detected `[MODIFIED_WITHOUT_VALIDATION]` markers in 3 files
+3. **Root Cause:** Documentation describing previous tests contained literal violation patterns
+4. **Fix Applied:** Escaped markers with zero-width space (U+200B) to break regex pattern
+5. **Second Review:** ✅ PASS - All violations resolved
+6. **Status:** Ready for merge
+
+**Key Lesson:** The system doesn't interpret "this is just documentation about a test" - it enforces rules on all artifacts uniformly.
+
+---
+
+### Common Mistakes to Avoid
+
+| ❌ Wrong | ✅ Right |
+|----------|----------|
+| `git push origin main` - blocked by branch protection | Work on feature branch, create PR |
+| Creating PR without local commits - empty PR gets rejected | Commit changes before creating PR |
+| Ignoring FAIL from Constitutional Agent - merge will be blocked | Fix violations and push new commits |
+| Trying to bypass review - impossible due to branch protection | Accept constitutional review as normal workflow |
+| Adding more rules/checks ceremonially - leads to compliance cathedral | Trust bounded, quiet, boring, predictable enforcement |
+
+---
+
+### Key Terminology
+
+| Term | Meaning |
+|------|---------|
+| **branch** | Separate work line isolated from main |
+| **main** | Primary branch representing production state |
+| **commit** | Snapshot of changes with descriptive message |
+| **push** | Send changes to GitHub remote repository |
+| **PR (Pull Request)** | Request to merge changes with constitutional review |
+| **merge** | Combine approved changes into main branch |
+| **review** | Quality and security control (automated + human) |
+| **Constitutional Agent** | Automated enforcement of R1-R7 rules (~19 seconds) |
+| **Branch Protection** | GitHub rules preventing direct main modifications |
+
+---
+
+### Philosophy: Constitutional Quietness
+
+The most mature element of P-OS is not the agent itself, but the **conscious limitation of its growth**.
+
+It would be easy to add:
+- More rules
+- More checks
+- More ceremonial layers
+- More complex regexes
+
+But after six months, you'd have a **compliance cathedral** that everyone wants to escape.
+
+Instead, P-OS doctrine emphasizes:
+- **Bounded** - Fixed rule set (R1-R7), no expansion without sovereign decision
+- **Quiet** - Invisible during normal operation
+- **Boring** - Predictable, deterministic behavior
+- **Predictable** - Same inputs → same outputs, always
+
+This is the defense mechanism against governance collapse.
+
+---
+
 ## 🛡️ Branch Protection Rules (Active on main)
 
 | Rule | Status | Purpose |
