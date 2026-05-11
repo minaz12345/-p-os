@@ -1,0 +1,62 @@
+[OK] Connected to Neo4j successfully
+
+================================================================================
+P-OS v7.5 - FROZEN TOPOLOGY REFERENCE REPORT
+================================================================================
+Generated: 2026-05-11 19:07:36
+Mode: Constitutional Quietness (Frozen Baseline)
+================================================================================
+
+[1] GLOBAL GRAPH METRICS
+--------------------------------------------------------------------------------
+Total Nodes:              460
+Total Relationships:      375
+Connected Nodes:          258
+Orphaned Nodes:           202
+Connectivity Ratio:       56.09%
+Average Degree:           0.82
+
+
+[2] NODE LABEL DISTRIBUTION
+--------------------------------------------------------------------------------
+neo4j.exceptions.GqlError: {gql_status: 42N08} {gql_status_description: error: syntax error or access rule violation - no such procedure. The procedure apoc.cypher.run() was not found. Verify that the spelling is correct.} {message: 42N08: The procedure apoc.cypher.run() was not found. Verify that the spelling is correct.} {diagnostic_record: {'_classification': 'CLIENT_ERROR', 'OPERATION': '', 'OPERATION_CODE': '0', 'CURRENT_SCHEMA': '/'}} {raw_classification: CLIENT_ERROR}
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\pos7\scripts\generate_frozen_topology_report.py", line 250, in <module>
+    generate_topology_report()
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\pos7\scripts\generate_frozen_topology_report.py", line 70, in generate_topology_report
+    label_result = session.run("""
+        CALL db.labels() YIELD label
+    ...<3 lines>...
+        ORDER BY count DESC
+    """)
+  File "C:\Users\Pawel\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\neo4j\_sync\work\session.py", line 320, in run
+    self._auto_result._run(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        query,
+        ^^^^^^
+    ...<6 lines>...
+        self._config.notifications_disabled_classifications,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Pawel\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\neo4j\_sync\work\result.py", line 237, in _run
+    self._attach()
+    ~~~~~~~~~~~~^^
+  File "C:\Users\Pawel\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\neo4j\_sync\work\result.py", line 439, in _attach
+    self._connection.fetch_message()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Pawel\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\neo4j\_sync\io\_common.py", line 193, in inner
+    func(*args, **kwargs)
+    ~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pawel\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\neo4j\_sync\io\_bolt.py", line 867, in fetch_message
+    res = self._process_message(tag, fields)
+  File "C:\Users\Pawel\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\neo4j\_sync\io\_bolt6.py", line 548, in _process_message
+    response.on_failure(summary_metadata or {})
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pawel\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\neo4j\_sync\io\_common.py", line 263, in on_failure
+    raise self._hydrate_error(metadata)
+neo4j.exceptions.ClientError: {neo4j_code: Neo.ClientError.Procedure.ProcedureNotFound} {message: There is no procedure with the name `apoc.cypher.run` registered for this database instance. Please ensure you've spelled the procedure name correctly and that the procedure is properly deployed.} {gql_status: 42001} {gql_status_description: error: syntax error or access rule violation - invalid syntax}
