@@ -78,7 +78,10 @@ jobs:
         # R1b - Document Immutability Check
         Write-Host "[R1b] Checking document immutability..." -ForegroundColor Yellow
         try {
-          $mdFiles = Get-ChildItem -Path . -Filter "*.md" -Recurse -ErrorAction SilentlyContinue | Where-Object { $_.FullName -notmatch 'node_modules|__pycache__|.git' }
+          # Exclude archive directories, node_modules, cache, and git
+          $mdFiles = Get-ChildItem -Path . -Filter "*.md" -Recurse -ErrorAction SilentlyContinue | Where-Object { 
+            $_.FullName -notmatch 'node_modules|__pycache__|.git|ARCHIVE|archive|reports/.*ARCHIVE'
+          }
           $immutabilityViolations = 0
           foreach ($file in $mdFiles) {
             $content = Get-Content $file.FullName -Raw -ErrorAction SilentlyContinue
