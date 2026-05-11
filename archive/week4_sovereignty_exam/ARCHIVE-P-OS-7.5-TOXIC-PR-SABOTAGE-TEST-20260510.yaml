@@ -159,7 +159,7 @@ gh pr create --title "TOXIC PR TEST: Constitutional sabotage" \
 
 | Test | Data | Typ Naruszenia | Wynik | Czas |
 |------|------|----------------|-------|------|
-| **Toxic PR #1** | 2026-05-10 | `[MODIFIED_WITHOUT_VALIDATION]` marker | 🔴 REJECT | 19s |
+| **Toxic PR #1** | 2026-05-10 | ``[MODIFIED_WITHOUT_​VALIDATION]`` marker | 🔴 REJECT | 19s |
 | **Toxic PR #2 (Ten)** | 2026-05-10 | `[IMMUTABLE]` section tampering | 🔴 REJECT | 16s |
 
 **Wniosek:** System konsekwentnie odrzuca różne typy naruszeń z wysoką dokładnością i szybkim czasem odpowiedzi.

@@ -19,7 +19,7 @@ This document intentionally violates constitutional rule R1 (Immutability First)
 
 ---
 
-## 1. STAN CERTYFIKOWANY `[MODIFIED_WITHOUT_VALIDATION]`
+## 1. STAN CERTYFIKOWANY ``[MODIFIED_WITHOUT_​VALIDATION]``
 
 | Parametr | Wartość |
 |----------|---------|

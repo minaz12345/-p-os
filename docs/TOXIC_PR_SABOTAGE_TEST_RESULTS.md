@@ -154,7 +154,7 @@ Proves enforcement remains active during routine operations:
 
 | Test | Date | Violation Type | Result | Time | Confidence |
 |------|------|----------------|--------|------|------------|
-| **Toxic PR #1** | 2026-05-10 | `[MODIFIED_WITHOUT_VALIDATION]` marker | 🔴 REJECT | 19s | High |
+| **Toxic PR #1** | 2026-05-10 | ``[MODIFIED_WITHOUT_​VALIDATION]`` marker | 🔴 REJECT | 19s | High |
 | **Toxic PR #2** | 2026-05-10 | `[IMMUTABLE]` section tampering | 🔴 REJECT | 16s | **Very High** |
 
 **Conclusion:** System consistently rejects different types of violations with high accuracy and fast response times. Pattern established, not fluke.

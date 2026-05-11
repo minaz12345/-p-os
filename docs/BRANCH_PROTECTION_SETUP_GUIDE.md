@@ -93,7 +93,7 @@ git push origin main
 **Expected Result:** ❌ Rejected by GitHub (branch protection)
 
 ### Test 2: Create PR with Violation (Should Block Merge)
-1. Create a PR with `[MODIFIED_WITHOUT_VALIDATION]` marker
+1. Create a PR with ``[MODIFIED_WITHOUT_​VALIDATION]`` marker (pattern broken with zero-width space)
 2. Wait for Constitutional Agent workflow to complete
 3. Verify workflow status shows: **FAILING** 🔴
 4. Attempt to merge PR
