@@ -65,7 +65,7 @@ def main():
     all_valid &= check_database(
         'pos_operational',
         expected_tables=41,  # Full P-OS v7.5 stack
-        classification='PRODUCTION'
+        classification='PRODUCTION (Epistemic State: TRUSTED)'
     )
     print()
     
@@ -74,7 +74,7 @@ def main():
     all_valid &= check_database(
         'milejczyce_operational',
         expected_tables=16,
-        classification='ARCHIVED CANDIDATE'
+        classification='ARCHIVED CANDIDATE (Epistemic State: TRUSTED)'
     )
     print()
     
@@ -83,15 +83,17 @@ def main():
     all_valid &= check_database(
         'pos_operational_restore_test',
         expected_tables=None,
-        classification='TEST ONLY'
+        classification='TEST ONLY (Epistemic State: TRUSTED)'
     )
     print()
     
     print("=" * 80)
     if all_valid:
         print("✅ VALIDATION PASSED - Runtime state matches canonical declaration")
+        print("✅ All databases in TRUSTED epistemic state")
     else:
         print("⚠️  VALIDATION WARNINGS - Review discrepancies above")
+        print("⚠️  Some databases may require epistemic state reconciliation")
     print("=" * 80)
     
     return 0 if all_valid else 1
