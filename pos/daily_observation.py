@@ -11,8 +11,9 @@ Usage:
 """
 
 import json
+import os
 import sys
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 
 
@@ -24,7 +25,7 @@ class DailyObserver:
         self.audit_dir = self.project_root / "logs" / "cli_audit"
         self.observation_log = self.project_root / "pos" / "OBSERVATION_LOG.jsonl"
         self.flags_dir = self.project_root / "flags"  # D:\pos7\flags\
-        self.today = datetime.utcnow().date()
+        self.today = datetime.now(timezone.utc).date()
 
     def check_pos_status(self) -> dict:
         """Run pos status and capture output."""
@@ -35,19 +36,22 @@ class DailyObserver:
                 [sys.executable, "-m", "pos", "status"],
                 cwd=self.project_root,
                 capture_output=True,
-                text=True,
                 timeout=30,
+                env={**os.environ, "PYTHONIOENCODING": "utf-8"},
             )
 
+            # Decode output with UTF-8, handling errors gracefully
+            stdout_text = result.stdout.decode('utf-8', errors='replace') if isinstance(result.stdout, bytes) else result.stdout
+
             return {
-                "timestamp": datetime.utcnow().isoformat() + "Z",
+                "timestamp": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
                 "exit_code": result.returncode,
-                "output_length": len(result.stdout),
+                "output_length": len(stdout_text),
                 "has_errors": result.returncode != 0,
             }
         except Exception as e:
             return {
-                "timestamp": datetime.utcnow().isoformat() + "Z",
+                "timestamp": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
                 "exit_code": -1,
                 "error": str(e),
             }
@@ -146,7 +150,7 @@ class DailyObserver:
         Na Windows st_atime (access time) też jest zawodny (często wyłączony).
 
         Zamiast tego: odnotowujemy że dokumenty ISTNIEJĄ i podajemy ich rozmiar.
-        Faktyczne śledzenie użycia robimy przez pytanie operatora (feedback).
+        Faktyczne śledzenie użycia robimy 5przez pytanie operatora (feedback).
         """
         docs_to_check = [
             self.project_root / "docs" / "NON_GOALS_AND_BOUNDARIES_PL.md",
@@ -262,7 +266,7 @@ class DailyObserver:
 
         daily_report = {
             "date": self.today.isoformat(),
-            "timestamp": datetime.utcnow().isoformat() + "Z",
+            "timestamp": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
             "automated_metrics": {
                 "status_check": status_check,
                 "audit_logs": audit_count,

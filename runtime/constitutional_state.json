@@ -1,14 +1,32 @@
-﻿{
-    "w11":  "ACTIVE",
-    "last_self_test":  "2026-05-09T23:42:03Z",
-    "audit_chain":  "VERIFIED",
-    "last_state_transition":  {
-                                  "timestamp":  "2026-05-09T23:42:03Z",
-                                  "from":  "CONSTITUTIONAL_FAILURE",
-                                  "to":  "HEALTHY",
-                                  "reason":  "All components operational"
-                              },
-    "state":  "HEALTHY",
-    "replay_integrity":  "READY",
-    "freeze_mode":  false
+{
+  "mode": "quiet_operations",
+  "state": "CERTIFIED_IMMUTABLE",
+  "r1_r7_frozen": true,
+  "enforcement_active": true,
+  "low_noise_mode": true,
+  "mutation_lock_until": "2026-06-10T00:00:00Z",
+  "constitutional_health_score": 99.5,
+  "last_verified": "2026-05-12T08:30:00Z",
+  "semantic_refinement_doctrine": {
+    "status": "ACTIVE",
+    "effective_date": "2026-05-12",
+    "forensic_truth_first": true,
+    "separation_of_concerns": [
+      "operational_success",
+      "audit_integrity",
+      "constitutional_compliance",
+      "operator_friction"
+    ],
+    "max_runtime_states": 5,
+    "max_governance_verdicts": 4,
+    "ontology_creep_prohibition": true,
+    "epistemological_transition": {
+      "from": "health_theater",
+      "to": "runtime_epistemology",
+      "five_axis_model": true,
+      "overall_status_prohibited": true,
+      "friction_as_telemetry": true,
+      "historical_debt_separated": true
+    }
+  }
 }
