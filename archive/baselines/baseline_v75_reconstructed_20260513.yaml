@@ -1,0 +1,146 @@
+document_id: BASELINE-P-OS-v7.5-R8-RECONSTRUCTED-20260513
+status: CERTIFIED_RECONSTRUCTED
+timestamp: '2026-05-13T13:22:03.181231Z'
+reconstructed_by: scripts/generate_r8_baseline.py
+provenance:
+  method: Epistemic Reconstruction after Phantom Baseline discovery
+  reason: Original v7.5 baseline (40 tables) lacked enumeration and was declared Folklore
+  verification_path: python scripts/verify_r8_baseline.py
+  operator: Budowniczy P-OS
+  supervisor: Nadzorca (Gemini AI Core)
+schema_fingerprint:
+  algorithm: SHA-256
+  input: Alphabetically sorted list of 41 public tables
+  hash: 88b986d9593fead799ff5ba5084a104dd47691e574d637d3e4304f7491b58ff0
+enumeration:
+  total_tables: 41
+  tables:
+  - name: agent_messages
+    column_count: 10
+    row_count: 0
+  - name: agents
+    column_count: 10
+    row_count: 5
+  - name: artefacts
+    column_count: 9
+    row_count: 0
+  - name: blocks
+    column_count: 11
+    row_count: 0
+  - name: clock_state
+    column_count: 3
+    row_count: 0
+  - name: events
+    column_count: 9
+    row_count: 415
+  - name: events_archive
+    column_count: 11
+    row_count: 3
+  - name: events_summary
+    column_count: 6
+    row_count: 1
+  - name: federation_compliance_audit
+    column_count: 7
+    row_count: 9
+  - name: federation_gdpr_erasure_requests
+    column_count: 10
+    row_count: 2
+  - name: federation_gdpr_node_status
+    column_count: 8
+    row_count: 10
+  - name: federation_node_certificates
+    column_count: 8
+    row_count: 0
+  - name: federation_node_sync_state
+    column_count: 7
+    row_count: 1
+  - name: federation_node_trust_history
+    column_count: 7
+    row_count: 1
+  - name: federation_nodes
+    column_count: 13
+    row_count: 7
+  - name: federation_policy_audit_log
+    column_count: 10
+    row_count: 1
+  - name: federation_policy_conflicts
+    column_count: 11
+    row_count: 0
+  - name: federation_policy_sync_preferences
+    column_count: 7
+    row_count: 1
+  - name: federation_replicated_events
+    column_count: 10
+    row_count: 1
+  - name: federation_replication_conflicts
+    column_count: 9
+    row_count: 0
+  - name: federation_replication_queue
+    column_count: 10
+    row_count: 0
+  - name: federation_revocation_list
+    column_count: 6
+    row_count: 1
+  - name: federation_risk_intelligence
+    column_count: 10
+    row_count: 2
+  - name: federation_w11_policies
+    column_count: 13
+    row_count: 1
+  - name: gdpr_erasure_audit_log
+    column_count: 9
+    row_count: 1
+  - name: gdpr_erasure_certificates
+    column_count: 17
+    row_count: 9
+  - name: gdpr_erasure_requests
+    column_count: 10
+    row_count: 13
+  - name: gdpr_retention_policies
+    column_count: 6
+    row_count: 4
+  - name: idempotency_cache
+    column_count: 4
+    row_count: 8
+  - name: idempotency_responses
+    column_count: 3
+    row_count: 8
+  - name: replay_risk_scores
+    column_count: 4
+    row_count: 4
+  - name: replay_snapshots
+    column_count: 10
+    row_count: 1
+  - name: replay_verification
+    column_count: 8
+    row_count: 1
+  - name: retry_queue
+    column_count: 9
+    row_count: 1
+  - name: role_hierarchy
+    column_count: 4
+    row_count: 6
+  - name: schema_meta
+    column_count: 2
+    row_count: 0
+  - name: shared_context
+    column_count: 4
+    row_count: 0
+  - name: tokens
+    column_count: 18
+    row_count: 0
+  - name: user_risk_scores
+    column_count: 5
+    row_count: 12
+  - name: w11_rule_audit
+    column_count: 6
+    row_count: 24
+  - name: w11_rules
+    column_count: 5
+    row_count: 56
+constitutional_compliance:
+  R8_Baseline_Reconstructibility: PASS
+  full_enumeration: true
+  cryptographic_snapshot: true
+  provenance_chain: true
+  verification_path: true
