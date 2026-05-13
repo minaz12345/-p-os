@@ -8,6 +8,7 @@ __pycache__/
 # Runtime artifacts
 *.jsonl
 logs/
+!logs/hash_chain/
 tmp/
 .cache/
 .env
@@ -30,3 +31,7 @@ Thumbs.db
 *.tmp
 *.bak
 *.backup
+
+# Toxic test artifacts - do not commit
+TOXIC_PR_*.md
+PR*_VIOLATION*.md
