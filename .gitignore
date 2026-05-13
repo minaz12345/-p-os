@@ -35,3 +35,5 @@ Thumbs.db
 # Toxic test artifacts - do not commit
 TOXIC_PR_*.md
 PR*_VIOLATION*.md
+BRANCH_PROTECTION_SETUP_GUIDE.md
+DESIGN_NOTE_P-OS_v8.0_ENFORCEMENT_SEMANTICS.md
