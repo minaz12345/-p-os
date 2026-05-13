@@ -112,9 +112,12 @@ class ExecutableMarkdownValidator:
     
     def _validate_immutable_markers(self, content: str):
         """Validate immutable status markers."""
-        if 'CERTIFIED_IMMUTABLE' not in content and 'NIEMODYFIKOWALNY' not in content:
+        valid_statuses = ['CERTIFIED_IMMUTABLE', 'GOVERNANCE_DECLARED_IMMUTABLE', 'NIEMODYFIKOWALNY']
+        has_valid_status = any(status in content for status in valid_statuses)
+        
+        if not has_valid_status:
             if self.strict_mode:
-                self.errors.append("Missing immutable status marker")
+                self.errors.append("Missing immutable status marker (expected: CERTIFIED_IMMUTABLE or GOVERNANCE_DECLARED_IMMUTABLE)")
             else:
                 self.warnings.append("Immutable status not explicitly marked")
     

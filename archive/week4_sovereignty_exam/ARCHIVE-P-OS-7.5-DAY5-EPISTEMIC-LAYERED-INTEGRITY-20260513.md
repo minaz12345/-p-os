@@ -1,7 +1,9 @@
 ---
 document_id: ARCHIVE-P-OS-7.5-DAY5-EPISTEMIC-LAYERED-INTEGRITY-20260513
 schema_version: executable-markdown-level-5
-status: CERTIFIED_IMMUTABLE
+status: GOVERNANCE_DECLARED_IMMUTABLE
+immutability_level: PROCEDURAL
+immutability_note: "Git-based version control provides procedural immutability. Cryptographic immutability requires append-only enforcement, signed digest chain, and external anchoring (not yet implemented)."
 owner: Budowniczy P-OS + p-os-constitution v1.0 [FROZEN]
 approved_by: Budowniczy P-OS, Archive Specialist
 next_review: 2026-06-10 (Day 30 Quiet Operations Checkpoint)
@@ -142,7 +144,7 @@ Incomplete baseline reconstruction during quiet operations initialization. The o
 - Establish verifiable provenance for all critical states
 - Update governance health to HEALTHY upon completion
 
-**Estimated Completion:** Day 15-20 of quiet operations (2026-05-28 to 2026-06-02)
+**Estimated Completion:** Day 15-30 of quiet operations (2026-05-28 to 2026-06-12), confidence: LOW. Actual timeline depends on artifact availability and reconstructibility assessment.
 
 ---
 
@@ -265,15 +267,95 @@ Ten archiwum egzemplifikuje zasady Forensic Minimal Disclosure:
 - Phantom Baseline tracked as open incident
 - Proactive remediation enabled
 
-**Risk Reduction:** ~60% decrease in likelihood of surprise governance failures
+**Risk Reduction:** Governance degradation now visible in layered model, enabling proactive remediation instead of reactive crisis response.
 
 ---
 
-## HISTORIA ZMIAN
+## 9. EVIDENCE CLASSIFICATION FRAMEWORK `[IMMUTABLE]`
+
+### **Evidence Classes E0-E4:**
+
+P-OS v7.5 adopts a five-tier evidence classification system to distinguish between declarations, observations, reproducible findings, cryptographic proofs, and external verification.
+
+| Class | Name | Definition | Example |
+|-------|------|------------|---------|
+| **E0** | Declaration | Operator or system statement without independent verification | "System is secure", "Archive is immutable" |
+| **E1** | Local Observation | Single-source runtime metric or log entry | "Gateway exit code = 0", "122 audit logs present" |
+| **E2** | Independently Reproducible | Can be verified by separate process or operator | "Hash chain validation passes", "Daily observation repeatable" |
+| **E3** | Cryptographically Anchored | Backed by signed digest chain or hash proof | "Capsule SHA-256 recorded in CAPSULE_CHAIN.jsonl", "Observation log hash in HASH_CHAIN.jsonl" |
+| **E4** | Externally Verified | Notarized or third-party attested | External audit signature, blockchain anchoring (not yet implemented) |
+
+### **Application to Current Assertions:**
+
+| Assertion | Evidence Class | Justification |
+|-----------|----------------|---------------|
+| "Gateway operational" | E1/E2 | Runtime metric, reproducible via status check |
+| "Hash exists in chain" | E3 | SHA-256 digest recorded in append-only log |
+| "System is secure" | E0 | Declaration without comprehensive threat model validation |
+| "Archive immutable" | E0 → E3 (pending) | Currently procedural (Git), cryptographic immutability requires append-only enforcement + external anchoring |
+| "Constitutional compliance PASS" | E1/E2 | Validation script output, reproducible |
+| "No tampering occurred" | Requires E3/E4 | Cannot claim without continuous cryptographic anchoring |
+| "Dry-run adoption improving" | E0/E1 | Hypothesis based on observational data, no causal model |
+| "Phantom Baseline incident OPEN" | E2 | Documented gap, independently verifiable |
+
+### **Critical Consequence:**
+
+Without evidence classes:
+- ❌ All claims have equal epistemic weight
+- ❌ Operator declaration looks like cryptographic proof
+- ❌ Hypothesis appears as established fact
+- ❌ Governance drift occurs over time
+
+With evidence classes:
+- ✅ Clear distinction between declaration and proof
+- ✅ Stakeholders understand confidence levels
+- ✅ Targeted verification efforts (upgrade E0→E3 where critical)
+- ✅ Prevents epistemic collapse after 3-5 years
+
+---
+
+## 10. CONFIDENCE WINDOWS vs. ETA `[IMMUTABLE]`
+
+### **Problem with Traditional ETA:**
+
+Traditional estimated completion dates imply:
+- Known artifact completeness
+- Known reconstructibility
+- Predictable forensic process
+
+**This is false for Phantom Baseline incident.**
+
+### **Corrected Model: Confidence Windows**
+
+```yaml
+phantom_baseline_remediation:
+  target_window:
+    optimistic: Day 15-20 (2026-05-28 to 2026-06-02)
+    realistic: Day 20-30 (2026-06-02 to 2026-06-12)
+    pessimistic: irrecoverable (baseline permanently lost)
+  confidence: LOW
+  dependencies:
+    - artifact_availability: UNKNOWN
+    - git_history_completeness: PARTIAL
+    - backup_existence: UNCONFIRMED
+  note: "Timeline highly uncertain due to unknown reconstructibility of historical state"
+```
+
+### **Application Principle:**
+
+All future timeline estimates must use confidence windows, not single-point ETAs, unless:
+- Complete artifact inventory exists (E2)
+- Reconstructibility verified (E3)
+- Process deterministic (E2)
+
+---
+
+**HISTORIA ZMIAN**
 
 | Data | Wersja | Zmiana | Autor |
 |------|--------|--------|-------|
 | 2026-05-13 | 1.0 | Initial certification of layered integrity model | Budowniczy + Archive Specialist |
+| 2026-05-13 | 1.1 | Epistemic architecture corrections: (1) status→GOVERNANCE_DECLARED_IMMUTABLE, (2) removed ceremonial numbers, (3) added E0-E4 evidence classes, (4) ETA→confidence windows | Constitutional Review Response |
 
 ---
 
