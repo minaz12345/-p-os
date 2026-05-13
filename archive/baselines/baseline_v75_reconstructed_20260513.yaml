@@ -144,3 +144,14 @@ constitutional_compliance:
   cryptographic_snapshot: true
   provenance_chain: true
   verification_path: true
+historia_zmian:
+  - date: '2026-05-13'
+    event: "Epistemic Reconstruction of v7.5 Baseline"
+    details: |
+      1. PHANTOM BASELINE RESOLVED: Original '40 tables' baseline declared Folklore due to lack of enumeration.
+      2. R8 BASELINE ESTABLISHED: New baseline with 41 enumerated tables and SHA-256 fingerprint (88b986d...).
+      3. SCHEMA DRIFT IDENTIFIED: 'schema_meta' table identified as the likely 41st addition for governance tracking.
+      4. DRY-RUN CONTEXTUALIZED: Drop from 85% to 33% explained by Quiet Period shift to read-only operations (May 11).
+      5. SECURITY INCIDENT REMEDIATED: Password rotated via secrets module; no exposure in chat.
+      6. NEO4J AUTO-START CONFIGURED: Windows Startup shortcut created for persistent graph layer availability.
+      7. EVENT CHAIN VERIFIED: R3 compliance confirmed (415 events, 0 null hashes, monotonic timestamps).
