@@ -9,6 +9,24 @@ approved_by: Budowniczy P-OS, Archive Specialist
 next_review: 2026-06-10 (Day 30 Quiet Operations Checkpoint)
 validation_cmd: python scripts/validate_docs.py --strict
 contacts: ops@milejczyce.gov.pl, dpo@milejczyce.gov.pl, security@milejczyce.gov.pl
+
+# Evidence Metadata
+evidence_metadata:
+  created_at: 2026-05-13T18:45:00Z
+  retention_until: 2027-05-13
+  decay_risk: LOW
+  refresh_required_by: 2026-08-13
+
+# Epistemic Resilience Assessment
+epistemic_resilience:
+  status: IMPROVED
+  confidence_in_assessment: MODERATE
+  evidence_class: E1
+  statement: "Epistemic collapse resistance mechanisms introduced"
+  limitations:
+    - "No longitudinal validation yet"
+    - "No degradation simulations performed"
+    - "Operator drift not tested"
 ---
 
 # P-OS v7.5 ARCHIWUM STANU CERTYFIKOWANEGO
@@ -42,9 +60,9 @@ Oficjalne wprowadzenie rozdzielenia zdrowia systemu na trzy warstwy: Runtime, Go
 
 | Warstwa | Status | Pewność | Dowody |
 |---------|--------|---------|--------|
-| **Runtime Health** | ✅ HEALTHY | HIGH | Gateway OK, logi rosną (122 total), W11 = 0 |
-| **Governance Health** | ⚠️ DEGRADED | MODERATE | Phantom baseline unresolved, capsule overwrite risk |
-| **Epistemic Health** | 🔧 RECONSTRUCTING | LOW→MODERATE | Uncertainty now explicit, hypotheses labeled |
+| **Runtime Health** | ✅ HEALTHY | HIGH (confidence_in_interpretation) | Gateway OK, logi rosną (122 total), W11 = 0 |
+| **Governance Health** | ⚠️ DEGRADED | MODERATE (confidence_in_interpretation) | Phantom baseline unresolved, capsule overwrite risk |
+| **Epistemic Health** | 🔧 RECONSTRUCTING | LOW→MODERATE (confidence_in_interpretation) | Uncertainty now explicit, hypotheses labeled |
 
 ### **Dlaczego To Jest Ważne:**
 
@@ -107,12 +125,27 @@ interpretation:
 # BEFORE (ceremonial precision):
 constitutional_health_score: 99.8%  # ❌ No formal model
 
-# AFTER (epistemic humility):
-system_state_layers:
-  runtime: HEALTHY
-  governance: DEGRADED_WITH_DRIFT_UNDER_INVESTIGATION
-  epistemic: UNDER_RECONSTRUCTION
-confidence: MODERATE
+# AFTER (epistemic humility with separated layers):
+runtime_health_assertion:
+  observation:
+    gateway_exit_code: 0
+    daily_observation_success: true
+    audit_log_entries_count: 122
+  
+  interpretation:
+    gateway_operational: true
+    system_stable: true
+  
+  evidence:
+    class: E2  # Cross-source reproducible
+    confidence_in_interpretation: MODERATE
+    sources:
+      - "pos/OBSERVATION_LOG.jsonl"
+      - "logs/cli_audit/*.json"
+  
+  limitations:
+    - "No external uptime monitoring"
+    - "Interpretation assumes exit code 0 equals full functionality"
 ```
 
 ---
@@ -281,7 +314,7 @@ P-OS v7.5 adopts a five-tier evidence classification system to distinguish betwe
 |-------|------|------------|---------|
 | **E0** | Declaration | Operator or system statement without independent verification | "System is secure", "Archive is immutable" |
 | **E1** | Local Observation | Single-source runtime metric or log entry | "Gateway exit code = 0", "122 audit logs present" |
-| **E2** | Independently Reproducible | Can be verified by separate process or operator | "Hash chain validation passes", "Daily observation repeatable" |
+| **E2** | Cross-Source Reproducible | Assertion validated by ≥2 independent evidence sources | "Hash chain validation passes", "Daily observation repeatable" |
 | **E3** | Cryptographically Anchored | Backed by signed digest chain or hash proof | "Capsule SHA-256 recorded in CAPSULE_CHAIN.jsonl", "Observation log hash in HASH_CHAIN.jsonl" |
 | **E4** | Externally Verified | Notarized or third-party attested | External audit signature, blockchain anchoring (not yet implemented) |
 
@@ -297,6 +330,36 @@ P-OS v7.5 adopts a five-tier evidence classification system to distinguish betwe
 | "No tampering occurred" | Requires E3/E4 | Cannot claim without continuous cryptographic anchoring |
 | "Dry-run adoption improving" | E0/E1 | Hypothesis based on observational data, no causal model |
 | "Phantom Baseline incident OPEN" | E2 | Documented gap, independently verifiable |
+
+### **E2 Detailed Example (Separated Layers):**
+
+```yaml
+claim: "Gateway is operational"
+
+observation:
+  - source: "Daily Observation Log"
+    metric: "exit_code = 0"
+    timestamp: "2026-05-13T18:40:16Z"
+  
+  - source: "CLI Audit Log"
+    metric: "command_success = true"
+    timestamp: "2026-05-13T18:40:16Z"
+
+interpretation:
+  gateway_operational: true
+  system_stable: true
+
+evidence:
+  class: E2  # Cross-source reproducible
+  confidence_in_interpretation: MODERATE
+  rationale: "Two independent sources confirm successful execution, but no external health check performed."
+  limitations:
+    - "Exit code 0 may not indicate full functionality"
+    - "No external uptime monitoring (e.g., ping test)"
+    - "Interpretation model assumes no silent failures"
+```
+
+**Key Insight:** E2 refers to *evidence quality* (two sources agree), NOT *interpretation validity* (gateway truly operational). The interpretation could still be wrong if both sources share a common failure mode.
 
 ### **Critical Consequence:**
 
@@ -356,6 +419,7 @@ All future timeline estimates must use confidence windows, not single-point ETAs
 |------|--------|--------|-------|
 | 2026-05-13 | 1.0 | Initial certification of layered integrity model | Budowniczy + Archive Specialist |
 | 2026-05-13 | 1.1 | Epistemic architecture corrections: (1) status→GOVERNANCE_DECLARED_IMMUTABLE, (2) removed ceremonial numbers, (3) added E0-E4 evidence classes, (4) ETA→confidence windows | Constitutional Review Response |
+| 2026-05-13 | 1.2 | Final epistemic separation: observation/interpretation/evidence layers separated, confidence→confidence_in_interpretation, added evidence_metadata & epistemic_resilience sections | Constitutional Review - Epistemic Observability |
 
 ---
 
