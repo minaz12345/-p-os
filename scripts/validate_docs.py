@@ -19,7 +19,7 @@ import json
 import os
 import re
 import sys
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 
@@ -49,6 +49,7 @@ class ExecutableMarkdownValidator:
         self._validate_immutable_markers(content)
         self._validate_metadata_completeness(content)
         self._validate_hash_integrity(content, path)
+        self._validate_forensic_minimal_disclosure(content, path.name)
         
         # Report results
         self._print_results(file_path)
@@ -137,6 +138,72 @@ class ExecutableMarkdownValidator:
         # Store hash for audit trail
         self.metadata['computed_hash'] = f"sha256:{file_hash}"
     
+    def _validate_forensic_minimal_disclosure(self, content: str, filename: str):
+        """Validate Forensic Minimal Disclosure doctrine compliance.
+        
+        Detects potential secret leakage through high-entropy strings.
+        Rule: Secrets are runtime-only entities. Publication = Compromise.
+        """
+        # Skip validation for known secret files
+        secret_file_patterns = ['.env', 'secret', 'credential', 'key', 'token']
+        if any(pattern in filename.lower() for pattern in secret_file_patterns):
+            return  # Don't validate secret files themselves
+        
+        # High-entropy string detection patterns
+        # Pattern 1: Base64-encoded strings (likely secrets)
+        base64_pattern = r'[A-Za-z0-9+/]{40,}={0,2}'
+        base64_matches = re.findall(base64_pattern, content)
+        
+        # Pattern 2: Hex strings (API keys, tokens)
+        hex_pattern = r'[0-9a-fA-F]{32,}'
+        hex_matches = re.findall(hex_pattern, content)
+        
+        # Pattern 3: Connection strings with passwords
+        connection_string_pattern = r'(password|passwd|pwd|secret)=\S{8,}'
+        connection_matches = re.findall(connection_string_pattern, content, re.IGNORECASE)
+        
+        # Pattern 4: Private keys
+        private_key_pattern = r'-----BEGIN (RSA |EC |DSA )?PRIVATE KEY-----'
+        private_key_matches = re.findall(private_key_pattern, content)
+        
+        # Report findings
+        if base64_matches:
+            for match in base64_matches[:3]:  # Limit to first 3 to avoid spam
+                self.errors.append(
+                    f"POTENTIAL SECRET LEAKAGE: High-entropy Base64 string detected "
+                    f"(length: {len(match)}). Review for accidental secret exposure."
+                )
+        
+        if hex_matches:
+            for match in hex_matches[:3]:
+                self.errors.append(
+                    f"POTENTIAL SECRET LEAKAGE: Long hex string detected "
+                    f"(length: {len(match)}, starts: {match[:16]}...). "
+                    f"Could be API key or token."
+                )
+        
+        if connection_matches:
+            for match in connection_matches[:3]:
+                self.errors.append(
+                    f"SECRET EXPOSURE: Connection string with credentials detected: "
+                    f"'{match}'. Remove immediately - secrets are runtime-only!"
+                )
+        
+        if private_key_matches:
+            self.errors.append(
+                f"CRITICAL SECRET EXPOSURE: Private key detected in documentation! "
+                f"This violates Forensic Minimal Disclosure doctrine. Remove immediately."
+            )
+        
+        # Warning for suspicious patterns (not errors, but worth reviewing)
+        entropy_warning_pattern = r'[A-Za-z0-9_\-]{20,}\.[A-Za-z0-9_\-]{20,}\.[A-Za-z0-9_\-]{20,}'
+        jwt_matches = re.findall(entropy_warning_pattern, content)
+        if jwt_matches:
+            self.warnings.append(
+                f"Possible JWT token detected (length: {len(jwt_matches[0])}). "
+                f"Verify this is not a real token."
+            )
+    
     def _print_results(self, file_path: str):
         """Print validation results."""
         print("\n" + "="*70)
@@ -144,7 +211,7 @@ class ExecutableMarkdownValidator:
         print("="*70)
         print(f"File: {file_path}")
         print(f"Mode: {'STRICT' if self.strict_mode else 'STANDARD'}")
-        print(f"Timestamp: {datetime.utcnow().isoformat()}Z")
+        print(f"Timestamp: {datetime.now(timezone.utc).isoformat()}")
         print("-"*70)
         
         if self.metadata:
