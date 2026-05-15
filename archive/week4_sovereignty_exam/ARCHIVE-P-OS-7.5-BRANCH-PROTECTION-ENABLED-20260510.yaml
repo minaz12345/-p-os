@@ -1,0 +1,161 @@
+# P-OS v7.5 ARCHIWUM STANU CERTYFIKOWANEGO (kompakt)
+document_id: ARCHIVE-P-OS-7.5-BRANCH-PROTECTION-ENABLED-20260510
+status: CERTIFIED_IMMUTABLE
+data_certyfikacji: 2026-05-10T14:30:00Z
+właściciel: Budowniczy P-OS + p-os-constitution v1.0 [FROZEN]
+następny_przegląd: 2026-06-07
+validation_cmd: gh api repos/minaz12345/-p-os/branches/main/protection --jq '.required_status_checks.contexts'
+kontakty: ops@milejczyce.gov.pl, dpo@milejczyce.gov.pl, security@milejczyce.gov.pl
+
+---
+
+## PURPOSE
+**CERTYFIKACJA AKTYWACJI OCHRONY GAŁĘZI MAIN**  
+Oficjalne potwierdzenie włączenia **mandatory Constitutional Enforcement** na gałęzi `main`. System P-OS przeszedł z trybu advisory na mandatory enforcement.
+
+---
+
+## 1. STAN CERTYFIKOWANY `[IMMUTABLE]`
+
+| Parametr | Wartość | Status |
+|----------|---------|--------|
+| GitHub CLI | v2.92.0 | ✅ INSTALLED |
+| Authentication | minaz12345 | ✅ AUTHENTICATED |
+| Admin Permissions | ADMIN | ✅ CONFIRMED |
+| Branch Protection | main | ✅ ENABLED |
+| Required Checks | Constitutional Review / 🏛️ Constitutional Compliance Check | ✅ CONFIGURED |
+| Required Approvals | 1 | ✅ SET |
+| Admin Enforcement | true | ✅ ENABLED |
+| Force Pushes | false | ✅ BLOCKED |
+| Deletions | false | ✅ BLOCKED |
+| Linear History | true | ✅ ENFORCED |
+
+**Sygnatura zdrowia:** Ochrona gałęzi aktywna. Wszystkie PR muszą przejść przez Constitutional Agent before merge.
+
+---
+
+## 2. KONFIGURACJA ZASTOSOWANA `[IMMUTABLE]`
+
+### Wymagane Status Checks:
+```json
+{
+  "contexts": [
+    "Constitutional Review / 🏛️ Constitutional Compliance Check"
+  ],
+  "strict": true
+}
+```
+
+### Ustawienia Ochrony:
+- ✅ **Admin Enforcement:** Even repository admins must follow rules
+- ✅ **Required Approvals:** Minimum 1 human approval
+- ✅ **Dismiss Stale Reviews:** Old approvals invalidated on new commits
+- ❌ **Force Pushes:** Blocked - prevents history rewriting
+- ❌ **Deletions:** Blocked - prevents accidental branch deletion
+- ✅ **Linear History:** Enforced - keeps git history clean
+
+---
+
+## 3. EXECUTION LOG `[IMMUTABLE]`
+
+**Timestamp:** 2026-05-10T14:30:00Z  
+**Operator:** Budowniczy (minaz12345)  
+**Method:** Automated script (`ENABLE_BRANCH_PROTECTION.ps1`)
+
+**Execution Steps:**
+1. ✅ GitHub CLI installed (v2.92.0)
+2. ✅ Authentication completed via web browser
+3. ✅ Admin permissions verified
+4. ✅ Branch protection rules applied via GitHub API
+5. ✅ Configuration verified (all critical settings active)
+
+**Script Output:**
+```
+✅ Branch protection enabled successfully
+✅ Admins Enforced: True
+✅ Required Reviews: 1
+✅ Force Pushes Allowed: False
+✅ Deletions Allowed: False
+✅ Contexts: Constitutional Review / 🏛️ Constitutional Compliance Check
+```
+
+---
+
+## 4. ZNACZENIE OPERACYJNE `[IMMUTABLE]`
+
+**Przed aktywacją:**
+- ❌ Direct push do main był możliwy
+- ❌ Merge bez review był możliwy
+- ❌ Constitutional Agent był opcjonalny (advisory)
+- ❌ Admini mogli omijać reguły
+
+**Po aktywacji:**
+- ✅ Wszystkie zmiany przez PR tylko
+- ✅ Constitutional Agent MANDATORY
+- ✅ Minimum 1 aprobata wymagana
+- ✅ Nawet admini podlegają regułom
+- ✅ Historia chroniona przed rewrite
+- ✅ Gałąź chroniona przed usunięciem
+
+**To jest moment, w którym P-OS staje się żywą konstytucją repozytorium.**
+
+---
+
+## 5. WERYFIKacja PO AKTYWACJI `[OPERATOR_INPUT_REQUIRED]`
+
+### Test 1: Direct Push (Should Fail)
+```bash
+git checkout main
+echo "test" >> test.txt
+git add test.txt
+git commit -m "test: verify protection"
+git push origin main
+```
+**Expected:** ❌ Rejected by GitHub
+
+### Test 2: Create Compliant PR
+```bash
+git checkout -b test-compliance
+echo "# Test" >> TEST.md
+git add TEST.md
+git commit -m "test: compliant change"
+git push origin test-compliance
+```
+Then create PR and verify:
+- ✅ Constitutional Agent workflow triggers automatically
+- ✅ Status check appears in PR
+- ✅ Cannot merge until checks pass
+- ✅ After passing, merge is allowed
+
+---
+
+## 6. NASTĘPNE KROKI `[OPERATOR_INPUT_REQUIRED]`
+
+1. **Immediate:**
+   - [ ] Create test PR to verify workflow integration
+   - [ ] Confirm Constitutional Agent check blocks merge on FAIL
+   - [ ] Confirm merge allowed after PASS
+
+2. **Short-term (Week 1):**
+   - [ ] Document branch protection in team onboarding
+   - [ ] Train team on new workflow requirements
+   - [ ] Monitor first week of PR activity
+
+3. **Long-term:**
+   - [ ] Monthly review of protection effectiveness
+   - [ ] Quarterly assessment of constitutional health score
+   - [ ] Annual re-certification of branch protection rules
+
+---
+
+## HISTORIA ZMIAN
+
+| Data | Wersja | Zmiana | Autor |
+|------|--------|--------|-------|
+| 2026-05-10 | 1.0 | Aktywacja ochrony gałęzi main | Budowniczy + p-os-constitution v1.0 |
+
+---
+
+*Archiwum P-OS v7.5 | Branch Protection ACTIVATED | Mandatory Constitutional Enforcement ENABLED | 2026-05-10*
+
+()()(())()()(())()()(())()()(())()()
