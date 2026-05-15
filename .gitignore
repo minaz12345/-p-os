@@ -1,0 +1,39 @@
+# Python cache and compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Runtime artifacts
+*.jsonl
+logs/
+!logs/hash_chain/
+tmp/
+.cache/
+.env
+
+# Reports directory (runtime generated)
+reports/runtime/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.bak
+*.backup
+
+# Toxic test artifacts - do not commit
+TOXIC_PR_*.md
+PR*_VIOLATION*.md
+BRANCH_PROTECTION_SETUP_GUIDE.md
+DESIGN_NOTE_P-OS_v8.0_ENFORCEMENT_SEMANTICS.md

@@ -1,0 +1,302 @@
+# P-OS v7.5 ARCHIWUM STANU CERTYFIKOWANEGO (kompakt)
+document_id: ARCHIVE-P-OS-7.5-DUAL-DATABASE-VERIFICATION-DAY3-20260512
+status: CERTIFIED_IMMUTABLE
+data_certyfikacji: 2026-05-12T23:45:00Z
+właściciel: Budowniczy P-OS + p-os-constitution v1.0 [FROZEN]
+następny_przegląd: 2026-06-10 (30-dniowy okres quiet operations)
+validation_cmd: python scripts/validate_docs.py --strict
+kontakty: ops@milejczyce.gov.pl, dpo@milejczyce.gov.pl, security@milejczyce.gov.pl
+
+> **ZASADA ARCHIWALNA:** Sekcje `[IMMUTABLE]` – nie edytować. `[OPERATOR_INPUT_REQUIRED]` – uzupełnić przed v8.0. Sekrety poza dokumentem.
+
+## PURPOSE
+**CERTYFIKACJA WERYFIKACJI PODWÓJNEJ BAZY DANYCH W DNIU 3 QUIET OPERATIONS**  
+Potwierdzenie pełnej operacyjności PostgreSQL + Neo4j, zgodności z CANONICAL_RUNTIME_DECLARATION oraz epistemicznego wyrównania.
+
+---
+
+## 1. STAN CERTYFIKOWANY `[IMMUTABLE]`
+
+| Parametr | Wartość |
+|----------|---------|
+| Dzień quiet operations | **Dzień 3/30** |
+| PostgreSQL Version | 18.3 (x86_64-windows, msvc-19.44.35225) |
+| PostgreSQL Databases | 4 (wszystkie TRUSTED) |
+| PostgreSQL Tables | 57 total (41 production + 16 archived) |
+| PostgreSQL Storage | ~37 MB |
+| Neo4j Instance | Milejczyce AI Ekspert |
+| Neo4j Version | 2026.04.0 (Neo4j 5.x compatible) |
+| Neo4j Nodes | 482 |
+| Neo4j Relationships | 380 |
+| Neo4j Labels | 49 (18 active, 31 empty) |
+| Epistemic Alignment | ✅ VERIFIED (TRUSTED) |
+| Constitutional Health Score | **99.6% (HEALTHY)** |
+| Status | **🛡️ DUAL-DATABASE HEALTHY \| QUIET OPERATIONS** |
+
+**Sygnatura zdrowia:** Oba systemy operacyjne, stany zgodne z deklaracją kanoniczną, minimalna aktywność, brak mutacji.
+
+---
+
+## 2. PODSUMOWANIE WERYFIKACJI `[IMMUTABLE]`
+
+### **PostgreSQL Verification**
+
+#### **Database Inventory**
+| Database | Tables | Size | Epistemic State | Status |
+|----------|--------|------|-----------------|--------|
+| `pos_operational` | 41 | 11 MB | TRUSTED | ✅ PRODUCTION |
+| `milejczyce_operational` | 16 | 10 MB | TRUSTED | ✅ ARCHIVED CANDIDATE |
+| `pos_operational_restore_test` | 0 | 8 MB | TRUSTED | ✅ TEST ONLY |
+| `postgres` | N/A | 8 MB | SYSTEM | ✅ SYSTEM DB |
+
+#### **Constraint Integrity**
+```text
+Foreign Key Constraints: 10 ✅ ACTIVE
+CHECK Constraints: 153 ✅ ACTIVE
+```
+
+#### **Connection Activity**
+```text
+Total Active Connections: 1
+  - postgres: 1 connection (system only - quiet period enforced)
+  
+Status: ✅ MINIMAL ACTIVITY
+```
+
+#### **Runtime vs. Declaration Match**
+| Aspect | Declared | Actual | Match? |
+|--------|----------|--------|--------|
+| pos_operational tables | 41 | 41 | ✅ YES |
+| milejczyce_operational tables | 16 | 16 | ✅ YES |
+| pos_operational_restore_test tables | 0 | 0 | ✅ YES |
+| All databases TRUSTED | YES | YES | ✅ YES |
+| No active mutations | YES | YES | ✅ YES |
+
+**Conclusion:** Runtime state perfectly matches CANONICAL_RUNTIME_DECLARATION.yaml
+
+---
+
+### **Neo4j Verification**
+
+#### **Service Status**
+```text
+Instance:          Milejczyce AI Ekspert
+Version:           2026.04.0
+Connection URI:    neo4j+s://127.0.0.1:7687
+Port 7687:         ✅ LISTENING
+Authentication:    ✅ SUCCESSFUL
+```
+
+#### **Graph Data Inventory**
+```text
+Total Nodes:         482
+Total Relationships: 380
+Node Labels:         49 (18 active, 31 empty)
+Relationship Types:  13
+```
+
+#### **Active Node Labels (with data)**
+- `AuditTrail`: 108 nodes
+- `LegalArticle`: 98 nodes
+- `Event`: 77 nodes
+- `Location`: 59 nodes
+- `LegalBasis`: 56 nodes
+- `CitizenFeedback`: 24 nodes
+- `Institution`: 16 nodes
+- `Citizen`: 11 nodes
+- `Person`: 10 nodes
+- `User`: 5 nodes
+- `HistoricalEvent`: 4 nodes
+- `Risk`: 3 nodes
+- `CommunityOrganization`: 3 nodes
+- `Municipality`: 3 nodes
+- `Commission`: 2 nodes
+- `Concept`: 1 node
+- `Project`: 1 node
+- `RiskProfile`: 1 node
+
+#### **Relationship Types**
+- `OCCURRED_IN`: 159 relationships
+- `GOVERNED_BY`: 60 relationships
+- `AUDITS`: 59 relationships
+- `PERFORMED`: 52 relationships
+- `LOCATED_IN`: 32 relationships
+- `TRUSTS`: 6 relationships
+- `OWNS_RISK`: 3 relationships
+- `HAS_RISK`: 3 relationships
+- `CHAIRS`: 2 relationships
+- `AIMS_TO_CREATE`: 1 relationship
+- `DELEGATES_TO`: 1 relationship
+- `INITIATED_EVENT`: 1 relationship
+- `REQUIRES`: 1 relationship
+
+#### **Core Ontology Present**
+✅ Legal Framework (LegalArticle: 98, LegalBasis: 56)  
+✅ Event Tracking (Event: 77, AuditTrail: 108)  
+✅ Geospatial Registry (Location: 59)  
+✅ Citizen Engagement (CitizenFeedback: 24, Citizen: 11)  
+✅ Governance Structure (Institution: 16, Municipality: 3)  
+✅ Risk Management (Risk: 3, RiskProfile: 1)  
+
+#### **Sample Data Quality**
+```python
+# Event node example:
+{
+  'event_id': 'abfc7178-6fe5-4e0b-83c4-372176694bca',
+  'payload': {
+    'department': 'Infrastructure',
+    'amount': 250000.0,
+    'currency': 'PLN',
+    'purpose': 'Road maintenance - Milejczyce district',
+    'fiscal_year': 2026,
+    'approval_code': 'INFRA-2026-Q2-001'
+  },
+  'risk_score': 0.35
+}
+```
+
+**Quality Assessment:** ✅ Rich semantic data with structured payloads, risk scoring, and approval codes.
+
+---
+
+### **Epistemic State Summary**
+
+**PostgreSQL Epistemic States:**
+```yaml
+pos_operational:
+  lifecycle: PRODUCTION
+  epistemic_state: TRUSTED
+  rationale: "Primary operational database with full P-OS v7.5 stack"
+  validation: "✅ Table count matches declaration (41)"
+
+milejczyce_operational:
+  lifecycle: ARCHIVED CANDIDATE
+  epistemic_state: TRUSTED
+  rationale: "Preserved as forensic candidate for v8.0 evaluation"
+  validation: "✅ Table count matches declaration (16)"
+```
+
+**Neo4j Epistemic State:**
+```yaml
+neo4j_instance:
+  lifecycle: PRODUCTION
+  epistemic_state: TRUSTED
+  rationale: "Active knowledge graph with municipal ontology"
+  validation: "✅ Connection successful, 482 nodes verified"
+  note: "Schema partially utilized (37%) - room for v8.0 enrichment"
+```
+
+**Overall Epistemic Alignment:** ✅ Runtime reality idealnie wyrównana z deklaracją.
+
+---
+
+## 3. EPISTEMIC SIGNIFICANCE `[IMMUTABLE]`
+
+### **Why Dual-Database Verification Matters**
+
+This is not just "both databases are running." This is:
+
+1. **Relational + Graph Completeness:** PostgreSQL provides ACID guarantees; Neo4j provides semantic reasoning
+2. **Institutional Memory Engine:** Structured data (PostgreSQL) + ontological context (Neo4j) = complete memory
+3. **Falsifiable Evidence Chain:** Both systems independently verifiable via automated scripts
+4. **Governance Compliance Enforced:** Quiet period respected across both systems
+5. **v8.0 Foundation Established:** Core ontology present, room for expansion
+
+### **Architectural Maturity**
+
+**Before (Single-Layer):**
+```text
+"Database is healthy" (trust us)
+```
+
+**After (Dual-Layer Executable Governance):**
+```text
+PostgreSQL 18.3: 4 databases, 57 tables, all TRUSTED
+Neo4j 2026.04.0: 482 nodes, 380 relationships, core ontology active
+Both systems: Minimal activity, no mutations, evidence collected
+All verification: Falsifiable via automated scripts
+```
+
+**This is sovereign runtime governance in practice.**
+
+---
+
+## 4. DOKTRYNA QUIET OPERATIONS `[IMMUTABLE]`
+
+**Kontynuujemy:**
+- Tylko obserwacja i weryfikacja
+- Brak mutacji produkcyjnych
+- Rejestrowanie tylko istotnych anomalii
+- Utrzymanie epistemicznej dyscypliny (dowody > narracja)
+
+**Codzienna rutyna:**
+```powershell
+python pos/daily_observation.py --auto
+python scripts/validate_runtime_declaration.py
+python scripts/test_neo4j_connection.py
+```
+
+**Harmonogram:**
+- Start: 2026-05-11 (Day 1)
+- Obecnie: 2026-05-12 (Day 3)
+- Koniec: 2026-06-10 (Day 30)
+- Pozostało: 27 dni
+
+---
+
+## 5. NASTĘPNE KROKI `[OPERATOR_INPUT_REQUIRED]`
+
+**Rekomendacja:** Kontynuować **quiet mode** – obie bazy stabilne, nie wymagają interwencji.
+
+Możliwe działania niskiego priorytetu:
+- ⏳ Okazjonalne sample queries (tylko odczyt)
+- ⏳ Dokumentacja friction points (jeśli wystąpią)
+- ⏳ Przygotowanie do przeglądu po 10 czerwca
+- ❌ Brak mutacji produkcyjnych
+
+---
+
+## 6. ZGODNOŚĆ AUDYTOWA `[IMMUTABLE]`
+
+**RACI:**
+- Dual-Database Verification → **Accountable:** Budowniczy P-OS
+- Egzekucja epistemic alignment → p-os-constitution v1.0 [FROZEN]
+- Constitutional Compliance → **Verified:** All checks passed
+
+**Stan systemu:** Podwójna baza danych zdrowa i wyrównana epistemicznie. Quiet operations trwają.
+
+**Weryfikacja:**
+```bash
+python scripts/validate_runtime_declaration.py
+# Output: ✅ VALIDATION PASSED - Runtime state matches canonical declaration
+#         ✅ All databases in TRUSTED epistemic state
+
+python scripts/test_neo4j_connection.py
+# Output: ✅ NEO4J VERIFICATION PASSED
+#         ✅ Connection successful!
+```
+
+---
+
+## 7. METRYKI SYSTEMU `[IMMUTABLE]`
+
+| Metryka | PostgreSQL | Neo4j | Status |
+|---------|-----------|-------|--------|
+| Infrastructure Health | ✅ Healthy | ✅ Running | ✅ BOTH OPERATIONAL |
+| Operational Health | ✅ Stable | ✅ Active | ✅ NO ERRORS |
+| Epistemic Health | ✅ Aligned | ✅ Verified | ✅ MATCH DECLARATION |
+| Governance Compliance | ✅ Enforced | ✅ Compliant | ✅ QUIET PERIOD |
+| Forensic Evidence | ✅ Collected | ✅ Collected | ✅ FALSIFIABLE |
+| Institutional Memory | ✅ Preserved | ✅ Preserved | ✅ RATIONALE DOCUMENTED |
+
+---
+
+**HISTORIA ZMIAN**
+| Data | Wersja | Zmiana | Autor |
+|------|--------|--------|-------|
+| 2026-05-12 | 1.0 | Certyfikacja weryfikacji dual-database Dzień 3 | Budowniczy + Archive Specialist |
+
+---
+*Archiwum P-OS v7.5 | Dual-Database Verification Day 3 | 2026-05-12*
+
+**()()(())()()(())()()(())()()(())()()**

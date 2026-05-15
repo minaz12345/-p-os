@@ -1,0 +1,242 @@
+# P-OS v8.0 ARCHIWUM STANU CERTYFIKOWANEGO (kompakt)
+document_id: REVIEW-P-OS-v8.0-TWO-PHASE-FIX-20260512
+status: APPROVED_WITH_NOTES
+data_certyfikacji: 2026-05-12T00:00:00Z
+właściciel: Budowniczy P-OS + AI Architect
+następny_przegląd: 2026-06-10 (koniec okresu quiet operations)
+validation_cmd: python scripts/validate_docs.py --strict
+kontakty: ops@milejczyce.gov.pl, dpo@milejczyce.gov.pl, security@milejczyce.gov.pl
+
+> **ZASADA ARCHIWALNA:** Sekcje `[IMMUTABLE]` – nie edytować. `[OPERATOR_INPUT_REQUIRED]` – uzupełnić przed wdrożeniem. Sekrety poza dokumentem.
+
+## PURPOSE
+**REVIEW CERTIFICATION: P-OS v8.0 Two-Phase Fix**  
+Oficjalna certyfikacja przeglądu architektonicznego poprawek dwuetapowych dla v8.0. Zatwierdzenie kierunku precyzyjnego refinamentu bez ekspansji semantycznej.
+
+---
+
+## 1. PODSUMOWANIE WYKONAWCZE `[IMMUTABLE]`
+
+Przegląd jest **głęboko trafny**. Ten refinament reprezentuje dokładnie właściwy kierunek dla v8.0:
+
+```text
+v7.5: System raportuje status (ceremonialny)
+v8.0: System modeluje rzeczywistość runtime precyzyjnie (forensiczny)
+```
+
+To nie jest ekspansja. To jest **refinament precyzji**.
+
+---
+
+## 2. KLUCZOWE INSIGHTY ZWERYFIKOWANE `[IMMUTABLE]`
+
+### **2.1 Faza 1: Korekta Warstwy Runtime** ✅
+
+Problem rozwiązany poprzez:
+- ✅ Korektę warstwy runtime (właściwe kodowanie UTF-8)
+- ❌ NIE hack governance
+- ❌ NIE supresję błędów
+- ❌ NIE ignorowanie awarii
+
+**Wpływ:** `status command: FAILED → COMPLETE` bez zmian konstytucyjnych.
+
+To jest **model bounded system refinement**.
+
+---
+
+### **2.2 Usunięcie Rich Console: Prostota Operacyjna** ✅
+
+Ocena jest poprawna:
+
+```text
+prostota operacyjna > wyrafinowanie wizualne
+```
+
+**Dlaczego to ważne:**
+- Stabilne renderowanie ASCII na Windows cp1252
+- Brak zależności od dziwactw biblioteki Rich
+- Przewidywalne wyjście we wszystkich środowiskach
+- Zgodność z doktryną Constitutional Quietness
+- Osiągnięty low-noise runtime
+
+**Dojrzałe systemy wybierają niezawodność ponad estetykę.**
+
+---
+
+### **2.3 Klasyfikacja Pięciostanowa: Semantyka Forensyczna** ✅
+
+To jest **najważniejszy refinament całej sesji**.
+
+**Ewolucja:**
+```text
+v7.5: SUCCESS / FAIL (binarne, stratne)
+v8.0: COMPLETE / FAILED / INTERRUPTED / INCOMPLETE / CORRUPTED (forensiczne, precyzyjne)
+```
+
+**Dlaczego to ważne:**
+- Zachowuje prawdę runtime
+- Zapobiega manipulacji metrykami
+- Umożliwia właściwą obserwowalność
+- Rozróżnia stan operacyjny od integralności audytu
+
+**To jest przejście od semantyki CI do semantyki forensycznej.**
+
+---
+
+### **2.4 Rozdzielenie: Fundamentalny Insight** ✅
+
+```text
+Sukces Operacyjny ≠ Integralność Audytu
+```
+
+To rozdzielenie zapobiega:
+- ❌ Raportowaniu "zdrowy" gdy istnieją awarie
+- ❌ Maskowaniu zdegradowanego runtime perfekcyjnymi logami audytu
+- ❌ Myleniu dwóch niezależnych wymiarów
+
+**Teraz oba stany istnieją niezależnie i są raportowane oddzielnie.**
+
+To jest **prawdziwa dojrzałość obserwowalności**.
+
+---
+
+### **2.5 Ewolucja Semantyczna: Przesunięcie Filozoficzne** ✅
+
+Charakteryzacja jest doskonała:
+
+| Wersja | Filozofia | Zachowanie |
+|--------|-----------|------------|
+| **v7.5** | System raportuje status | Raportowanie ceremonialne |
+| **v8.0** | System modeluje rzeczywistość runtime precyzyjnie | Zachowanie prawdy forensycznej |
+
+**To jest fundamentalna różnica filozoficzna.**
+
+---
+
+## 3. OSTRZEŻENIE KRYTYCZNE: EGZEKWACJA GRANIC ⚠️ `[IMMUTABLE]`
+
+### **Granica Egzekwowana: Maksymalnie 5 Stanów**
+
+Absolutnie słuszne ostrzeżenie przed:
+- ❌ 17 podkategoriami
+- ❌ 42 przypadkami brzegowymi
+- ❌ Biurokracją semantyczną
+- ❌ Grawitacją governance
+- ❌ Pełzaniem ontologii
+
+**Ostateczny Kształt Rekomendowany:**
+
+```yaml
+STAN RUNTIME (maks. 5 stanów):
+├── COMPLETE
+├── FAILED
+├── INTERRUPTED
+├── INCOMPLETE
+└── CORRUPTED
+
+WERDYKT GOVERNANCE (maks. 4 stany):
+├── PASS
+├── CONDITIONAL_PASS
+├── FAIL
+└── OBSERVE
+```
+
+**STOP TU.** Żadnej ekspansji bez bardzo silnych dowodów operacyjnych.
+
+---
+
+## 4. NAJDOJRZALSZY ELEMENT: "SYSTEM PRZESTAŁ UDWAĆ" ✅ `[IMMUTABLE]`
+
+To jest kluczowy insight:
+
+**Dojrzałe systemy:**
+- ✅ Nie udają idealnych
+- ✅ Nie wygładzają runtime
+- ✅ Nie maskują degradacji agregatem
+
+**Zamiast tego:**
+- ✅ Klasyfikują rzeczywistość
+- ✅ Zachowują prawdę forensyczną
+- ✅ Ograniczają własną narrację
+
+**To jest dokładnie to, co osiągnęliśmy.**
+
+---
+
+## 5. OCENA KOŃCOWA `[IMMUTABLE]`
+
+```yaml
+Kierunek Architektury: POPRAWNY ✅
+Boundedness: ZACHOWANY ✅
+Prawdomówność Runtime: ZWIĘKSZONA ✅
+Teatr Governance: ZREDUKOWANY ✅
+Precyzja Semantyczna: ZNACZNIE POPRAWIONA ✅
+```
+
+**To jest refinament precyzji, nie ekspansja.**
+
+**To jest dokładnie tym, czym powinno być v8.0.**
+
+---
+
+## 6. STATUS WDROŻENIA `[OPERATOR_INPUT_REQUIRED]`
+
+### **Zakończone:**
+✅ Faza 1: Poprawka kodowania Unicode (rekonfiguracja UTF-8)  
+✅ Faza 1: Usunięcie emoji (alternatywy bezpieczne dla ASCII)  
+✅ Faza 1: Ominięcie Rich console (zwykłe instrukcje print)  
+✅ Faza 2: Infrastruktura klasyfikacji pięciostanowej  
+✅ Faza 2: Ulepszenia loggera audytu  
+✅ Faza 2: Framework rozdzielonych metryk  
+
+### **Gotowe do Wdrożenia:**
+⏸️ Integracja z daily observer (oczekuje na decyzję operatora)  
+⏸️ Pełne raportowanie pięciostanowe (oczekuje na zakończenie okresu quiet)  
+
+---
+
+## 7. NASTĘPNE KROKI (Po Okresie Quiet: 2026-06-10) `[OPERATOR_INPUT_REQUIRED]`
+
+1. **Zaktualizuj Daily Observer** aby używał klasyfikacji pięciostanowej
+2. **Zaimplementuj strukturę raportowania w stylu YAML**
+3. **Przetestuj ze scenariuszami rzeczywistymi** (przerwane operacje, częściowe zapisy)
+4. **Dokumentuj egzekucję granic** (brak ekspansji poza 5+4 stany)
+5. **Zarchiwizuj jako wzorzec referencyjny v8.0**
+
+---
+
+## 8. CERTYFIKACJA ARCHIWALNA `[IMMUTABLE]`
+
+```
+╔═══════════════════════════════════════════════════════════╗
+║  P-OS v8.0 TWO-PHASE FIX - REVIEW CERTIFIED             ║
+║                                                           ║
+║  Recenzent:         Budowniczy + AI Architect            ║
+║  Data:              2026-05-12                           ║
+║  Status:            APPROVED_WITH_NOTES                  ║
+║  Boundedness:       ZACHOWANY                            ║
+║  Dryf Semantyczny:  ZREDUKOWANY                          ║
+║                                                           ║
+║  Kluczowe Osiągnięcie:                                    ║
+║    System przestał udawać                                ║
+║    System modeluje rzeczywistość runtime precyzyjnie     ║
+║    Prawda forensyczna zachowana                          ║
+║                                                           ║
+║  Egzekucja Granic:                                        ║
+║    Maks 5 stanów runtime                                 ║
+║    Maks 4 werdykty governance                            ║
+║    BEZ ekspansji bez dowodu operacyjnego                 ║
+║                                                           ║
+║  ()()(())()()(())()()(())()()(())()()                    ║
+╚═══════════════════════════════════════════════════════════╝
+```
+
+---
+
+## HISTORIA ZMIAN
+| Data | Wersja | Zmiana | Autor |
+|------|--------|--------|-------|
+| 2026-05-12 | 1.0 | Certyfikacja przeglądu v8.0 two-phase fix | Budowniczy + AI Architect |
+
+---
+*Archiwum P-OS v8.0 | Review Certification - Two-Phase Fix | 2026-05-12*

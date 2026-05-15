@@ -11,9 +11,17 @@ Usage:
 """
 
 import json
+import os
 import sys
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
+
+# R5 Hash Chain Integration
+sys.path.insert(0, str(Path(__file__).parent.parent))
+try:
+    from core.observability.hash_chain import HashChainVerifier
+except ImportError:
+    HashChainVerifier = None
 
 
 class DailyObserver:
@@ -24,7 +32,7 @@ class DailyObserver:
         self.audit_dir = self.project_root / "logs" / "cli_audit"
         self.observation_log = self.project_root / "pos" / "OBSERVATION_LOG.jsonl"
         self.flags_dir = self.project_root / "flags"  # D:\pos7\flags\
-        self.today = datetime.utcnow().date()
+        self.today = datetime.now(timezone.utc).date()
 
     def check_pos_status(self) -> dict:
         """Run pos status and capture output."""
@@ -35,19 +43,22 @@ class DailyObserver:
                 [sys.executable, "-m", "pos", "status"],
                 cwd=self.project_root,
                 capture_output=True,
-                text=True,
                 timeout=30,
+                env={**os.environ, "PYTHONIOENCODING": "utf-8"},
             )
 
+            # Decode output with UTF-8, handling errors gracefully
+            stdout_text = result.stdout.decode('utf-8', errors='replace') if isinstance(result.stdout, bytes) else result.stdout
+
             return {
-                "timestamp": datetime.utcnow().isoformat() + "Z",
+                "timestamp": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
                 "exit_code": result.returncode,
-                "output_length": len(result.stdout),
+                "output_length": len(stdout_text),
                 "has_errors": result.returncode != 0,
             }
         except Exception as e:
             return {
-                "timestamp": datetime.utcnow().isoformat() + "Z",
+                "timestamp": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
                 "exit_code": -1,
                 "error": str(e),
             }
@@ -93,6 +104,45 @@ class DailyObserver:
             "dry_run_count": dry_run_count,
             "execution_count": execution_count,
             "adoption_rate": round(adoption_rate, 2),
+        }
+
+    def check_dry_run_threshold(self, adoption_rate: float) -> dict:
+        """
+        Check if dry-run adoption has dropped below safe threshold.
+        
+        Prevents overconfidence drift during quiet operations.
+        Threshold based on constitutional monitoring requirements.
+        """
+        THRESHOLD_LOW = 0.20   # 20% minimum (alert trigger)
+        THRESHOLD_WARNING = 0.30  # 30% warning level
+        
+        status = "NORMAL"
+        recommendation = None
+        severity = "INFO"
+        
+        if adoption_rate < THRESHOLD_LOW:
+            status = "ALERT_LOW_CONFIDENCE"
+            severity = "WARNING"
+            recommendation = (
+                "Dry-run adoption below 20%. "
+                "Schedule interactive feedback session to assess overconfidence risk. "
+                "Consider temporary mandatory dry-run for critical operations."
+            )
+        elif adoption_rate < THRESHOLD_WARNING:
+            status = "MONITORING"
+            severity = "INFO"
+            recommendation = (
+                f"Dry-run adoption at {adoption_rate*100:.1f}%. "
+                "Within acceptable range but trending low. Continue monitoring."
+            )
+        
+        return {
+            "status": status,
+            "severity": severity,
+            "adoption_rate": round(adoption_rate * 100, 2),
+            "threshold_low": THRESHOLD_LOW * 100,
+            "threshold_warning": THRESHOLD_WARNING * 100,
+            "recommendation": recommendation
         }
 
     def check_w11_flag_activations(self) -> dict:
@@ -146,7 +196,7 @@ class DailyObserver:
         Na Windows st_atime (access time) też jest zawodny (często wyłączony).
 
         Zamiast tego: odnotowujemy że dokumenty ISTNIEJĄ i podajemy ich rozmiar.
-        Faktyczne śledzenie użycia robimy przez pytanie operatora (feedback).
+        Faktyczne śledzenie użycia robimy 5przez pytanie operatora (feedback).
         """
         docs_to_check = [
             self.project_root / "docs" / "NON_GOALS_AND_BOUNDARIES_PL.md",
@@ -260,17 +310,36 @@ class DailyObserver:
         if doc_usage.get("missing_names"):
             print(f"  [!] Brakuje: {', '.join(doc_usage['missing_names'])}")
 
+        # Dry-Run Threshold Monitoring
+        dry_run_threshold = self.check_dry_run_threshold(dry_run_analysis['adoption_rate'] / 100)
+        if dry_run_threshold['severity'] == 'WARNING':
+            print(f"[!] Adopcja dry-run: {dry_run_threshold['adoption_rate']}% - ALERT LOW CONFIDENCE")
+            if dry_run_threshold.get('recommendation'):
+                print(f"  [!] Rekomendacja: {dry_run_threshold['recommendation']}")
+
         daily_report = {
             "date": self.today.isoformat(),
-            "timestamp": datetime.utcnow().isoformat() + "Z",
+            "timestamp": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
             "automated_metrics": {
                 "status_check": status_check,
                 "audit_logs": audit_count,
                 "dry_run_adoption": dry_run_analysis,
+                "dry_run_threshold_monitoring": dry_run_threshold,
                 "w11_activations": w11_check,
                 "document_usage": doc_usage,
             },
         }
+
+        # R5 Hash Chain Recording
+        if HashChainVerifier:
+            try:
+                hash_verifier = HashChainVerifier(self.project_root)
+                hash_result = hash_verifier.record_daily_hash(self.today.isoformat())
+                print(f"[OK] Łańcuch hashy: {hash_result['status']}")
+                daily_report["hash_chain"] = hash_result
+            except Exception as e:
+                print(f"[!] Łańcuch hashy: BŁĄD - {str(e)}")
+                daily_report["hash_chain"] = {"status": "ERROR", "error": str(e)}
 
         if interactive:
             feedback = self.collect_operator_feedback()
