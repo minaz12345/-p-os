@@ -330,7 +330,14 @@ class DailyObserver:
             },
         }
 
-        # R5 Hash Chain Recording
+        if interactive:
+            feedback = self.collect_operator_feedback()
+            daily_report["operator_feedback"] = feedback
+
+        # Save report FIRST
+        self.save_daily_report(daily_report)
+
+        # R5 Hash Chain Recording - MUST be AFTER save to capture final file state
         if HashChainVerifier:
             try:
                 hash_verifier = HashChainVerifier(self.project_root)
@@ -340,12 +347,6 @@ class DailyObserver:
             except Exception as e:
                 print(f"[!] Łańcuch hashy: BŁĄD - {str(e)}")
                 daily_report["hash_chain"] = {"status": "ERROR", "error": str(e)}
-
-        if interactive:
-            feedback = self.collect_operator_feedback()
-            daily_report["operator_feedback"] = feedback
-
-        self.save_daily_report(daily_report)
 
         print()
         print("=" * 70)
