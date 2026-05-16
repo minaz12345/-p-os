@@ -46,3 +46,17 @@ data/prometheus/
 # Database credential backups (rotated)
 .env.db.backup*
 
+
+# Migration artifacts
+migration_*.txt
+migration_output.txt
+
+# SQLite WAL files
+*.db-shm
+*.db-wal
+
+# Screenshots
+*.png
+
+# Test databases
+*_test.db
