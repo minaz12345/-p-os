@@ -42,3 +42,7 @@ DESIGN_NOTE_P-OS_v8.0_ENFORCEMENT_SEMANTICS.md
 data/prometheus/
 *.tsdb
 
+
+# Database credential backups (rotated)
+.env.db.backup*
+
