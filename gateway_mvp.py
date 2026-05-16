@@ -276,7 +276,7 @@ def request_erasure(request: Request, req: ErasureRequest):
     
     operator_uuid = uuid.uuid5(uuid.NAMESPACE_DNS, req.operator_id)
     
-    # 6. Log to Audit Trail (File-based for backup)
+    # 6. Prepare audit log (written AFTER DB commit to ensure atomic truth)
     audit_log = {
         "event": "GDPR_ERASURE_REQUEST",
         "timestamp": datetime.now(timezone.utc).isoformat(),
@@ -291,10 +291,8 @@ def request_erasure(request: Request, req: ErasureRequest):
     log_dir = Path("D:/pos7/logs/gdpr_requests")
     log_dir.mkdir(exist_ok=True)
     
-    with open(log_dir / f"{request_id}.json", "w") as f:
-        json.dump(audit_log, f, indent=2)
-        
-    # 7. Persist to Production PostgreSQL Table
+    # 7. Persist to Production PostgreSQL Table FIRST (primary truth)
+    db_status = "FAILED"
     try:
         conn = get_db()
         cur = conn.cursor()
@@ -315,7 +313,18 @@ def request_erasure(request: Request, req: ErasureRequest):
         db_status = "PERSISTED"
     except Exception as e:
         print(f"Database persistence failed: {e}")
-        raise HTTPException(status_code=500, detail=f"DB error: {str(e)}")
+        # DB failed - request never entered reality, no audit trail created
+        raise HTTPException(status_code=503, detail=f"Service unavailable: database error")
+    
+    # 8. ONLY write audit log AFTER successful DB commit (atomic truth boundary)
+    try:
+        with open(log_dir / f"{request_id}.json", "w") as f:
+            json.dump(audit_log, f, indent=2)
+    except Exception as e:
+        # Audit write failed but DB succeeded - log warning but don't fail request
+        # This is acceptable: primary truth (DB) exists, audit is secondary
+        print(f"WARNING: Audit log write failed: {e}")
+        # Request still valid since DB has the record
     
     # 8. Emit immutable event to hash chain
     try:
