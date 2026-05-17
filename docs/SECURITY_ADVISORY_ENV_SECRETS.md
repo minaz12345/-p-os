@@ -309,29 +309,167 @@ After completing remediation:
 - Comprehensive remediation guide
 - Step-by-step rotation instructions
 
-### Pending Actions
+### Pending Actions - BLOCKING STAGING DEPLOYMENT
 
-⚠️ **SECRET ROTATION REQUIRED** (Blocker for staging deployment)
+⚠️ **CRITICAL: Credential Rotation Required**
 
-The following secrets must be rotated before staging deployment:
+**Status:** 🔴 BLOCKED - Requires manual operator execution  
+**Impact:** All previously committed secrets must be considered COMPROMISED  
+**Priority:** HIGH - Must complete before staging deployment
 
-1. **Database Password** (CRITICAL - Highest Priority)
-   - Current password exposed in git history
-   - Use: `python scripts\secure_rotate_password.py`
-   - Or manual rotation via psql
+#### Execution Order:
 
-2. **JWT Signing Key**
-   - Generate new key
-   - Invalidate existing tokens
-   - Update `.env.auth`
+```text
+1. PostgreSQL password rotation (CRITICAL)
+2. JWT / auth secret rotation
+3. Grafana admin password rotation
+4. Runtime tokens / encryption keys rotation
+5. Service restart and validation
+6. Integration test execution
+```
 
-3. **Grafana Credentials**
-   - Change admin password
-   - Update `.env.grafana`
+#### Step 1: PostgreSQL Password Rotation
 
-4. **Runtime Secrets**
-   - Review and rotate all API keys/tokens
-   - Update `.env.runtime`
+**Prerequisites:**
+- Administrator privileges required to start PostgreSQL service
+- Access to current database credentials
+
+**Execution (Run PowerShell AS ADMINISTRATOR):**
+
+```powershell
+# Start PostgreSQL service
+Start-Service postgresql-x64-18
+
+# Verify service is running
+Get-Service postgresql-x64-18 | Select-Object Name, Status
+
+# Navigate to project directory
+cd D:\pos7
+
+# Execute secure rotation script
+python scripts\secure_rotate_password.py
+```
+
+**Expected Output:**
+```
+🔐 Secure Password Rotation Tool
+================================
+
+Current password: [hidden input]
+Generating new 48-character secure password...
+✓ Password generated successfully
+Updating PostgreSQL database...
+✓ Database password updated
+Verifying new credentials...
+✓ Connection successful
+Updating .env.db file...
+✓ Configuration updated
+
+Rotation complete!
+New password stored in: .env.db
+```
+
+**Verification:**
+```powershell
+# Test new credentials
+psql -U pos_admin -d pos_operational -h localhost -W
+# Enter new password when prompted
+# Should connect successfully
+```
+
+#### Step 2: JWT/Auth Secret Rotation
+
+**Manual Procedure:**
+
+1. Generate new JWT secret:
+```powershell
+python -c "import secrets; print(secrets.token_urlsafe(48))"
+```
+
+2. Update `.env.auth`:
+```bash
+JWT_SECRET=<new_generated_secret>
+SESSION_SECRET=<new_generated_secret>
+ENCRYPTION_KEY=<new_generated_secret>
+```
+
+3. Restart API gateway:
+```powershell
+# Stop existing gateway
+Stop-Process -Name "uvicorn" -Force -ErrorAction SilentlyContinue
+
+# Start with new credentials
+python app\main.py
+```
+
+#### Step 3: Grafana Admin Password Rotation
+
+**Via Grafana UI:**
+1. Navigate to `http://localhost:3000`
+2. Login with current credentials
+3. Go to: Administration → Users → Admin
+4. Click "Change Password"
+5. Update `.env.grafana` with new password
+
+**Via CLI (if available):**
+```bash
+grafana-cli admin reset-admin-password <new_password>
+```
+
+#### Step 4: Runtime Secrets Rotation
+
+Review `.env.runtime` and rotate any:
+- API tokens
+- Encryption keys
+- Third-party service credentials
+- Webhook secrets
+
+Generate new values using:
+```powershell
+python -c "import secrets; print(secrets.token_hex(32))"
+```
+
+#### Step 5: Service Restart & Validation
+
+```powershell
+# Restart all services
+Restart-Service postgresql-x64-18
+
+# Restart API gateway (if running as service)
+Restart-Service pos-gateway
+
+# Verify health endpoints
+curl http://localhost:8000/health
+curl http://localhost:8000/api/v1/status
+```
+
+#### Step 6: Integration Test Execution
+
+```powershell
+# Run API gateway tests
+python tests\test_api_gateway.py
+
+# Run production hardening tests
+python tests\test_production_hardening.py --all
+
+# Expected result: ALL TESTS PASSING (100% pass rate)
+```
+
+---
+
+### Blocking Conditions for Staging Deployment
+
+**Staging deployment is BLOCKED until:**
+
+- [ ] PostgreSQL password rotated and verified
+- [ ] JWT/auth secrets rotated
+- [ ] Grafana credentials rotated
+- [ ] Runtime secrets rotated
+- [ ] All services restarted successfully
+- [ ] Integration tests passing (100% pass rate)
+- [ ] Health checks returning OK status
+
+**Current Status:** 🔴 **BLOCKED** - Awaiting credential rotation
 
 ### Risk Assessment
 
