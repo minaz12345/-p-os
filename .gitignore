@@ -13,6 +13,20 @@ tmp/
 .cache/
 .env
 
+# Environment secrets (keep .env.example templates, ignore actual secrets)
+!.env.example
+.env.auth
+.env.db
+.env.grafana
+.env.runtime
+*.key
+*.pem
+
+# Runtime export artifacts (ephemeral - do not commit)
+data/exports/
+data/export_queue/
+flags/
+
 # Reports directory (runtime generated)
 reports/runtime/
 
