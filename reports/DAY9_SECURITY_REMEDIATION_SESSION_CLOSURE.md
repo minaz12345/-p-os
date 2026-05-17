@@ -641,8 +641,8 @@ This session demonstrated:
 ### **Git Repository:**
 
 - Branch: `feature/day9-operations`
-- Remote: `https://github.com/minaz12345/-p-os.git`
-- Latest Commit: `97c9f72`
+- Remote: GitHub (private repository)
+- Latest Commit: `8af6897`
 
 ---
 
