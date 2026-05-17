@@ -93,24 +93,72 @@ git check-ignore -v .env.auth
 
 ### Step 3: Rotate Compromised Secrets
 
-Since these secrets were in git history, they should be considered **compromised**:
+Since these secrets were in git history, they should be considered **compromised**.
+
+#### **Database Password Rotation (CRITICAL)**
+
+**Option A: Automated Secure Rotation (Recommended)**
+
+```powershell
+# Start PostgreSQL service first (requires admin)
+Start-Service postgresql-x64-18
+
+# Run secure rotation script
+cd d:\pos7
+python scripts\secure_rotate_password.py
+```
+
+The script will:
+1. Prompt for current password (hidden input)
+2. Generate new 48-character cryptographically secure password
+3. Update PostgreSQL database
+4. Verify new credentials work
+5. Automatically update `.env.db` file
+
+**Option B: Manual Rotation**
+
+```sql
+-- Connect to PostgreSQL as superuser
+psql -U postgres
+
+-- Rotate password
+ALTER USER pos_admin WITH PASSWORD 'NEW_SECURE_PASSWORD_HERE';
+
+-- Verify
+\q
+
+-- Test new credentials
+psql -U pos_admin -d pos_operational -h localhost
+```
+
+Then manually update `.env.db`:
+```ini
+POSTGRESQL_PASSWORD=NEW_SECURE_PASSWORD_HERE
+POSTGRESQL_URI=postgresql://pos_admin:NEW_SECURE_PASSWORD_HERE@localhost:5432/pos_operational
+```
+
+#### **Other Secrets Rotation**
 
 1. **JWT Secrets** (`.env.auth`)
-   - Generate new JWT signing keys
-   - Invalidate existing tokens
-   - Update `.env.auth` with new values
+   ```powershell
+   # Generate new JWT signing key
+   python -c "import secrets; print('JWT_SECRET_KEY=' + secrets.token_hex(32))"
+   
+   # Update .env.auth with new key
+   # Restart P-OS API service
+   ```
 
-2. **Database Credentials** (`.env.db`)
-   - Change database passwords
-   - Update connection strings
-   - Revoke old credentials
+2. **Grafana Credentials** (`.env.grafana`)
+   - Log into Grafana admin UI
+   - Change admin password
+   - Update `.env.grafana` with new credentials
+   - Restart Grafana service if needed
 
-3. **Grafana Credentials** (`.env.grafana`)
-   - Rotate API keys
-   - Update authentication tokens
-
-4. **Runtime Secrets** (`.env.runtime`)
-   - Review and rotate all contained secrets
+3. **Runtime Secrets** (`.env.runtime`)
+   - Review all contained secrets
+   - Generate new API keys/tokens as needed
+   - Update `.env.runtime`
+   - Restart affected services
 
 ### Step 4: Add to Deployment Documentation
 
@@ -224,15 +272,78 @@ config/.env.example     # ← Template (safe)
 
 After completing remediation:
 
-- [ ] Secret files removed from git tracking (`git rm --cached`)
-- [ ] `.gitignore` updated to prevent future commits
-- [ ] All secrets rotated (JWT, DB, Grafana, Runtime)
+- [x] Secret files removed from git tracking (`git rm --cached`)
+- [x] `.gitignore` updated to prevent future commits
+- [ ] All secrets rotated (JWT, DB, Grafana, Runtime) ← **OPERATOR ACTION REQUIRED**
 - [ ] `.env.example` templates updated with new structure
 - [ ] Team members notified of secret rotation
-- [ ] Pre-commit hooks installed
+- [x] Pre-commit hooks installed
 - [ ] CI/CD security scanning configured
 - [ ] Deployment documentation updated
 - [ ] Git history cleaned (optional: `git filter-branch` or BFG Repo-Cleaner)
+
+---
+
+## 📍 Current Status (2026-05-17)
+
+### Completed Actions
+
+✅ **Secret Files Removed from Git**
+- Commit: `54cf3b9`
+- Files: `.env.auth`, `.env.db`, `.env.grafana`, `.env.runtime`
+- Status: No longer tracked in repository
+
+✅ **.gitignore Updated**
+- Commit: `a8c521f`
+- Blocks future accidental commits of secret files
+- Preserves `.env.example` templates
+
+✅ **Pre-commit Hook Installed**
+- Commit: `f154ff3`
+- Location: `.githooks/pre-commit`
+- Activated via: `git config core.hooksPath .githooks`
+- Automatically blocks secret file commits
+
+✅ **Security Advisory Created**
+- Document: `docs/SECURITY_ADVISORY_ENV_SECRETS.md`
+- Comprehensive remediation guide
+- Step-by-step rotation instructions
+
+### Pending Actions
+
+⚠️ **SECRET ROTATION REQUIRED** (Blocker for staging deployment)
+
+The following secrets must be rotated before staging deployment:
+
+1. **Database Password** (CRITICAL - Highest Priority)
+   - Current password exposed in git history
+   - Use: `python scripts\secure_rotate_password.py`
+   - Or manual rotation via psql
+
+2. **JWT Signing Key**
+   - Generate new key
+   - Invalidate existing tokens
+   - Update `.env.auth`
+
+3. **Grafana Credentials**
+   - Change admin password
+   - Update `.env.grafana`
+
+4. **Runtime Secrets**
+   - Review and rotate all API keys/tokens
+   - Update `.env.runtime`
+
+### Risk Assessment
+
+| Risk Factor | Status | Severity |
+|-------------|--------|----------|
+| Secrets in git history | ⚠️ Present | HIGH |
+| Future accidental commits | ✅ Blocked | MITIGATED |
+| Pre-commit protection | ✅ Active | PROTECTED |
+| Team awareness | ⚠️ Pending notification | MEDIUM |
+| Staging deployment safety | ⚠️ BLOCKED until rotation | CRITICAL |
+
+**Overall Status:** REMEDIATION IN PROGRESS - SECRET ROTATION PENDING
 
 ---
 
