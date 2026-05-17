@@ -1,0 +1,431 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Forensic Export Schemas",
+  "description": "Data contracts for P-OS constitutional forensic export pipeline",
+  "version": "1.0.0",
+  
+  "definitions": {
+    "ExportRequest": {
+      "type": "object",
+      "required": ["request_id", "data_subject", "dataset_type", "date_range"],
+      "properties": {
+        "request_id": {
+          "type": "string",
+          "format": "uuid",
+          "description": "Unique identifier for export request"
+        },
+        "data_subject": {
+          "type": "object",
+          "required": ["name", "email"],
+          "properties": {
+            "name": {"type": "string"},
+            "email": {"type": "string", "format": "email"},
+            "id_number": {"type": "string"}
+          }
+        },
+        "dataset_type": {
+          "type": "string",
+          "enum": ["facebook_messages", "email", "sms", "chat_log"],
+          "description": "Type of communication dataset"
+        },
+        "date_range": {
+          "type": "object",
+          "required": ["start_date", "end_date"],
+          "properties": {
+            "start_date": {"type": "string", "format": "date"},
+            "end_date": {"type": "string", "format": "date"}
+          }
+        },
+        "participants": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "List of conversation participants"
+        },
+        "requested_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "deadline_hours": {
+          "type": "integer",
+          "default": 72,
+          "description": "GDPR deadline in hours (default: 72)"
+        }
+      }
+    },
+
+    "MessageRecord": {
+      "type": "object",
+      "required": ["message_id", "timestamp", "sender", "text", "text_ascii"],
+      "properties": {
+        "message_id": {
+          "type": "string",
+          "pattern": "^msg_[0-9]{6}$",
+          "description": "Unique message identifier"
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time",
+          "description": "ISO 8601 timestamp"
+        },
+        "date": {
+          "type": "string",
+          "format": "date",
+          "description": "Date string (YYYY-MM-DD)"
+        },
+        "sender": {
+          "type": "string",
+          "description": "Message sender name"
+        },
+        "text": {
+          "type": "string",
+          "description": "Original message text (may contain diacritics)"
+        },
+        "text_ascii": {
+          "type": "string",
+          "description": "ASCII-safe version for analysis (Polish chars converted)"
+        },
+        "text_clean": {
+          "type": "string",
+          "description": "Lowercase ASCII for tokenization"
+        },
+        "message_length": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Length of text_ascii in characters"
+        },
+        "has_media": {
+          "type": "boolean",
+          "description": "Whether message contains media"
+        },
+        "media_type": {
+          "type": ["string", "null"],
+          "enum": ["photo", "video", "gif", "audio", "file", null],
+          "description": "Type of media or null"
+        },
+        "reply_gap_minutes": {
+          "type": ["number", "null"],
+          "description": "Minutes since previous message (null if same sender)"
+        },
+        "conversation_day_index": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Days from conversation start"
+        }
+      }
+    },
+
+    "NormalizedText": {
+      "type": "object",
+      "required": ["original", "ascii", "clean"],
+      "properties": {
+        "original": {
+          "type": "string",
+          "description": "Original text with diacritics"
+        },
+        "ascii": {
+          "type": "string",
+          "pattern": "^[\\x00-\\x7F]*$",
+          "description": "ASCII-safe version (no non-ASCII characters)"
+        },
+        "clean": {
+          "type": "string",
+          "pattern": "^[a-z0-9\\s?!]*$",
+          "description": "Lowercase ASCII for tokenization"
+        },
+        "encoding_method": {
+          "type": "string",
+          "enum": ["ASCII_PL_v1.0"],
+          "description": "Normalization algorithm version"
+        }
+      }
+    },
+
+    "RelationshipMetrics": {
+      "type": "object",
+      "required": ["sender", "messages_count", "avg_message_length"],
+      "properties": {
+        "sender": {
+          "type": "string",
+          "description": "Participant name"
+        },
+        "messages_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "avg_message_length": {
+          "type": "number",
+          "minimum": 0
+        },
+        "median_message_length": {
+          "type": "number",
+          "minimum": 0
+        },
+        "media_share_percent": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "avg_reply_gap_minutes": {
+          "type": ["number", "null"],
+          "minimum": 0
+        },
+        "median_reply_gap_minutes": {
+          "type": ["number", "null"],
+          "minimum": 0
+        },
+        "days_opened": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Days this person initiated conversation"
+        },
+        "days_closed": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Days this person closed conversation"
+        }
+      }
+    },
+
+    "TimelinePhase": {
+      "type": "object",
+      "required": ["week", "phase_type", "total_messages"],
+      "properties": {
+        "week": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}/\\d{4}-\\d{2}-\\d{2}$",
+          "description": "Week range (YYYY-MM-DD/YYYY-MM-DD)"
+        },
+        "start_timestamp": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "end_timestamp": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "phase_type": {
+          "type": "string",
+          "enum": [
+            "HIGH_INTENSITY",
+            "STABLE_CONTACT",
+            "LOW_CONTACT",
+            "WEAK_CONTACT",
+            "SILENCE",
+            "REACTIVATION",
+            "DECLINE"
+          ],
+          "description": "Relationship phase classification"
+        },
+        "total_messages": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "pawel_messages": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "kasia_messages": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "pawel_share_percent": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "kasia_share_percent": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "dominant_sender": {
+          "type": "string",
+          "enum": ["Pawel Nazaruk", "Kasia Ju", "balanced"]
+        },
+        "active_days": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "avg_daily_messages": {
+          "type": "number",
+          "minimum": 0
+        },
+        "avg_message_length": {
+          "type": "number",
+          "minimum": 0
+        },
+        "media_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "max_gap_days": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Maximum silence gap in days"
+        }
+      }
+    },
+
+    "SemanticExtract": {
+      "type": "object",
+      "required": ["phase_type", "extraction_type"],
+      "properties": {
+        "phase_type": {
+          "type": "string",
+          "description": "Relationship phase"
+        },
+        "extraction_type": {
+          "type": "string",
+          "enum": ["keywords", "ngrams", "repeated_phrases", "questions", "emotional_markers", "named_entities"],
+          "description": "Type of semantic extraction"
+        },
+        "entries": {
+          "type": "array",
+          "items": {"type": "object"},
+          "description": "Extracted semantic items"
+        },
+        "total_count": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+
+    "ExportManifest": {
+      "type": "object",
+      "required": ["package_name", "version", "created_at", "files"],
+      "properties": {
+        "package_name": {
+          "type": "string",
+          "description": "Name of export package"
+        },
+        "version": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+$"
+        },
+        "created_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "description": {
+          "type": "string"
+        },
+        "architecture": {
+          "type": "string",
+          "enum": ["RAW → METRICS → TIMELINE → SEMANTIC"]
+        },
+        "source_data": {
+          "type": "object",
+          "properties": {
+            "dataset_id": {"type": "string"},
+            "participants": {"type": "array", "items": {"type": "string"}},
+            "total_messages": {"type": "integer"},
+            "date_range": {"type": "string"}
+          }
+        },
+        "pipeline_version": {
+          "type": "object",
+          "additionalProperties": {"type": "string"}
+        },
+        "files": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "path": {"type": "string"},
+              "description": {"type": "string"},
+              "contents": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "filename": {"type": "string"},
+                    "size_kb": {"type": "number"},
+                    "hash_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+
+    "ExportCertificate": {
+      "type": "object",
+      "required": ["certificate_id", "request_id", "issued_at", "status", "hash_chain"],
+      "properties": {
+        "certificate_id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "request_id": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "issued_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "expires_at": {
+          "type": "string",
+          "format": "date-time",
+          "description": "72 hours after issued_at"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["APPROVED", "REJECTED", "EXPIRED"],
+          "description": "Export approval status"
+        },
+        "w11_validation": {
+          "type": "object",
+          "properties": {
+            "r1_missing_data": {"type": "boolean"},
+            "r2_hash_chain": {"type": "boolean"},
+            "r3_active_flags": {"type": "boolean"},
+            "r4_deadline": {"type": "boolean"},
+            "r5_encoding": {"type": "boolean"},
+            "r6_manifest": {"type": "boolean"},
+            "r7_archive_size": {"type": "boolean"},
+            "all_gates_passed": {"type": "boolean"}
+          }
+        },
+        "hash_chain": {
+          "type": "object",
+          "required": ["manifest_hash", "archive_hash"],
+          "properties": {
+            "manifest_hash": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$",
+              "description": "SHA-256 of MANIFEST.json"
+            },
+            "archive_hash": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$",
+              "description": "SHA-256 of forensic_export.zip"
+            },
+            "file_hashes": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              }
+            }
+          }
+        },
+        "processing_time_seconds": {
+          "type": "number",
+          "minimum": 0
+        },
+        "export_size_mb": {
+          "type": "number",
+          "minimum": 0
+        },
+        "dpo_contact": {
+          "type": "string",
+          "format": "email"
+        }
+      }
+    }
+  }
+}

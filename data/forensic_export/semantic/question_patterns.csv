@@ -1,0 +1,763 @@
+timestamp,sender,phase_type,text,text_norm
+2019-01-30 22:23:09.938,Kasia Ju,HIGH_INTENSITY,Ktore chcesz?,ktore chcesz?
+2019-01-30 22:27:36.409,Pawel Nazaruk,HIGH_INTENSITY,a dlaczego?,a dlaczego?
+2019-01-30 22:37:09.814,Kasia Ju,HIGH_INTENSITY,Kladziesz sie juÅ¼?,kladziesz sie juz?
+2019-01-30 22:45:24.426,Kasia Ju,HIGH_INTENSITY,I ?,i ?
+2019-01-30 22:45:43.132,Kasia Ju,HIGH_INTENSITY,I nie bÄdzie jak tematu zmienic?,i nie bedzie jak tematu zmienic?
+2019-01-30 22:45:57.027,Kasia Ju,HIGH_INTENSITY,Czym sie poratowac?âº,czym sie poratowac?ao
+2019-01-30 22:47:03.402,Kasia Ju,HIGH_INTENSITY,Chyba odwagi?,chyba odwagi?
+2019-01-30 22:47:32.298,Pawel Nazaruk,HIGH_INTENSITY,odwagi? dla bohatera?,odwagi? dla bohatera?
+2019-01-30 22:58:11.686,Kasia Ju,HIGH_INTENSITY,ZapaliÄ? ð,zapalia?
+2019-01-30 22:58:34.631,Kasia Ju,HIGH_INTENSITY,Czego mojego?,czego mojego?
+2019-01-30 23:08:58.713,Pawel Nazaruk,HIGH_INTENSITY,a buÅ¼ka?,a buzka?
+2019-01-31 07:45:24.857,Pawel Nazaruk,HIGH_INTENSITY,You dont understand maine or frau?,you dont understand maine or frau?
+2019-01-31 09:05:02.747,Pawel Nazaruk,HIGH_INTENSITY,Z translatorem to pisaÅaÅ czy twÃ³j angielski jest taki zaawansowany?,z translatorem to pisalas czy twoj angielski jest taki zaawansowany?
+2019-01-31 09:12:20.366,Pawel Nazaruk,HIGH_INTENSITY,Can I say to you my lady? Becouse I dont now who are you to me now.,can i say to you my lady? becouse i dont now who are you to me now
+2019-01-31 09:38:30.879,Pawel Nazaruk,HIGH_INTENSITY,"Ci znowu gadajÄ na tydzieÅ do domu trzeba jechaÄ. Na mnie to dziaÅa jak pÅachta na byka. Tutaj jeszcze 3 - 4 tygodnie i na nastÄpnÄ budowÄ, ale nie, koniecznie na tydzieÅ do domu. Zamiast siedzieÄ aÅ¼ do ÅwiÄt jak jest dobrze. No muszÄ siÄ z nimi rozstaÄ ale ciÄÅ¼ko bÄdzie trafiÄ na kogoÅ podobnego. Ale wkurzajÄ. Å»eby to dzieci maÅe pÅakaÅy, czego tam jechaÄ do cholery?",ci znowu gadaja na tydziea do domu trzeba jechaa na mnie to dziala jak plachta na byka tutaj jeszcze 3 4 tygodnie i na nastepna budowe ale nie koniecznie na tydziea do domu zamiast siedziea az do swiat jak jest dobrze no musze sie z nimi rozstaa ale ciezko bedzie trafia na kogos podobnego ale wkurzaja zeby to dzieci male plakaly czego tam jechaa do cholery?
+2019-01-31 18:02:53.078,Pawel Nazaruk,HIGH_INTENSITY,A co robiÅaÅ?,a co robilas?
+2019-01-31 18:21:33.622,Kasia Ju,HIGH_INTENSITY,Dlaczego?,dlaczego?
+2019-01-31 21:02:30.173,Kasia Ju,HIGH_INTENSITY,Co robisz?,co robisz?
+2019-01-31 21:26:00.292,Kasia Ju,HIGH_INTENSITY,A u Ciebie wszystko ok?,a u ciebie wszystko ok?
+2019-01-31 21:26:26.457,Pawel Nazaruk,HIGH_INTENSITY,"tak, a dlaczego pytasz?",tak a dlaczego pytasz?
+2019-01-31 21:28:38.158,Pawel Nazaruk,HIGH_INTENSITY,jak pÅyn w samochodzie?,jak plyn w samochodzie?
+2019-01-31 21:46:57.078,Pawel Nazaruk,HIGH_INTENSITY,w jakim sklepie byÅaÅ?,w jakim sklepie bylas?
+2019-01-31 22:13:47.830,Pawel Nazaruk,HIGH_INTENSITY,ale jakie to sumienie trzeba mieÄ?,ale jakie to sumienie trzeba miea?
+2019-01-31 22:16:11.587,Pawel Nazaruk,HIGH_INTENSITY,jakie to twoje auto jest w ogÃ³le?,jakie to twoje auto jest w ogole?
+2019-01-31 22:20:57.668,Kasia Ju,HIGH_INTENSITY,Jak to jakie?,jak to jakie?
+2019-01-31 22:33:28.684,Pawel Nazaruk,HIGH_INTENSITY,pod pryÅnic?,pod prysnic?
+2019-01-31 22:45:24.057,Kasia Ju,HIGH_INTENSITY,Idziesz?,idziesz?
+2019-01-31 22:45:42.499,Kasia Ju,HIGH_INTENSITY,Czy mam iÅÄ sama?,czy mam isa sama?
+2019-01-31 22:45:54.082,Pawel Nazaruk,HIGH_INTENSITY,ale tak na golasa?,ale tak na golasa?
+2019-01-31 22:47:34.948,Pawel Nazaruk,HIGH_INTENSITY,robiÅaÅ to kiedyÅ tak?,robilas to kiedys tak?
+2019-01-31 23:16:40.268,Pawel Nazaruk,HIGH_INTENSITY,czemu mnie nie wpuÅciÅaÅ?,czemu mnie nie wpuscilas?
+2019-01-31 23:30:31.219,Pawel Nazaruk,HIGH_INTENSITY,"ale wiesz, ktÃ³ra juÅ¼ godzina?",ale wiesz ktora juz godzina?
+2019-02-01 10:00:10.331,Kasia Ju,HIGH_INTENSITY,Wyspany?,wyspany?
+2019-02-01 11:49:48.474,Kasia Ju,HIGH_INTENSITY,Dalej spisz?,dalej spisz?
+2019-02-01 16:02:02.406,Kasia Ju,HIGH_INTENSITY,Nie nudzisz sie?,nie nudzisz sie?
+2019-02-01 16:17:02.308,Kasia Ju,HIGH_INTENSITY,Kto teraz znaczek kupuje?ð,kto teraz znaczek kupuje?
+2019-02-01 16:17:14.866,Pawel Nazaruk,HIGH_INTENSITY,A jacy oni?,a jacy oni?
+2019-02-01 16:17:42.560,Kasia Ju,HIGH_INTENSITY,Kto oni?,kto oni?
+2019-02-01 16:19:53.436,Pawel Nazaruk,HIGH_INTENSITY,Z nimi po polsku juÅ¼ siÄ nie dogadasz?,z nimi po polsku juz sie nie dogadasz?
+2019-02-01 21:47:29.324,Pawel Nazaruk,HIGH_INTENSITY,telewizor jeszcze chodzi?,telewizor jeszcze chodzi?
+2019-02-01 23:21:41.629,Kasia Ju,HIGH_INTENSITY,?,?
+2019-02-01 23:23:44.396,Pawel Nazaruk,HIGH_INTENSITY,dobra?,dobra?
+2019-02-01 23:45:44.207,Pawel Nazaruk,HIGH_INTENSITY,ale jakby jeden na Åwiecie bez ludzi?,ale jakby jeden na swiecie bez ludzi?
+2019-02-02 00:04:18.433,Kasia Ju,HIGH_INTENSITY,Nie zalujesz ze Ci z ta Goska nie wyszlo?,nie zalujesz ze ci z ta goska nie wyszlo?
+2019-02-02 00:08:21.297,Kasia Ju,HIGH_INTENSITY,Nie przeszkadzalo jej ze palisz?,nie przeszkadzalo jej ze palisz?
+2019-02-02 00:08:29.692,Kasia Ju,HIGH_INTENSITY,Czy tez palila?,czy tez palila?
+2019-02-02 00:10:09.590,Kasia Ju,HIGH_INTENSITY,Dlaczego sie rozstaliscie?,dlaczego sie rozstaliscie?
+2019-02-02 00:12:07.133,Kasia Ju,HIGH_INTENSITY,Nie chciales dzieci?,nie chciales dzieci?
+2019-02-02 00:13:20.252,Kasia Ju,HIGH_INTENSITY,Czy Ty chciaÅeÅ?,czy ty chciales?
+2019-02-02 00:13:52.548,Kasia Ju,HIGH_INTENSITY,SkÄd wiadomo?,skad wiadomo?
+2019-02-02 00:15:20.543,Kasia Ju,HIGH_INTENSITY,Dlaczego?,dlaczego?
+2019-02-02 00:15:50.235,Kasia Ju,HIGH_INTENSITY,Moze z kazda kobieta tak aamo jes?,moze z kazda kobieta tak aamo jes?
+2019-02-02 00:20:54.598,Kasia Ju,HIGH_INTENSITY,A Ty umiesz przepraszac?,a ty umiesz przepraszac?
+2019-02-02 00:21:12.214,Kasia Ju,HIGH_INTENSITY,Latwo Ci to lrzychodzi?,latwo ci to lrzychodzi?
+2019-02-02 00:23:24.935,Kasia Ju,HIGH_INTENSITY,Czy nie tak?,czy nie tak?
+2019-02-02 00:24:02.073,Pawel Nazaruk,HIGH_INTENSITY,"broniÄ siÄ, Å¼eby nie przyzwyczajaÄ do przeprosin czÄstych?",bronie sie zeby nie przyzwyczajaa do przeprosin czestych?
+2019-02-02 00:32:55.602,Kasia Ju,HIGH_INTENSITY,Nje przrszkadza Ci to?,nje przrszkadza ci to?
+2019-02-02 00:33:08.735,Kasia Ju,HIGH_INTENSITY,Ze nie jestem do konxa grzeczna?,ze nie jestem do konxa grzeczna?
+2019-02-02 00:33:31.210,Pawel Nazaruk,HIGH_INTENSITY,"a myÅlisz, Å¼e ja jestem?",a myslisz ze ja jestem?
+2019-02-02 00:35:14.311,Kasia Ju,HIGH_INTENSITY,Dlaczego uwazasz ze tancze jakmi partner  zagra?,dlaczego uwazasz ze tancze jakmi partner zagra?
+2019-02-02 00:37:32.975,Kasia Ju,HIGH_INTENSITY,Grzeczny nie mialbys szans?,grzeczny nie mialbys szans?
+2019-02-02 00:38:14.547,Kasia Ju,HIGH_INTENSITY,Na co?,na co?
+2019-02-02 10:58:23.585,Kasia Ju,HIGH_INTENSITY,Nie mowilam?,nie mowilam?
+2019-02-02 11:05:41.473,Kasia Ju,HIGH_INTENSITY,Nie? Bylam pewna ze rozmawialiÅmy o tym. A moze to z mama rozmawialamð,nie? bylam pewna ze rozmawialismy o tym a moze to z mama rozmawialam
+2019-02-02 11:14:42.488,Kasia Ju,HIGH_INTENSITY,Co jest zniewiescieniem wg Ciebie?,co jest zniewiescieniem wg ciebie?
+2019-02-02 11:14:58.088,Kasia Ju,HIGH_INTENSITY,Ze nie mozna uderzyc i obrazac?,ze nie mozna uderzyc i obrazac?
+2019-02-02 11:16:27.555,Kasia Ju,HIGH_INTENSITY,Jak nie piwinno byc?,jak nie piwinno byc?
+2019-02-02 11:17:14.760,Pawel Nazaruk,HIGH_INTENSITY,A za co?,a za co?
+2019-02-02 11:17:20.431,Kasia Ju,HIGH_INTENSITY,Jakie ulgi?,jakie ulgi?
+2019-02-02 11:17:39.986,Kasia Ju,HIGH_INTENSITY,Konkretnie?,konkretnie?
+2019-02-02 11:18:14.041,Pawel Nazaruk,HIGH_INTENSITY,A co to? Taki sam czÅowiek,a co to? taki sam czlowiek
+2019-02-02 11:23:35.184,Pawel Nazaruk,HIGH_INTENSITY,Tak?,tak?
+2019-02-02 11:25:55.972,Kasia Ju,HIGH_INTENSITY,Czyli jak znike to bedziesz szczÄÅliwy?,czyli jak znike to bedziesz szczesliwy?
+2019-02-02 11:26:36.727,Kasia Ju,HIGH_INTENSITY,Tak?,tak?
+2019-02-02 11:32:40.234,Pawel Nazaruk,HIGH_INTENSITY,to co on szalony?,to co on szalony?
+2019-02-02 11:32:54.973,Pawel Nazaruk,HIGH_INTENSITY,moÅ¼e przesadza?,moze przesadza?
+2019-02-02 11:40:22.424,Pawel Nazaruk,HIGH_INTENSITY,albo.... Co ja bym jeszcze mogÅa zrobiÄ?,albo co ja bym jeszcze mogla zrobia?
+2019-02-02 11:40:32.332,Pawel Nazaruk,HIGH_INTENSITY,a jak pÃ³jdzie i nie przyjdzie?,a jak pojdzie i nie przyjdzie?
+2019-02-02 11:40:42.189,Pawel Nazaruk,HIGH_INTENSITY,a ja tu z trÃ³jkÄ dzieci?,a ja tu z trojka dzieci?
+2019-02-02 11:41:57.922,Pawel Nazaruk,HIGH_INTENSITY,sprzÄtasz trochÄ?,sprzatasz troche?
+2019-02-02 11:55:50.664,Kasia Ju,HIGH_INTENSITY,I skad taki sen?,i skad taki sen?
+2019-02-02 11:56:03.444,Kasia Ju,HIGH_INTENSITY,Wg Twojego sennika co oznacza?,wg twojego sennika co oznacza?
+2019-02-02 11:56:10.096,Kasia Ju,HIGH_INTENSITY,Boisz sie czegos?,boisz sie czegos?
+2019-02-02 11:56:53.368,Kasia Ju,HIGH_INTENSITY,Albo kogoÅ?,albo kogos?
+2019-02-02 12:08:28.119,Kasia Ju,HIGH_INTENSITY,Zreszta ile my sie znamy?,zreszta ile my sie znamy?
+2019-02-02 12:08:33.717,Kasia Ju,HIGH_INTENSITY,MiesiÄc?,miesiac?
+2019-02-02 12:16:03.211,Pawel Nazaruk,HIGH_INTENSITY,umyÅaÅ gowÄ?,umylas gowe?
+2019-02-02 12:16:08.136,Pawel Nazaruk,HIGH_INTENSITY,gÅowÄ?,glowe?
+2019-02-02 14:54:40.277,Pawel Nazaruk,HIGH_INTENSITY,DuÅ¼o dzieci byÅo?,duzo dzieci bylo?
+2019-02-02 14:54:49.397,Pawel Nazaruk,HIGH_INTENSITY,To z bloku mieszkanie?,to z bloku mieszkanie?
+2019-02-02 15:02:25.720,Kasia Ju,HIGH_INTENSITY,Dyskryminuje?,dyskryminuje?
+2019-02-02 15:23:27.148,Pawel Nazaruk,HIGH_INTENSITY,a gdzie  buÅºka?,a gdzie buzka?
+2019-02-02 15:24:05.825,Kasia Ju,HIGH_INTENSITY,I tak poprostu mam dac?,i tak poprostu mam dac?
+2019-02-02 15:32:48.845,Pawel Nazaruk,HIGH_INTENSITY,co tu wymyÅleÄ?,co tu wymyslea?
+2019-02-02 15:35:42.473,Pawel Nazaruk,HIGH_INTENSITY,prosiÄ mam?,prosia mam?
+2019-02-02 15:39:21.516,Pawel Nazaruk,HIGH_INTENSITY,"najdroÅ¼sza Kasiu, dasz buÅºki dla swego adoratora?",najdrozsza kasiu dasz buzki dla swego adoratora?
+2019-02-02 15:39:48.603,Pawel Nazaruk,HIGH_INTENSITY,o to?,o to?
+2019-02-02 15:50:38.480,Pawel Nazaruk,HIGH_INTENSITY,nie moÅ¼na byÅo od razu?,nie mozna bylo od razu?
+2019-02-02 16:14:34.031,Pawel Nazaruk,HIGH_INTENSITY,a powinienem za to dziÄkowaÄ twoim zdaniem?,a powinienem za to dziekowaa twoim zdaniem?
+2019-02-02 16:15:46.659,Kasia Ju,HIGH_INTENSITY,DziÄkowaÄ?  Hmm pewnie ze milo jak dziekujesz,dziekowaa? hmm pewnie ze milo jak dziekujesz
+2019-02-02 16:16:28.667,Pawel Nazaruk,HIGH_INTENSITY,"no moÅ¼na podziÄkowaÄ, ale nie kojarzy siÄ to w jakimÅ sensie z zapÅatÄ?",no mozna podziekowaa ale nie kojarzy sie to w jakims sensie z zaplata?
+2019-02-02 16:18:20.966,Pawel Nazaruk,HIGH_INTENSITY,a teraz co ma?,a teraz co ma?
+2019-02-02 16:18:53.447,Pawel Nazaruk,HIGH_INTENSITY,a w swoim do czego podÅÄcza?,a w swoim do czego podlacza?
+2019-02-02 16:31:23.102,Pawel Nazaruk,HIGH_INTENSITY,nr na pamiÄÄ pamiÄta?,nr na pamiea pamieta?
+2019-02-02 16:32:24.345,Pawel Nazaruk,HIGH_INTENSITY,"a jak nr nauczyÅaÅ, czy sam siÄ nauczyÅ?",a jak nr nauczylas czy sam sie nauczyl?
+2019-02-02 17:57:47.520,Kasia Ju,HIGH_INTENSITY,https://m.youtube.com/watch?v=i8Bsae1JNLI,
+2019-02-02 18:04:22.431,Pawel Nazaruk,HIGH_INTENSITY,juÅ¼ wolne masz?,juz wolne masz?
+2019-02-02 18:04:34.381,Pawel Nazaruk,HIGH_INTENSITY,czy jeszcze coÅ zostaÅo?,czy jeszcze cos zostalo?
+2019-02-02 18:23:06.808,Kasia Ju,HIGH_INTENSITY,https://m.youtube.com/watch?v=H8WfDs5ItJA,
+2019-02-02 18:24:52.129,Kasia Ju,HIGH_INTENSITY,https://m.youtube.com/watch?v=GTtROTIUoYU,
+2019-02-02 20:42:33.981,Kasia Ju,HIGH_INTENSITY,To ziemniaczane?,to ziemniaczane?
+2019-02-02 21:00:48.076,Kasia Ju,HIGH_INTENSITY,Czyli Tobie pizzy nie dal?,czyli tobie pizzy nie dal?
+2019-02-02 21:02:07.925,Pawel Nazaruk,HIGH_INTENSITY,a Ty byÅ mi daÅa?,a ty bys mi dala?
+2019-02-02 21:02:57.009,Pawel Nazaruk,HIGH_INTENSITY,no co?,no co?
+2019-02-02 21:03:16.242,Kasia Ju,HIGH_INTENSITY,Tobie mialabym Å¼aÅowaÄ?,tobie mialabym zalowaa?
+2019-02-02 21:04:45.668,Pawel Nazaruk,HIGH_INTENSITY,a moÅ¼e z podtekstem zapytaÅem?,a moze z podtekstem zapytalem?
+2019-02-02 21:04:52.212,Pawel Nazaruk,HIGH_INTENSITY,he?,he?
+2019-02-02 21:06:04.935,Pawel Nazaruk,HIGH_INTENSITY,tak?,tak?
+2019-02-02 21:14:32.914,Pawel Nazaruk,HIGH_INTENSITY,Tobie mialabym Å¼aÅowaÄ?,tobie mialabym zalowaa?
+2019-02-02 22:14:09.102,Kasia Ju,HIGH_INTENSITY,To kiedy byÅeÅ ostatnio z kobietÄ?,to kiedy byles ostatnio z kobieta?
+2019-02-02 22:23:18.723,Pawel Nazaruk,HIGH_INTENSITY,2011-12?,2011 12?
+2019-02-02 22:23:59.000,Pawel Nazaruk,HIGH_INTENSITY,a Ty?,a ty?
+2019-02-02 22:33:06.533,Kasia Ju,HIGH_INTENSITY,W takich lozkowych sprawach lepiej Ci bylo z Goska czy Aneta?,w takich lozkowych sprawach lepiej ci bylo z goska czy aneta?
+2019-02-02 22:34:00.318,Pawel Nazaruk,HIGH_INTENSITY,a Tobie?,a tobie?
+2019-02-02 22:36:03.162,Pawel Nazaruk,HIGH_INTENSITY,a co taniego zdecydowanie lepszego byÅo?,a co taniego zdecydowanie lepszego bylo?
+2019-02-02 22:36:11.450,Pawel Nazaruk,HIGH_INTENSITY,kochaÅaÅ go bardziej?,kochalas go bardziej?
+2019-02-02 22:36:22.531,Pawel Nazaruk,HIGH_INTENSITY,czy miaÅ lepsze warunki?,czy mial lepsze warunki?
+2019-02-02 22:36:27.569,Pawel Nazaruk,HIGH_INTENSITY,czy jak?,czy jak?
+2019-02-02 22:37:39.459,Pawel Nazaruk,HIGH_INTENSITY,?,?
+2019-02-02 22:39:45.246,Pawel Nazaruk,HIGH_INTENSITY,wiesz co? chyba jednak nie chcÄ tego sÅuchaÄ,wiesz co? chyba jednak nie chce tego sluchaa
+2019-02-02 22:43:21.430,Pawel Nazaruk,HIGH_INTENSITY,no co ty?,no co ty?
+2019-02-02 22:45:24.750,Pawel Nazaruk,HIGH_INTENSITY,oglÄdasz coÅ?,ogladasz cos?
+2019-02-03 08:48:28.119,Kasia Ju,HIGH_INTENSITY,Wyspany?,wyspany?
+2019-02-03 08:57:08.374,Kasia Ju,HIGH_INTENSITY,Rozumiem ze dom jest jego?,rozumiem ze dom jest jego?
+2019-02-03 08:57:59.903,Pawel Nazaruk,HIGH_INTENSITY,no ale kto go odziedziczy?,no ale kto go odziedziczy?
+2019-02-03 09:05:25.990,Pawel Nazaruk,HIGH_INTENSITY,nie uwaÅ¼asz?,nie uwazasz?
+2019-02-03 09:23:31.594,Pawel Nazaruk,HIGH_INTENSITY,i jak wyszÅo?,i jak wyszlo?
+2019-02-03 09:29:32.372,Pawel Nazaruk,HIGH_INTENSITY,https://scontent-frt3-2.xx.fbcdn.net/v/t1.15752-0/s261x260/51003387_218243249009782_2921343304840773632_n.jpg?_nc_cat=101&_nc_ht=scontent-frt3-2.xx&oh=4263826367d97d00906905355286cbda&oe=5CB670AC,
+2019-02-03 09:30:38.183,Kasia Ju,HIGH_INTENSITY,Na innych nie widziales?,na innych nie widziales?
+2019-02-03 13:07:59.661,Pawel Nazaruk,HIGH_INTENSITY,a o niemieckim coÅ sÅyszaÅaÅ?,a o niemieckim cos slyszalas?
+2019-02-03 15:59:04.368,Kasia Ju,HIGH_INTENSITY,Co porabiasz?,co porabiasz?
+2019-02-03 16:02:10.653,Pawel Nazaruk,HIGH_INTENSITY,i jak te zdjÄcia?,i jak te zdjecia?
+2019-02-03 16:03:43.260,Pawel Nazaruk,HIGH_INTENSITY,ale z Å¼onÄ?,ale z zona?
+2019-02-03 16:04:46.328,Pawel Nazaruk,HIGH_INTENSITY,dobrze gdzieÅ pojechaÄ ale tak daleko?,dobrze gdzies pojechaa ale tak daleko?
+2019-02-03 16:15:26.296,Pawel Nazaruk,HIGH_INTENSITY,fizycznie teÅ¼ bardzo siÄ zmieniÅaÅ po urodzeniu?,fizycznie tez bardzo sie zmienilas po urodzeniu?
+2019-02-03 16:20:56.960,Pawel Nazaruk,HIGH_INTENSITY,dlaczego?,dlaczego?
+2019-02-03 16:43:31.982,Kasia Ju,HIGH_INTENSITY,A pozatym myÅlisz ze bylabym szczera?,a pozatym myslisz ze bylabym szczera?
+2019-02-03 17:07:44.373,Pawel Nazaruk,HIGH_INTENSITY,i co? smaÅ¼ysz placki?,i co? smazysz placki?
+2019-02-03 17:10:43.421,Kasia Ju,HIGH_INTENSITY,A jak obiad?,a jak obiad?
+2019-02-03 17:10:49.875,Kasia Ju,HIGH_INTENSITY,Zrobil Jurgen?,zrobil jurgen?
+2019-02-03 17:11:43.267,Pawel Nazaruk,HIGH_INTENSITY,a PaweÅ?,a pawel?
+2019-02-03 17:12:58.745,Kasia Ju,HIGH_INTENSITY,A ta ryba tez sie nie pidzielil?,a ta ryba tez sie nie pidzielil?
+2019-02-03 17:14:20.502,Pawel Nazaruk,HIGH_INTENSITY,kawaÅeczek ryby zamieniaÄ na takÄ karkÃ³wkÄ?,kawaleczek ryby zamieniaa na taka karkowke?
+2019-02-03 17:16:03.921,Kasia Ju,HIGH_INTENSITY,A sniadania jak teraz?,a sniadania jak teraz?
+2019-02-03 17:48:19.122,Pawel Nazaruk,HIGH_INTENSITY,to jak mnie bÄdziesz gnieÅÄ?,to jak mnie bedziesz gniesa?
+2019-02-03 19:17:35.397,Pawel Nazaruk,HIGH_INTENSITY,i co tam KasieÅka porabiasz? uczycie siÄ?,i co tam kasieaka porabiasz? uczycie sie?
+2019-02-03 19:34:36.647,Pawel Nazaruk,HIGH_INTENSITY,i urosÅo ?,i uroslo ?
+2019-02-03 20:21:09.983,Pawel Nazaruk,HIGH_INTENSITY,ok?,ok?
+2019-02-03 20:21:56.665,Kasia Ju,HIGH_INTENSITY,A Ty juz sam ze takie mysli?,a ty juz sam ze takie mysli?
+2019-02-03 20:53:20.600,Pawel Nazaruk,HIGH_INTENSITY,albo kupiÄ moÅ¼e?,albo kupie moze?
+2019-02-03 20:53:55.091,Pawel Nazaruk,HIGH_INTENSITY,a kolacyjkÄ ze ÅwieczkÄ?,a kolacyjka ze swieczka?
+2019-02-03 20:54:15.519,Kasia Ju,HIGH_INTENSITY,Jedna Åwieczka? ð,jedna swieczka?
+2019-02-03 20:54:26.885,Kasia Ju,HIGH_INTENSITY,I kto ja zrobi?ð,i kto ja zrobi?
+2019-02-03 21:18:55.931,Kasia Ju,HIGH_INTENSITY,Ale jak sie tym bawic?,ale jak sie tym bawic?
+2019-02-03 21:24:38.161,Pawel Nazaruk,HIGH_INTENSITY,wykÄpaÅaÅ siÄ?,wykapalas sie?
+2019-02-03 21:30:08.379,Kasia Ju,HIGH_INTENSITY,A ladniej nie moÅ¼na?,a ladniej nie mozna?
+2019-02-03 21:30:58.387,Pawel Nazaruk,HIGH_INTENSITY,a kwoka to brzydko?,a kwoka to brzydko?
+2019-02-03 21:53:52.661,Pawel Nazaruk,HIGH_INTENSITY,jeszcze siÄ nie wychlupaÅaÅ?,jeszcze sie nie wychlupalas?
+2019-02-04 18:27:04.535,Kasia Ju,HIGH_INTENSITY,Jak sie czujesz? Lepiej?,jak sie czujesz? lepiej?
+2019-02-04 20:01:25.986,Pawel Nazaruk,HIGH_INTENSITY,parÄ miesiÄcy tak moÅ¼na ale caÅe Å¼ycie?,pare miesiecy tak mozna ale cale zycie?
+2019-02-04 20:38:57.400,Pawel Nazaruk,HIGH_INTENSITY,to sama juÅ¼ dojeÅ¼dÅ¼asz?,to sama juz dojezdzasz?
+2019-02-04 21:38:44.541,Pawel Nazaruk,HIGH_INTENSITY,a o czym siÄ uczycie?,a o czym sie uczycie?
+2019-02-05 09:00:44.232,Pawel Nazaruk,HIGH_INTENSITY,Nie bÄdzie grzecznie dziewczynki?,nie bedzie grzecznie dziewczynki?
+2019-02-05 17:47:26.879,Pawel Nazaruk,HIGH_INTENSITY,Nie za duÅ¼o tego wszystkiego na jedno dziecko?,nie za duzo tego wszystkiego na jedno dziecko?
+2019-02-05 17:54:30.789,Pawel Nazaruk,HIGH_INTENSITY,To czego wczoraj z przyrody siÄ uczyliÅcie?,to czego wczoraj z przyrody sie uczyliscie?
+2019-02-05 18:07:44.983,Pawel Nazaruk,HIGH_INTENSITY,A na brykanie co nic odzewu?,a na brykanie co nic odzewu?
+2019-02-05 22:20:59.136,Kasia Ju,HIGH_INTENSITY,Spisz juz?,spisz juz?
+2019-02-06 13:33:53.041,Kasia Ju,HIGH_INTENSITY,Jak tam dzien mija?,jak tam dzien mija?
+2019-02-06 18:52:37.576,Pawel Nazaruk,HIGH_INTENSITY,"a pogÅaskaÄ to pogÅaskam, tylko gdzie?",a poglaskaa to poglaskam tylko gdzie?
+2019-02-06 18:55:04.264,Pawel Nazaruk,HIGH_INTENSITY,a jak pogÅaskam to nie bÄdziesz pÅakaÄ?,a jak poglaskam to nie bedziesz plakaa?
+2019-02-06 18:59:54.849,Pawel Nazaruk,HIGH_INTENSITY,to nie mogÅaÅ jednego sobie podkupiÄ?,to nie moglas jednego sobie podkupia?
+2019-02-06 19:08:06.043,Pawel Nazaruk,HIGH_INTENSITY,to w czym byÅ problem?,to w czym byl problem?
+2019-02-06 19:13:29.707,Pawel Nazaruk,HIGH_INTENSITY,wiesz co to jaÅmÃ³Å¼?,wiesz co to jalmoz?
+2019-02-06 19:26:59.286,Kasia Ju,HIGH_INTENSITY,I co bedziesz z tego robil?,i co bedziesz z tego robil?
+2019-02-06 20:17:45.594,Pawel Nazaruk,HIGH_INTENSITY,s Ty co robisz? lekcje?,s ty co robisz? lekcje?
+2019-02-07 05:40:22.284,Pawel Nazaruk,HIGH_INTENSITY,https://www.youtube.com/watch?v=eLXJSkgw4fg,
+2019-02-07 06:21:45.620,Pawel Nazaruk,HIGH_INTENSITY,a tamta druga urodziÅa?,a tamta druga urodzila?
+2019-02-07 07:17:49.896,Pawel Nazaruk,HIGH_INTENSITY,Bez problemÃ³w wszystko jak sÄdzÄ. TeÅ¼ byÅ chciaÅa jeszcze takiego bejbika?,bez problemow wszystko jak sadze tez bys chciala jeszcze takiego bejbika?
+2019-02-07 07:29:39.124,Kasia Ju,HIGH_INTENSITY,A Ty bys chcial?,a ty bys chcial?
+2019-02-07 07:31:47.564,Kasia Ju,HIGH_INTENSITY,Ale tak szczerze to mowisz?,ale tak szczerze to mowisz?
+2019-02-07 07:32:04.535,Kasia Ju,HIGH_INTENSITY,Czy to co myÅlisz ze ja chce uslyszec?ð,czy to co myslisz ze ja chce uslyszec?
+2019-02-07 08:28:43.538,Kasia Ju,HIGH_INTENSITY,Juz druga ?,juz druga ?
+2019-02-07 11:51:54.628,Pawel Nazaruk,HIGH_INTENSITY,"Jak programik, dalej nie daje siÄ tresowaÄ? Wczoraj mÃ³wiÅem co masz zrobiÄ Å¼eby sÅuchaÅ. Delikatnie.",jak programik dalej nie daje sie tresowaa? wczoraj mowilem co masz zrobia zeby sluchal delikatnie
+2019-02-07 12:05:08.519,Pawel Nazaruk,HIGH_INTENSITY,"To na jakiej jest dobrze, na internet explorer?",to na jakiej jest dobrze na internet explorer?
+2019-02-07 12:44:37.021,Pawel Nazaruk,HIGH_INTENSITY,A wyszÅo miÅo?,a wyszlo milo?
+2019-02-07 16:08:07.455,Kasia Ju,HIGH_INTENSITY,Tylko gdzie ta granica?hehe,tylko gdzie ta granica?hehe
+2019-02-07 21:38:35.727,Pawel Nazaruk,HIGH_INTENSITY,jakiej momogamii jeÅ¼eli mogÄ zapytaÄ?,jakiej momogamii jezeli moge zapytaa?
+2019-02-07 22:33:37.277,Kasia Ju,HIGH_INTENSITY,?,?
+2019-02-07 22:48:21.357,Pawel Nazaruk,HIGH_INTENSITY,ok?,ok?
+2019-02-07 22:49:45.095,Pawel Nazaruk,HIGH_INTENSITY,"dobra, to teraz, ale co Ty ze mnÄ poczniesz?",dobra to teraz ale co ty ze mna poczniesz?
+2019-02-07 22:50:01.982,Pawel Nazaruk,HIGH_INTENSITY,ugoÅcisz mnie?,ugoscisz mnie?
+2019-02-07 22:59:26.348,Kasia Ju,HIGH_INTENSITY,Pobadamy? W jakim sensie?,pobadamy? w jakim sensie?
+2019-02-07 23:00:48.625,Pawel Nazaruk,HIGH_INTENSITY,moÅ¼e byÄ taki plan?,moze bya taki plan?
+2019-02-07 23:10:38.942,Kasia Ju,HIGH_INTENSITY,Dalej sam gotujesz?,dalej sam gotujesz?
+2019-02-08 14:43:52.318,Pawel Nazaruk,HIGH_INTENSITY,udaÅo siÄ wczeÅniej wyjÅÄ?,udalo sie wczesniej wyjsa?
+2019-02-08 14:46:38.293,Pawel Nazaruk,HIGH_INTENSITY,koleÅ¼anka teÅ¼ tak wyszÅa? to co robisz?,kolezanka tez tak wyszla? to co robisz?
+2019-02-08 14:48:48.750,Pawel Nazaruk,HIGH_INTENSITY,z Adrianem czy sobie zÄbka zrobiÄ?,z adrianem czy sobie zabka zrobia?
+2019-02-08 16:37:08.693,Pawel Nazaruk,HIGH_INTENSITY,"u Ciebie Åadne zÄbki, bialutkie to jak doszÅo aÅ¼ do wyrwania?",u ciebie ladne zabki bialutkie to jak doszlo az do wyrwania?
+2019-02-08 16:39:50.245,Pawel Nazaruk,HIGH_INTENSITY,"aha, ostatni?",aha ostatni?
+2019-02-08 16:47:06.741,Kasia Ju,HIGH_INTENSITY,Czyli jak?,czyli jak?
+2019-02-08 17:16:18.111,Kasia Ju,HIGH_INTENSITY,Braciszku i jak Nana dziÅ sie czuje?,braciszku i jak nana dzis sie czuje?
+2019-02-08 17:18:50.234,Pawel Nazaruk,HIGH_INTENSITY,mÄdrzejszy?,madrzejszy?
+2019-02-08 17:18:56.915,Pawel Nazaruk,HIGH_INTENSITY,wiÄkszy?,wiekszy?
+2019-02-08 17:20:39.593,Pawel Nazaruk,HIGH_INTENSITY,Åadne jajka dzisiaj Ci wysÅaÅem?,ladne jajka dzisiaj ci wyslalem?
+2019-02-08 17:29:43.906,Kasia Ju,HIGH_INTENSITY,?,?
+2019-02-08 17:30:28.948,Pawel Nazaruk,HIGH_INTENSITY,to jak siÄ miaÅem dorobiÄ?,to jak sie mialem dorobia?
+2019-02-08 17:30:43.192,Pawel Nazaruk,HIGH_INTENSITY,czy rozsÄdnie?,czy rozsadnie?
+2019-02-08 18:15:35.411,Pawel Nazaruk,HIGH_INTENSITY,myÅlisz Å¼e gruby bÄdzie?,myslisz ze gruby bedzie?
+2019-02-08 18:26:02.446,Kasia Ju,HIGH_INTENSITY,To co oni szykuja na ten stol?,to co oni szykuja na ten stol?
+2019-02-08 18:32:07.380,Kasia Ju,HIGH_INTENSITY,Samochodem? To piÄ nie bÄdÄ?,samochodem? to pia nie beda?
+2019-02-08 18:38:23.472,Kasia Ju,HIGH_INTENSITY,A z kim bedzie spaÅ?  ð,a z kim bedzie spal?
+2019-02-08 18:39:47.088,Kasia Ju,HIGH_INTENSITY,Na ochotnika sie zglosil?ð,na ochotnika sie zglosil?
+2019-02-08 18:50:55.247,Kasia Ju,HIGH_INTENSITY,Zagrasz w tysiaca?,zagrasz w tysiaca?
+2019-02-08 19:12:40.733,Pawel Nazaruk,HIGH_INTENSITY,duÅ¼o na rachunki idzie?,duzo na rachunki idzie?
+2019-02-08 19:16:21.600,Pawel Nazaruk,HIGH_INTENSITY,wyrabiasz siÄ?,wyrabiasz sie?
+2019-02-08 20:53:47.187,Kasia Ju,HIGH_INTENSITY,I jak impreza?,i jak impreza?
+2019-02-08 22:44:50.897,Pawel Nazaruk,HIGH_INTENSITY,i zgadnij o czym?,i zgadnij o czym?
+2019-02-08 23:39:50.029,Kasia Ju,HIGH_INTENSITY,O czym?,o czym?
+2019-02-08 23:40:48.689,Pawel Nazaruk,HIGH_INTENSITY,a Ty nie Åpisz jeszcze?,a ty nie spisz jeszcze?
+2019-02-08 23:41:08.641,Pawel Nazaruk,HIGH_INTENSITY,czy przebudziÅaÅ siÄ?,czy przebudzilas sie?
+2019-02-08 23:42:54.054,Pawel Nazaruk,HIGH_INTENSITY,i chciaÅo siÄ pisaÄ jeszcze?,i chcialo sie pisaa jeszcze?
+2019-02-08 23:51:11.523,Kasia Ju,HIGH_INTENSITY,I co Ty z tym zrobisz?ð,i co ty z tym zrobisz?
+2019-02-08 23:58:41.812,Pawel Nazaruk,HIGH_INTENSITY,lepiej?,lepiej?
+2019-02-09 00:02:53.251,Pawel Nazaruk,HIGH_INTENSITY,kotek?,kotek?
+2019-02-09 00:04:36.826,Pawel Nazaruk,HIGH_INTENSITY,a Ty jak na mnie chcesz mÃ³wiÄ?,a ty jak na mnie chcesz mowia?
+2019-02-09 08:56:33.774,Pawel Nazaruk,HIGH_INTENSITY,nie Åpisz?,nie spisz?
+2019-02-09 09:01:57.954,Kasia Ju,HIGH_INTENSITY,Jak tam wczoraj ?,jak tam wczoraj ?
+2019-02-09 09:02:07.362,Kasia Ju,HIGH_INTENSITY,Dlugo siedziales z nimi?,dlugo siedziales z nimi?
+2019-02-09 09:06:41.343,Pawel Nazaruk,HIGH_INTENSITY,a co masz dzisiaj w planach za obowiÄzki?,a co masz dzisiaj w planach za obowiazki?
+2019-02-09 09:08:36.875,Pawel Nazaruk,HIGH_INTENSITY,"a co u kosmetyczki robisz, maseczkÄ jakÄÅ?",a co u kosmetyczki robisz maseczke jakas?
+2019-02-09 09:09:12.451,Pawel Nazaruk,HIGH_INTENSITY,pory wycisnÄÄ?,pory wycisnaa?
+2019-02-09 09:09:37.103,Pawel Nazaruk,HIGH_INTENSITY,a moÅ¼e kurtynÄ zaÅoÅ¼yÄ?,a moze kurtyne zalozya?
+2019-02-09 09:12:14.847,Kasia Ju,HIGH_INTENSITY,Rzes nie dokleja?,rzes nie dokleja?
+2019-02-09 09:31:52.207,Pawel Nazaruk,HIGH_INTENSITY,ale beze mnie?,ale beze mnie?
+2019-02-09 09:32:07.346,Pawel Nazaruk,HIGH_INTENSITY,ten sen?,ten sen?
+2019-02-09 09:37:20.624,Kasia Ju,HIGH_INTENSITY,I skad takie gÅupie sny?ð¦,i skad takie glupie sny?
+2019-02-09 10:31:12.332,Pawel Nazaruk,HIGH_INTENSITY,a skÄd ma takie?,a skad ma takie?
+2019-02-09 10:32:48.677,Pawel Nazaruk,HIGH_INTENSITY,to do komÃ³rki?,to do komorki?
+2019-02-09 13:18:55.544,Pawel Nazaruk,HIGH_INTENSITY,na gierki?ððð,na gierki?
+2019-02-09 13:18:57.526,Kasia Ju,HIGH_INTENSITY,Lubisz taki smalczyk ze skwarkami?,lubisz taki smalczyk ze skwarkami?
+2019-02-09 13:19:07.607,Pawel Nazaruk,HIGH_INTENSITY,a co?,a co?
+2019-02-09 13:19:17.567,Pawel Nazaruk,HIGH_INTENSITY,robisz czy kupilaÅ?,robisz czy kupilas?
+2019-02-09 13:20:25.843,Pawel Nazaruk,HIGH_INTENSITY,"niech sobie sama zrobi, sÅoniny nie moÅ¼e kupiÄ?",niech sobie sama zrobi sloniny nie moze kupia?
+2019-02-09 13:20:28.619,Pawel Nazaruk,HIGH_INTENSITY,a co?,a co?
+2019-02-09 13:20:31.974,Pawel Nazaruk,HIGH_INTENSITY,sÅaby?,slaby?
+2019-02-09 13:22:37.013,Pawel Nazaruk,HIGH_INTENSITY,nie wybredna jesteÅ do jedzenia?,nie wybredna jestes do jedzenia?
+2019-02-09 13:22:42.306,Pawel Nazaruk,HIGH_INTENSITY,co?,co?
+2019-02-09 13:36:51.782,Pawel Nazaruk,HIGH_INTENSITY,a robisz czasami jajka z mÄkÄ i na patelniÄ?,a robisz czasami jajka z maka i na patelnie?
+2019-02-09 13:37:33.557,Kasia Ju,HIGH_INTENSITY,A po co tam mÄkÄ?,a po co tam maka?
+2019-02-09 13:37:44.107,Kasia Ju,HIGH_INTENSITY,Lepsze z mÄkÄ?,lepsze z maka?
+2019-02-09 13:39:17.914,Pawel Nazaruk,HIGH_INTENSITY,takie miÄdzy jajecznicÄ a naleÅnikiem?,takie miedzy jajecznica a nalesnikiem?
+2019-02-09 14:04:05.950,Pawel Nazaruk,HIGH_INTENSITY,wystraszyÅ siÄ?,wystraszyl sie?
+2019-02-09 14:07:46.983,Pawel Nazaruk,HIGH_INTENSITY,do sklepu go puszczasz samego?,do sklepu go puszczasz samego?
+2019-02-09 14:07:59.970,Pawel Nazaruk,HIGH_INTENSITY,albo do szkoÅy?,albo do szkoly?
+2019-02-09 14:11:49.906,Pawel Nazaruk,HIGH_INTENSITY,"babcia bardziej rozpieszcza, martwi siÄ itp.?",babcia bardziej rozpieszcza martwi sie itp ?
+2019-02-09 14:14:15.992,Pawel Nazaruk,HIGH_INTENSITY,to ma zÅy wpÅyw twoim zdaniem na Adriana?,to ma zly wplyw twoim zdaniem na adriana?
+2019-02-09 16:47:36.590,Pawel Nazaruk,HIGH_INTENSITY,a co moja kocia buÅºka robi?,a co moja kocia buzka robi?
+2019-02-09 17:09:20.814,Pawel Nazaruk,HIGH_INTENSITY,a z jakiego miÄsa?,a z jakiego miesa?
+2019-02-09 17:12:34.210,Pawel Nazaruk,HIGH_INTENSITY,z ziemniakami?,z ziemniakami?
+2019-02-09 17:16:02.439,Pawel Nazaruk,HIGH_INTENSITY,"kalafior gotowany a pÃ³Åºniej jajko, panierka i patelnia?",kalafior gotowany a pozniej jajko panierka i patelnia?
+2019-02-09 17:16:29.068,Pawel Nazaruk,HIGH_INTENSITY,sprawdziÅaÅ czy dla dzieci?,sprawdzilas czy dla dzieci?
+2019-02-09 17:17:18.163,Kasia Ju,HIGH_INTENSITY,Co dla dzieci?,co dla dzieci?
+2019-02-09 17:18:41.253,Pawel Nazaruk,HIGH_INTENSITY,to przedstawienie?,to przedstawienie?
+2019-02-09 17:22:07.473,Pawel Nazaruk,HIGH_INTENSITY,na 18 marca? ale nigdy nie chodzÄ,na 18 marca? ale nigdy nie chodze
+2019-02-09 17:23:35.862,Pawel Nazaruk,HIGH_INTENSITY,imiÄ dziewczyny?,imie dziewczyny?
+2019-02-09 17:23:52.338,Kasia Ju,HIGH_INTENSITY,A nazwisko?,a nazwisko?
+2019-02-09 17:24:36.246,Pawel Nazaruk,HIGH_INTENSITY,juchimowicz?,juchimowicz?
+2019-02-09 17:25:10.596,Pawel Nazaruk,HIGH_INTENSITY,a Ty moje?,a ty moje?
+2019-02-09 17:25:53.954,Kasia Ju,HIGH_INTENSITY,Chyba ze to nieprawdziwe?,chyba ze to nieprawdziwe?
+2019-02-09 17:26:08.371,Pawel Nazaruk,HIGH_INTENSITY,a kto by prawdziwe podawaÅ?,a kto by prawdziwe podawal?
+2019-02-09 17:28:48.751,Kasia Ju,HIGH_INTENSITY,A jak mowisz?ðð,a jak mowisz?
+2019-02-09 17:33:08.187,Pawel Nazaruk,HIGH_INTENSITY,a jak?,a jak?
+2019-02-09 17:39:21.798,Kasia Ju,HIGH_INTENSITY,Czego mialabym nie zrozumieÄ?,czego mialabym nie zrozumiea?
+2019-02-09 17:39:40.752,Kasia Ju,HIGH_INTENSITY,Co jrst lepiej?,co jrst lepiej?
+2019-02-09 17:40:38.184,Kasia Ju,HIGH_INTENSITY,A z tymi procentami?,a z tymi procentami?
+2019-02-09 18:34:41.997,Kasia Ju,HIGH_INTENSITY,Lubisz bataty?,lubisz bataty?
+2019-02-09 18:36:27.005,Pawel Nazaruk,HIGH_INTENSITY,gdzie to kupujesz?,gdzie to kupujesz?
+2019-02-09 18:42:11.124,Pawel Nazaruk,HIGH_INTENSITY,wycinasz biaÅe jak kroisz?,wycinasz biale jak kroisz?
+2019-02-09 18:44:23.400,Pawel Nazaruk,HIGH_INTENSITY,a co? Åºle napisaÅem?,a co? zle napisalem?
+2019-02-09 18:44:30.589,Pawel Nazaruk,HIGH_INTENSITY,inaczej siÄ mÃ³wi?,inaczej sie mowi?
+2019-02-09 20:58:51.775,Pawel Nazaruk,HIGH_INTENSITY,taki drogi interes?,taki drogi interes?
+2019-02-09 20:59:03.882,Pawel Nazaruk,HIGH_INTENSITY,filmy drogie?,filmy drogie?
+2019-02-09 20:59:34.067,Pawel Nazaruk,HIGH_INTENSITY,uÅmiaÅaÅ siÄ trochÄ?,usmialas sie troche?
+2019-02-09 22:23:08.976,Pawel Nazaruk,HIGH_INTENSITY,juÅ¼ w domu?,juz w domu?
+2019-02-09 22:39:06.628,Pawel Nazaruk,HIGH_INTENSITY,wyÅwietliÅ siÄ gif?,wyswietlil sie gif?
+2019-02-09 23:33:32.477,Kasia Ju,HIGH_INTENSITY,Co masz na mysli ze z Twarzy greya?,co masz na mysli ze z twarzy greya?
+2019-02-09 23:36:05.156,Kasia Ju,HIGH_INTENSITY,Zawsze tak latwo odpyszczasz?,zawsze tak latwo odpyszczasz?
+2019-02-09 23:54:24.980,Pawel Nazaruk,HIGH_INTENSITY,juÅ¼ nie boli gÅowa?,juz nie boli glowa?
+2019-02-10 10:39:54.343,Pawel Nazaruk,HIGH_INTENSITY,do taÅca jakieÅ lepsze trzeba kupowaÄ?,do taaca jakies lepsze trzeba kupowaa?
+2019-02-10 13:17:27.498,Pawel Nazaruk,HIGH_INTENSITY,byliÅcie w koÅciele?,byliscie w kosciele?
+2019-02-10 14:00:10.022,Pawel Nazaruk,HIGH_INTENSITY,to tam blisko poczty?,to tam blisko poczty?
+2019-02-10 14:00:30.950,Pawel Nazaruk,HIGH_INTENSITY,na gÃ³rze?,na gorze?
+2019-02-10 14:01:30.690,Pawel Nazaruk,HIGH_INTENSITY,a jak z miejscem? spore?,a jak z miejscem? spore?
+2019-02-10 14:02:19.800,Pawel Nazaruk,HIGH_INTENSITY,tam teÅ¼ restauracja czy piwiarnia taka bardziej tylko?,tam tez restauracja czy piwiarnia taka bardziej tylko?
+2019-02-10 14:05:04.897,Pawel Nazaruk,HIGH_INTENSITY,"to chÄtnie bym tam poszedÅ z TobÄ, zaprosisz mnie?ðððð",to chetnie bym tam poszedl z toba zaprosisz mnie?
+2019-02-10 14:06:15.720,Kasia Ju,HIGH_INTENSITY,Ja mam zaprosiÄ?,ja mam zaprosia?
+2019-02-10 14:06:31.401,Pawel Nazaruk,HIGH_INTENSITY,a co?,a co?
+2019-02-10 16:17:52.126,Kasia Ju,HIGH_INTENSITY,Co robisz?,co robisz?
+2019-02-10 16:36:51.415,Pawel Nazaruk,HIGH_INTENSITY,PokaÅ¼ co wyszÅo?,pokaz co wyszlo?
+2019-02-10 16:44:04.422,Pawel Nazaruk,HIGH_INTENSITY,ÅciÄgniÄte z czegoÅ czy z gÅowy?,aciagniete z czegos czy z glowy?
+2019-02-10 16:45:33.443,Pawel Nazaruk,HIGH_INTENSITY,A tam na rzece to juÅ¼ trzech wpadÅo?,a tam na rzece to juz trzech wpadlo?
+2019-02-10 16:53:20.671,Pawel Nazaruk,HIGH_INTENSITY,A prask?,a prask?
+2019-02-10 20:26:43.182,Kasia Ju,HIGH_INTENSITY,A co jeÅ¼eli bycie szczerym sprawi przykrosc?,a co jezeli bycie szczerym sprawi przykrosc?
+2019-02-10 20:28:27.949,Pawel Nazaruk,HIGH_INTENSITY,chcesz mi coÅ powiedzieÄ przykrego?,chcesz mi cos powiedziea przykrego?
+2019-02-10 20:42:35.402,Pawel Nazaruk,HIGH_INTENSITY,a jak ja jeszcze dojdÄ to jak to bÄdzie z tym czasem?,a jak ja jeszcze dojde to jak to bedzie z tym czasem?
+2019-02-10 20:50:11.540,Pawel Nazaruk,HIGH_INTENSITY,a jak tam maÅa brata?,a jak tam mala brata?
+2019-02-10 21:10:45.143,Pawel Nazaruk,HIGH_INTENSITY,A ile lat twÃ³j tato za granicÄ? Ile lat miaÅaÅ jak wyjechaÅ?,a ile lat twoj tato za granica? ile lat mialas jak wyjechal?
+2019-02-11 07:38:55.110,Pawel Nazaruk,HIGH_INTENSITY,Znowu zÅy sen?,znowu zly sen?
+2019-02-11 12:03:18.190,Pawel Nazaruk,HIGH_INTENSITY,Smalec koleÅ¼ance zawiozÅaÅ?,smalec kolezance zawiozlas?
+2019-02-11 12:34:53.319,Kasia Ju,HIGH_INTENSITY,No co Ty? zaczetyð,no co ty? zaczety
+2019-02-11 21:51:57.275,Kasia Ju,HIGH_INTENSITY,Nie spjsz jeszcze?,nie spjsz jeszcze?
+2019-02-12 08:11:38.897,Pawel Nazaruk,HIGH_INTENSITY,"Zuch z Ciebie, 10 minut dla kobiety?",zuch z ciebie 10 minut dla kobiety?
+2019-02-12 14:12:30.852,Kasia Ju,HIGH_INTENSITY,Jak dzionek mija?,jak dzionek mija?
+2019-02-12 20:23:10.506,Pawel Nazaruk,HIGH_INTENSITY,Lepiej juÅ¼? MinÄÅo napiÄcie?,lepiej juz? minelo napiecie?
+2019-02-12 20:52:02.468,Pawel Nazaruk,HIGH_INTENSITY,A jak gorszÄ ocenÄ dostanie to co siÄ stanie?,a jak gorsza ocene dostanie to co sie stanie?
+2019-02-12 22:19:26.583,Kasia Ju,HIGH_INTENSITY,To ze czlowiekowi zawsze malo Twoim zdaniem jest  zle?,to ze czlowiekowi zawsze malo twoim zdaniem jest zle?
+2019-02-12 22:20:28.849,Kasia Ju,HIGH_INTENSITY,A to ze niczego nie potrzebuje? To jes dobre?  Tez chyba nie do koÅca.  Trzeba miec jakies ambicje dazyc do czegos miec jakis cel.,a to ze niczego nie potrzebuje? to jes dobre? tez chyba nie do koaca trzeba miec jakies ambicje dazyc do czegos miec jakis cel
+2019-02-12 22:43:41.387,Pawel Nazaruk,HIGH_INTENSITY,ile lat trzeba Å¼eby normalne pieniÄdze zarobiÄ nie tylko na wegetacjÄ?,ile lat trzeba zeby normalne pieniadze zarobia nie tylko na wegetacje?
+2019-02-12 23:02:49.189,Pawel Nazaruk,HIGH_INTENSITY,a ten tego?,a ten tego?
+2019-02-12 23:03:09.074,Kasia Ju,HIGH_INTENSITY,Nie rozumiem?,nie rozumiem?
+2019-02-12 23:04:38.428,Kasia Ju,HIGH_INTENSITY,Ale co?,ale co?
+2019-02-12 23:05:24.095,Pawel Nazaruk,HIGH_INTENSITY,a z czym ten tego Ci siÄ kojarzy?,a z czym ten tego ci sie kojarzy?
+2019-02-12 23:05:57.989,Pawel Nazaruk,HIGH_INTENSITY,JuÅº zaczynam znowu gÅupoty?,juz zaczynam znowu glupoty?
+2019-02-13 09:53:35.354,Pawel Nazaruk,HIGH_INTENSITY,Chcesz takie?,chcesz takie?
+2019-02-13 12:14:13.644,Pawel Nazaruk,HIGH_INTENSITY,Smakowita saÅatka? Sama robiÅaÅ czy kupiona?,smakowita salatka? sama robilas czy kupiona?
+2019-02-13 17:33:10.957,Pawel Nazaruk,HIGH_INTENSITY,ChÅopcy taÅczÄ? KiedyÅ nie do pomyÅlenia,chlopcy taacza? kiedys nie do pomyslenia
+2019-02-13 19:19:58.663,Pawel Nazaruk,HIGH_INTENSITY,pleÅniowy czy jak on tam?,plesniowy czy jak on tam?
+2019-02-13 22:40:36.482,Pawel Nazaruk,HIGH_INTENSITY,Adrianek ma na jutro walentynkÄ dla dziewczyny jakiejÅ ulubionej?,adrianek ma na jutro walentynke dla dziewczyny jakiejs ulubionej?
+2019-02-13 22:44:44.600,Pawel Nazaruk,HIGH_INTENSITY,"to ta Ola, tak?",to ta ola tak?
+2019-02-13 22:51:24.734,Kasia Ju,HIGH_INTENSITY,Jak macie te wypÅaty? Teraz tylko za styczeÅ byla?,jak macie te wyplaty? teraz tylko za styczea byla?
+2019-02-14 06:45:53.249,Pawel Nazaruk,HIGH_INTENSITY,A buÅºka?,a buzka?
+2019-02-14 06:47:06.052,Pawel Nazaruk,HIGH_INTENSITY,"TrochÄ nie bardzo, ale dasz radÄ, bo kto jak nie Ty?",troche nie bardzo ale dasz rade bo kto jak nie ty?
+2019-02-14 07:12:30.869,Kasia Ju,HIGH_INTENSITY,A placisz alimenty na dzieci?,a placisz alimenty na dzieci?
+2019-02-14 07:15:46.414,Kasia Ju,HIGH_INTENSITY,Dlaczego niedlugo?,dlaczego niedlugo?
+2019-02-14 08:30:15.850,Kasia Ju,HIGH_INTENSITY,A wracajac do alimentow to zakladasz ze nie pojda na studia ?,a wracajac do alimentow to zakladasz ze nie pojda na studia ?
+2019-02-14 08:31:24.540,Pawel Nazaruk,HIGH_INTENSITY,To Ty dzisiaj nie w pracy?,to ty dzisiaj nie w pracy?
+2019-02-14 09:11:04.489,Pawel Nazaruk,HIGH_INTENSITY,A dlaczego miaÅby przestaÄ pÅaciÄ? A z policji to chyba jeszcze mu emerytura nie przysÅuguje to czemu odchodzi?,a dlaczego mialby przestaa placia? a z policji to chyba jeszcze mu emerytura nie przysluguje to czemu odchodzi?
+2019-02-14 11:24:42.684,Kasia Ju,HIGH_INTENSITY,Bie powinno juz przestac krwawic?,bie powinno juz przestac krwawic?
+2019-02-14 18:15:35.186,Kasia Ju,HIGH_INTENSITY,A Ty w sklepie jestes?,a ty w sklepie jestes?
+2019-02-14 18:15:41.117,Kasia Ju,HIGH_INTENSITY,Czy spisz?ð,czy spisz?
+2019-02-14 18:57:02.319,Pawel Nazaruk,HIGH_INTENSITY,"Fajnie tak wolne mieÄ, co?",fajnie tak wolne miea co?
+2019-02-14 19:05:25.723,Pawel Nazaruk,HIGH_INTENSITY,to nie ma przysÄdzonych prawnie?,to nie ma przysadzonych prawnie?
+2019-02-14 19:09:24.015,Kasia Ju,HIGH_INTENSITY,Co nie przejdzie?,co nie przejdzie?
+2019-02-14 19:09:32.045,Pawel Nazaruk,HIGH_INTENSITY,ale jak to kredyt pÅaci?,ale jak to kredyt placi?
+2019-02-14 19:10:55.442,Pawel Nazaruk,HIGH_INTENSITY,450zÅ pewnie musi?,450zl pewnie musi?
+2019-02-14 19:11:08.281,Pawel Nazaruk,HIGH_INTENSITY,czy ile sÄd przyznaÅ?,czy ile sad przyznal?
+2019-02-14 19:13:54.963,Pawel Nazaruk,HIGH_INTENSITY,a nawet jeÅli na tÄ ratÄ by byÅo to co? pod mostem macie mieszkaÄ?,a nawet jesli na ta rate by bylo to co? pod mostem macie mieszkaa?
+2019-02-14 19:33:38.148,Pawel Nazaruk,HIGH_INTENSITY,ale to sÄd ile przyznaÅ?,ale to sad ile przyznal?
+2019-02-14 19:35:16.364,Pawel Nazaruk,HIGH_INTENSITY,to nie miaÅaÅ wyroku sÄdowego?,to nie mialas wyroku sadowego?
+2019-02-14 20:57:50.830,Pawel Nazaruk,HIGH_INTENSITY,"to po cholerÄ jechaÄ i pÅakaÄ, Å¼e drogo?",to po cholere jechaa i plakaa ze drogo?
+2019-02-15 08:34:41.591,Pawel Nazaruk,HIGH_INTENSITY,a Ty co KasieÅko dzisiaj planujesz?,a ty co kasieako dzisiaj planujesz?
+2019-02-15 08:36:09.736,Pawel Nazaruk,HIGH_INTENSITY,masz juÅ¼ plan zajÄÄ czy tak jak poleci?,masz juz plan zajea czy tak jak poleci?
+2019-02-15 09:01:28.718,Pawel Nazaruk,HIGH_INTENSITY,a komu kwiatki i w ktÃ³rej kwiaciarni?,a komu kwiatki i w ktorej kwiaciarni?
+2019-02-15 09:02:09.800,Pawel Nazaruk,HIGH_INTENSITY,doniczkowego?,doniczkowego?
+2019-02-15 09:10:02.759,Pawel Nazaruk,HIGH_INTENSITY,na kazimierzowskiej moÅ¼e byÅaÅ?,na kazimierzowskiej moze bylas?
+2019-02-15 09:12:22.582,Pawel Nazaruk,HIGH_INTENSITY,a skÄd wiesz ktÃ³ra?,a skad wiesz ktora?
+2019-02-15 09:12:31.418,Pawel Nazaruk,HIGH_INTENSITY,przez fb?,przez fb?
+2019-02-15 09:18:42.869,Pawel Nazaruk,HIGH_INTENSITY,rury uÅ¼ywasz?,rury uzywasz?
+2019-02-15 09:22:00.415,Pawel Nazaruk,HIGH_INTENSITY,przesadziÅem?,przesadzilem?
+2019-02-15 09:37:12.730,Pawel Nazaruk,HIGH_INTENSITY,z cebulkÄ?,z cebulka?
+2019-02-15 09:39:41.149,Pawel Nazaruk,HIGH_INTENSITY,co Ty na to?,co ty na to?
+2019-02-15 09:41:03.558,Pawel Nazaruk,HIGH_INTENSITY,co to za dentystka? Jak takie rady daje,co to za dentystka? jak takie rady daje
+2019-02-15 09:41:43.123,Pawel Nazaruk,HIGH_INTENSITY,mocno boli?,mocno boli?
+2019-02-15 09:44:20.484,Pawel Nazaruk,HIGH_INTENSITY,"powinno boleÄ ale jak nie to lepiej, zaÅoÅ¼yÅa jakieÅ szwy?",powinno bolea ale jak nie to lepiej zalozyla jakies szwy?
+2019-02-15 09:51:19.929,Pawel Nazaruk,HIGH_INTENSITY,to do niedzieli mam czekaÄ???,to do niedzieli mam czekaa???
+2019-02-15 10:14:58.116,Pawel Nazaruk,HIGH_INTENSITY,https://allegro.pl/listing?string=kwiaty%20doniczkowe&order=m&bmatch=baseline-n-hou-1-1-0131,
+2019-02-15 13:42:36.014,Pawel Nazaruk,HIGH_INTENSITY,to teraz w szkole jesteÅ?,to teraz w szkole jestes?
+2019-02-15 13:43:01.445,Pawel Nazaruk,HIGH_INTENSITY,a w szkole nie zostawiajÄ czÄÅci?,a w szkole nie zostawiaja czesci?
+2019-02-15 13:43:40.671,Pawel Nazaruk,HIGH_INTENSITY,dwa razy bÄdziesz jeÅºdziÄ?,dwa razy bedziesz jezdzia?
+2019-02-15 13:47:35.047,Pawel Nazaruk,HIGH_INTENSITY,dla kogo?,dla kogo?
+2019-02-15 13:47:43.409,Pawel Nazaruk,HIGH_INTENSITY,dla samotnych?,dla samotnych?
+2019-02-15 14:07:51.125,Pawel Nazaruk,HIGH_INTENSITY,"moÅ¼na i 180 jeÅºdziÄ, ale po co?",mozna i 180 jezdzia ale po co?
+2019-02-15 14:12:59.071,Pawel Nazaruk,HIGH_INTENSITY,"a Ty tak sprzÄtasz, Å¼e tak zapytam?ððð",a ty tak sprzatasz ze tak zapytam?
+2019-02-15 14:19:21.012,Pawel Nazaruk,HIGH_INTENSITY,?,?
+2019-02-15 16:42:58.678,Pawel Nazaruk,HIGH_INTENSITY,"Dobrze jak dzieÅ wolny, co? Inne Å¼ycie.",dobrze jak dziea wolny co? inne zycie
+2019-02-15 17:03:20.507,Pawel Nazaruk,HIGH_INTENSITY,Ile taka przyjemnoÅÄ z dostawÄ?,ile taka przyjemnosa z dostawa?
+2019-02-15 17:12:26.278,Pawel Nazaruk,HIGH_INTENSITY,to razem idziecie?,to razem idziecie?
+2019-02-15 20:10:23.550,Pawel Nazaruk,HIGH_INTENSITY,dalej u koleÅ¼anki?,dalej u kolezanki?
+2019-02-15 22:26:39.880,Kasia Ju,HIGH_INTENSITY,A Ty co robisz?,a ty co robisz?
+2019-02-16 08:33:51.172,Pawel Nazaruk,HIGH_INTENSITY,D?,d?
+2019-02-16 08:34:00.874,Pawel Nazaruk,HIGH_INTENSITY,witamina D?,witamina d?
+2019-02-16 11:54:12.452,Pawel Nazaruk,HIGH_INTENSITY,"Przynajmniej jeden kÅopot masz z gÅowy, mechanik przystojny byÅ?",przynajmniej jeden klopot masz z glowy mechanik przystojny byl?
+2019-02-16 12:52:40.296,Pawel Nazaruk,HIGH_INTENSITY,Nie nadawaÅ siÄ?,nie nadawal sie?
+2019-02-16 15:03:17.468,Kasia Ju,HIGH_INTENSITY,Dalej w sklepie?,dalej w sklepie?
+2019-02-16 16:04:10.007,Pawel Nazaruk,HIGH_INTENSITY,A Ty masz jakieÅ coÅ czego nie lubisz bardzo?,a ty masz jakies cos czego nie lubisz bardzo?
+2019-02-16 16:07:58.311,Pawel Nazaruk,HIGH_INTENSITY,Åmierdzi?,amierdzi?
+2019-02-16 17:07:07.127,Kasia Ju,HIGH_INTENSITY,Dlaczego Goska nie chciala jesc twgo co gotowales?,dlaczego goska nie chciala jesc twgo co gotowales?
+2019-02-16 17:07:15.841,Kasia Ju,HIGH_INTENSITY,Nie smakowaÅo jej?,nie smakowalo jej?
+2019-02-16 17:07:54.645,Kasia Ju,HIGH_INTENSITY,Czy wolala owoce morza?ð,czy wolala owoce morza?
+2019-02-16 18:01:22.417,Pawel Nazaruk,HIGH_INTENSITY,Soczek porzeczkowy? Z czarnej porzeczki?,soczek porzeczkowy? z czarnej porzeczki?
+2019-02-16 18:02:49.320,Pawel Nazaruk,HIGH_INTENSITY,A buÅºki mojej moÅ¼e?,a buzki mojej moze?
+2019-02-16 20:25:04.632,Pawel Nazaruk,HIGH_INTENSITY,Co tam KasieÅka porabia?,co tam kasieaka porabia?
+2019-02-16 21:31:06.041,Pawel Nazaruk,HIGH_INTENSITY,wieczorem?,wieczorem?
+2019-02-16 22:20:07.679,Kasia Ju,HIGH_INTENSITY,Ogladasz coÅ?,ogladasz cos?
+2019-02-16 22:37:05.358,Pawel Nazaruk,HIGH_INTENSITY,bardziej siÄ opÅacaÅo moÅ¼e byÄ razem?,bardziej sie oplacalo moze bya razem?
+2019-02-16 22:39:11.248,Pawel Nazaruk,HIGH_INTENSITY,"to ile oczekujesz Å¼eby twÃ³j partner zarabiaÅ? TrochÄ gÅupie pytanie, nie musisz odpowiadaÄ",to ile oczekujesz zeby twoj partner zarabial? troche glupie pytanie nie musisz odpowiadaa
+2019-02-16 22:58:04.098,Pawel Nazaruk,HIGH_INTENSITY,a wy jeszcze nie idziecie spaÄ?,a wy jeszcze nie idziecie spaa?
+2019-02-16 23:43:57.003,Pawel Nazaruk,HIGH_INTENSITY,A Ty nie nieÅmiaÅa?,a ty nie niesmiala?
+2019-02-16 23:49:27.478,Pawel Nazaruk,HIGH_INTENSITY,Ciekawe co? Bo nie wiem co to coÅ innego.,ciekawe co? bo nie wiem co to cos innego
+2019-02-17 10:21:59.306,Kasia Ju,HIGH_INTENSITY,WstaÅeÅ?,wstales?
+2019-02-17 13:20:26.048,Pawel Nazaruk,HIGH_INTENSITY,a co tam Kasia porabia?,a co tam kasia porabia?
+2019-02-17 13:31:48.655,Kasia Ju,HIGH_INTENSITY,Ale kto spioch?,ale kto spioch?
+2019-02-17 16:14:46.414,Pawel Nazaruk,HIGH_INTENSITY,a z jakiego okresu siÄ uczycie?,a z jakiego okresu sie uczycie?
+2019-02-17 16:25:28.027,Kasia Ju,HIGH_INTENSITY,A Ty co robisz?,a ty co robisz?
+2019-02-17 18:03:39.887,Pawel Nazaruk,HIGH_INTENSITY,lepiej czy gorzej w niedzielÄ?,lepiej czy gorzej w niedziele?
+2019-02-17 20:04:16.201,Kasia Ju,HIGH_INTENSITY,Czy to tak przypadkiem? ð,czy to tak przypadkiem?
+2019-02-17 21:44:51.973,Pawel Nazaruk,HIGH_INTENSITY,"i co KasieÅko, idziesz juÅ¼ spaÄ?",i co kasieako idziesz juz spaa?
+2019-02-18 06:41:50.645,Pawel Nazaruk,HIGH_INTENSITY,Tak wczeÅnie wstaÅaÅ?,tak wczesnie wstalas?
+2019-02-18 12:03:30.130,Pawel Nazaruk,HIGH_INTENSITY,I jak tam? Firma nie upadÅa bez Ciebie?,i jak tam? firma nie upadla bez ciebie?
+2019-02-18 17:44:33.576,Pawel Nazaruk,HIGH_INTENSITY,Co mu to daÅo?,co mu to dalo?
+2019-02-18 17:54:26.250,Pawel Nazaruk,HIGH_INTENSITY,A tamtÄ spÃ³ÅkÄ co prowadziÅaÅ najwiÄkszÄ dalej bÄdziesz prowadziÄ?,a tamta spolke co prowadzilas najwieksza dalej bedziesz prowadzia?
+2019-02-18 18:06:07.786,Pawel Nazaruk,HIGH_INTENSITY,No co Ty?,no co ty?
+2019-02-18 18:10:35.170,Pawel Nazaruk,HIGH_INTENSITY,A wybuÅºkaÄ siÄ dasz?,a wybuzkaa sie dasz?
+2019-02-18 18:11:47.452,Pawel Nazaruk,HIGH_INTENSITY,Jeszcze nie? Ale i tak na razie nie mogÄ bo mi buÅºki na telefonie nie wychodzÄ.,jeszcze nie? ale i tak na razie nie moge bo mi buzki na telefonie nie wychodza
+2019-02-19 15:59:39.463,Kasia Ju,HIGH_INTENSITY,A jak u Ciebie dzis?,a jak u ciebie dzis?
+2019-02-19 17:57:24.792,Pawel Nazaruk,HIGH_INTENSITY,A jak u nas?,a jak u nas?
+2019-02-19 18:52:13.424,Pawel Nazaruk,HIGH_INTENSITY,aÅ¼ tak taÅczyÄ siÄ chce? dziwna Kasiaððððð,az tak taaczya sie chce? dziwna kasia
+2019-02-19 20:01:15.974,Pawel Nazaruk,HIGH_INTENSITY,potaÅcowaÅaÅ?,potaacowalas?
+2019-02-19 21:12:57.909,Pawel Nazaruk,HIGH_INTENSITY,a gdzie teraz informatyk pracuje?,a gdzie teraz informatyk pracuje?
+2019-02-19 21:13:32.873,Pawel Nazaruk,HIGH_INTENSITY,to co robi w bielsku?,to co robi w bielsku?
+2019-02-19 22:09:21.258,Pawel Nazaruk,HIGH_INTENSITY,sroga?,sroga?
+2019-02-19 22:09:46.526,Pawel Nazaruk,HIGH_INTENSITY,wymagajÄca?,wymagajaca?
+2019-02-19 22:10:55.323,Pawel Nazaruk,HIGH_INTENSITY,a nagrody bÄdÄ?,a nagrody beda?
+2019-02-19 22:11:08.140,Pawel Nazaruk,HIGH_INTENSITY,i sprawowanie?,i sprawowanie?
+2019-02-19 22:13:03.674,Pawel Nazaruk,HIGH_INTENSITY,a mogÄ zapytaÄ jakie bÄdÄ nagrody?,a moge zapytaa jakie beda nagrody?
+2019-02-19 22:14:32.559,Pawel Nazaruk,HIGH_INTENSITY,to nagrody teÅ¼ zdalne?,to nagrody tez zdalne?
+2019-02-19 22:24:08.801,Pawel Nazaruk,HIGH_INTENSITY,dopiero do lekcji??? patrz ktÃ³ra godzina,dopiero do lekcji??? patrz ktora godzina
+2019-02-20 09:34:04.180,Kasia Ju,HIGH_INTENSITY,Jak dziÅ nastrÃ³j?,jak dzis nastroj?
+2019-02-20 09:40:37.324,Kasia Ju,HIGH_INTENSITY,To kiedy wracasz?  To juz pewne rozumiem?,to kiedy wracasz? to juz pewne rozumiem?
+2019-02-20 10:14:14.926,Pawel Nazaruk,HIGH_INTENSITY,Ciekawe czy jak siÄ spotkamy to bÄdzie ta sama Kasia z telefonu czy inna caÅkiem?,ciekawe czy jak sie spotkamy to bedzie ta sama kasia z telefonu czy inna calkiem?
+2019-02-20 17:19:11.939,Pawel Nazaruk,HIGH_INTENSITY,SkÄd Ty tyle tych chÄci masz ?,skad ty tyle tych checi masz ?
+2019-02-20 17:25:38.014,Pawel Nazaruk,HIGH_INTENSITY,Co nie?,co nie?
+2019-02-20 19:18:18.749,Pawel Nazaruk,HIGH_INTENSITY,a Ty KasieÅko juÅ¼ jadÅaÅ kolacjÄ?,a ty kasieako juz jadlas kolacje?
+2019-02-20 19:39:44.937,Kasia Ju,HIGH_INTENSITY,Co to za wymowki?ð,co to za wymowki?
+2019-02-20 19:42:51.642,Pawel Nazaruk,HIGH_INTENSITY,a kary teÅ¼ bÄdÄ czy tylko nagrody?,a kary tez beda czy tylko nagrody?
+2019-02-20 20:19:30.752,Pawel Nazaruk,HIGH_INTENSITY,"znasz ich? bo podatek bÄdÄ musiaÅ gdzieÅ rozliczyÄ, a nie chcÄ za bardzo do ciotki iÅÄ ani wysyÅaÄ gdzieÅ w PolskÄ dokumentÃ³w",znasz ich? bo podatek bede musial gdzies rozliczya a nie chce za bardzo do ciotki isa ani wysylaa gdzies w polske dokumentow
+2019-02-20 21:20:38.618,Pawel Nazaruk,HIGH_INTENSITY,nauczyliÅcie siÄ juÅ¼?,nauczyliscie sie juz?
+2019-02-20 22:36:03.909,Pawel Nazaruk,HIGH_INTENSITY,taki kibic z Ciebie?,taki kibic z ciebie?
+2019-02-21 08:24:53.575,Pawel Nazaruk,HIGH_INTENSITY,"Taka ich praca, a Ty byÅ nie mogÅa na takÄ 'dziewczynkÄ' zostaÄ?",taka ich praca a ty bys nie mogla na taka dziewczynka zostaa?
+2019-02-21 11:06:11.944,Pawel Nazaruk,HIGH_INTENSITY,Oswajasz siÄ juÅ¼ trochÄ?,oswajasz sie juz troche?
+2019-02-21 11:08:49.702,Pawel Nazaruk,HIGH_INTENSITY,Skontrolowali CiÄ juÅ¼? Dobrze sobie radzÄ dziewczynki?,skontrolowali cie juz? dobrze sobie radza dziewczynki?
+2019-02-21 13:31:13.606,Pawel Nazaruk,HIGH_INTENSITY,"Spokojnie, tak tylko smuty walÄ, no ale komu jak nie tobie?",spokojnie tak tylko smuty wale no ale komu jak nie tobie?
+2019-02-21 13:33:23.455,Pawel Nazaruk,HIGH_INTENSITY,"ToÅ¼ tak, co zrobiÄ? Pod most pÃ³jdÄ?",toz tak co zrobie? pod most pojde?
+2019-02-21 15:30:31.037,Kasia Ju,HIGH_INTENSITY,O ktorej ten busik?,o ktorej ten busik?
+2019-02-21 22:42:25.241,Pawel Nazaruk,HIGH_INTENSITY,Minecrafta?,minecrafta?
+2019-02-21 22:44:13.919,Kasia Ju,HIGH_INTENSITY,https://www.wowschool.pl/kursy/?cities=bialystok&courseId=5755#header,
+2019-02-21 22:53:34.821,Kasia Ju,HIGH_INTENSITY,Co jeszcze chcesz?,co jeszcze chcesz?
+2019-02-21 22:57:42.817,Pawel Nazaruk,HIGH_INTENSITY,A jak ja powiem Å¼e teÅ¼ siÄ stresuje to bÄdzie Ci lepiej?,a jak ja powiem ze tez sie stresuje to bedzie ci lepiej?
+2019-02-22 09:50:05.568,Kasia Ju,HIGH_INTENSITY,Pospales troche?,pospales troche?
+2019-02-22 09:54:14.749,Pawel Nazaruk,HIGH_INTENSITY,Co nie strasz? Nie bÄdziesz buÅºkami szastaÄ na lewo i prawo. BuÅºka musi mieÄ pokrycie w naturze.,co nie strasz? nie bedziesz buzkami szastaa na lewo i prawo buzka musi miea pokrycie w naturze
+2019-02-22 10:05:06.279,Pawel Nazaruk,HIGH_INTENSITY,A czego siÄ boisz? Å»e Ci buÅºki zabiorÄ he he,a czego sie boisz? ze ci buzki zabiore he he
+2019-02-22 12:20:16.801,Kasia Ju,HIGH_INTENSITY,Jak mama?,jak mama?
+2019-02-22 12:20:33.571,Kasia Ju,HIGH_INTENSITY,Ucieszyla sie po przemysleniu ?,ucieszyla sie po przemysleniu ?
+2019-02-22 19:22:46.907,Pawel Nazaruk,HIGH_INTENSITY,Åpisz? Bo chce zadzwoniÄ i na jutro siÄ umÃ³wiÄ.,apisz? bo chce zadzwonia i na jutro sie umowia
+2019-02-22 22:49:16.993,Kasia Ju,HIGH_INTENSITY,Co robisz?,co robisz?
+2019-02-22 22:56:43.444,Kasia Ju,HIGH_INTENSITY,Kto pisze listy do Ciebie?,kto pisze listy do ciebie?
+2019-02-22 22:57:21.638,Pawel Nazaruk,HIGH_INTENSITY,No wiesz? Nie mogÄ za bardzo siÄ zdradziÄ.,no wiesz? nie moge za bardzo sie zdradzia
+2019-02-22 23:04:44.242,Pawel Nazaruk,HIGH_INTENSITY,WyspaÅaÅ siÄ?,wyspalas sie?
+2019-02-23 08:27:21.224,Pawel Nazaruk,HIGH_INTENSITY,"DzieÅ dobry, jak zdrÃ³wko?",dziea dobry jak zdrowko?
+2019-02-23 11:34:16.677,Kasia Ju,HIGH_INTENSITY,Co robisz?,co robisz?
+2019-02-23 11:34:22.178,Kasia Ju,HIGH_INTENSITY,Sprzatasz?,sprzatasz?
+2019-02-23 12:23:19.217,Pawel Nazaruk,HIGH_INTENSITY,nie zdenerwowaÅa?,nie zdenerwowala?
+2019-02-23 15:09:45.867,Pawel Nazaruk,HIGH_INTENSITY,A jak u Ciebie?,a jak u ciebie?
+2019-02-23 15:23:47.021,Pawel Nazaruk,HIGH_INTENSITY,"Do szpitala to nie bardzo, co?",do szpitala to nie bardzo co?
+2019-02-23 18:33:21.559,Pawel Nazaruk,HIGH_INTENSITY,Ale gdzie?,ale gdzie?
+2019-02-23 18:34:17.975,Pawel Nazaruk,HIGH_INTENSITY,I czemu beze mnie?,i czemu beze mnie?
+2019-02-23 18:36:33.110,Kasia Ju,HIGH_INTENSITY,Wiesz co to te raspbery pi?,wiesz co to te raspbery pi?
+2019-02-23 18:49:23.857,Kasia Ju,HIGH_INTENSITY,To cos podobnego?,to cos podobnego?
+2019-02-23 18:51:04.156,Pawel Nazaruk,HIGH_INTENSITY,strony internetowe?,strony internetowe?
+2019-02-23 19:33:29.205,Kasia Ju,HIGH_INTENSITY,A Ty sam?,a ty sam?
+2019-02-23 20:10:17.152,Kasia Ju,HIGH_INTENSITY,Jak czesto oni moga przyjezdzac?,jak czesto oni moga przyjezdzac?
+2019-02-23 20:34:14.595,Kasia Ju,HIGH_INTENSITY,Jaki film?,jaki film?
+2019-02-23 20:56:41.564,Pawel Nazaruk,HIGH_INTENSITY,"A co tam u brata, wyzdrowiaÅa ta maÅa?",a co tam u brata wyzdrowiala ta mala?
+2019-02-23 21:00:25.931,Pawel Nazaruk,HIGH_INTENSITY,A Tata teÅ¼ w wykoÅczeniÃ³wce robi?,a tata tez w wykoaczeniowce robi?
+2019-02-23 21:17:44.991,Kasia Ju,HIGH_INTENSITY,Myslusz ze Wojtek chcialby mieszkac z Toba?,myslusz ze wojtek chcialby mieszkac z toba?
+2019-02-23 21:23:13.802,Pawel Nazaruk,HIGH_INTENSITY,A skÄd to pytanie?,a skad to pytanie?
+2019-02-23 21:35:42.699,Pawel Nazaruk,HIGH_INTENSITY,Co zobaczymy!?,co zobaczymy!?
+2019-02-23 22:06:01.940,Kasia Ju,HIGH_INTENSITY,?,?
+2019-02-23 22:22:23.090,Pawel Nazaruk,HIGH_INTENSITY,"MaÅo, bo kiedy?",malo bo kiedy?
+2019-02-23 23:06:25.148,Kasia Ju,HIGH_INTENSITY,Spisz?,spisz?
+2019-02-23 23:11:03.961,Pawel Nazaruk,HIGH_INTENSITY,To jak mi dzisiaj buÅºki dasz na dobranoc?,to jak mi dzisiaj buzki dasz na dobranoc?
+2019-02-23 23:12:46.774,Kasia Ju,HIGH_INTENSITY,Taka chora spuchnieta?,taka chora spuchnieta?
+2019-02-23 23:16:01.392,Kasia Ju,HIGH_INTENSITY,Jak sie nazywaÅ?,jak sie nazywal?
+2019-02-23 23:17:33.833,Kasia Ju,HIGH_INTENSITY,Jak nie byÅo?,jak nie bylo?
+2019-02-23 23:17:53.946,Kasia Ju,HIGH_INTENSITY,To kiedy Ci Å¼oÅnierze walczyli?,to kiedy ci zolnierze walczyli?
+2019-02-24 09:45:37.250,Pawel Nazaruk,HIGH_INTENSITY,"O czym gadaliÅcie po drodze, jak atmosfera?",o czym gadaliscie po drodze jak atmosfera?
+2019-02-24 09:48:45.562,Pawel Nazaruk,HIGH_INTENSITY,"Zainteresowanie jest, duÅ¼o droÅ¼sze takie mieszkania od starych mniej wiÄcej?",zainteresowanie jest duzo drozsze takie mieszkania od starych mniej wiecej?
+2019-02-24 10:03:57.026,Kasia Ju,HIGH_INTENSITY,JesteÅ?,jestes?
+2019-02-24 11:07:04.438,Pawel Nazaruk,HIGH_INTENSITY,To on teÅ¼ czeka z wami?,to on tez czeka z wami?
+2019-02-24 13:31:15.127,Kasia Ju,HIGH_INTENSITY,Od tego zeby leÅ¼eÄ? ð,od tego zeby lezea?
+2019-02-24 13:33:51.935,Pawel Nazaruk,HIGH_INTENSITY,A co byÅ chciaÅa w niedzielÄ robiÄ? Tylko leÅ¼eÄ,a co bys chciala w niedziele robia? tylko lezea
+2019-02-24 13:45:39.940,Kasia Ju,HIGH_INTENSITY,A myslisz ze w tygodniu mialbys jak przyjechac?,a myslisz ze w tygodniu mialbys jak przyjechac?
+2019-02-24 13:45:55.566,Kasia Ju,HIGH_INTENSITY,Do kiedy wogle bÄdziesz w domu?,do kiedy wogle bedziesz w domu?
+2019-02-24 15:26:08.901,Kasia Ju,HIGH_INTENSITY,Co miales na obiad?,co miales na obiad?
+2019-02-24 15:35:04.776,Pawel Nazaruk,HIGH_INTENSITY,Å»e CiÄ boli jak za duÅ¼o zjesz?,ze cie boli jak za duzo zjesz?
+2019-02-24 16:14:56.506,Pawel Nazaruk,HIGH_INTENSITY,"Zaraz mecze siÄ zacznÄ, kawkÄ sobie zrobiÄ, gierkÄ do tego wÅÄczÄ, najedzony, cieplutko i czego wiÄcej chcieÄ?",zaraz mecze sie zaczna kawke sobie zrobie gierke do tego wlacze najedzony cieplutko i czego wiecej chciea?
+2019-02-24 19:24:30.467,Pawel Nazaruk,HIGH_INTENSITY,to mÃ³wisz przytulaÄ juÅ¼ siÄ chcesz? pomyÅlaÅaÅ sobie,to mowisz przytulaa juz sie chcesz? pomyslalas sobie
+2019-02-25 15:17:14.557,Pawel Nazaruk,HIGH_INTENSITY,DaÄ jak siÄ pisze?,daa jak sie pisze?
+2019-02-25 16:59:03.413,Kasia Ju,HIGH_INTENSITY,Z kim byles?,z kim byles?
+2019-02-25 17:14:32.936,Kasia Ju,HIGH_INTENSITY,A w tej agencji pracy Was nie rozlicza?,a w tej agencji pracy was nie rozlicza?
+2019-02-25 20:46:28.714,Pawel Nazaruk,HIGH_INTENSITY,"I jak tam oczka, zapuÅciÅaÅ krople?",i jak tam oczka zapuscilas krople?
+2019-02-25 21:20:34.544,Pawel Nazaruk,HIGH_INTENSITY,Lepiej? Jest ulga?,lepiej? jest ulga?
+2019-02-25 21:41:02.294,Kasia Ju,HIGH_INTENSITY,To kiedy?,to kiedy?
+2019-02-25 22:46:50.751,Pawel Nazaruk,HIGH_INTENSITY,A co z tej kuchni ma byÄ Å¼e trzeba robiÄ tyle? Meble najwaÅ¼niejsze mi siÄ wydajÄ,a co z tej kuchni ma bya ze trzeba robia tyle? meble najwazniejsze mi sie wydaja
+2019-02-26 11:18:51.687,Kasia Ju,HIGH_INTENSITY,A wiesz juz cos do kiedy bedziesz?,a wiesz juz cos do kiedy bedziesz?
+2019-02-26 18:19:04.141,Pawel Nazaruk,HIGH_INTENSITY,KasieÅce telefon siÄ zespÃ³Å czy jaki czort?,kasieace telefon sie zespol czy jaki czort?
+2019-02-26 18:43:47.680,Pawel Nazaruk,HIGH_INTENSITY,Jak Dobrze siÄ czujesz to czemu nie?,jak dobrze sie czujesz to czemu nie?
+2019-02-26 22:08:27.311,Kasia Ju,HIGH_INTENSITY,A Ty co porabiasz?,a ty co porabiasz?
+2019-02-26 22:29:07.009,Kasia Ju,HIGH_INTENSITY,Kiedy moglbys przyjechaÄ?,kiedy moglbys przyjechaa?
+2019-02-27 09:32:45.204,Pawel Nazaruk,HIGH_INTENSITY,Spokojnie w pracy?,spokojnie w pracy?
+2019-02-27 18:47:30.266,Kasia Ju,HIGH_INTENSITY,Chcesz tam mieszkac caly czas?,chcesz tam mieszkac caly czas?
+2019-02-28 10:26:43.710,Pawel Nazaruk,HIGH_INTENSITY,Ile pÄczkÃ³w juÅ¼ dzisiaj wsunÄÅaÅ? Ja na razie dwa,ile paczkow juz dzisiaj wsunelas? ja na razie dwa
+2019-02-28 18:34:17.031,Pawel Nazaruk,HIGH_INTENSITY,"Jak tam Kasiu, z domu juÅ¼? Dawno pewnie",jak tam kasiu z domu juz? dawno pewnie
+2019-02-28 21:15:19.121,Kasia Ju,HIGH_INTENSITY,Czyli jutro chcesz sie spotkac?,czyli jutro chcesz sie spotkac?
+2019-02-28 21:25:00.271,Pawel Nazaruk,HIGH_INTENSITY,zawsze tak masz?,zawsze tak masz?
+2019-02-28 21:38:44.834,Kasia Ju,HIGH_INTENSITY,?,?
+2019-02-28 21:41:06.041,Pawel Nazaruk,HIGH_INTENSITY,taki pracuÅ z Ciebie?,taki pracus z ciebie?
+2019-02-28 21:47:50.756,Pawel Nazaruk,HIGH_INTENSITY,"a co zrobiÅy takiego, Å¼e Ciebie dotknÄÅo?",a co zrobily takiego ze ciebie dotknelo?
+2019-02-28 21:53:25.078,Pawel Nazaruk,HIGH_INTENSITY,jakÄ przykroÅÄ koleÅ¼anki zrobiÅy?,jaka przykrosa kolezanki zrobily?
+2019-02-28 21:57:12.510,Pawel Nazaruk,HIGH_INTENSITY,to co z tymi koleÅ¼ankami?,to co z tymi kolezankami?
+2019-02-28 21:59:13.406,Pawel Nazaruk,HIGH_INTENSITY,a wezmÄ? majÄ kogoÅ?,a wezma? maja kogos?
+2019-02-28 22:01:25.145,Pawel Nazaruk,HIGH_INTENSITY,to koleÅ¼anki sÄ?,to kolezanki sa?
+2019-02-28 22:01:56.781,Pawel Nazaruk,HIGH_INTENSITY,stracÄ coÅ na tym? nie,straca cos na tym? nie
+2019-02-28 22:04:28.438,Pawel Nazaruk,HIGH_INTENSITY,ich firma?,ich firma?
+2019-02-28 22:18:01.779,Pawel Nazaruk,HIGH_INTENSITY,Dobrze odrobiÅ?,dobrze odrobil?
+2019-02-28 22:29:26.015,Kasia Ju,HIGH_INTENSITY,A spotkamy sie?,a spotkamy sie?
+2019-02-28 22:32:18.100,Pawel Nazaruk,HIGH_INTENSITY,a ja moÅ¼e chcÄ takÄ?,a ja moze chce taka?
+2019-02-28 22:32:23.270,Pawel Nazaruk,HIGH_INTENSITY,eee?,eee?
+2019-02-28 22:48:23.442,Pawel Nazaruk,HIGH_INTENSITY,A posmarowaÅaÅ tam gdzie trzeba w ogÃ³le?,a posmarowalas tam gdzie trzeba w ogole?
+2019-02-28 23:01:01.670,Kasia Ju,HIGH_INTENSITY,Gdzie?,gdzie?
+2019-02-28 23:02:31.832,Pawel Nazaruk,HIGH_INTENSITY,A Ty gdzie juÅ¼ sobie myÅlaÅaÅ?,a ty gdzie juz sobie myslalas?
+2019-03-01 18:56:15.266,Kasia Ju,HIGH_INTENSITY,Ok?,ok?
+2019-03-01 21:33:40.250,Pawel Nazaruk,HIGH_INTENSITY,"A tobie jak byÅo, moÅ¼e byÄ?",a tobie jak bylo moze bya?
+2019-03-01 21:43:38.144,Pawel Nazaruk,HIGH_INTENSITY,Chcesz jeszcze?,chcesz jeszcze?
+2019-03-01 21:44:57.586,Pawel Nazaruk,HIGH_INTENSITY,Ale bÄdziesz jeszcze chciaÅa?,ale bedziesz jeszcze chciala?
+2019-03-01 21:47:52.953,Pawel Nazaruk,HIGH_INTENSITY,MoÅ¼e te rÃ³Å¼ne Åwiaty tak przyciÄgajÄ?,moze te rozne swiaty tak przyciagaja?
+2019-03-01 21:51:51.905,Pawel Nazaruk,HIGH_INTENSITY,Czyli nie wiesz czy bÄdziesz chciaÅa jeszcze?,czyli nie wiesz czy bedziesz chciala jeszcze?
+2019-03-02 08:31:03.935,Pawel Nazaruk,HIGH_INTENSITY,"Ej, Åmiejesz siÄ ze mnie? Czekaj tylko, dostaniesz klapsa to inaczej pogadamy.",ej smiejesz sie ze mnie? czekaj tylko dostaniesz klapsa to inaczej pogadamy
+2019-03-02 09:08:10.547,Pawel Nazaruk,HIGH_INTENSITY,"Å»ebym ja w nim byÅ to rozumiem, ale sama? Co w nim robiÄ?",zebym ja w nim byl to rozumiem ale sama? co w nim robia?
+2019-03-02 09:12:38.823,Kasia Ju,HIGH_INTENSITY,Ciekawo czy bys potrafil?,ciekawo czy bys potrafil?
+2019-03-02 09:16:40.738,Kasia Ju,HIGH_INTENSITY,A mi czy Ty ByÅ potrafil zmienic moj nastroj?,a mi czy ty bys potrafil zmienic moj nastroj?
+2019-03-02 09:17:09.570,Pawel Nazaruk,HIGH_INTENSITY,Ja bym nie potrafiÅ? KasieÅka,ja bym nie potrafil? kasieaka
+2019-03-02 09:57:31.434,Pawel Nazaruk,HIGH_INTENSITY,"Co wzdychasz? Kto pierwszy wstaje robi Åniadanie, dla mnie jajecznicÄ poproszÄ.",co wzdychasz? kto pierwszy wstaje robi sniadanie dla mnie jajecznice poprosze
+2019-03-02 10:45:28.016,Kasia Ju,HIGH_INTENSITY,Dlaczego?,dlaczego?
+2019-03-02 10:51:46.980,Pawel Nazaruk,HIGH_INTENSITY,"Normalnie czujÄ osÄ dzisiaj, okres masz?",normalnie czuje ose dzisiaj okres masz?
+2019-03-02 11:02:35.029,Kasia Ju,HIGH_INTENSITY,Nie marzniesz?,nie marzniesz?
+2019-03-02 11:04:05.652,Kasia Ju,HIGH_INTENSITY,Za co?,za co?
+2019-03-02 12:19:20.212,Pawel Nazaruk,HIGH_INTENSITY,To z czego ta inhalacja?,to z czego ta inhalacja?
+2019-03-02 14:31:20.322,Kasia Ju,HIGH_INTENSITY,Wiesz na jak dlugo teraz ta praca?,wiesz na jak dlugo teraz ta praca?
+2019-03-02 14:44:09.405,Pawel Nazaruk,HIGH_INTENSITY,"Wiesz, Å¼e chce mi siÄ do Ciebie?",wiesz ze chce mi sie do ciebie?
+2019-03-02 14:51:49.684,Pawel Nazaruk,HIGH_INTENSITY,Å»e tak mi siÄ wydziela?,ze tak mi sie wydziela?
+2019-03-02 14:52:01.119,Pawel Nazaruk,HIGH_INTENSITY,Czy tego kominiarza?,czy tego kominiarza?
+2019-03-02 16:19:00.382,Kasia Ju,HIGH_INTENSITY,I gdzie nocujesz ?,i gdzie nocujesz ?
+2019-03-02 17:05:14.121,Pawel Nazaruk,HIGH_INTENSITY,a jak moÅ¼na trochÄ siedzieÄ?,a jak mozna troche siedziea?
+2019-03-02 17:07:48.755,Pawel Nazaruk,HIGH_INTENSITY,szafki na rÃ³wni z parapetem?,szafki na rowni z parapetem?
+2019-03-02 17:09:14.156,Pawel Nazaruk,HIGH_INTENSITY,tak?,tak?
+2019-03-02 17:20:23.491,Pawel Nazaruk,HIGH_INTENSITY,chciaÅa byÅ?,chciala bys?
+2019-03-02 17:22:30.576,Kasia Ju,HIGH_INTENSITY,Mama robiÅa czy ciotka?,mama robila czy ciotka?
+2019-03-02 18:53:00.832,Pawel Nazaruk,HIGH_INTENSITY,A o czym tak dyskutowaÅyÅcie?,a o czym tak dyskutowalyscie?
+2019-03-02 18:53:05.994,Pawel Nazaruk,HIGH_INTENSITY,o pracy?,o pracy?
+2019-03-02 18:53:27.663,Pawel Nazaruk,HIGH_INTENSITY,a gdzie teraz?,a gdzie teraz?
+2019-03-02 18:53:39.027,Pawel Nazaruk,HIGH_INTENSITY,z bielska?,z bielska?
+2019-03-02 18:53:57.675,Pawel Nazaruk,HIGH_INTENSITY,a o facetach?,a o facetach?
+2019-03-02 18:55:07.155,Kasia Ju,HIGH_INTENSITY,O co?,o co?
+2019-03-02 18:57:02.005,Pawel Nazaruk,HIGH_INTENSITY,"gdzie koleÅ¼anka teraz pracuje, teÅ¼ w zawodzie?",gdzie kolezanka teraz pracuje tez w zawodzie?
+2019-03-02 19:05:23.724,Pawel Nazaruk,HIGH_INTENSITY,kominiarz byÅ?,kominiarz byl?
+2019-03-02 19:12:52.168,Pawel Nazaruk,HIGH_INTENSITY,ile tych biletÃ³w miaÅ?,ile tych biletow mial?
+2019-03-03 09:47:56.449,Pawel Nazaruk,HIGH_INTENSITY,nie widzisz podobieÅstwa?,nie widzisz podobieastwa?
+2019-03-03 12:06:36.459,Pawel Nazaruk,HIGH_INTENSITY,"i jak? popracowaÅaÅ? Nerwuska z Ciebie, typowa kobieta.",i jak? popracowalas? nerwuska z ciebie typowa kobieta
+2019-03-03 12:13:53.936,Pawel Nazaruk,HIGH_INTENSITY,co robisz?,co robisz?
+2019-03-03 13:13:40.415,Kasia Ju,HIGH_INTENSITY,A Ty co robisz?,a ty co robisz?
+2019-03-03 16:06:06.952,Pawel Nazaruk,HIGH_INTENSITY,Pracujesz czy lekcje odrabiacie?,pracujesz czy lekcje odrabiacie?
+2019-03-03 16:17:00.195,Kasia Ju,HIGH_INTENSITY,Ogladasz?,ogladasz?
+2019-03-03 16:21:00.584,Pawel Nazaruk,HIGH_INTENSITY,"A Ty siÄ przyznajesz, Å¼e jesteÅ?",a ty sie przyznajesz ze jestes?
+2019-03-03 16:21:11.354,Kasia Ju,HIGH_INTENSITY,A te jurorki Ci sie podobaja?,a te jurorki ci sie podobaja?
+2019-03-03 16:21:23.711,Kasia Ju,HIGH_INTENSITY,Åadne sa wedlug Ciebie?,aadne sa wedlug ciebie?
+2019-03-03 16:24:25.704,Kasia Ju,HIGH_INTENSITY,Jest ladna wedlug Ciebie?,jest ladna wedlug ciebie?
+2019-03-03 16:35:15.373,Pawel Nazaruk,HIGH_INTENSITY,To bÄdziesz szukaÄ dalej czy tym siÄ zaspokoisz?,to bedziesz szukaa dalej czy tym sie zaspokoisz?
+2019-03-03 16:37:54.149,Pawel Nazaruk,HIGH_INTENSITY,Tzn mnÄ?,tzn mna?
+2019-03-03 16:47:59.013,Pawel Nazaruk,HIGH_INTENSITY,A mnie nie szukaÅaÅ?,a mnie nie szukalas?
+2019-03-03 16:49:47.299,Pawel Nazaruk,HIGH_INTENSITY,"Jeszcze jedno gÅupie pytanie, a znalazÅaÅ?",jeszcze jedno glupie pytanie a znalazlas?
+2019-03-03 17:40:21.718,Pawel Nazaruk,HIGH_INTENSITY,"A przypomnÄ stolik, co to byÅo? Nie wrednoÅÄ czasami?",a przypomne stolik co to bylo? nie wrednosa czasami?
+2019-03-03 17:42:50.309,Pawel Nazaruk,HIGH_INTENSITY,"CzujÄ potrzebÄ buÅºki, dostanÄ?",czuje potrzebe buzki dostane?
+2019-03-03 17:55:00.971,Pawel Nazaruk,HIGH_INTENSITY,To co mam teraz zrobiÄ twoim zdaniem Å¼eby zÅagodziÄ?,to co mam teraz zrobia twoim zdaniem zeby zlagodzia?
+2019-03-03 17:56:11.246,Pawel Nazaruk,HIGH_INTENSITY,Jak siÄ rozpÅaczÄ na przykÅad?,jak sie rozplacze na przyklad?
+2019-03-03 17:56:50.253,Pawel Nazaruk,HIGH_INTENSITY,Ale co Ci da moje pÅakanie?,ale co ci da moje plakanie?
+2019-03-03 18:02:10.209,Kasia Ju,HIGH_INTENSITY,Tylko nie wiem czego ze stracisz na swojej meskosci?,tylko nie wiem czego ze stracisz na swojej meskosci?
+2019-03-03 18:03:36.010,Kasia Ju,HIGH_INTENSITY,Czy tego ze okazesz slabosc? i tego ze w rezultacie ktos przejmie kontrole nad TobÄ ?,czy tego ze okazesz slabosc? i tego ze w rezultacie ktos przejmie kontrole nad toba ?
+2019-03-03 18:08:28.939,Kasia Ju,HIGH_INTENSITY,Co znaczy zdeptania?,co znaczy zdeptania?
+2019-03-03 18:08:42.971,Kasia Ju,HIGH_INTENSITY,Co masz na myÅli?,co masz na mysli?
+2019-03-03 18:15:30.358,Pawel Nazaruk,HIGH_INTENSITY,To dasz tej buÅºki?,to dasz tej buzki?
+2019-03-03 19:13:18.480,Kasia Ju,HIGH_INTENSITY,Doczekaliscie sie?,doczekaliscie sie?
+2019-03-03 20:09:36.672,Pawel Nazaruk,HIGH_INTENSITY,Tylko gdzie ja znowu?,tylko gdzie ja znowu?
+2019-03-03 21:38:06.184,Pawel Nazaruk,HIGH_INTENSITY,Ciekawe co KasieÅka moja robi co mi buÅºki dawaÄ nie chce?,ciekawe co kasieaka moja robi co mi buzki dawaa nie chce?
+2019-03-03 22:41:15.732,Kasia Ju,HIGH_INTENSITY,W jednym ÅÃ³Å¼ku?,w jednym lozku?
+2019-03-03 22:42:00.632,Kasia Ju,HIGH_INTENSITY,A twn czwarty?,a twn czwarty?
+2019-03-03 22:42:07.230,Kasia Ju,HIGH_INTENSITY,Ten nowy?,ten nowy?
+2019-03-03 22:44:27.036,Pawel Nazaruk,HIGH_INTENSITY,to bÄdzie na dobranoc chociaÅ¼?,to bedzie na dobranoc chociaz?
+2019-03-04 05:57:02.869,Kasia Ju,HIGH_INTENSITY,Stresujesz sie?,stresujesz sie?
+2019-03-04 12:30:06.923,Kasia Ju,HIGH_INTENSITY,I jak ?,i jak ?
+2019-03-04 17:34:39.386,Pawel Nazaruk,HIGH_INTENSITY,Ja juÅ¼ na chacie. I co tam mÅody narozrabiaÅ?,ja juz na chacie i co tam mlody narozrabial?
+2019-03-04 17:41:01.968,Pawel Nazaruk,HIGH_INTENSITY,Nie byÅ by to chÅopak ale specjalnie tak czy trochÄ niechcÄcy?,nie byl by to chlopak ale specjalnie tak czy troche niechcacy?
+2019-03-04 17:51:42.308,Pawel Nazaruk,HIGH_INTENSITY,"Ja bym chciaÅ w tym momencie Å¼eby mama staÅa po mojej stronie, bo kto?",ja bym chcial w tym momencie zeby mama stala po mojej stronie bo kto?
+2019-03-04 17:52:41.314,Kasia Ju,HIGH_INTENSITY,Nigdy sie nie biles?,nigdy sie nie biles?
+2019-03-04 17:54:49.258,Pawel Nazaruk,HIGH_INTENSITY,SiÄ biÅaÅ?,sie bilas?
+2019-03-04 18:00:04.265,Pawel Nazaruk,HIGH_INTENSITY,I kto tu jest sÅabÄ pÅciÄ?,i kto tu jest slaba plcia?
+2019-03-04 21:04:41.459,Kasia Ju,HIGH_INTENSITY,Jak w pracy?,jak w pracy?
+2019-03-04 21:32:46.348,Pawel Nazaruk,HIGH_INTENSITY,"mÃ³wiÅem, Å¼e mamy juÅ¼ dwa mieszkania?",mowilem ze mamy juz dwa mieszkania?
+2019-03-04 22:26:34.033,Kasia Ju,HIGH_INTENSITY,Spisz juÅ¼?,spisz juz?
+2019-03-04 22:47:43.241,Kasia Ju,HIGH_INTENSITY,To Ty z tym nowym?,to ty z tym nowym?
+2019-03-05 06:44:13.843,Kasia Ju,HIGH_INTENSITY,A dlaczego nie hipoteczny?,a dlaczego nie hipoteczny?
+2019-03-05 06:53:22.831,Kasia Ju,HIGH_INTENSITY,A rata az 2500?,a rata az 2500?
+2019-03-05 07:07:11.121,Kasia Ju,HIGH_INTENSITY,To Ty pytales czy sam opowiadal?,to ty pytales czy sam opowiadal?
+2019-03-05 07:46:15.829,Pawel Nazaruk,HIGH_INTENSITY,A to dlaczego?,a to dlaczego?
+2019-03-05 21:09:56.275,Pawel Nazaruk,HIGH_INTENSITY,nie zaÅatwiÅaÅ spraw?,nie zalatwilas spraw?
+2019-03-05 21:10:29.150,Pawel Nazaruk,HIGH_INTENSITY,czy potoczyÅy siÄ nie po twojej myÅli?,czy potoczyly sie nie po twojej mysli?
+2019-03-05 21:19:16.283,Pawel Nazaruk,HIGH_INTENSITY,przebiegaÅaÅ caÅy dzieÅ?,przebiegalas caly dziea?
+2019-03-05 23:07:20.577,Kasia Ju,HIGH_INTENSITY,Spisz juz?,spisz juz?
+2019-03-05 23:07:48.647,Pawel Nazaruk,HIGH_INTENSITY,a Ty?,a ty?
+2019-03-06 09:01:01.959,Kasia Ju,HIGH_INTENSITY,No i ta pani od muzyki pyta mnie czy sie przekonalam do szkoly muzycznej? Bo mowi Adrian to juz dawno przekonany tylko mowil jej ze mama musi sie zgodzic.,no i ta pani od muzyki pyta mnie czy sie przekonalam do szkoly muzycznej? bo mowi adrian to juz dawno przekonany tylko mowil jej ze mama musi sie zgodzic
+2019-03-06 17:36:12.723,Kasia Ju,HIGH_INTENSITY,ZmÄczony?,zmeczony?
+2019-03-06 17:39:04.554,Pawel Nazaruk,HIGH_INTENSITY,?,?
+2019-03-06 17:40:53.671,Pawel Nazaruk,HIGH_INTENSITY,jakie placki? ziemniaczane?,jakie placki? ziemniaczane?
+2019-03-06 17:43:00.869,Kasia Ju,HIGH_INTENSITY,A jak ma na imie?,a jak ma na imie?
+2019-03-06 17:43:25.366,Kasia Ju,HIGH_INTENSITY,Åciemniacz ten?ð,aciemniacz ten?
+2019-03-06 17:58:12.064,Kasia Ju,HIGH_INTENSITY,Co robisz w tej pracy?,co robisz w tej pracy?
+2019-03-06 17:58:12.270,Kasia Ju,HIGH_INTENSITY,Tak wÅaÅciwie?,tak wlasciwie?
+2019-03-06 18:57:20.956,Kasia Ju,HIGH_INTENSITY,Jak Twoj niemiecki?,jak twoj niemiecki?
+2019-03-06 18:57:21.666,Kasia Ju,HIGH_INTENSITY,Cwiczysz?ð,cwiczysz?
+2019-03-07 12:01:08.467,Kasia Ju,HIGH_INTENSITY,Hej. Jak tam mija dzien?,hej jak tam mija dzien?
+2019-03-07 18:09:28.703,Pawel Nazaruk,HIGH_INTENSITY,A to trzeba nastroju na buÅºkÄ? A Åadnie tak z dzieci siÄ ÅmiaÄ?,a to trzeba nastroju na buzke? a ladnie tak z dzieci sie smiaa?
+2019-03-08 13:10:01.799,Kasia Ju,HIGH_INTENSITY,Jak dzieÅ mija?,jak dziea mija?
+2019-03-08 21:55:46.305,Kasia Ju,HIGH_INTENSITY,?,?
+2019-03-08 21:56:36.777,Pawel Nazaruk,HIGH_INTENSITY,MoÅ¼liwe. Ale nie pamiÄtam. A co? Fajne?,mozliwe ale nie pamietam a co? fajne?
+2019-03-09 14:45:59.347,Kasia Ju,HIGH_INTENSITY,I dobrze Ci tak prawda?,i dobrze ci tak prawda?
+2019-03-09 14:48:58.350,Kasia Ju,HIGH_INTENSITY,Co powinienes robic wg niego?,co powinienes robic wg niego?
+2019-03-09 15:06:51.931,Pawel Nazaruk,HIGH_INTENSITY,"jakbym tak kochaÅ ten spokÃ³j to wyobraÅº sobie jak tam w domu mam, nic mnie nie obchodzi, po co mi kobieta? (retorycznie), ale wiem, Å¼e niektÃ³re rzeczy muszÄ po prostu zrealizowaÄ bo tak trzeba",jakbym tak kochal ten spokoj to wyobraz sobie jak tam w domu mam nic mnie nie obchodzi po co mi kobieta? retorycznie ale wiem ze niektore rzeczy musze po prostu zrealizowaa bo tak trzeba
+2019-03-09 20:20:02.832,Pawel Nazaruk,HIGH_INTENSITY,a gdzie wredna KasieÅka co mi buÅºki nie chce dawaÄ? Uczy siÄ?,a gdzie wredna kasieaka co mi buzki nie chce dawaa? uczy sie?
+2019-03-09 20:44:36.245,Pawel Nazaruk,HIGH_INTENSITY,A Ty Pedro jak byÅeÅ mÅodym indianinem to teÅ¼ nosiÅeÅ piÃ³rko w d...?,a ty pedro jak byles mlodym indianinem to tez nosiles piorko w d ?
+2019-03-09 23:08:27.125,Pawel Nazaruk,HIGH_INTENSITY,i co? Åpisz juÅ¼? ani buÅºki na dobranoc ani dobranocð¬ð¬ð¬ðð,i co? spisz juz? ani buzki na dobranoc ani dobranoc
+2019-03-10 19:40:59.292,Pawel Nazaruk,HIGH_INTENSITY,dobry plan?,dobry plan?
+2019-03-10 19:42:30.331,Pawel Nazaruk,HIGH_INTENSITY,czytasz dalej czy juÅ¼ kolacjÄ robisz?,czytasz dalej czy juz kolacje robisz?
+2019-03-11 21:12:59.643,Kasia Ju,STABLE_CONTACT,Dlaczego?,dlaczego?
+2019-03-11 21:13:20.379,Kasia Ju,STABLE_CONTACT,Znowu przeprowadzka?,znowu przeprowadzka?
+2019-03-11 21:14:37.134,Kasia Ju,STABLE_CONTACT,I z kim jrstes teraz?,i z kim jrstes teraz?
+2019-03-11 21:18:25.560,Kasia Ju,STABLE_CONTACT,Tak na weekend?,tak na weekend?
+2019-03-11 21:18:51.257,Kasia Ju,STABLE_CONTACT,Przeciez Ty chyba mozesz zostac?,przeciez ty chyba mozesz zostac?
+2019-03-11 21:18:59.222,Kasia Ju,STABLE_CONTACT,I pracowaÄ?,i pracowaa?
+2019-03-11 21:20:24.385,Kasia Ju,STABLE_CONTACT,Czyli przydalby Ci sie i tam samochÃ³d by byc niezaleznym?,czyli przydalby ci sie i tam samochod by byc niezaleznym?
+2019-03-12 16:56:45.816,Pawel Nazaruk,STABLE_CONTACT,"Dopiero do domu jedziemy, korek nas dotknÄÅ, a jeszcze do sklepu, a co u Ciebie?",dopiero do domu jedziemy korek nas dotknal a jeszcze do sklepu a co u ciebie?
+2019-03-12 17:00:25.205,Kasia Ju,STABLE_CONTACT,Co z ta pracÄ nowÄ?,co z ta praca nowa?
+2019-03-12 21:02:38.003,Pawel Nazaruk,STABLE_CONTACT,wytaÅcowaÅaÅ siÄ?,wytaacowalas sie?
+2019-03-13 18:51:04.514,Kasia Ju,STABLE_CONTACT,Jak dzien mija?,jak dzien mija?
+2019-03-13 18:51:15.187,Kasia Ju,STABLE_CONTACT,W domku juz? Odpoczywasz pewnie,w domku juz? odpoczywasz pewnie
+2019-03-13 18:56:15.025,Pawel Nazaruk,STABLE_CONTACT,A jak u Ciebie?,a jak u ciebie?
+2019-03-13 18:58:07.340,Pawel Nazaruk,STABLE_CONTACT,Z Adrianem problem?,z adrianem problem?
+2019-03-13 18:58:13.994,Pawel Nazaruk,STABLE_CONTACT,Czy tak coÅ?,czy tak cos?
+2019-03-13 19:01:11.957,Pawel Nazaruk,STABLE_CONTACT,To ta z Bielska?,to ta z bielska?
+2019-03-15 22:22:23.728,Kasia Ju,STABLE_CONTACT,Dlaczego myslisz ze nie wroci?,dlaczego myslisz ze nie wroci?
+2019-03-15 22:22:29.442,Kasia Ju,STABLE_CONTACT,Pedro z domu?,pedro z domu?
+2019-03-15 22:32:20.789,Pawel Nazaruk,STABLE_CONTACT,A Ty juÅ¼ do spania?,a ty juz do spania?
+2019-03-16 18:53:41.588,Pawel Nazaruk,STABLE_CONTACT,pogadamy przez kamerkÄ parÄ minut?,pogadamy przez kamerke pare minut?
+2019-03-16 18:55:44.535,Pawel Nazaruk,STABLE_CONTACT,"czemu to i dobrze? nie chcesz wiÄcej czasu, czy boisz siÄ, Å¼e bez Ciebie siÄ nie nauczy?",czemu to i dobrze? nie chcesz wiecej czasu czy boisz sie ze bez ciebie sie nie nauczy?
+2019-03-16 19:07:53.625,Pawel Nazaruk,STABLE_CONTACT,tylko czego od nich oczekujesz?,tylko czego od nich oczekujesz?
+2019-03-17 11:40:30.688,Pawel Nazaruk,STABLE_CONTACT,"kaszel, czy tak tylko Åºle siÄ czuje?",kaszel czy tak tylko zle sie czuje?
+2019-03-17 11:45:10.458,Kasia Ju,STABLE_CONTACT,Rozrozniasz goraczke od stanu pisgoeaczkowego?,rozrozniasz goraczke od stanu pisgoeaczkowego?
+2019-03-17 11:50:43.797,Pawel Nazaruk,STABLE_CONTACT,to jutro do lekarza?,to jutro do lekarza?
+2019-03-17 12:02:21.577,Pawel Nazaruk,STABLE_CONTACT,https://www.youtube.com/watch?v=StbRUXRDpMk,
+2019-03-17 12:14:46.288,Kasia Ju,STABLE_CONTACT,Ale co Ty mi tak wlasciwie zarzucasz?,ale co ty mi tak wlasciwie zarzucasz?
+2019-03-17 12:22:56.995,Kasia Ju,STABLE_CONTACT,Dla Ciebie wszystko jest takie proste i jednoznaczne?,dla ciebie wszystko jest takie proste i jednoznaczne?
+2019-03-18 16:50:32.102,Pawel Nazaruk,STABLE_CONTACT,A u was jak zdrÃ³wko?,a u was jak zdrowko?
+2019-03-19 17:36:36.425,Pawel Nazaruk,STABLE_CONTACT,co tam sÅychaÄ?,co tam slychaa?
+2019-03-19 17:36:48.845,Pawel Nazaruk,STABLE_CONTACT,standard?,standard?
+2019-03-19 17:57:37.741,Pawel Nazaruk,STABLE_CONTACT,sama chodzisz na tÄ siÅowniÄ?,sama chodzisz na ta silownie?
+2019-03-20 22:21:16.224,Kasia Ju,STABLE_CONTACT,Co slychac?,co slychac?
+2019-03-21 18:59:05.454,Pawel Nazaruk,STABLE_CONTACT,takie ciÅnienie? Å¼eby pÅakaÄ?,takie cisnienie? zeby plakaa?
+2019-03-22 15:22:43.665,Pawel Nazaruk,STABLE_CONTACT,a tak poza tym to dlaczego nie dostaÅem Å¼adnej buÅºki przez dwa tygodnie?ð,a tak poza tym to dlaczego nie dostalem zadnej buzki przez dwa tygodnie?
+2019-03-23 16:36:53.337,Pawel Nazaruk,STABLE_CONTACT,co tam KasieÅka u Ciebie?,co tam kasieaka u ciebie?
+2019-03-23 16:39:35.884,Pawel Nazaruk,STABLE_CONTACT,chrzeÅniaczka w Bielsku mieszka?,chrzesniaczka w bielsku mieszka?
+2019-03-24 15:47:23.798,Pawel Nazaruk,STABLE_CONTACT,Jak u chrzeÅniaczki byÅo?,jak u chrzesniaczki bylo?
+2019-03-24 16:46:14.785,Kasia Ju,STABLE_CONTACT,A Ty juz spakowany?,a ty juz spakowany?
+2019-03-24 16:46:25.452,Kasia Ju,STABLE_CONTACT,Kiedy jedziesz?  I jak?,kiedy jedziesz? i jak?
+2019-03-24 16:47:57.603,Kasia Ju,STABLE_CONTACT,A czemu nie moze wrocic?,a czemu nie moze wrocic?
+2019-03-24 16:50:04.684,Pawel Nazaruk,STABLE_CONTACT,"A tematy facetÃ³w byÅy? A raczej twÃ³j temat z facetami, a raczej z facetem",a tematy facetow byly? a raczej twoj temat z facetami a raczej z facetem
+2019-03-25 20:55:34.815,Kasia Ju,LOW_CONTACT,I jak w nowej pracy?,i jak w nowej pracy?
+2019-03-26 06:23:46.401,Kasia Ju,LOW_CONTACT,Dorzucasz sie mu do benzyny?,dorzucasz sie mu do benzyny?
+2019-03-31 19:30:28.222,Pawel Nazaruk,LOW_CONTACT,"CzeÅÄ Kasia, co sÅychaÄ?",czesa kasia co slychaa?
+2019-03-31 19:31:41.783,Pawel Nazaruk,LOW_CONTACT,swoje czy cudze?,swoje czy cudze?
+2019-03-31 19:32:21.921,Pawel Nazaruk,LOW_CONTACT,ciekawe czy ciotka mnie rozliczyÅa?,ciekawe czy ciotka mnie rozliczyla?
+2019-03-31 19:46:33.918,Kasia Ju,LOW_CONTACT,Teraz kazdy sam gotuje?,teraz kazdy sam gotuje?
+2019-03-31 19:46:53.611,Kasia Ju,LOW_CONTACT,Pedro dalej na zwolnieniu?,pedro dalej na zwolnieniu?
+2019-03-31 19:50:20.553,Kasia Ju,LOW_CONTACT,Dlaczego?,dlaczego?
+2019-03-31 19:50:28.523,Kasia Ju,LOW_CONTACT,Nie ma roboty?,nie ma roboty?
+2019-03-31 19:50:35.934,Kasia Ju,LOW_CONTACT,Przeciez inni dojeÅ¼dÅ¼ajÄ?,przeciez inni dojezdzaja?
+2019-04-06 21:17:09.357,Kasia Ju,STABLE_CONTACT,Jak weekend mija?,jak weekend mija?
+2019-04-06 21:23:26.148,Pawel Nazaruk,STABLE_CONTACT,to jak Åadnie?,to jak ladnie?
+2019-04-06 21:27:52.347,Pawel Nazaruk,STABLE_CONTACT,"w sukience? trzeba byÅo zdjÄcie zrobiÄ, seksownie wyglÄdaÅaÅ pewnie",w sukience? trzeba bylo zdjecie zrobia seksownie wygladalas pewnie
+2019-04-06 22:35:46.210,Pawel Nazaruk,STABLE_CONTACT,i co? dalej nie ma? to ja juÅ¼ idÄ spaÄ,i co? dalej nie ma? to ja juz ide spaa
+2019-04-07 21:01:28.976,Pawel Nazaruk,STABLE_CONTACT,jak tam KasieÅka? Dzisiaj teÅ¼ pracujesz?,jak tam kasieaka? dzisiaj tez pracujesz?
+2019-04-07 21:43:40.308,Pawel Nazaruk,STABLE_CONTACT,"no to nieÅºle, to byÅ Adrian na zajÄciach dzisiaj?",no to niezle to byl adrian na zajeciach dzisiaj?
+2019-04-07 21:44:33.283,Pawel Nazaruk,STABLE_CONTACT,przyszedÅ w gierkÄ sobie pograÄ?,przyszedl w gierke sobie pograa?
+2019-04-07 21:53:11.094,Pawel Nazaruk,STABLE_CONTACT,"i tyle Tobie ta praca zabiera? CoÅ nie tak z tym twoim zagospodarowaniem czasowym, no ale jak trzeba to trzeba.",i tyle tobie ta praca zabiera? cos nie tak z tym twoim zagospodarowaniem czasowym no ale jak trzeba to trzeba
+2019-04-07 21:53:44.154,Pawel Nazaruk,STABLE_CONTACT,"nie moÅ¼esz postanowiÄ sobie, Å¼e w weekendy nie pracujesz?",nie mozesz postanowia sobie ze w weekendy nie pracujesz?
+2019-04-07 22:19:49.433,Kasia Ju,STABLE_CONTACT,"""Wyjatkiem""?",wyjatkiem ?
+2019-08-15 20:53:54.284,Kasia Ju,SILENCE,Co sÅychaÄ?,co slychaa?
+2019-08-21 23:09:59.149,Pawel Nazaruk,STABLE_CONTACT,?,?
+2019-08-21 23:22:41.889,Pawel Nazaruk,STABLE_CONTACT,leci to znaczy dalej praca dom?,leci to znaczy dalej praca dom?
+2019-08-21 23:23:08.299,Pawel Nazaruk,STABLE_CONTACT,jak wakacje?,jak wakacje?
+2019-08-21 23:27:21.633,Pawel Nazaruk,STABLE_CONTACT,Na wiosce siedzieliÅcie?,na wiosce siedzieliscie?
+2019-08-21 23:28:35.354,Kasia Ju,STABLE_CONTACT,Obfite?  Czyli?,obfite? czyli?
+2019-08-21 23:28:45.262,Kasia Ju,STABLE_CONTACT,DÅugie?,dlugie?
+2019-08-21 23:31:45.377,Kasia Ju,STABLE_CONTACT,Palenie rzuciles?,palenie rzuciles?
+2019-08-21 23:35:58.477,Kasia Ju,STABLE_CONTACT,?,?
+2019-08-21 23:36:20.861,Kasia Ju,STABLE_CONTACT,Kiedy do pracy?,kiedy do pracy?
+2019-08-21 23:36:52.398,Kasia Ju,STABLE_CONTACT,A potem gdzie?,a potem gdzie?
+2019-08-21 23:36:59.975,Kasia Ju,STABLE_CONTACT,Nadal Niemcy?,nadal niemcy?
+2019-08-21 23:37:48.747,Kasia Ju,STABLE_CONTACT,Dalej z Pedrem?,dalej z pedrem?
+2019-08-21 23:37:56.014,Kasia Ju,STABLE_CONTACT,Czy juz nie?,czy juz nie?
+2019-08-21 23:40:07.740,Pawel Nazaruk,STABLE_CONTACT,laptopa firmowego zdaÅaÅ na wakacje?,laptopa firmowego zdalas na wakacje?
+2019-08-21 23:43:27.348,Kasia Ju,STABLE_CONTACT,Jak rodZice? zdrowi?,jak rodzice? zdrowi?
+2019-08-21 23:44:09.636,Kasia Ju,STABLE_CONTACT,A co u Wojtusia?,a co u wojtusia?
+2019-08-21 23:50:06.581,Pawel Nazaruk,STABLE_CONTACT,byli nowi kandydaci na edarling?,byli nowi kandydaci na edarling?
+2019-08-21 23:51:32.213,Pawel Nazaruk,STABLE_CONTACT,z jakich powodÃ³w?,z jakich powodow?
+2019-08-21 23:52:45.274,Kasia Ju,STABLE_CONTACT,A Tobie ulozylo sie jakos? Poznales kogos?,a tobie ulozylo sie jakos? poznales kogos?
+2019-08-21 23:56:41.008,Kasia Ju,STABLE_CONTACT,Jak ma na imie?,jak ma na imie?
+2019-10-12 09:26:18.977,Kasia Ju,SILENCE,CzeÅÄ.  Co slychac? Jak prawko zdane? Juz pracujesz?,czesa co slychac? jak prawko zdane? juz pracujesz?
+2019-12-02 14:34:37.857,Pawel Nazaruk,LOW_CONTACT,Kasia Czy to Ciebie opisali w wiadomoÅciach na gÅÃ³wnej ? o tutaj naszemiastonews.24.eu,kasia czy to ciebie opisali w wiadomosciach na glownej ? o tutaj naszemiastonews 24 eu
+2019-12-02 16:38:48.511,Kasia Ju,LOW_CONTACT,hej. o co chodzi?,hej o co chodzi?
+2019-12-05 18:15:30.273,Kasia Ju,LOW_CONTACT,Co Ty mi wirusy przesylasz? ð,co ty mi wirusy przesylasz?
+2019-12-05 18:15:42.090,Kasia Ju,LOW_CONTACT,Lepiej powiedz co sÅychaÄ?,lepiej powiedz co slychaa?
+2019-12-05 20:26:45.744,Kasia Ju,LOW_CONTACT,Dalej z tymi samymi chlopakami mieszkasz?,dalej z tymi samymi chlopakami mieszkasz?
+2019-12-05 20:30:38.900,Kasia Ju,LOW_CONTACT,A jak prawko zdane?,a jak prawko zdane?
+2019-12-05 20:32:23.764,Kasia Ju,LOW_CONTACT,A jezdzisz troche?,a jezdzisz troche?
+2019-12-05 20:35:22.330,Kasia Ju,LOW_CONTACT,Z Asia tez wszystko na dobrej drodze?,z asia tez wszystko na dobrej drodze?
+2019-12-05 20:36:52.564,Pawel Nazaruk,LOW_CONTACT,A u Ciebie jak z e-darling?,a u ciebie jak z e darling?
+2020-02-29 12:22:39.556,Kasia Ju,STABLE_CONTACT,Co u Ciebie?,co u ciebie?
+2020-02-29 12:49:53.072,Pawel Nazaruk,STABLE_CONTACT,A u Ciebie jak tam?,a u ciebie jak tam?
+2020-02-29 12:52:43.979,Kasia Ju,STABLE_CONTACT,?,?
+2020-02-29 12:53:01.971,Kasia Ju,STABLE_CONTACT,Dalej z ta sama ekipa mieszkasz?,dalej z ta sama ekipa mieszkasz?
+2020-02-29 12:55:39.855,Kasia Ju,STABLE_CONTACT,Jak Z Asia siÄ ukÅada? Wszystko w porzÄdku?,jak z asia sie uklada? wszystko w porzadku?
+2020-02-29 13:02:50.888,Kasia Ju,STABLE_CONTACT,Czy siÄ zajmowaÅa?,czy sie zajmowala?
+2020-02-29 13:02:58.732,Kasia Ju,STABLE_CONTACT,I z czego teraz Å¼yje?,i z czego teraz zyje?
+2020-02-29 13:03:07.919,Kasia Ju,STABLE_CONTACT,I co robi?,i co robi?
+2020-02-29 13:12:35.104,Kasia Ju,STABLE_CONTACT,?,?
+2020-02-29 13:13:02.410,Pawel Nazaruk,STABLE_CONTACT,wdowa?,wdowa?
+2020-02-29 13:13:45.372,Pawel Nazaruk,STABLE_CONTACT,znasz moÅ¼e?,znasz moze?
+2020-02-29 13:16:05.940,Pawel Nazaruk,STABLE_CONTACT,Adrian na taÅce dalej chodzi?,adrian na taace dalej chodzi?
+2020-02-29 13:16:23.293,Kasia Ju,STABLE_CONTACT,I co z ta kobieta?,i co z ta kobieta?
+2020-02-29 13:16:34.008,Kasia Ju,STABLE_CONTACT,MyÅlaÅam Å¼e jakaÅ dÅuÅ¼sza opowieÅÄ?,myslalam ze jakas dluzsza opowiesa?
+2020-02-29 13:17:59.532,Pawel Nazaruk,STABLE_CONTACT,i co ma w zastÄpstwie za taÅce?,i co ma w zastepstwie za taace?
+2020-03-29 11:38:18.258,Kasia Ju,WEAK_CONTACT,Co u Ciebie?,co u ciebie?
+2020-03-29 11:38:23.656,Kasia Ju,WEAK_CONTACT,Pracujesz?,pracujesz?

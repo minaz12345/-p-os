@@ -13,6 +13,20 @@ tmp/
 .cache/
 .env
 
+# Environment secrets (keep .env.example templates, ignore actual secrets)
+!.env.example
+.env.auth
+.env.db
+.env.grafana
+.env.runtime
+*.key
+*.pem
+
+# Runtime export artifacts (ephemeral - do not commit)
+data/exports/
+data/export_queue/
+flags/
+
 # Reports directory (runtime generated)
 reports/runtime/
 
@@ -37,3 +51,26 @@ TOXIC_PR_*.md
 PR*_VIOLATION*.md
 BRANCH_PROTECTION_SETUP_GUIDE.md
 DESIGN_NOTE_P-OS_v8.0_ENFORCEMENT_SEMANTICS.md
+
+# Prometheus TSDB runtime data (moved to D:\P-OS-DATA\prometheus)
+data/prometheus/
+*.tsdb
+
+
+# Database credential backups (rotated)
+.env.db.backup*
+
+
+# Migration artifacts
+migration_*.txt
+migration_output.txt
+
+# SQLite WAL files
+*.db-shm
+*.db-wal
+
+# Screenshots
+*.png
+
+# Test databases
+*_test.db

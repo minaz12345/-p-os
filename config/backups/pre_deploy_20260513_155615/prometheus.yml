@@ -1,0 +1,38 @@
+# P-OS v7.5 Prometheus Configuration
+# Purpose: Passive observation of friction metrics from grafana_friction_exporter.py
+# Compliance: Read-only scraping, no mutation of production systems
+
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+  external_labels:
+    project: 'p-os'
+    component: 'friction_monitoring'
+    environment: 'milejczyce_local'
+
+# Alerting disabled for Constitutional Quietness (Read-Only)
+# alerting:
+#   alertmanagers:
+#     - static_configs:
+#         - targets: []
+
+# Rule files disabled (Zero mutations)
+rule_files:
+  # - "friction_rules.yml"
+
+scrape_configs:
+  - job_name: 'pos_friction_metrics'
+    metrics_path: /metrics
+    static_configs:
+      - targets: ['localhost:8000']
+    scrape_interval: 15s
+    scrape_timeout: 10s
+    honor_labels: true
+    labels:
+      source: 'p-os-exporter'
+      version: 'v7.5'
+
+  - job_name: 'prometheus_self'
+    static_configs:
+      - targets: ['localhost:9090']
+    scrape_interval: 30s

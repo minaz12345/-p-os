@@ -20,6 +20,38 @@ from rich.panel import Panel
 console = Console()
 
 
+def check_w11_flag_files() -> List[Dict]:
+    """
+    Check actual W11 flag files in flags/ directory.
+    This is the authoritative source of W11 state.
+    """
+    project_root = Path(__file__).parent.parent.parent
+    flags_dir = project_root / "flags"
+
+    if not flags_dir.exists():
+        return []
+
+    active_flags = []
+    for flag_file in sorted(flags_dir.glob("*.flag")):
+        try:
+            content = flag_file.read_text(encoding="utf-8")
+            active_flags.append({
+                "name": flag_file.name,
+                "content": content.strip(),
+                "modified": datetime.fromtimestamp(
+                    flag_file.stat().st_mtime
+                ).isoformat(),
+            })
+        except Exception:
+            active_flags.append({
+                "name": flag_file.name,
+                "content": "(unreadable)",
+                "modified": "unknown",
+            })
+
+    return active_flags
+
+
 def load_w11_enforcement_contract() -> Dict:
     """
     Load the W11 enforcement contract configuration.
@@ -164,6 +196,21 @@ def flags(correlation_id: Optional[str] = None) -> bool:
         title="🚩 FLAGS",
         border_style="cyan",
     ))
+    console.print()
+    
+    # SEKCJA 1: Rzeczywiste flagi W11 z katalogu flags/
+    console.print("[bold]W11 Flag Files (flags/*.flag):[/bold]")
+    w11_files = check_w11_flag_files()
+
+    if w11_files:
+        console.print(f"  [red]🚨 SYSTEM DEGRADED — {len(w11_files)} aktywna flaga[/red]")
+        for flag in w11_files:
+            console.print(f"\n  [red]● {flag['name']}[/red]")
+            console.print(f"    Modified: {flag['modified']}")
+            for line in flag['content'].split('\n'):
+                console.print(f"    {line}")
+    else:
+        console.print("  [green]✓ Brak aktywnych flag — system HEALTHY[/green]")
     console.print()
     
     # Check W11 enforcement contract

@@ -1,0 +1,221 @@
+[OK] Connected to Neo4j successfully
+
+================================================================================
+P-OS v7.5 - NEO4J SCHEMA INSPECTION REPORT
+================================================================================
+
+[1] NODE LABELS
+--------------------------------------------------------------------------------
+Total labels: 45
+
+  AccessLog                      (   0 nodes)
+
+  AdministrativeDecision         (   0 nodes)
+
+  AuditTrail                     ( 108 nodes)
+    Properties: operator, timestamp, audit_hash, ip_address, action, hash_value, node_id, node_type, session_id, data_classification
+
+  Budget                         (   0 nodes)
+
+  BudgetItem                     (   0 nodes)
+
+  Citizen                        (  11 nodes)
+    Properties: pesel_hash, registration_date, citizen_id, deletable, audit_on_delete, address_municipality, data_processing_consent, first_name, gdpr_rights_acknowledged, last_name
+
+  CitizenFeedback                (  24 nodes)
+    Properties: status, category, title, description, priority, created_at, updated_at, feedback_id, citizen_hash, location_ref
+
+  CommunityOrganization          (   0 nodes)
+
+  ConsentRecord                  (   0 nodes)
+
+  CouncilCommittee               (   0 nodes)
+
+  CouncilMember                  (   0 nodes)
+
+  DataExport                     (   0 nodes)
+
+  DecisionVersion                (   0 nodes)
+
+  DemographicSnapshot            (   0 nodes)
+
+  Event                          (  77 nodes)
+    Properties: actor_id, event_id, timestamp, created_at, action, municipality, payload, policy_decision, risk_score
+
+  FinancialFlow                  (   0 nodes)
+
+  FundingSource                  (   0 nodes)
+
+  GDPRErasureCertificate         (   0 nodes)
+
+  Grant                          (   0 nodes)
+
+  HistoricalEvent                (   0 nodes)
+
+  HistoricalFigure               (   0 nodes)
+
+  IdentityTension                (   0 nodes)
+
+  IncidentResponse               (   0 nodes)
+
+  Institution                    (  16 nodes)
+    Properties: name, data_classification, classification_timestamp
+
+  Investment                     (   0 nodes)
+
+  LegalArticle                   (  98 nodes)
+    Properties: article_id, article_type, content, created_at, parent_law, data_classification, classification_timestamp
+
+  LegalBasis                     (  55 nodes)
+    Properties: legal_id, law_name, article, compliance_level, risk_classification, data_classification, classification_timestamp
+
+  LegalProcedureStep             (   0 nodes)
+
+  Location                       (  59 nodes)
+    Properties: area_m2, name, audit_hash, location_id, lat, lon, imported_at, geo_type, parent_district, boundary_wkt
+
+  Municipality                   (   3 nodes)
+    Properties: data_classification, municipality_id, public_key, federation_status, joined_federation_at, jurisdiction_id
+
+  Operator                       (   0 nodes)
+
+  PainPoint                      (   0 nodes)
+
+  PoliticalActor                 (   0 nodes)
+
+  Property                       (   0 nodes)
+
+  PublicInformation              (   0 nodes)
+
+  Regulation                     (   0 nodes)
+
+  Risk                           (   3 nodes)
+    Properties: updated_at, user_id, score
+
+  RiskProfile                    (   1 nodes)
+    Properties: last_updated, user_id, municipality, current_risk_score, total_events
+
+  Road                           (   0 nodes)
+
+  SecurityBreach                 (   0 nodes)
+
+  SocialConflict                 (   0 nodes)
+
+  StrategicConcept               (   0 nodes)
+
+  Token                          (   0 nodes)
+
+  User                           (   5 nodes)
+    Properties: created_at, user_id, municipality
+
+  W11Flag                        (   0 nodes)
+
+
+[2] RELATIONSHIP TYPES
+--------------------------------------------------------------------------------
+Total relationship types: 9
+
+  AUDITS                         (  59 relationships)
+  GOVERNED_BY                    (  60 relationships)
+  HAS_RISK                       (   3 relationships)
+  INITIATED_EVENT                (   1 relationships)
+  LOCATED_IN                     (  32 relationships)
+  OCCURRED_IN                    ( 159 relationships)
+  OWNS_RISK                      (   3 relationships)
+  PERFORMED                      (  52 relationships)
+  TRUSTS                         (   6 relationships)
+
+
+[3] PROPERTY KEYS (Top 50)
+--------------------------------------------------------------------------------
+Total property keys: 642
+
+  ò access_level
+  ò access_timestamp
+  ò access_type
+  ò accessed_by
+  ò accident_history_count
+  ò accountable_official
+  ò achievements
+  ò action
+  ò active
+  ò active_firefighters
+  ò activities
+  ò activity_type
+  ò actor_id
+  ò actual_duration_days
+  ò address_id
+  ò address_municipality
+  ò address_number
+  ò address_street
+  ò address_village
+  ò administrative_language
+  ò advocacy_materials_url
+  ò affected_data_categories
+  ò affected_groups
+  ò affected_population_pct
+  ò affiliation
+  ò age_group
+  ò age_range
+  ò alert_level
+  ò amendment_reason
+  ò amount_pln
+  ò analysis_areas
+  ò anniversary_celebration
+  ò annual_budget_pln
+  ò annual_traffic_volume
+  ò anonymization_reason
+  ò anonymized_at
+  ò appeal_deadline
+  ò appeal_rights_documented
+  ò applicant
+  ò application_deadline
+  ò appointment_date
+  ò approval_date
+  ò approval_probability_pct
+  ò approval_threshold
+  ò approved
+  ò archetype
+  ò area_m2
+  ò article
+  ò article_id
+  ò article_type
+  ... and 592 more
+
+
+[4] DETAILED SCHEMA FOR ENRICHMENT TARGETS
+================================================================================
+
+Citizen:
+----------------------------------------
+  Node count: 11
+  Properties: address_municipality, audit_on_delete, citizen_id, classification_tier, classification_timestamp, consent_required, created_at, data_classification, data_processing_consent, data_purpose, deletable, email, exportable, first_name, gdpr_rights_acknowledged, last_name, legal_hold, legal_hold_date, legal_hold_reason, name, pesel, pesel_hash, registration_date, retention_period
+  Sample: {'data_purpose': 'municipal_service_delivery', 'gdpr_rights_acknowledged': True, 'deletable': True, 'last_name': 'Nowak', 'consent_required': True, 'data_processing_consent': True, 'retention_period': '7_years', 'citizen_id': 'CITIZEN_002', 'data_classification': 'CONFIDENTIAL', 'registration_date': '2026-02-20T14:30:00.000000000+00:00', 'address_municipality': 'Milejczyce', 'exportable': True, 'classification_timestamp': '2026-05-03T13:06:32.340000000+00:00', 'audit_on_delete': True, 'pesel_hash': 'f6e5d4c3b2a1', 'first_name': 'Anna'}
+
+CitizenFeedback:
+----------------------------------------
+  Node count: 24
+  Properties: anonymization_reason, anonymized_at, category, citizen_hash, classification_tier, created_at, description, feedback_id, location_ref, priority, resolution_note, status, title, updated_at
+  Sample: {'location_ref': 'Location_Lipowa_12', 'classification_tier': 'INTERNAL', 'updated_at': '2026-05-03T13:25:36.019000000+00:00', 'description': 'Streetlight has been out for 3 days, safety hazard for pedestrians', 'created_at': '2026-05-03T13:25:36.019000000+00:00', 'feedback_id': 'FB-20260503-001', 'citizen_hash': 'sha256_abc123def456', 'category': 'complaint', 'title': 'Broken streetlight on ul. Lipowa', 'priority': 'medium', 'resolution_note': '', 'status': 'new'}
+
+LegalBasis:
+----------------------------------------
+  Node count: 55
+  Properties: article, audit_hash, category, classification_timestamp, compliance_level, created_at, data_classification, date_enacted, effective_date, issuing_body, last_updated, law_name, law_type, legal_id, reference, risk_classification, status, summary
+  Sample: {'legal_id': 'LAW_EPPO_REGULATION', 'law_name': 'EPPO Regulation', 'data_classification': 'PUBLIC', 'risk_classification': 'CRITICAL', 'classification_timestamp': '2026-05-03T13:06:42.486000000+00:00', 'article': 'Council Regulation (EU) 2017/1939', 'compliance_level': 'MANDATORY'}
+
+LegalArticle:
+----------------------------------------
+  Node count: 98
+  Properties: article_id, article_type, classification_timestamp, content, created_at, data_classification, parent_law
+Traceback (most recent call last):
+  File "D:\pos7\scripts\inspect_neo4j_schema.py", line 135, in <module>
+    inspect_schema()
+    ~~~~~~~~~~~~~~^^
+  File "D:\pos7\scripts\inspect_neo4j_schema.py", line 110, in inspect_schema
+    print(f"  Sample: {dict(node)}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Pawel\AppData\Local\Python\pythoncore-3.14-64\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u0119' in position 272: character maps to <undefined>

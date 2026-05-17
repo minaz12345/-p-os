@@ -1,0 +1,199 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
+  <defs>
+    <style>
+      text { font-family: Arial, sans-serif; }
+      .title { font-size: 24px; font-weight: bold; fill: #1a1a1a; }
+      .layer-title { font-size: 16px; font-weight: bold; fill: #ffffff; }
+      .component-title { font-size: 13px; font-weight: bold; fill: #333333; }
+      .component-text { font-size: 11px; fill: #555555; }
+      .legend-text { font-size: 12px; fill: #333333; }
+      .arrow { stroke: #666666; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+      .box-shadow { filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.2)); }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#666666"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="900" fill="#f8f9fa"/>
+
+  <!-- Title -->
+  <text x="600" y="40" text-anchor="middle" class="title">P-OS Universal Protocol v4.0 - System Architecture</text>
+
+  <!-- Layer 1: Client Layer (Top) -->
+  <g transform="translate(50, 70)">
+    <rect x="0" y="0" width="1100" height="120" rx="10" fill="#e3f2fd" stroke="#2196f3" stroke-width="2" class="box-shadow"/>
+    <rect x="0" y="0" width="1100" height="35" rx="10" fill="#2196f3"/>
+    <rect x="0" y="25" width="1100" height="10" fill="#2196f3"/>
+    <text x="20" y="23" class="layer-title">Layer 1: Client Layer</text>
+
+    <!-- Web Browser -->
+    <rect x="50" y="50" width="200" height="50" rx="5" fill="#ffffff" stroke="#1976d2" stroke-width="1.5"/>
+    <text x="150" y="70" text-anchor="middle" class="component-title">Web Browser</text>
+    <text x="150" y="85" text-anchor="middle" class="component-text">REST API Client</text>
+
+    <!-- Mobile App -->
+    <rect x="300" y="50" width="200" height="50" rx="5" fill="#ffffff" stroke="#1976d2" stroke-width="1.5"/>
+    <text x="400" y="70" text-anchor="middle" class="component-title">Mobile App</text>
+    <text x="400" y="85" text-anchor="middle" class="component-text">iOS / Android</text>
+
+    <!-- API Clients -->
+    <rect x="550" y="50" width="200" height="50" rx="5" fill="#ffffff" stroke="#1976d2" stroke-width="1.5"/>
+    <text x="650" y="70" text-anchor="middle" class="component-title">API Clients</text>
+    <text x="650" y="85" text-anchor="middle" class="component-text">External Services</text>
+
+    <!-- CLI Tools -->
+    <rect x="800" y="50" width="200" height="50" rx="5" fill="#ffffff" stroke="#1976d2" stroke-width="1.5"/>
+    <text x="900" y="70" text-anchor="middle" class="component-title">CLI Tools</text>
+    <text x="900" y="85" text-anchor="middle" class="component-text">Command Line</text>
+  </g>
+
+  <!-- Arrow down -->
+  <line x1="600" y1="190" x2="600" y2="220" class="arrow"/>
+
+  <!-- Layer 2: Edge Layer -->
+  <g transform="translate(50, 220)">
+    <rect x="0" y="0" width="1100" height="120" rx="10" fill="#f3e5f5" stroke="#9c27b0" stroke-width="2" class="box-shadow"/>
+    <rect x="0" y="0" width="1100" height="35" rx="10" fill="#9c27b0"/>
+    <rect x="0" y="25" width="1100" height="10" fill="#9c27b0"/>
+    <text x="20" y="23" class="layer-title">Layer 2: Edge Layer</text>
+
+    <!-- Load Balancer -->
+    <rect x="100" y="50" width="250" height="50" rx="5" fill="#ffffff" stroke="#7b1fa2" stroke-width="1.5"/>
+    <text x="225" y="70" text-anchor="middle" class="component-title">Load Balancer</text>
+    <text x="225" y="85" text-anchor="middle" class="component-text">Traffic Distribution</text>
+
+    <!-- API Gateway -->
+    <rect x="450" y="50" width="250" height="50" rx="5" fill="#ffffff" stroke="#7b1fa2" stroke-width="1.5"/>
+    <text x="575" y="70" text-anchor="middle" class="component-title">API Gateway</text>
+    <text x="575" y="85" text-anchor="middle" class="component-text">Request Routing & Auth</text>
+
+    <!-- CDN -->
+    <rect x="800" y="50" width="200" height="50" rx="5" fill="#ffffff" stroke="#7b1fa2" stroke-width="1.5"/>
+    <text x="900" y="70" text-anchor="middle" class="component-title">CDN</text>
+    <text x="900" y="85" text-anchor="middle" class="component-text">Content Delivery</text>
+  </g>
+
+  <!-- Arrow down -->
+  <line x1="600" y1="340" x2="600" y2="370" class="arrow"/>
+
+  <!-- Layer 3: Application Layer -->
+  <g transform="translate(50, 370)">
+    <rect x="0" y="0" width="1100" height="180" rx="10" fill="#fff3e0" stroke="#ff9800" stroke-width="2" class="box-shadow"/>
+    <rect x="0" y="0" width="1100" height="35" rx="10" fill="#ff9800"/>
+    <rect x="0" y="25" width="1100" height="10" fill="#ff9800"/>
+    <text x="20" y="23" class="layer-title">Layer 3: Application Layer (L8-L11)</text>
+
+    <!-- Kernel Engine -->
+    <rect x="50" y="50" width="180" height="110" rx="5" fill="#ffffff" stroke="#f57c00" stroke-width="1.5"/>
+    <text x="140" y="70" text-anchor="middle" class="component-title">Kernel Engine</text>
+    <text x="140" y="88" text-anchor="middle" class="component-text">• Central Orchestration</text>
+    <text x="140" y="103" text-anchor="middle" class="component-text">• Task Scheduler</text>
+    <text x="140" y="118" text-anchor="middle" class="component-text">• Event Bus (L10)</text>
+    <text x="140" y="133" text-anchor="middle" class="component-text">• Message Router (L8)</text>
+
+    <!-- Tokenizer -->
+    <rect x="260" y="50" width="180" height="110" rx="5" fill="#ffffff" stroke="#f57c00" stroke-width="1.5"/>
+    <text x="350" y="70" text-anchor="middle" class="component-title">Tokenizer (L9)</text>
+    <text x="350" y="88" text-anchor="middle" class="component-text">• 16 Categories</text>
+    <text x="350" y="103" text-anchor="middle" class="component-text">• Fact Extraction</text>
+    <text x="350" y="118" text-anchor="middle" class="component-text">• Scoring Engine</text>
+    <text x="350" y="133" text-anchor="middle" class="component-text">• Change Detection</text>
+
+    <!-- Policy Engine -->
+    <rect x="470" y="50" width="180" height="110" rx="5" fill="#ffffff" stroke="#f57c00" stroke-width="1.5"/>
+    <text x="560" y="70" text-anchor="middle" class="component-title">Policy Engine (L11)</text>
+    <text x="560" y="88" text-anchor="middle" class="component-text">• RBAC System</text>
+    <text x="560" y="103" text-anchor="middle" class="component-text">• Permission Check</text>
+    <text x="560" y="118" text-anchor="middle" class="component-text">• Audit Trail</text>
+    <text x="560" y="133" text-anchor="middle" class="component-text">• Emergency Override</text>
+
+    <!-- Agent Framework -->
+    <rect x="680" y="50" width="180" height="110" rx="5" fill="#ffffff" stroke="#f57c00" stroke-width="1.5"/>
+    <text x="770" y="70" text-anchor="middle" class="component-title">Agent Framework</text>
+    <text x="770" y="88" text-anchor="middle" class="component-text">• Base Agent V2</text>
+    <text x="770" y="103" text-anchor="middle" class="component-text">• Process/Query</text>
+    <text x="770" y="118" text-anchor="middle" class="component-text">• Notify/Validate</text>
+    <text x="770" y="133" text-anchor="middle" class="component-text">• Protocol Support</text>
+
+    <!-- REST API -->
+    <rect x="890" y="50" width="160" height="110" rx="5" fill="#ffffff" stroke="#f57c00" stroke-width="1.5"/>
+    <text x="970" y="70" text-anchor="middle" class="component-title">REST API Server</text>
+    <text x="970" y="88" text-anchor="middle" class="component-text">• Health Check</text>
+    <text x="970" y="103" text-anchor="middle" class="component-text">• Token Query</text>
+    <text x="970" y="118" text-anchor="middle" class="component-text">• Agent Mgmt</text>
+    <text x="970" y="133" text-anchor="middle" class="component-text">• Context Export</text>
+  </g>
+
+  <!-- Arrow down -->
+  <line x1="600" y1="550" x2="600" y2="580" class="arrow"/>
+
+  <!-- Layer 4: Data Access Layer -->
+  <g transform="translate(50, 580)">
+    <rect x="0" y="0" width="1100" height="120" rx="10" fill="#e8f5e9" stroke="#4caf50" stroke-width="2" class="box-shadow"/>
+    <rect x="0" y="0" width="1100" height="35" rx="10" fill="#4caf50"/>
+    <rect x="0" y="25" width="1100" height="10" fill="#4caf50"/>
+    <text x="20" y="23" class="layer-title">Layer 4: Data Access Layer</text>
+
+    <!-- Database Module -->
+    <rect x="100" y="50" width="250" height="50" rx="5" fill="#ffffff" stroke="#388e3c" stroke-width="1.5"/>
+    <text x="225" y="70" text-anchor="middle" class="component-title">Database Module</text>
+    <text x="225" y="85" text-anchor="middle" class="component-text">SQLite with Migrations</text>
+
+    <!-- Schema Manager -->
+    <rect x="425" y="50" width="250" height="50" rx="5" fill="#ffffff" stroke="#388e3c" stroke-width="1.5"/>
+    <text x="550" y="70" text-anchor="middle" class="component-title">Schema Manager v4.0</text>
+    <text x="550" y="85" text-anchor="middle" class="component-text">12 Core Tables + Indexes</text>
+
+    <!-- Ingest Pipeline -->
+    <rect x="750" y="50" width="250" height="50" rx="5" fill="#ffffff" stroke="#388e3c" stroke-width="1.5"/>
+    <text x="875" y="70" text-anchor="middle" class="component-title">Ingest Pipeline</text>
+    <text x="875" y="85" text-anchor="middle" class="component-text">Autonomic Loop</text>
+  </g>
+
+  <!-- Arrow down -->
+  <line x1="600" y1="700" x2="600" y2="730" class="arrow"/>
+
+  <!-- Layer 5: Persistence Layer (Bottom) -->
+  <g transform="translate(50, 730)">
+    <rect x="0" y="0" width="1100" height="100" rx="10" fill="#fce4ec" stroke="#e91e63" stroke-width="2" class="box-shadow"/>
+    <rect x="0" y="0" width="1100" height="35" rx="10" fill="#e91e63"/>
+    <rect x="0" y="25" width="1100" height="10" fill="#e91e63"/>
+    <text x="20" y="23" class="layer-title">Layer 5: Persistence Layer</text>
+
+    <!-- SQLite Database -->
+    <rect x="100" y="50" width="200" height="35" rx="5" fill="#ffffff" stroke="#c2185b" stroke-width="1.5"/>
+    <text x="200" y="72" text-anchor="middle" class="component-title">noi_core.db</text>
+
+    <!-- Backup System -->
+    <rect x="350" y="50" width="200" height="35" rx="5" fill="#ffffff" stroke="#c2185b" stroke-width="1.5"/>
+    <text x="450" y="72" text-anchor="middle" class="component-title">Backup System</text>
+
+    <!-- Migration Manager -->
+    <rect x="600" y="50" width="200" height="35" rx="5" fill="#ffffff" stroke="#c2185b" stroke-width="1.5"/>
+    <text x="700" y="72" text-anchor="middle" class="component-title">Migration Manager</text>
+
+    <!-- Event Log -->
+    <rect x="850" y="50" width="150" height="35" rx="5" fill="#ffffff" stroke="#c2185b" stroke-width="1.5"/>
+    <text x="925" y="72" text-anchor="middle" class="component-title">Event Log</text>
+  </g>
+
+  <!-- Legend -->
+  <g transform="translate(50, 860)">
+    <rect x="0" y="-10" width="30" height="15" fill="#2196f3"/>
+    <text x="40" y="2" class="legend-text">Client Layer</text>
+
+    <rect x="150" y="-10" width="30" height="15" fill="#9c27b0"/>
+    <text x="190" y="2" class="legend-text">Edge Layer</text>
+
+    <rect x="300" y="-10" width="30" height="15" fill="#ff9800"/>
+    <text x="340" y="2" class="legend-text">Application Layer</text>
+
+    <rect x="500" y="-10" width="30" height="15" fill="#4caf50"/>
+    <text x="540" y="2" class="legend-text">Data Access Layer</text>
+
+    <rect x="720" y="-10" width="30" height="15" fill="#e91e63"/>
+    <text x="760" y="2" class="legend-text">Persistence Layer</text>
+  </g>
+</svg>

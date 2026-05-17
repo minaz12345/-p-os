@@ -1,0 +1,53 @@
+#!/bin/sh
+
+# P-OS Pre-commit Hook: Prevent Secret File Commits
+# This hook blocks commits that contain sensitive files or potential secrets
+
+BLOCKED_FILES=".env.auth .env.db .env.grafana .env.runtime .env"
+
+echo "🔒 Running pre-commit security check..."
+
+# Check 1: Block specific secret files
+for file in $BLOCKED_FILES; do
+  if git diff --cached --name-only | grep -q "^$file$"; then
+    echo "❌ BLOCKED: Refusing to commit secret file: $file"
+    echo ""
+    echo "This file contains sensitive credentials and must not be tracked by Git."
+    echo "If you need to track environment configuration, use .env.example instead."
+    echo ""
+    echo "To fix this:"
+    echo "  git restore --staged $file"
+    echo "  echo '$file' >> .gitignore"
+    exit 1
+  fi
+done
+
+# Check 2: Warn about potential secrets in diff content
+if git diff --cached | grep -iE "(password|secret|token|api_key|private_key|BEGIN RSA PRIVATE KEY)" >/dev/null; then
+  echo "⚠️  WARNING: Possible secret detected in staged changes!"
+  echo ""
+  echo "The following patterns were found:"
+  git diff --cached | grep -iE "(password|secret|token|api_key|private_key)" | head -5
+  echo ""
+  echo "Please review carefully before committing."
+  echo "If these are real secrets, DO NOT COMMIT them."
+  echo ""
+  read -p "Continue anyway? (y/N): " -n 1 -r
+  echo ""
+  if [[ ! $REPLY =~ ^[Yy]$ ]]; then
+    echo "Commit aborted."
+    exit 1
+  fi
+fi
+
+# Check 3: Verify no .env files with actual values (only .example allowed)
+if git diff --cached --name-only | grep -E "^\.env\.(auth|db|grafana|runtime)$" >/dev/null; then
+  echo "❌ BLOCKED: Environment secret file detected"
+  echo ""
+  echo "Files like .env.auth, .env.db, etc. contain actual secrets."
+  echo "Use .env.example for templates instead."
+  exit 1
+fi
+
+echo "✅ Pre-commit security check passed"
+exit 0

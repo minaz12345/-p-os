@@ -1,0 +1,3 @@
+sender,messages_count,avg_message_length,median_message_length,media_messages,avg_reply_gap_minutes,median_reply_gap_minutes,media_share_percent,days_opened,days_closed
+Kasia Ju,4869,32.18,27.0,15,108.86,0.41,0.31,32,40
+Pawel Nazaruk,3910,39.71,31.0,20,48.43,0.37,0.51,43,35

@@ -1,0 +1,142 @@
+{
+  "dataset_info": {
+    "name": "Kasia Ju - Paweł Nazaruk Facebook Conversation",
+    "dataset_id": "kasiaju_1977350892357109",
+    "participants": ["Kasia Ju", "Paweł Nazaruk"],
+    "date_range": "2019-01-30 to 2022-05-14",
+    "total_duration_days": 1199
+  },
+  
+  "expected_metrics": {
+    "total_messages": 8779,
+    "pawel_messages": 3910,
+    "kasia_messages": 4869,
+    "pawel_percentage": 44.5,
+    "kasia_percentage": 55.5,
+    
+    "pawel_avg_message_length": 39.71,
+    "kasia_avg_message_length": 32.18,
+    "pawel_median_message_length": 31.0,
+    "kasia_median_message_length": 27.0,
+    
+    "pawel_media_share_percent": 0.51,
+    "kasia_media_share_percent": 0.31,
+    
+    "pawel_avg_reply_gap_minutes": 48.43,
+    "kasia_avg_reply_gap_minutes": 108.86,
+    "pawel_median_reply_gap_minutes": 0.37,
+    "kasia_median_reply_gap_minutes": 0.41,
+    
+    "pawel_days_opened": 43,
+    "kasia_days_opened": 32,
+    "pawel_days_closed": 35,
+    "kasia_days_closed": 40,
+    
+    "initiative_asymmetry_percent": 57.3,
+    "description": "Paweł initiates 57.3% of conversation days"
+  },
+  
+  "expected_timeline": {
+    "total_weeks": 21,
+    "phase_distribution": {
+      "HIGH_INTENSITY": 6,
+      "STABLE_CONTACT": 5,
+      "LOW_CONTACT": 2,
+      "WEAK_CONTACT": 4,
+      "SILENCE": 4
+    },
+    "high_intensity_weeks": 6,
+    "stable_contact_weeks": 5,
+    "low_contact_weeks": 2,
+    "weak_contact_weeks": 4,
+    "silence_weeks": 4,
+    
+    "messages_in_first_9_weeks_percent": 89.8,
+    "description": "89.8% of all messages occurred in first 9 weeks"
+  },
+  
+  "expected_semantic": {
+    "questions_total": 762,
+    "questions_in_high_intensity_percent": 89.9,
+    
+    "emotional_markers_total": 1624,
+    "emotional_marker_categories": [
+      "positive",
+      "negative",
+      "uncertainty",
+      "closeness",
+      "conflict"
+    ],
+    
+    "keywords_by_phase_total": 657,
+    "ngrams_total": 1226,
+    "repeated_phrases_total": 122,
+    
+    "named_entities_total": 200,
+    "third_party_entity_candidate": "Adrian",
+    "adrian_mentions": 77,
+    
+    "ritual_phrases": {
+      "dobranoc": 30,
+      "dzie dobry": 16,
+      "dobranoc kasiu": 9,
+      "description": "Greeting/closing rituals detected"
+    }
+  },
+  
+  "expected_encoding": {
+    "ascii_pl_version": "ASCII_PL_v1.0",
+    "text_ascii_non_ascii_chars": 0,
+    "text_clean_non_ascii_chars": 0,
+    "mojibake_in_original": true,
+    "mojibake_patterns": ["Å", "Ä", "Ã", "â"],
+    "description": "Original text contains mojibake, but analytical fields are clean ASCII"
+  },
+  
+  "expected_package": {
+    "total_files": 20,
+    "archive_size_mb_compressed": 1.3,
+    "archive_size_mb_uncompressed": 10.0,
+    "layers": [
+      "RAW (messages.jsonl)",
+      "METRICS (relationship_basic_metrics.csv)",
+      "TIMELINE (relationship_phases.csv)",
+      "SEMANTIC (7 CSV/JSON files)",
+      "MANIFEST.json",
+      "README.md",
+      "VERSION.txt",
+      "forensic_export_v1.0.zip"
+    ]
+  },
+  
+  "w11_validation_expected": {
+    "r1_missing_data": true,
+    "r2_hash_chain": true,
+    "r3_active_flags": true,
+    "r4_deadline_hours": 72,
+    "r5_encoding": true,
+    "r6_manifest": true,
+    "r7_archive_size_mb_limit": 10,
+    "all_gates_passed": true,
+    "processing_time_seconds_max": 3600,
+    "description": "All W11 constitutional gates should pass"
+  },
+  
+  "regression_tests": {
+    "critical_values": {
+      "total_messages_must_be": 8779,
+      "pawel_messages_must_be": 3910,
+      "kasia_messages_must_be": 4869,
+      "questions_total_must_be": 762,
+      "emotional_markers_minimum": 1600,
+      "high_intensity_weeks_must_be": 6
+    },
+    "tolerance_rules": {
+      "message_count_tolerance": 0,
+      "percentage_tolerance": 0.1,
+      "encoding_violations_allowed": 0
+    },
+    "failure_action": "BLOCK_EXPORT_AND_ALERT",
+    "description": "If any critical value changes, system must reject export and alert operator"
+  }
+}

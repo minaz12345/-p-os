@@ -1,0 +1,114 @@
+[
+  {
+    "start": "2019-03-26T06:29:05.597000",
+    "end": "2019-03-31T19:30:28.222000",
+    "duration_hours": 132.02,
+    "duration_days": 5.5,
+    "before_message_idx": 8348,
+    "after_message_idx": 8349
+  },
+  {
+    "start": "2019-03-31T19:51:16.159000",
+    "end": "2019-04-04T10:15:36.228000",
+    "duration_hours": 86.41,
+    "duration_days": 3.6,
+    "before_message_idx": 8384,
+    "after_message_idx": 8385
+  },
+  {
+    "start": "2019-04-07T22:42:24.908000",
+    "end": "2019-04-28T09:16:50.997000",
+    "duration_hours": 490.57,
+    "duration_days": 20.44,
+    "before_message_idx": 8516,
+    "after_message_idx": 8517
+  },
+  {
+    "start": "2019-04-28T15:41:27.268000",
+    "end": "2019-08-15T20:53:48.098000",
+    "duration_hours": 2621.21,
+    "duration_days": 109.22,
+    "before_message_idx": 8518,
+    "after_message_idx": 8519
+  },
+  {
+    "start": "2019-08-15T20:53:54.284000",
+    "end": "2019-08-21T23:09:09.253000",
+    "duration_hours": 146.25,
+    "duration_days": 6.09,
+    "before_message_idx": 8520,
+    "after_message_idx": 8521
+  },
+  {
+    "start": "2019-08-22T00:00:18.628000",
+    "end": "2019-10-12T09:26:18.977000",
+    "duration_hours": 1233.43,
+    "duration_days": 51.39,
+    "before_message_idx": 8630,
+    "after_message_idx": 8631
+  },
+  {
+    "start": "2019-10-12T09:26:18.977000",
+    "end": "2019-10-21T20:04:00.287000",
+    "duration_hours": 226.63,
+    "duration_days": 9.44,
+    "before_message_idx": 8631,
+    "after_message_idx": 8632
+  },
+  {
+    "start": "2019-10-21T20:04:00.287000",
+    "end": "2019-12-02T14:34:37.857000",
+    "duration_hours": 1003.51,
+    "duration_days": 41.81,
+    "before_message_idx": 8632,
+    "after_message_idx": 8633
+  },
+  {
+    "start": "2019-12-02T16:38:59.555000",
+    "end": "2019-12-05T18:15:30.273000",
+    "duration_hours": 73.61,
+    "duration_days": 3.07,
+    "before_message_idx": 8636,
+    "after_message_idx": 8637
+  },
+  {
+    "start": "2019-12-06T21:15:07.648000",
+    "end": "2020-01-06T14:23:25.526000",
+    "duration_hours": 737.14,
+    "duration_days": 30.71,
+    "before_message_idx": 8664,
+    "after_message_idx": 8665
+  },
+  {
+    "start": "2020-01-06T14:23:25.526000",
+    "end": "2020-02-29T12:22:32.491000",
+    "duration_hours": 1293.99,
+    "duration_days": 53.92,
+    "before_message_idx": 8665,
+    "after_message_idx": 8666
+  },
+  {
+    "start": "2020-02-29T13:20:54.394000",
+    "end": "2020-03-10T18:27:03.609000",
+    "duration_hours": 245.1,
+    "duration_days": 10.21,
+    "before_message_idx": 8771,
+    "after_message_idx": 8772
+  },
+  {
+    "start": "2020-03-10T19:06:36.470000",
+    "end": "2020-03-29T11:38:13.072000",
+    "duration_hours": 447.53,
+    "duration_days": 18.65,
+    "before_message_idx": 8774,
+    "after_message_idx": 8775
+  },
+  {
+    "start": "2020-03-29T11:38:23.656000",
+    "end": "2022-05-14T14:13:29.314000",
+    "duration_hours": 18626.58,
+    "duration_days": 776.11,
+    "before_message_idx": 8777,
+    "after_message_idx": 8778
+  }
+]

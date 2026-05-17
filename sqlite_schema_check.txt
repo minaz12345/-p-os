@@ -1,0 +1,97 @@
+======================================================================
+SQLITE TABLE SCHEMAS
+======================================================================
+
+citizen_feedback_test.db.citizen_feedback (200 rows):
+  feedback_id                    TEXT                 NULL
+  citizen_id                     TEXT                 NOT NULL
+  category                       TEXT                 NOT NULL
+  sentiment_score                REAL                 NOT NULL
+  priority                       TEXT                 NOT NULL
+  status                         TEXT                 NOT NULL
+  submitted_date                 TEXT                 NOT NULL
+  resolved_date                  TEXT                 NULL
+  feedback_text                  TEXT                 NOT NULL
+  resolution_summary             TEXT                 NULL
+
+municipal_projects_test.db.municipal_projects (180 rows):
+  project_id                     TEXT                 NULL
+  category                       TEXT                 NOT NULL
+  project_name                   TEXT                 NOT NULL
+  status                         TEXT                 NOT NULL
+  priority                       TEXT                 NOT NULL
+  start_date                     TEXT                 NOT NULL
+  approved_date                  TEXT                 NULL
+  completion_date                TEXT                 NULL
+  budget_planned                 REAL                 NOT NULL
+  budget_spent                   REAL                 NOT NULL
+  geographic_coordinates         TEXT                 NOT NULL
+  stakeholders                   TEXT                 NOT NULL
+  description                    TEXT                 NULL
+
+geospatial_registry_test.db.geospatial_nodes (70 rows):
+  node_id                        TEXT                 NULL
+  node_type                      TEXT                 NOT NULL
+  name                           TEXT                 NOT NULL
+  parent_district                TEXT                 NULL
+  area_m2                        REAL                 NOT NULL
+  location_lat                   REAL                 NULL
+  location_lon                   REAL                 NULL
+  boundary_wkt                   TEXT                 NULL
+  notes                          TEXT                 NULL
+
+org_structure_test.db.employees (150 rows):
+  employee_id                    TEXT                 NULL
+  full_name                      TEXT                 NOT NULL
+  position_title                 TEXT                 NOT NULL
+  department                     TEXT                 NOT NULL
+  manager_id                     TEXT                 NULL
+  hire_date                      TEXT                 NOT NULL
+  employment_status              TEXT                 NOT NULL
+  salary_grade                   INTEGER              NOT NULL
+  office_location                TEXT                 NULL
+  email                          TEXT                 NULL
+
+gmina_staff_test.db.staff_directory (45 rows):
+  id                             INTEGER              NULL
+  first_name                     TEXT                 NULL
+  last_name                      TEXT                 NULL
+  position                       TEXT                 NULL
+  department                     TEXT                 NULL
+  office_phone                   TEXT                 NULL
+  office_email                   TEXT                 NULL
+  room_number                    TEXT                 NULL
+
+noi_core.db.semantic_records (16 rows):
+  semantic_id                    TEXT                 NULL
+  category                       TEXT                 NOT NULL
+  layer                          INTEGER              NOT NULL
+  definition                     TEXT                 NOT NULL
+  allowed_relations              TEXT                 NULL
+  forbidden_relations            TEXT                 NULL
+  version                        TEXT                 NOT NULL
+  owner                          TEXT                 NOT NULL
+  validation_status              INTEGER              NULL
+  metadata                       TEXT                 NULL
+  created_at                     TIMESTAMP            NULL
+  updated_at                     TIMESTAMP            NULL
+
+service_requests_test.db.service_requests_backup (150 rows):
+  request_id                     TEXT                 NULL
+  citizen_id                     TEXT                 NULL
+  department_id                  TEXT                 NULL
+  category                       TEXT                 NULL
+  priority                       TEXT                 NULL
+  status                         TEXT                 NULL
+  submitted_date                 TEXT                 NULL
+  assigned_date                  TEXT                 NULL
+  resolved_date                  TEXT                 NULL
+  description                    TEXT                 NULL
+  resolution_notes               TEXT                 NULL
+
+token_ingestion_test.db.ingested_tokens (36 rows):
+  token_id                       TEXT                 NULL
+  source                         TEXT                 NOT NULL
+  content                        TEXT                 NULL
+  checksum                       TEXT                 NOT NULL
+  timestamp                      TEXT                 NOT NULL
