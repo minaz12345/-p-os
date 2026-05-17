@@ -28,7 +28,7 @@ import sys
 project_root = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(project_root))
 
-from normalize_text import to_ascii_pl, normalize_text_for_analysis
+from core.normalization.ascii_pl import to_ascii_pl, normalize_for_analysis as normalize_text_for_analysis
 
 RAW_INPUT = project_root / "data" / "forensic_export" / "raw" / "messages.jsonl"
 PHASES_INPUT = project_root / "data" / "forensic_export" / "timeline" / "relationship_phases.csv"

@@ -18,6 +18,7 @@ Output: data/forensic_export/timeline/relationship_phases.csv
 from pathlib import Path
 import pandas as pd
 import sys
+from typing import List, Dict
 
 # Add project root to path
 project_root = Path(__file__).resolve().parent.parent
@@ -65,6 +66,84 @@ def classify_phase(row):
     
     # Default fallback
     return "LOW_CONTACT"
+
+
+def detect_weekly_phases(messages: List[Dict]) -> List[Dict]:
+    """
+    Detect relationship phases from message list.
+    
+    Args:
+        messages: List of enriched message dicts (from forensic_export_raw)
+    
+    Returns:
+        List of phase dicts with week, phase_type, metrics
+    """
+    
+    # Convert to DataFrame
+    df = pd.DataFrame(messages)
+    
+    if len(df) == 0:
+        return []
+    
+    # Parse timestamps
+    df["timestamp"] = pd.to_datetime(df["timestamp"], format='ISO8601')
+    df = df.sort_values("timestamp").reset_index(drop=True)
+    
+    # Extract date components
+    df["date"] = df["timestamp"].dt.date
+    df["week"] = df["timestamp"].dt.to_period("W").astype(str)
+    df["month"] = df["timestamp"].dt.to_period("M").astype(str)
+    
+    # Ensure text fields
+    df["text"] = df["text"].fillna("")
+    df["message_length"] = df["text"].str.len()
+    
+    # Media detection
+    if "has_media" not in df.columns:
+        df["has_media"] = False
+    
+    # Calculate gaps between consecutive messages
+    df["previous_timestamp"] = df["timestamp"].shift(1)
+    df["gap_days"] = (
+        (df["timestamp"] - df["previous_timestamp"])
+        .dt.total_seconds()
+        .div(60 * 60 * 24)
+    )
+    
+    # Weekly aggregation
+    weekly = df.groupby("week").agg(
+        start_timestamp=("timestamp", "min"),
+        end_timestamp=("timestamp", "max"),
+        total_messages=("message_id", "count"),
+        total_chars=("message_length", "sum"),
+        avg_message_length=("message_length", "mean"),
+        active_days=("date", "nunique"),
+        media_count=("has_media", "sum"),
+        max_gap_days=("gap_days", "max"),
+    ).reset_index()
+    
+    # Per-sender counts per week
+    sender_counts = (
+        df.groupby(["week", "sender"])
+        .size()
+        .unstack(fill_value=0)
+        .reset_index()
+    )
+    
+    weekly = weekly.merge(sender_counts, on="week", how="left")
+    
+    # Ensure both senders exist in columns
+    for col in ["Pawel Nazaruk", "Kasia Ju"]:
+        if col not in weekly.columns:
+            weekly[col] = 0
+    
+    # Classify phases
+    weekly["phase_type"] = weekly.apply(classify_phase, axis=1)
+    
+    # Convert to list of dicts
+    phases = weekly.to_dict('records')
+    
+    return phases
 
 
 def main():

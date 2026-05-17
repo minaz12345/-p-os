@@ -23,7 +23,7 @@ project_root = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(project_root))
 
 from core.db.neo4j_connection import get_neo4j_driver
-from normalize_text import to_ascii_pl
+from core.normalization.ascii_pl import to_ascii_pl
 
 
 def extract_raw_messages(conversation_path: Path) -> List[Dict]:
