@@ -1,0 +1,28 @@
+{
+  "duration_seconds": 0.3198667,
+  "checks": {
+    "hash_continuity": {
+      "detail": "SHA256 verified",
+      "result": "PASS"
+    },
+    "replay_reconstruction": {
+      "detail": "3 files extracted",
+      "result": "PASS"
+    },
+    "w11_lookup": {
+      "detail": "Contract valid",
+      "result": "PASS"
+    },
+    "rollback_readiness": {
+      "detail": "Dirty working dir",
+      "result": "WARNING"
+    },
+    "audit_append": {
+      "detail": "Event written",
+      "result": "PASS"
+    }
+  },
+  "selftest_id": "cbd15c44-5c7e-4cf9-8008-f49a44fb13ee",
+  "overall_result": "PASS",
+  "timestamp": "2026-05-13T16:15:38Z"
+}

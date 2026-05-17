@@ -1,0 +1,23 @@
+{
+  "persons": [
+    "Pawel Nazaruk",
+    "Kasia Ju"
+  ],
+  "relationships": [
+    {
+      "type": "KNOWS",
+      "from": "Pawel Nazaruk",
+      "to": "Kasia Ju",
+      "properties": {
+        "first_observed": "2019-01-30T22:02:18.920000",
+        "relationship_type": "peer",
+        "evidence": "conversation_analysis",
+        "last_observed": "2022-05-14T14:13:29.314000",
+        "conversation_context": "facebook_messenger",
+        "interaction_strength": 0.445
+      },
+      "id": "5:e43fde89-6f95-4c4a-ab46-68cadfad6727:6917589500780609599"
+    }
+  ],
+  "timestamp": "2026-05-17"
+}

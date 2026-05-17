@@ -1,0 +1,1519 @@
+{
+  "timeline": [
+    {
+      "window_start": "2019-01-30T22:02:18.920000",
+      "window_end": "2019-02-06T22:02:18.920000",
+      "message_count": 1854,
+      "density_per_day": 264.86,
+      "phase": "PHASE_INTENSIFICATION",
+      "phase_category": "building"
+    },
+    {
+      "window_start": "2019-02-06T22:02:18.920000",
+      "window_end": "2019-02-13T22:02:18.920000",
+      "message_count": 1880,
+      "density_per_day": 268.57,
+      "phase": "PHASE_INTENSIFICATION",
+      "phase_category": "building"
+    },
+    {
+      "window_start": "2019-02-13T22:02:18.920000",
+      "window_end": "2019-02-20T22:02:18.920000",
+      "message_count": 1505,
+      "density_per_day": 215.0,
+      "phase": "PHASE_INTENSIFICATION",
+      "phase_category": "building"
+    },
+    {
+      "window_start": "2019-02-20T22:02:18.920000",
+      "window_end": "2019-02-27T22:02:18.920000",
+      "message_count": 1235,
+      "density_per_day": 176.43,
+      "phase": "PHASE_INTENSIFICATION",
+      "phase_category": "building"
+    },
+    {
+      "window_start": "2019-02-27T22:02:18.920000",
+      "window_end": "2019-03-06T22:02:18.920000",
+      "message_count": 1225,
+      "density_per_day": 175.0,
+      "phase": "PHASE_INTENSIFICATION",
+      "phase_category": "building"
+    },
+    {
+      "window_start": "2019-03-06T22:02:18.920000",
+      "window_end": "2019-03-13T22:02:18.920000",
+      "message_count": 287,
+      "density_per_day": 41.0,
+      "phase": "PHASE_INTENSIFICATION",
+      "phase_category": "building"
+    },
+    {
+      "window_start": "2019-03-13T22:02:18.920000",
+      "window_end": "2019-03-20T22:02:18.920000",
+      "message_count": 237,
+      "density_per_day": 33.86,
+      "phase": "PHASE_STABILIZATION",
+      "phase_category": "stable"
+    },
+    {
+      "window_start": "2019-03-20T22:02:18.920000",
+      "window_end": "2019-03-27T22:02:18.920000",
+      "message_count": 126,
+      "density_per_day": 18.0,
+      "phase": "PHASE_STABILIZATION",
+      "phase_category": "stable"
+    },
+    {
+      "window_start": "2019-03-27T22:02:18.920000",
+      "window_end": "2019-04-03T22:02:18.920000",
+      "message_count": 36,
+      "density_per_day": 5.14,
+      "phase": "PHASE_ECHO",
+      "phase_category": "post_relationship"
+    },
+    {
+      "window_start": "2019-04-03T22:02:18.920000",
+      "window_end": "2019-04-10T22:02:18.920000",
+      "message_count": 132,
+      "density_per_day": 18.86,
+      "phase": "PHASE_STABILIZATION",
+      "phase_category": "stable"
+    },
+    {
+      "window_start": "2019-04-10T22:02:18.920000",
+      "window_end": "2019-04-17T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2019-04-17T22:02:18.920000",
+      "window_end": "2019-04-24T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2019-04-24T22:02:18.920000",
+      "window_end": "2019-05-01T22:02:18.920000",
+      "message_count": 2,
+      "density_per_day": 0.29,
+      "phase": "PHASE_ECHO",
+      "phase_category": "post_relationship"
+    },
+    {
+      "window_start": "2019-05-01T22:02:18.920000",
+      "window_end": "2019-05-08T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2019-05-08T22:02:18.920000",
+      "window_end": "2019-05-15T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2019-05-15T22:02:18.920000",
+      "window_end": "2019-05-22T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2019-05-22T22:02:18.920000",
+      "window_end": "2019-05-29T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2019-05-29T22:02:18.920000",
+      "window_end": "2019-06-05T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2019-06-05T22:02:18.920000",
+      "window_end": "2019-06-12T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2019-06-12T22:02:18.920000",
+      "window_end": "2019-06-19T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2019-06-19T22:02:18.920000",
+      "window_end": "2019-06-26T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2019-06-26T22:02:18.920000",
+      "window_end": "2019-07-03T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2019-07-03T22:02:18.920000",
+      "window_end": "2019-07-10T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2019-07-10T22:02:18.920000",
+      "window_end": "2019-07-17T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2019-07-17T22:02:18.920000",
+      "window_end": "2019-07-24T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2019-07-24T22:02:18.920000",
+      "window_end": "2019-07-31T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2019-07-31T22:02:18.920000",
+      "window_end": "2019-08-07T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2019-08-07T22:02:18.920000",
+      "window_end": "2019-08-14T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2019-08-14T22:02:18.920000",
+      "window_end": "2019-08-21T22:02:18.920000",
+      "message_count": 2,
+      "density_per_day": 0.29,
+      "phase": "PHASE_ECHO",
+      "phase_category": "post_relationship"
+    },
+    {
+      "window_start": "2019-08-21T22:02:18.920000",
+      "window_end": "2019-08-28T22:02:18.920000",
+      "message_count": 110,
+      "density_per_day": 15.71,
+      "phase": "PHASE_ECHO",
+      "phase_category": "post_relationship"
+    },
+    {
+      "window_start": "2019-08-28T22:02:18.920000",
+      "window_end": "2019-09-04T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2019-09-04T22:02:18.920000",
+      "window_end": "2019-09-11T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2019-09-11T22:02:18.920000",
+      "window_end": "2019-09-18T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2019-09-18T22:02:18.920000",
+      "window_end": "2019-09-25T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2019-09-25T22:02:18.920000",
+      "window_end": "2019-10-02T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2019-10-02T22:02:18.920000",
+      "window_end": "2019-10-09T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2019-10-09T22:02:18.920000",
+      "window_end": "2019-10-16T22:02:18.920000",
+      "message_count": 1,
+      "density_per_day": 0.14,
+      "phase": "PHASE_ECHO",
+      "phase_category": "post_relationship"
+    },
+    {
+      "window_start": "2019-10-16T22:02:18.920000",
+      "window_end": "2019-10-23T22:02:18.920000",
+      "message_count": 1,
+      "density_per_day": 0.14,
+      "phase": "PHASE_ECHO",
+      "phase_category": "post_relationship"
+    },
+    {
+      "window_start": "2019-10-23T22:02:18.920000",
+      "window_end": "2019-10-30T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2019-10-30T22:02:18.920000",
+      "window_end": "2019-11-06T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2019-11-06T22:02:18.920000",
+      "window_end": "2019-11-13T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2019-11-13T22:02:18.920000",
+      "window_end": "2019-11-20T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2019-11-20T22:02:18.920000",
+      "window_end": "2019-11-27T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2019-11-27T22:02:18.920000",
+      "window_end": "2019-12-04T22:02:18.920000",
+      "message_count": 4,
+      "density_per_day": 0.57,
+      "phase": "PHASE_ECHO",
+      "phase_category": "post_relationship"
+    },
+    {
+      "window_start": "2019-12-04T22:02:18.920000",
+      "window_end": "2019-12-11T22:02:18.920000",
+      "message_count": 28,
+      "density_per_day": 4.0,
+      "phase": "PHASE_ECHO",
+      "phase_category": "post_relationship"
+    },
+    {
+      "window_start": "2019-12-11T22:02:18.920000",
+      "window_end": "2019-12-18T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2019-12-18T22:02:18.920000",
+      "window_end": "2019-12-25T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2019-12-25T22:02:18.920000",
+      "window_end": "2020-01-01T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2020-01-01T22:02:18.920000",
+      "window_end": "2020-01-08T22:02:18.920000",
+      "message_count": 1,
+      "density_per_day": 0.14,
+      "phase": "PHASE_ECHO",
+      "phase_category": "post_relationship"
+    },
+    {
+      "window_start": "2020-01-08T22:02:18.920000",
+      "window_end": "2020-01-15T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2020-01-15T22:02:18.920000",
+      "window_end": "2020-01-22T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2020-01-22T22:02:18.920000",
+      "window_end": "2020-01-29T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2020-01-29T22:02:18.920000",
+      "window_end": "2020-02-05T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2020-02-05T22:02:18.920000",
+      "window_end": "2020-02-12T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2020-02-12T22:02:18.920000",
+      "window_end": "2020-02-19T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2020-02-19T22:02:18.920000",
+      "window_end": "2020-02-26T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2020-02-26T22:02:18.920000",
+      "window_end": "2020-03-04T22:02:18.920000",
+      "message_count": 106,
+      "density_per_day": 15.14,
+      "phase": "PHASE_ECHO",
+      "phase_category": "post_relationship"
+    },
+    {
+      "window_start": "2020-03-04T22:02:18.920000",
+      "window_end": "2020-03-11T22:02:18.920000",
+      "message_count": 3,
+      "density_per_day": 0.43,
+      "phase": "PHASE_ECHO",
+      "phase_category": "post_relationship"
+    },
+    {
+      "window_start": "2020-03-11T22:02:18.920000",
+      "window_end": "2020-03-18T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2020-03-18T22:02:18.920000",
+      "window_end": "2020-03-25T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2020-03-25T22:02:18.920000",
+      "window_end": "2020-04-01T22:02:18.920000",
+      "message_count": 3,
+      "density_per_day": 0.43,
+      "phase": "PHASE_ECHO",
+      "phase_category": "post_relationship"
+    },
+    {
+      "window_start": "2020-04-01T22:02:18.920000",
+      "window_end": "2020-04-08T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2020-04-08T22:02:18.920000",
+      "window_end": "2020-04-15T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2020-04-15T22:02:18.920000",
+      "window_end": "2020-04-22T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2020-04-22T22:02:18.920000",
+      "window_end": "2020-04-29T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2020-04-29T22:02:18.920000",
+      "window_end": "2020-05-06T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2020-05-06T22:02:18.920000",
+      "window_end": "2020-05-13T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2020-05-13T22:02:18.920000",
+      "window_end": "2020-05-20T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2020-05-20T22:02:18.920000",
+      "window_end": "2020-05-27T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2020-05-27T22:02:18.920000",
+      "window_end": "2020-06-03T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2020-06-03T22:02:18.920000",
+      "window_end": "2020-06-10T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2020-06-10T22:02:18.920000",
+      "window_end": "2020-06-17T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2020-06-17T22:02:18.920000",
+      "window_end": "2020-06-24T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2020-06-24T22:02:18.920000",
+      "window_end": "2020-07-01T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2020-07-01T22:02:18.920000",
+      "window_end": "2020-07-08T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2020-07-08T22:02:18.920000",
+      "window_end": "2020-07-15T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2020-07-15T22:02:18.920000",
+      "window_end": "2020-07-22T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2020-07-22T22:02:18.920000",
+      "window_end": "2020-07-29T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2020-07-29T22:02:18.920000",
+      "window_end": "2020-08-05T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2020-08-05T22:02:18.920000",
+      "window_end": "2020-08-12T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2020-08-12T22:02:18.920000",
+      "window_end": "2020-08-19T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2020-08-19T22:02:18.920000",
+      "window_end": "2020-08-26T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2020-08-26T22:02:18.920000",
+      "window_end": "2020-09-02T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2020-09-02T22:02:18.920000",
+      "window_end": "2020-09-09T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2020-09-09T22:02:18.920000",
+      "window_end": "2020-09-16T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2020-09-16T22:02:18.920000",
+      "window_end": "2020-09-23T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2020-09-23T22:02:18.920000",
+      "window_end": "2020-09-30T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2020-09-30T22:02:18.920000",
+      "window_end": "2020-10-07T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2020-10-07T22:02:18.920000",
+      "window_end": "2020-10-14T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2020-10-14T22:02:18.920000",
+      "window_end": "2020-10-21T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2020-10-21T22:02:18.920000",
+      "window_end": "2020-10-28T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2020-10-28T22:02:18.920000",
+      "window_end": "2020-11-04T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2020-11-04T22:02:18.920000",
+      "window_end": "2020-11-11T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2020-11-11T22:02:18.920000",
+      "window_end": "2020-11-18T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2020-11-18T22:02:18.920000",
+      "window_end": "2020-11-25T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2020-11-25T22:02:18.920000",
+      "window_end": "2020-12-02T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2020-12-02T22:02:18.920000",
+      "window_end": "2020-12-09T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2020-12-09T22:02:18.920000",
+      "window_end": "2020-12-16T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2020-12-16T22:02:18.920000",
+      "window_end": "2020-12-23T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2020-12-23T22:02:18.920000",
+      "window_end": "2020-12-30T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2020-12-30T22:02:18.920000",
+      "window_end": "2021-01-06T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2021-01-06T22:02:18.920000",
+      "window_end": "2021-01-13T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2021-01-13T22:02:18.920000",
+      "window_end": "2021-01-20T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2021-01-20T22:02:18.920000",
+      "window_end": "2021-01-27T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2021-01-27T22:02:18.920000",
+      "window_end": "2021-02-03T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2021-02-03T22:02:18.920000",
+      "window_end": "2021-02-10T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2021-02-10T22:02:18.920000",
+      "window_end": "2021-02-17T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2021-02-17T22:02:18.920000",
+      "window_end": "2021-02-24T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2021-02-24T22:02:18.920000",
+      "window_end": "2021-03-03T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2021-03-03T22:02:18.920000",
+      "window_end": "2021-03-10T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2021-03-10T22:02:18.920000",
+      "window_end": "2021-03-17T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2021-03-17T22:02:18.920000",
+      "window_end": "2021-03-24T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2021-03-24T22:02:18.920000",
+      "window_end": "2021-03-31T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2021-03-31T22:02:18.920000",
+      "window_end": "2021-04-07T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2021-04-07T22:02:18.920000",
+      "window_end": "2021-04-14T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2021-04-14T22:02:18.920000",
+      "window_end": "2021-04-21T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2021-04-21T22:02:18.920000",
+      "window_end": "2021-04-28T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2021-04-28T22:02:18.920000",
+      "window_end": "2021-05-05T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2021-05-05T22:02:18.920000",
+      "window_end": "2021-05-12T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2021-05-12T22:02:18.920000",
+      "window_end": "2021-05-19T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2021-05-19T22:02:18.920000",
+      "window_end": "2021-05-26T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2021-05-26T22:02:18.920000",
+      "window_end": "2021-06-02T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2021-06-02T22:02:18.920000",
+      "window_end": "2021-06-09T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2021-06-09T22:02:18.920000",
+      "window_end": "2021-06-16T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2021-06-16T22:02:18.920000",
+      "window_end": "2021-06-23T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2021-06-23T22:02:18.920000",
+      "window_end": "2021-06-30T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2021-06-30T22:02:18.920000",
+      "window_end": "2021-07-07T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2021-07-07T22:02:18.920000",
+      "window_end": "2021-07-14T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2021-07-14T22:02:18.920000",
+      "window_end": "2021-07-21T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2021-07-21T22:02:18.920000",
+      "window_end": "2021-07-28T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2021-07-28T22:02:18.920000",
+      "window_end": "2021-08-04T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2021-08-04T22:02:18.920000",
+      "window_end": "2021-08-11T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2021-08-11T22:02:18.920000",
+      "window_end": "2021-08-18T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2021-08-18T22:02:18.920000",
+      "window_end": "2021-08-25T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2021-08-25T22:02:18.920000",
+      "window_end": "2021-09-01T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2021-09-01T22:02:18.920000",
+      "window_end": "2021-09-08T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2021-09-08T22:02:18.920000",
+      "window_end": "2021-09-15T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2021-09-15T22:02:18.920000",
+      "window_end": "2021-09-22T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2021-09-22T22:02:18.920000",
+      "window_end": "2021-09-29T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2021-09-29T22:02:18.920000",
+      "window_end": "2021-10-06T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2021-10-06T22:02:18.920000",
+      "window_end": "2021-10-13T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2021-10-13T22:02:18.920000",
+      "window_end": "2021-10-20T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2021-10-20T22:02:18.920000",
+      "window_end": "2021-10-27T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2021-10-27T22:02:18.920000",
+      "window_end": "2021-11-03T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2021-11-03T22:02:18.920000",
+      "window_end": "2021-11-10T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2021-11-10T22:02:18.920000",
+      "window_end": "2021-11-17T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2021-11-17T22:02:18.920000",
+      "window_end": "2021-11-24T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2021-11-24T22:02:18.920000",
+      "window_end": "2021-12-01T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2021-12-01T22:02:18.920000",
+      "window_end": "2021-12-08T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2021-12-08T22:02:18.920000",
+      "window_end": "2021-12-15T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2021-12-15T22:02:18.920000",
+      "window_end": "2021-12-22T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2021-12-22T22:02:18.920000",
+      "window_end": "2021-12-29T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2021-12-29T22:02:18.920000",
+      "window_end": "2022-01-05T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2022-01-05T22:02:18.920000",
+      "window_end": "2022-01-12T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2022-01-12T22:02:18.920000",
+      "window_end": "2022-01-19T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2022-01-19T22:02:18.920000",
+      "window_end": "2022-01-26T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2022-01-26T22:02:18.920000",
+      "window_end": "2022-02-02T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2022-02-02T22:02:18.920000",
+      "window_end": "2022-02-09T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2022-02-09T22:02:18.920000",
+      "window_end": "2022-02-16T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2022-02-16T22:02:18.920000",
+      "window_end": "2022-02-23T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2022-02-23T22:02:18.920000",
+      "window_end": "2022-03-02T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2022-03-02T22:02:18.920000",
+      "window_end": "2022-03-09T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2022-03-09T22:02:18.920000",
+      "window_end": "2022-03-16T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2022-03-16T22:02:18.920000",
+      "window_end": "2022-03-23T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2022-03-23T22:02:18.920000",
+      "window_end": "2022-03-30T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2022-03-30T22:02:18.920000",
+      "window_end": "2022-04-06T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2022-04-06T22:02:18.920000",
+      "window_end": "2022-04-13T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2022-04-13T22:02:18.920000",
+      "window_end": "2022-04-20T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2022-04-20T22:02:18.920000",
+      "window_end": "2022-04-27T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2022-04-27T22:02:18.920000",
+      "window_end": "2022-05-04T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2022-05-04T22:02:18.920000",
+      "window_end": "2022-05-11T22:02:18.920000",
+      "message_count": 0,
+      "density_per_day": 0.0,
+      "phase": "PHASE_SILENCE",
+      "phase_category": "inactive"
+    },
+    {
+      "window_start": "2022-05-11T22:02:18.920000",
+      "window_end": "2022-05-18T22:02:18.920000",
+      "message_count": 1,
+      "density_per_day": 0.14,
+      "phase": "PHASE_ECHO",
+      "phase_category": "post_relationship"
+    }
+  ],
+  "transitions": [
+    {
+      "transition_point": "2019-03-13T22:02:18.920000",
+      "from_phase": "PHASE_INTENSIFICATION",
+      "to_phase": "PHASE_STABILIZATION",
+      "from_category": "building",
+      "to_category": "stable"
+    },
+    {
+      "transition_point": "2019-03-27T22:02:18.920000",
+      "from_phase": "PHASE_STABILIZATION",
+      "to_phase": "PHASE_ECHO",
+      "from_category": "stable",
+      "to_category": "post_relationship"
+    },
+    {
+      "transition_point": "2019-04-03T22:02:18.920000",
+      "from_phase": "PHASE_ECHO",
+      "to_phase": "PHASE_STABILIZATION",
+      "from_category": "post_relationship",
+      "to_category": "stable"
+    },
+    {
+      "transition_point": "2019-04-10T22:02:18.920000",
+      "from_phase": "PHASE_STABILIZATION",
+      "to_phase": "PHASE_SILENCE",
+      "from_category": "stable",
+      "to_category": "inactive"
+    },
+    {
+      "transition_point": "2019-04-24T22:02:18.920000",
+      "from_phase": "PHASE_SILENCE",
+      "to_phase": "PHASE_ECHO",
+      "from_category": "inactive",
+      "to_category": "post_relationship"
+    },
+    {
+      "transition_point": "2019-05-01T22:02:18.920000",
+      "from_phase": "PHASE_ECHO",
+      "to_phase": "PHASE_SILENCE",
+      "from_category": "post_relationship",
+      "to_category": "inactive"
+    },
+    {
+      "transition_point": "2019-08-14T22:02:18.920000",
+      "from_phase": "PHASE_SILENCE",
+      "to_phase": "PHASE_ECHO",
+      "from_category": "inactive",
+      "to_category": "post_relationship"
+    },
+    {
+      "transition_point": "2019-08-28T22:02:18.920000",
+      "from_phase": "PHASE_ECHO",
+      "to_phase": "PHASE_SILENCE",
+      "from_category": "post_relationship",
+      "to_category": "inactive"
+    },
+    {
+      "transition_point": "2019-10-09T22:02:18.920000",
+      "from_phase": "PHASE_SILENCE",
+      "to_phase": "PHASE_ECHO",
+      "from_category": "inactive",
+      "to_category": "post_relationship"
+    },
+    {
+      "transition_point": "2019-10-23T22:02:18.920000",
+      "from_phase": "PHASE_ECHO",
+      "to_phase": "PHASE_SILENCE",
+      "from_category": "post_relationship",
+      "to_category": "inactive"
+    },
+    {
+      "transition_point": "2019-11-27T22:02:18.920000",
+      "from_phase": "PHASE_SILENCE",
+      "to_phase": "PHASE_ECHO",
+      "from_category": "inactive",
+      "to_category": "post_relationship"
+    },
+    {
+      "transition_point": "2019-12-11T22:02:18.920000",
+      "from_phase": "PHASE_ECHO",
+      "to_phase": "PHASE_SILENCE",
+      "from_category": "post_relationship",
+      "to_category": "inactive"
+    },
+    {
+      "transition_point": "2020-01-01T22:02:18.920000",
+      "from_phase": "PHASE_SILENCE",
+      "to_phase": "PHASE_ECHO",
+      "from_category": "inactive",
+      "to_category": "post_relationship"
+    },
+    {
+      "transition_point": "2020-01-08T22:02:18.920000",
+      "from_phase": "PHASE_ECHO",
+      "to_phase": "PHASE_SILENCE",
+      "from_category": "post_relationship",
+      "to_category": "inactive"
+    },
+    {
+      "transition_point": "2020-02-26T22:02:18.920000",
+      "from_phase": "PHASE_SILENCE",
+      "to_phase": "PHASE_ECHO",
+      "from_category": "inactive",
+      "to_category": "post_relationship"
+    },
+    {
+      "transition_point": "2020-03-11T22:02:18.920000",
+      "from_phase": "PHASE_ECHO",
+      "to_phase": "PHASE_SILENCE",
+      "from_category": "post_relationship",
+      "to_category": "inactive"
+    },
+    {
+      "transition_point": "2020-03-25T22:02:18.920000",
+      "from_phase": "PHASE_SILENCE",
+      "to_phase": "PHASE_ECHO",
+      "from_category": "inactive",
+      "to_category": "post_relationship"
+    },
+    {
+      "transition_point": "2020-04-01T22:02:18.920000",
+      "from_phase": "PHASE_ECHO",
+      "to_phase": "PHASE_SILENCE",
+      "from_category": "post_relationship",
+      "to_category": "inactive"
+    },
+    {
+      "transition_point": "2022-05-11T22:02:18.920000",
+      "from_phase": "PHASE_SILENCE",
+      "to_phase": "PHASE_ECHO",
+      "from_category": "inactive",
+      "to_category": "post_relationship"
+    }
+  ],
+  "metadata": {
+    "total_phases": 4,
+    "total_transitions": 19
+  }
+}

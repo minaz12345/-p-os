@@ -319,6 +319,7 @@ class DailyObserver:
 
         daily_report = {
             "date": self.today.isoformat(),
+            "time": datetime.now(timezone.utc).strftime("%H:%M:%S UTC"),
             "timestamp": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
             "automated_metrics": {
                 "status_check": status_check,

@@ -1,0 +1,170 @@
+{
+  "package_name": "Forensic Relationship Export",
+  "version": "1.0",
+  "created_at": "2026-05-17T03:18:16.691792",
+  "description": "Complete forensic extraction of Facebook conversation data with phase-labeled timeline and semantic patterns",
+  "architecture": "RAW DATA → METRICS → TIMELINE → SEMANTIC (strict separation)",
+  "source_data": {
+    "conversation_id": "kasiaju_1977350892357109",
+    "participants": [
+      "Kasia Ju",
+      "Pawel Nazaruk"
+    ],
+    "total_messages": 8779,
+    "date_range": "2019-01-30 to 2022-05-14"
+  },
+  "pipeline_version": {
+    "forensic_export_raw.py": "v1.0 (ASCII-safe encoding)",
+    "analyze_relationship_raw.py": "v1.0",
+    "detect_relationship_phases.py": "v1.0",
+    "extract_semantic_patterns.py": "v1.0 (ASCII normalization)",
+    "check_encoding_quality.py": "v1.0"
+  },
+  "files": {
+    "raw": {
+      "path": "data\\forensic_export\\raw",
+      "description": "Raw forensic export - uninterpreted message data",
+      "contents": [
+        {
+          "filename": "messages.csv",
+          "size_kb": 1618.1,
+          "hash_sha256": "38c4b170e7680f74e8ab9cdde6bd05f281ea5f0b82e9b7a802410a6e2aae3304",
+          "modified_at": "2026-05-17T03:15:56.372190"
+        },
+        {
+          "filename": "messages.jsonl",
+          "size_kb": 3361.1,
+          "hash_sha256": "828af5168bc7e2f6124eb55e84f6f6e61d8a3274327e14fa12d8954d0a1f7abb",
+          "modified_at": "2026-05-17T03:15:56.252947"
+        },
+        {
+          "filename": "timeline_index.json",
+          "size_kb": 0.6,
+          "hash_sha256": "bc5ae1129673ec3a7e349636ce111ed98661c2323a32f4ecf465f186bc38a6df",
+          "modified_at": "2026-05-17T03:15:56.389857"
+        }
+      ],
+      "schema": {
+        "message_id": "Unique message identifier (msg_000001 format)",
+        "timestamp": "ISO 8601 timestamp",
+        "date": "Date string (YYYY-MM-DD)",
+        "sender": "Message sender name",
+        "text": "Original message text (may contain Polish diacritics)",
+        "text_ascii": "ASCII-safe version for analysis (Polish chars converted)",
+        "text_clean": "Lowercase ASCII version for tokenization",
+        "message_length": "Length of text_ascii in characters",
+        "has_media": "Boolean - whether message contains media",
+        "media_type": "Type of media (photo/video/gif/audio/file) or null",
+        "reply_gap_minutes": "Minutes since previous message (null if same sender)",
+        "conversation_day_index": "Days from conversation start (0, 1, 2, ...)"
+      }
+    },
+    "metrics": {
+      "path": "data\\forensic_export\\metrics",
+      "description": "Basic relationship metrics per person",
+      "contents": [
+        {
+          "filename": "relationship_basic_metrics.csv",
+          "size_kb": 0.3,
+          "hash_sha256": "a3b29f3ff30289afc5533a5ee2b0ee5b6d19e7f12c493bc1e54d387460fe8b3e",
+          "modified_at": "2026-05-17T03:16:12.577654"
+        }
+      ],
+      "columns": [
+        "messages_count",
+        "avg_message_length",
+        "median_message_length",
+        "media_share_percent",
+        "avg_reply_gap_minutes",
+        "median_reply_gap_minutes",
+        "days_opened",
+        "days_closed"
+      ]
+    },
+    "timeline": {
+      "path": "data\\forensic_export\\timeline",
+      "description": "Phase-labeled weekly timeline",
+      "contents": [
+        {
+          "filename": "messages_with_phases.jsonl",
+          "size_kb": 2489.3,
+          "hash_sha256": "bd0cedf640609acafd51fe7106ea0fd888142775d44d8c1b1e8c5ea94e84e9bb",
+          "modified_at": "2026-05-17T02:29:00.766617"
+        },
+        {
+          "filename": "phased_timeline.json",
+          "size_kb": 45.8,
+          "hash_sha256": "f3d9cc44300c6f79b23f947f5dc08541c0fc2afb9dd0730dd00165058e89f7a2",
+          "modified_at": "2026-05-17T02:29:00.627542"
+        },
+        {
+          "filename": "relationship_phases.csv",
+          "size_kb": 3.4,
+          "hash_sha256": "2d6170f389b7962bfea177986f64abfdb7f0cdb98dfd06671a94b78bfc22db50",
+          "modified_at": "2026-05-17T03:16:19.855887"
+        },
+        {
+          "filename": "silence_periods.json",
+          "size_kb": 3.0,
+          "hash_sha256": "daecf1413ea861f1b5e2c989e87724dc515e28953b7d16abb0613d8e308450cf",
+          "modified_at": "2026-05-17T02:29:00.209493"
+        }
+      ],
+      "phases": [
+        "HIGH_INTENSITY (≥300 msgs/week)",
+        "STABLE_CONTACT (80-299 msgs/week)",
+        "LOW_CONTACT (20-79 msgs/week)",
+        "WEAK_CONTACT (<20 msgs, ≤2 active days)",
+        "SILENCE (≥30 day gap AND ≤5 msgs)"
+      ]
+    },
+    "semantic": {
+      "path": "data\\forensic_export\\semantic",
+      "description": "Mechanical semantic extraction (no interpretation)",
+      "contents": [
+        {
+          "filename": "emotional_markers.csv",
+          "size_kb": 199.9,
+          "hash_sha256": "95b334955dccbc36d4a5e3c0383af79c0eed1ee29981e755d2f148905a2075aa",
+          "modified_at": "2026-05-17T03:16:33.274942"
+        },
+        {
+          "filename": "keywords_by_phase.csv",
+          "size_kb": 28.4,
+          "hash_sha256": "c3a2a588e549d305046e4ff1b68e0156ddc0230ddd2fd7a66505f3e65d15fd3e",
+          "modified_at": "2026-05-17T03:16:29.117734"
+        },
+        {
+          "filename": "named_entities_candidates.csv",
+          "size_kb": 1.9,
+          "hash_sha256": "5720b7e2254f5f42ed06306f85b992a655d86fa25ceb855d983a98329de7cc9d",
+          "modified_at": "2026-05-17T03:16:33.306580"
+        },
+        {
+          "filename": "ngrams_by_phase.csv",
+          "size_kb": 64.2,
+          "hash_sha256": "5aa911a1bb0d407ee889dc65dec9dd5737eead43ae217e0071815a2275238f9e",
+          "modified_at": "2026-05-17T03:16:29.334620"
+        },
+        {
+          "filename": "question_patterns.csv",
+          "size_kb": 83.2,
+          "hash_sha256": "054a74271272c9cfd8d7bf811cec25e804fc2067339f3c6ccfbb707b47a33157",
+          "modified_at": "2026-05-17T03:16:29.432621"
+        },
+        {
+          "filename": "repeated_phrases.csv",
+          "size_kb": 1.7,
+          "hash_sha256": "2cff18c738f2c019c248593439d100726327f3a5de9b2cb8c0872951f1b0025b",
+          "modified_at": "2026-05-17T03:16:29.343622"
+        },
+        {
+          "filename": "semantic_summary_by_phase.json",
+          "size_kb": 7.3,
+          "hash_sha256": "b964c855c86cc62a62acceb57a5d80f48e720f835ac9430196ba4433ad136bf0",
+          "modified_at": "2026-05-17T03:16:33.497139"
+        }
+      ]
+    }
+  }
+}

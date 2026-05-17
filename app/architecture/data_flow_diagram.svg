@@ -1,0 +1,337 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1400">
+  <defs>
+    <style>
+      text { font-family: Arial, sans-serif; }
+      .title { font-size: 24px; font-weight: bold; fill: #1a1a1a; }
+      .stage-title { font-size: 16px; font-weight: bold; fill: #ffffff; }
+      .component-title { font-size: 13px; font-weight: bold; fill: #333333; }
+      .component-text { font-size: 11px; fill: #555555; }
+      .flow-label { font-size: 12px; fill: #666666; font-style: italic; }
+      .arrow { stroke: #666666; stroke-width: 2.5; fill: none; marker-end: url(#arrowhead); }
+      .response-arrow { stroke: #999999; stroke-width: 2; fill: none; stroke-dasharray: 5,5; marker-end: url(#arrowhead-response); }
+      .box-shadow { filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.2)); }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#666666"/>
+    </marker>
+    <marker id="arrowhead-response" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#999999"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="1400" fill="#fafafa"/>
+
+  <!-- Title -->
+  <text x="600" y="40" text-anchor="middle" class="title">P-OS Universal Protocol v4.0 - Data Flow Diagram</text>
+
+  <!-- Stage 1: Client Request -->
+  <g transform="translate(100, 70)">
+    <rect x="0" y="0" width="1000" height="100" rx="10" fill="#e3f2fd" stroke="#2196f3" stroke-width="2" class="box-shadow"/>
+    <circle cx="50" cy="50" r="25" fill="#2196f3"/>
+    <text x="50" y="57" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">1</text>
+    <text x="100" y="35" class="stage-title">Client Request</text>
+    <text x="100" y="55" class="component-text">External Brain API calls, Agent messages, Token queries, Health checks</text>
+
+    <!-- Request Types -->
+    <rect x="600" y="20" width="160" height="25" rx="3" fill="#bbdefb" stroke="#1976d2" stroke-width="1"/>
+    <text x="680" y="37" text-anchor="middle" class="component-text">GET /token/query</text>
+
+    <rect x="600" y="50" width="160" height="25" rx="3" fill="#bbdefb" stroke="#1976d2" stroke-width="1"/>
+    <text x="680" y="67" text-anchor="middle" class="component-text">POST /token/add</text>
+
+    <rect x="780" y="20" width="160" height="25" rx="3" fill="#bbdefb" stroke="#1976d2" stroke-width="1"/>
+    <text x="860" y="37" text-anchor="middle" class="component-text">POST /agent/message</text>
+
+    <rect x="780" y="50" width="160" height="25" rx="3" fill="#bbdefb" stroke="#1976d2" stroke-width="1"/>
+    <text x="860" y="67" text-anchor="middle" class="component-text">GET /health</text>
+  </g>
+
+  <!-- Arrow down -->
+  <line x1="600" y1="170" x2="600" y2="200" class="arrow"/>
+  <text x="615" y="190" class="flow-label">Request</text>
+
+  <!-- Stage 2: Edge Layer -->
+  <g transform="translate(100, 200)">
+    <rect x="0" y="0" width="1000" height="120" rx="10" fill="#f3e5f5" stroke="#9c27b0" stroke-width="2" class="box-shadow"/>
+    <circle cx="50" cy="60" r="25" fill="#9c27b0"/>
+    <text x="50" y="67" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">2</text>
+    <text x="100" y="45" class="stage-title">Edge Layer</text>
+    <text x="100" y="65" class="component-text">CDN, Load Balancer, API Gateway</text>
+
+    <!-- CDN -->
+    <rect x="250" y="30" width="200" height="70" rx="5" fill="#ffffff" stroke="#7b1fa2" stroke-width="1.5"/>
+    <text x="350" y="50" text-anchor="middle" class="component-title">CDN</text>
+    <text x="350" y="65" text-anchor="middle" class="component-text">Cache static content</text>
+    <text x="350" y="80" text-anchor="middle" class="component-text">Reduce latency</text>
+
+    <!-- Load Balancer -->
+    <rect x="500" y="30" width="200" height="70" rx="5" fill="#ffffff" stroke="#7b1fa2" stroke-width="1.5"/>
+    <text x="600" y="50" text-anchor="middle" class="component-title">Load Balancer</text>
+    <text x="600" y="65" text-anchor="middle" class="component-text">Distribute traffic</text>
+    <text x="600" y="80" text-anchor="middle" class="component-text">Health checking</text>
+
+    <!-- API Gateway -->
+    <rect x="750" y="30" width="200" height="70" rx="5" fill="#ffffff" stroke="#7b1fa2" stroke-width="1.5"/>
+    <text x="850" y="50" text-anchor="middle" class="component-title">API Gateway</text>
+    <text x="850" y="65" text-anchor="middle" class="component-text">Route requests</text>
+    <text x="850" y="80" text-anchor="middle" class="component-text">Rate limiting</text>
+  </g>
+
+  <!-- Arrow down -->
+  <line x1="600" y1="320" x2="600" y2="350" class="arrow"/>
+  <text x="615" y="340" class="flow-label">Forward</text>
+
+  <!-- Stage 3: Service Mesh -->
+  <g transform="translate(100, 350)">
+    <rect x="0" y="0" width="1000" height="120" rx="10" fill="#fff3e0" stroke="#ff9800" stroke-width="2" class="box-shadow"/>
+    <circle cx="50" cy="60" r="25" fill="#ff9800"/>
+    <text x="50" y="67" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">3</text>
+    <text x="100" y="45" class="stage-title">Service Mesh (L8)</text>
+    <text x="100" y="65" class="component-text">Service Discovery, Circuit Breaker, Retry Logic</text>
+
+    <!-- Service Discovery -->
+    <rect x="250" y="30" width="200" height="70" rx="5" fill="#ffffff" stroke="#f57c00" stroke-width="1.5"/>
+    <text x="350" y="50" text-anchor="middle" class="component-title">Service Discovery</text>
+    <text x="350" y="65" text-anchor="middle" class="component-text">Locate services</text>
+    <text x="350" y="80" text-anchor="middle" class="component-text">Agent registry</text>
+
+    <!-- Circuit Breaker -->
+    <rect x="500" y="30" width="200" height="70" rx="5" fill="#ffffff" stroke="#f57c00" stroke-width="1.5"/>
+    <text x="600" y="50" text-anchor="middle" class="component-title">Circuit Breaker</text>
+    <text x="600" y="65" text-anchor="middle" class="component-text">Fault tolerance</text>
+    <text x="600" y="80" text-anchor="middle" class="component-text">Prevent cascading</text>
+
+    <!-- Retry Logic -->
+    <rect x="750" y="30" width="200" height="70" rx="5" fill="#ffffff" stroke="#f57c00" stroke-width="1.5"/>
+    <text x="850" y="50" text-anchor="middle" class="component-title">Retry Logic</text>
+    <text x="850" y="65" text-anchor="middle" class="component-text">Exponential backoff</text>
+    <text x="850" y="80" text-anchor="middle" class="component-text">Max retries: 3</text>
+  </g>
+
+  <!-- Arrow down -->
+  <line x1="600" y1="470" x2="600" y2="500" class="arrow"/>
+  <text x="615" y="490" class="flow-label">Route</text>
+
+  <!-- Stage 4: Microservices Core -->
+  <g transform="translate(100, 500)">
+    <rect x="0" y="0" width="1000" height="220" rx="10" fill="#ffebee" stroke="#f44336" stroke-width="2" class="box-shadow"/>
+    <circle cx="50" cy="110" r="25" fill="#f44336"/>
+    <text x="50" y="117" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">4</text>
+    <text x="100" y="95" class="stage-title">Microservices Core (L9-L11)</text>
+    <text x="100" y="115" class="component-text">Kernel, Tokenizer, Policy Engine, Agent Framework</text>
+
+    <!-- Kernel Engine -->
+    <rect x="200" y="30" width="180" height="80" rx="5" fill="#ffffff" stroke="#d32f2f" stroke-width="1.5"/>
+    <text x="290" y="50" text-anchor="middle" class="component-title">Kernel Engine</text>
+    <text x="290" y="65" text-anchor="middle" class="component-text">Orchestration</text>
+    <text x="290" y="80" text-anchor="middle" class="component-text">Event Bus (L10)</text>
+    <text x="290" y="95" text-anchor="middle" class="component-text">Scheduler</text>
+
+    <!-- Tokenizer -->
+    <rect x="410" y="30" width="180" height="80" rx="5" fill="#ffffff" stroke="#d32f2f" stroke-width="1.5"/>
+    <text x="500" y="50" text-anchor="middle" class="component-title">Tokenizer (L9)</text>
+    <text x="500" y="65" text-anchor="middle" class="component-text">16 Categories</text>
+    <text x="500" y="80" text-anchor="middle" class="component-text">Scoring & Linking</text>
+    <text x="500" y="95" text-anchor="middle" class="component-text">Change Detection</text>
+
+    <!-- Policy Engine -->
+    <rect x="620" y="30" width="180" height="80" rx="5" fill="#ffffff" stroke="#d32f2f" stroke-width="1.5"/>
+    <text x="710" y="50" text-anchor="middle" class="component-title">Policy Engine (L11)</text>
+    <text x="710" y="65" text-anchor="middle" class="component-text">RBAC Check</text>
+    <text x="710" y="80" text-anchor="middle" class="component-text">Permission Audit</text>
+    <text x="710" y="95" text-anchor="middle" class="component-text">Protected Tokens</text>
+
+    <!-- Message Router -->
+    <rect x="200" y="125" width="180" height="70" rx="5" fill="#ffffff" stroke="#d32f2f" stroke-width="1.5"/>
+    <text x="290" y="145" text-anchor="middle" class="component-title">Message Router</text>
+    <text x="290" y="160" text-anchor="middle" class="component-text">Priority routing (1-10)</text>
+    <text x="290" y="175" text-anchor="middle" class="component-text">Protocol validation</text>
+    <text x="290" y="190" text-anchor="middle" class="component-text">Broadcast support</text>
+
+    <!-- Agent Framework -->
+    <rect x="410" y="125" width="180" height="70" rx="5" fill="#ffffff" stroke="#d32f2f" stroke-width="1.5"/>
+    <text x="500" y="145" text-anchor="middle" class="component-title">Agent Framework V2</text>
+    <text x="500" y="160" text-anchor="middle" class="component-text">Process/Query/Notify</text>
+    <text x="500" y="175" text-anchor="middle" class="component-text">Protocols: REQUEST,</text>
+    <text x="500" y="190" text-anchor="middle" class="component-text">INFORM, ALERT, VETO</text>
+
+    <!-- REST API Server -->
+    <rect x="620" y="125" width="180" height="70" rx="5" fill="#ffffff" stroke="#d32f2f" stroke-width="1.5"/>
+    <text x="710" y="145" text-anchor="middle" class="component-title">REST API Server</text>
+    <text x="710" y="160" text-anchor="middle" class="component-text">12 Endpoints</text>
+    <text x="710" y="175" text-anchor="middle" class="component-text">Token CRUD</text>
+    <text x="710" y="190" text-anchor="middle" class="component-text">Context Export</text>
+  </g>
+
+  <!-- Arrow down -->
+  <line x1="600" y1="720" x2="600" y2="750" class="arrow"/>
+  <text x="615" y="740" class="flow-label">Process</text>
+
+  <!-- Stage 5: Message Queue & Event Bus -->
+  <g transform="translate(100, 750)">
+    <rect x="0" y="0" width="1000" height="120" rx="10" fill="#e0f2f1" stroke="#009688" stroke-width="2" class="box-shadow"/>
+    <circle cx="50" cy="60" r="25" fill="#009688"/>
+    <text x="50" y="67" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">5</text>
+    <text x="100" y="45" class="stage-title">Message Queue & Event Bus (L10)</text>
+    <text x="100" y="65" class="component-text">Asynchronous event processing, Priority queue</text>
+
+    <!-- Event Bus -->
+    <rect x="250" y="30" width="220" height="70" rx="5" fill="#ffffff" stroke="#00897b" stroke-width="1.5"/>
+    <text x="360" y="50" text-anchor="middle" class="component-title">Event Bus</text>
+    <text x="360" y="65" text-anchor="middle" class="component-text">TOKEN_CREATED</text>
+    <text x="360" y="80" text-anchor="middle" class="component-text">CONFLICT_DETECTED</text>
+    <text x="360" y="95" text-anchor="middle" class="component-text">ALERT_HIGH</text>
+
+    <!-- Priority Queue -->
+    <rect x="520" y="30" width="220" height="70" rx="5" fill="#ffffff" stroke="#00897b" stroke-width="1.5"/>
+    <text x="630" y="50" text-anchor="middle" class="component-title">Priority Queue</text>
+    <text x="630" y="65" text-anchor="middle" class="component-text">Priority 1-10</text>
+    <text x="630" y="80" text-anchor="middle" class="component-text">Persistent events</text>
+    <text x="630" y="95" text-anchor="middle" class="component-text">Async handling</text>
+
+    <!-- Change Detector -->
+    <rect x="790" y="30" width="160" height="70" rx="5" fill="#ffffff" stroke="#00897b" stroke-width="1.5"/>
+    <text x="870" y="50" text-anchor="middle" class="component-title">Change Detector</text>
+    <text x="870" y="65" text-anchor="middle" class="component-text">NEW/UPDATE</text>
+    <text x="870" y="80" text-anchor="middle" class="component-text">CONFLICT/DECAY</text>
+  </g>
+
+  <!-- Arrow down -->
+  <line x1="600" y1="870" x2="600" y2="900" class="arrow"/>
+  <text x="615" y="890" class="flow-label">Persist</text>
+
+  <!-- Stage 6: Data Persistence -->
+  <g transform="translate(100, 900)">
+    <rect x="0" y="0" width="1000" height="140" rx="10" fill="#e8f5e9" stroke="#4caf50" stroke-width="2" class="box-shadow"/>
+    <circle cx="50" cy="70" r="25" fill="#4caf50"/>
+    <text x="50" y="77" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">6</text>
+    <text x="100" y="55" class="stage-title">Data Persistence</text>
+    <text x="100" y="75" class="component-text">SQLite Database with Schema v4.0</text>
+
+    <!-- Core Tables -->
+    <rect x="200" y="30" width="180" height="90" rx="5" fill="#ffffff" stroke="#388e3c" stroke-width="1.5"/>
+    <text x="290" y="50" text-anchor="middle" class="component-title">Core Tables</text>
+    <text x="290" y="65" text-anchor="middle" class="component-text">• tokens (16 cats)</text>
+    <text x="290" y="80" text-anchor="middle" class="component-text">• change_log</text>
+    <text x="290" y="95" text-anchor="middle" class="component-text">• conflicts</text>
+    <text x="290" y="110" text-anchor="middle" class="component-text">• sources</text>
+
+    <!-- Event & Agent Tables -->
+    <rect x="410" y="30" width="180" height="90" rx="5" fill="#ffffff" stroke="#388e3c" stroke-width="1.5"/>
+    <text x="500" y="50" text-anchor="middle" class="component-title">Event & Agent Tables</text>
+    <text x="500" y="65" text-anchor="middle" class="component-text">• events</text>
+    <text x="500" y="80" text-anchor="middle" class="component-text">• agents</text>
+    <text x="500" y="95" text-anchor="middle" class="component-text">• agent_messages</text>
+    <text x="500" y="110" text-anchor="middle" class="component-text">• policy_audit</text>
+
+    <!-- Context Tables -->
+    <rect x="620" y="30" width="180" height="90" rx="5" fill="#ffffff" stroke="#388e3c" stroke-width="1.5"/>
+    <text x="710" y="50" text-anchor="middle" class="component-title">Context Tables</text>
+    <text x="710" y="65" text-anchor="middle" class="component-text">• blocks (L8)</text>
+    <text x="710" y="80" text-anchor="middle" class="component-text">• shared_context</text>
+    <text x="710" y="95" text-anchor="middle" class="component-text">• artefacts</text>
+    <text x="710" y="110" text-anchor="middle" class="component-text">• ingest_log</text>
+
+    <!-- Indexes -->
+    <rect x="830" y="30" width="120" height="90" rx="5" fill="#ffffff" stroke="#388e3c" stroke-width="1.5"/>
+    <text x="890" y="50" text-anchor="middle" class="component-title">Performance</text>
+    <text x="890" y="65" text-anchor="middle" class="component-text">Indexes on:</text>
+    <text x="890" y="80" text-anchor="middle" class="component-text">category, status,</text>
+    <text x="890" y="95" text-anchor="middle" class="component-text">weight, owner</text>
+  </g>
+
+  <!-- Arrow down -->
+  <line x1="600" y1="1040" x2="600" y2="1070" class="arrow"/>
+  <text x="615" y="1060" class="flow-label">Monitor</text>
+
+  <!-- Stage 7: Monitoring & Logging -->
+  <g transform="translate(100, 1070)">
+    <rect x="0" y="0" width="1000" height="120" rx="10" fill="#fce4ec" stroke="#e91e63" stroke-width="2" class="box-shadow"/>
+    <circle cx="50" cy="60" r="25" fill="#e91e63"/>
+    <text x="50" y="67" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold">7</text>
+    <text x="100" y="45" class="stage-title">Monitoring & Observability</text>
+    <text x="100" y="65" class="component-text">Health checks, Audit trails, System metrics</text>
+
+    <!-- Health Monitoring -->
+    <rect x="250" y="30" width="200" height="70" rx="5" fill="#ffffff" stroke="#c2185b" stroke-width="1.5"/>
+    <text x="350" y="50" text-anchor="middle" class="component-title">Health Monitoring</text>
+    <text x="350" y="65" text-anchor="middle" class="component-text">GET /health</text>
+    <text x="350" y="80" text-anchor="middle" class="component-text">GET /status</text>
+    <text x="350" y="95" text-anchor="middle" class="component-text">Component checks</text>
+
+    <!-- Audit Trail -->
+    <rect x="500" y="30" width="200" height="70" rx="5" fill="#ffffff" stroke="#c2185b" stroke-width="1.5"/>
+    <text x="600" y="50" text-anchor="middle" class="component-title">Audit Trail (L11)</text>
+    <text x="600" y="65" text-anchor="middle" class="component-text">Policy decisions</text>
+    <text x="600" y="80" text-anchor="middle" class="component-text">Token changes</text>
+    <text x="600" y="95" text-anchor="middle" class="component-text">Agent actions</text>
+
+    <!-- Event Log -->
+    <rect x="750" y="30" width="200" height="70" rx="5" fill="#ffffff" stroke="#c2185b" stroke-width="1.5"/>
+    <text x="850" y="50" text-anchor="middle" class="component-title">Event Log</text>
+    <text x="850" y="65" text-anchor="middle" class="component-text">GET /event/log</text>
+    <text x="850" y="80" text-anchor="middle" class="component-text">Persistent events</text>
+    <text x="850" y="95" text-anchor="middle" class="component-text">Debugging support</text>
+  </g>
+
+  <!-- Response Flow Arrows (right side) -->
+  <line x1="1150" y1="1130" x2="1150" y2="1040" class="response-arrow"/>
+  <text x="1160" y="1090" class="flow-label">Response</text>
+
+  <line x1="1150" y1="900" x2="1150" y2="870" class="response-arrow"/>
+  <line x1="1150" y1="750" x2="1150" y2="720" class="response-arrow"/>
+  <line x1="1150" y1="500" x2="1150" y2="470" class="response-arrow"/>
+  <line x1="1150" y1="350" x2="1150" y2="320" class="response-arrow"/>
+  <line x1="1150" y1="200" x2="1150" y2="170" class="response-arrow"/>
+
+  <!-- Cross-cutting Concerns Box -->
+  <g transform="translate(50, 1220)">
+    <rect x="0" y="0" width="1100" height="100" rx="10" fill="#f5f5f5" stroke="#9e9e9e" stroke-width="2" stroke-dasharray="5,5"/>
+    <text x="550" y="30" text-anchor="middle" class="stage-title" fill="#424242">Cross-Cutting Concerns</text>
+
+    <!-- Security -->
+    <rect x="100" y="45" width="200" height="40" rx="5" fill="#ffffff" stroke="#757575" stroke-width="1.5"/>
+    <text x="200" y="62" text-anchor="middle" class="component-title">Security Layer</text>
+    <text x="200" y="77" text-anchor="middle" class="component-text">RBAC, Protected tokens</text>
+
+    <!-- Error Handling -->
+    <rect x="350" y="45" width="200" height="40" rx="5" fill="#ffffff" stroke="#757575" stroke-width="1.5"/>
+    <text x="450" y="62" text-anchor="middle" class="component-title">Error Handling</text>
+    <text x="450" y="77" text-anchor="middle" class="component-text">Circuit breaker, Retries</text>
+
+    <!-- Migration -->
+    <rect x="600" y="45" width="200" height="40" rx="5" fill="#ffffff" stroke="#757575" stroke-width="1.5"/>
+    <text x="700" y="62" text-anchor="middle" class="component-title">Migration Support</text>
+    <text x="700" y="77" text-anchor="middle" class="component-text">v3.x to v4.0 auto-migrate</text>
+
+    <!-- Backup -->
+    <rect x="850" y="45" width="200" height="40" rx="5" fill="#ffffff" stroke="#757575" stroke-width="1.5"/>
+    <text x="950" y="62" text-anchor="middle" class="component-title">Backup System</text>
+    <text x="950" y="77" text-anchor="middle" class="component-text">Automatic backups</text>
+  </g>
+
+  <!-- Legend -->
+  <g transform="translate(50, 1350)">
+    <rect x="0" y="-10" width="30" height="15" fill="#2196f3"/>
+    <text x="40" y="2" class="legend-text">Stage 1: Client</text>
+
+    <rect x="150" y="-10" width="30" height="15" fill="#9c27b0"/>
+    <text x="190" y="2" class="legend-text">Stage 2: Edge</text>
+
+    <rect x="280" y="-10" width="30" height="15" fill="#ff9800"/>
+    <text x="320" y="2" class="legend-text">Stage 3: Mesh</text>
+
+    <rect x="430" y="-10" width="30" height="15" fill="#f44336"/>
+    <text x="470" y="2" class="legend-text">Stage 4: Core</text>
+
+    <rect x="580" y="-10" width="30" height="15" fill="#009688"/>
+    <text x="620" y="2" class="legend-text">Stage 5: Queue</text>
+
+    <rect x="750" y="-10" width="30" height="15" fill="#4caf50"/>
+    <text x="790" y="2" class="legend-text">Stage 6: Data</text>
+
+    <rect x="910" y="-10" width="30" height="15" fill="#e91e63"/>
+    <text x="950" y="2" class="legend-text">Stage 7: Monitor</text>
+  </g>
+</svg>

@@ -1,0 +1,25 @@
+Forensic Relationship Export Package
+Version: 1.0
+Created: 2026-05-17 03:18:16
+
+Pipeline Version:
+- forensic_export_raw.py: v1.0 (ASCII-safe encoding)
+- analyze_relationship_raw.py: v1.0
+- detect_relationship_phases.py: v1.0
+- extract_semantic_patterns.py: v1.0 (ASCII normalization)
+- check_encoding_quality.py: v1.0
+- package_forensic_export.py: v1.0
+
+Source Data:
+- Conversation ID: kasiaju_1977350892357109
+- Participants: Kasia Ju, Pawel Nazaruk
+- Total Messages: 8,779
+- Date Range: 2019-01-30 to 2022-05-14
+
+Architecture:
+RAW DATA → METRICS → TIMELINE → SEMANTIC
+(strict separation of data from interpretation)
+
+Encoding Principle:
+Analytical layer = ASCII-safe
+Polish diacritics converted: ą→a, ć→c, ę→e, ł→l, ń→n, ó→o, ś→s, ż→z, ź→z

@@ -1,0 +1,27 @@
+{
+  "export_metadata": {
+    "generated_at": "2026-05-17T03:15:56.389709",
+    "source": "facebook_messenger_export",
+    "total_messages": 8779,
+    "format": "raw_forensic_export"
+  },
+  "time_range": {
+    "earliest": "2019-01-30T22:02:18.920000",
+    "latest": "2022-05-14T14:13:29.314000",
+    "duration_days": 1199.63
+  },
+  "participant_statistics": {
+    "Pawel Nazaruk": 3910,
+    "Kasia Ju": 4869
+  },
+  "media_statistics": {
+    "photo": 33,
+    "gif": 1,
+    "video": 1
+  },
+  "interaction_metrics": {
+    "average_reply_gap_minutes": 196.8,
+    "min_reply_gap_minutes": 0.0,
+    "max_reply_gap_minutes": 1117595.09
+  }
+}

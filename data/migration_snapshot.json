@@ -1,0 +1,348 @@
+[
+  {
+    "database": "citizen_feedback_test.db",
+    "file_path": "data\\citizen_feedback_test.db",
+    "timestamp": "2026-05-12T12:34:03.247981+00:00",
+    "file_hash_sha256": "0dc23997ad4838293345dafb77370f39f580a474e28f05fb83b651987991b4c2",
+    "file_size_bytes": 65536,
+    "tables": {
+      "citizen_feedback": {
+        "row_count": 200,
+        "schema_signature": "416341400a0030dc",
+        "sample_hash_first_10": "34c5649e33e46207"
+      },
+      "ingestion_approvals": {
+        "row_count": 0,
+        "schema_signature": "a1ab2e6286e1f59f",
+        "sample_hash_first_10": "empty"
+      },
+      "ingestion_audit_log": {
+        "row_count": 1,
+        "schema_signature": "52cff4784aa766fa",
+        "sample_hash_first_10": "80da044fc561e246"
+      }
+    }
+  },
+  {
+    "database": "municipal_projects_test.db",
+    "file_path": "data\\municipal_projects_test.db",
+    "timestamp": "2026-05-12T12:34:03.266798+00:00",
+    "file_hash_sha256": "b0ef9fc68a777cb3d96085aa302c76bd86d37447fc755bacaf926f6fe33c40d2",
+    "file_size_bytes": 86016,
+    "tables": {
+      "municipal_projects": {
+        "row_count": 180,
+        "schema_signature": "cfe5ba7ca2a9a4af",
+        "sample_hash_first_10": "4e5fe4ae7aa9c08a"
+      },
+      "ingestion_approvals": {
+        "row_count": 0,
+        "schema_signature": "a1ab2e6286e1f59f",
+        "sample_hash_first_10": "empty"
+      },
+      "ingestion_audit_log": {
+        "row_count": 1,
+        "schema_signature": "52cff4784aa766fa",
+        "sample_hash_first_10": "beeab13733a4eeeb"
+      }
+    }
+  },
+  {
+    "database": "geospatial_registry_test.db",
+    "file_path": "data\\geospatial_registry_test.db",
+    "timestamp": "2026-05-12T12:34:03.270956+00:00",
+    "file_hash_sha256": "bc4dff7147d5ffb1acc5f88a0250ecf67e5dab545c867e8bc752b29d49e0b5cb",
+    "file_size_bytes": 40960,
+    "tables": {
+      "geospatial_nodes": {
+        "row_count": 70,
+        "schema_signature": "fbb0358ea621a78b",
+        "sample_hash_first_10": "9bc54991e0d0f52b"
+      },
+      "ingestion_approvals": {
+        "row_count": 0,
+        "schema_signature": "a1ab2e6286e1f59f",
+        "sample_hash_first_10": "empty"
+      },
+      "ingestion_audit_log": {
+        "row_count": 1,
+        "schema_signature": "52cff4784aa766fa",
+        "sample_hash_first_10": "3f41e1d4501f2b57"
+      }
+    }
+  },
+  {
+    "database": "org_structure_test.db",
+    "file_path": "data\\org_structure_test.db",
+    "timestamp": "2026-05-12T12:34:03.274920+00:00",
+    "file_hash_sha256": "6eb405203bce111eb0ae86b565f5bac1e193cdb0fec22ca5d15dc3b07d632dbd",
+    "file_size_bytes": 57344,
+    "tables": {
+      "employees": {
+        "row_count": 150,
+        "schema_signature": "33634421ba457f8d",
+        "sample_hash_first_10": "2ccdb38413d25980"
+      },
+      "ingestion_approvals": {
+        "row_count": 0,
+        "schema_signature": "a1ab2e6286e1f59f",
+        "sample_hash_first_10": "empty"
+      },
+      "ingestion_audit_log": {
+        "row_count": 1,
+        "schema_signature": "52cff4784aa766fa",
+        "sample_hash_first_10": "3680b0bce3578076"
+      }
+    }
+  },
+  {
+    "database": "gmina_staff_test.db",
+    "file_path": "data\\gmina_staff_test.db",
+    "timestamp": "2026-05-12T12:34:03.278889+00:00",
+    "file_hash_sha256": "a8adb519a8354fd7118eeba82304ff2c3d0d7256551ceb5f21ff4f2e004cfc1f",
+    "file_size_bytes": 36864,
+    "tables": {
+      "staff_directory": {
+        "row_count": 45,
+        "schema_signature": "2cb3f4a9fd8fa0cc",
+        "sample_hash_first_10": "cb19b5614821b9d4"
+      },
+      "ingestion_approvals": {
+        "row_count": 0,
+        "schema_signature": "a1ab2e6286e1f59f",
+        "sample_hash_first_10": "empty"
+      },
+      "ingestion_audit_log": {
+        "row_count": 1,
+        "schema_signature": "52cff4784aa766fa",
+        "sample_hash_first_10": "ce0604af7ad71c40"
+      }
+    }
+  },
+  {
+    "database": "noi_core.db",
+    "file_path": "data\\noi_core.db",
+    "timestamp": "2026-05-12T12:34:03.283959+00:00",
+    "file_hash_sha256": "e23f4ce8548e59afb0a6e35be1398f0ce320687e95fcdc5b047c3b8cca0e3493",
+    "file_size_bytes": 483328,
+    "tables": {
+      "security_audit": {
+        "row_count": 10,
+        "schema_signature": "58ab307ec758ccfb",
+        "sample_hash_first_10": "36aca55a62830a90"
+      },
+      "role_hierarchy": {
+        "row_count": 6,
+        "schema_signature": "afff6328bf31b5b2",
+        "sample_hash_first_10": "2e1ac506b6c3dc79"
+      },
+      "command_permissions": {
+        "row_count": 12,
+        "schema_signature": "b701b21a20346224",
+        "sample_hash_first_10": "d115117206cb8504"
+      },
+      "schema_migrations": {
+        "row_count": 1,
+        "schema_signature": "76c04a4038c8cbfa",
+        "sample_hash_first_10": "9050f3613fe3add3"
+      },
+      "semantic_records": {
+        "row_count": 16,
+        "schema_signature": "2cbff21d94d9c213",
+        "sample_hash_first_10": "280b12fffd3e911e"
+      },
+      "semantic_relationships": {
+        "row_count": 0,
+        "schema_signature": "00956d5daa521b35",
+        "sample_hash_first_10": "empty"
+      },
+      "identity_graph": {
+        "row_count": 0,
+        "schema_signature": "b2143d1f15ed32ad",
+        "sample_hash_first_10": "empty"
+      },
+      "memory_index": {
+        "row_count": 0,
+        "schema_signature": "b13ad5e92e950bcb",
+        "sample_hash_first_10": "empty"
+      },
+      "semantic_validation_log": {
+        "row_count": 0,
+        "schema_signature": "1a5d0bfc141adce4",
+        "sample_hash_first_10": "empty"
+      },
+      "graph_nodes": {
+        "row_count": 0,
+        "schema_signature": "ce9410fd733873b6",
+        "sample_hash_first_10": "empty"
+      },
+      "graph_relationships": {
+        "row_count": 0,
+        "schema_signature": "5fe4cde30567b3ea",
+        "sample_hash_first_10": "empty"
+      },
+      "graph_audit_log": {
+        "row_count": 0,
+        "schema_signature": "c72c5105b0063f9b",
+        "sample_hash_first_10": "empty"
+      },
+      "tokens": {
+        "row_count": 0,
+        "schema_signature": "49fbc01354197fac",
+        "sample_hash_first_10": "empty"
+      },
+      "change_log": {
+        "row_count": 0,
+        "schema_signature": "a3990019f0c09ecb",
+        "sample_hash_first_10": "empty"
+      },
+      "conflicts": {
+        "row_count": 0,
+        "schema_signature": "3c7c225d4529c432",
+        "sample_hash_first_10": "empty"
+      },
+      "sources": {
+        "row_count": 0,
+        "schema_signature": "39752194865aba6c",
+        "sample_hash_first_10": "empty"
+      },
+      "policy_audit": {
+        "row_count": 0,
+        "schema_signature": "a59ceaa31a3f5082",
+        "sample_hash_first_10": "empty"
+      },
+      "external_ingest_log": {
+        "row_count": 0,
+        "schema_signature": "e0140b65bb1da15a",
+        "sample_hash_first_10": "empty"
+      },
+      "events": {
+        "row_count": 0,
+        "schema_signature": "def7424a10b15767",
+        "sample_hash_first_10": "empty"
+      },
+      "agents": {
+        "row_count": 5,
+        "schema_signature": "faf2279e9462abe2",
+        "sample_hash_first_10": "22356bccfc692de1"
+      },
+      "agent_messages": {
+        "row_count": 0,
+        "schema_signature": "0eca96aa580b50b1",
+        "sample_hash_first_10": "empty"
+      },
+      "blocks": {
+        "row_count": 0,
+        "schema_signature": "b0ac892b8fe03360",
+        "sample_hash_first_10": "empty"
+      },
+      "shared_context": {
+        "row_count": 0,
+        "schema_signature": "fb7d508ce8787c8d",
+        "sample_hash_first_10": "empty"
+      },
+      "artefacts": {
+        "row_count": 0,
+        "schema_signature": "e47fa6a0c5ab2f34",
+        "sample_hash_first_10": "empty"
+      },
+      "schema_meta": {
+        "row_count": 0,
+        "schema_signature": "03baf65f8aa06419",
+        "sample_hash_first_10": "empty"
+      },
+      "event_journal": {
+        "row_count": 0,
+        "schema_signature": "fb9b318f439a4faa",
+        "sample_hash_first_10": "empty"
+      },
+      "command_log": {
+        "row_count": 0,
+        "schema_signature": "eb49b28fd0390afc",
+        "sample_hash_first_10": "empty"
+      },
+      "state_snapshots": {
+        "row_count": 0,
+        "schema_signature": "e35c187504b38c6f",
+        "sample_hash_first_10": "empty"
+      },
+      "clock_state": {
+        "row_count": 1,
+        "schema_signature": "7d7d2d44e4ebca28",
+        "sample_hash_first_10": "a69b56195f532698"
+      },
+      "idempotency_cache": {
+        "row_count": 0,
+        "schema_signature": "baa23704064c1a5d",
+        "sample_hash_first_10": "empty"
+      },
+      "mfa_config": {
+        "row_count": 0,
+        "schema_signature": "e3d0f3d0c2cc23a7",
+        "sample_hash_first_10": "empty"
+      }
+    }
+  },
+  {
+    "database": "service_requests_test.db",
+    "file_path": "data\\service_requests_test.db",
+    "timestamp": "2026-05-12T12:34:03.350340+00:00",
+    "file_hash_sha256": "eaa34964d2f1295043c39f98d08d41913325a18de15c440987132bddc15bede2",
+    "file_size_bytes": 32768,
+    "tables": {
+      "service_requests_backup": {
+        "row_count": 150,
+        "schema_signature": "66c05514455c7fa9",
+        "sample_hash_first_10": "f6578995a8340a47"
+      }
+    }
+  },
+  {
+    "database": "semantic_tokens_test.db",
+    "file_path": "data\\semantic_tokens_test.db",
+    "timestamp": "2026-05-12T12:34:03.353242+00:00",
+    "file_hash_sha256": "7ee96669957d5bcfd2a5e78b5079887ea6054057a157dc06317637e5e0ba089b",
+    "file_size_bytes": 40960,
+    "tables": {
+      "semantic_tokens": {
+        "row_count": 45,
+        "schema_signature": "17c0dc184ac734e5",
+        "sample_hash_first_10": "8546914f8d0b19ab"
+      },
+      "ingestion_approvals": {
+        "row_count": 0,
+        "schema_signature": "a1ab2e6286e1f59f",
+        "sample_hash_first_10": "empty"
+      },
+      "ingestion_audit_log": {
+        "row_count": 1,
+        "schema_signature": "52cff4784aa766fa",
+        "sample_hash_first_10": "6d6eca0ad0038295"
+      }
+    }
+  },
+  {
+    "database": "token_ingestion_test.db",
+    "file_path": "data\\token_ingestion_test.db",
+    "timestamp": "2026-05-12T12:34:03.356910+00:00",
+    "file_hash_sha256": "15a8ae3c6b3d8f31a166c92847b93d26b53073da7b1a5ed69a5fe30758704a8a",
+    "file_size_bytes": 49152,
+    "tables": {
+      "ingested_tokens": {
+        "row_count": 36,
+        "schema_signature": "68a26c76f6e898e6",
+        "sample_hash_first_10": "381850759c739ec6"
+      },
+      "ingestion_approvals": {
+        "row_count": 0,
+        "schema_signature": "a1ab2e6286e1f59f",
+        "sample_hash_first_10": "empty"
+      },
+      "ingestion_audit_log": {
+        "row_count": 1,
+        "schema_signature": "52cff4784aa766fa",
+        "sample_hash_first_10": "0cab8317fb37a5f0"
+      }
+    }
+  }
+]
