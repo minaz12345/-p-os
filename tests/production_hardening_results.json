@@ -1,0 +1,195 @@
+{
+  "timestamp": "2026-05-17T07:41:49.412727",
+  "test_categories": {
+    "load_testing": {
+      "test_name": "Load Testing",
+      "scenarios": [
+        {
+          "concurrency": 5,
+          "label": "5 concurrent",
+          "total_time_seconds": 11.28,
+          "successes": 5,
+          "failures": 0,
+          "success_rate_percent": 100.0,
+          "response_times": [
+            11160.430431365967,
+            11237.11085319519,
+            11256.289005279541,
+            11270.015239715576,
+            11275.910377502441
+          ],
+          "errors": [],
+          "success": true
+        },
+        {
+          "concurrency": 10,
+          "label": "10 concurrent",
+          "total_time_seconds": 20.93,
+          "successes": 10,
+          "failures": 0,
+          "success_rate_percent": 100.0,
+          "response_times": [
+            18575.419902801514,
+            20228.212118148804,
+            20345.191955566406,
+            20691.77556037903,
+            20781.57687187195,
+            20790.104627609253,
+            20899.356603622437,
+            20906.415462493896,
+            20902.862548828125,
+            20919.572353363037
+          ],
+          "errors": [],
+          "success": true
+        }
+      ],
+      "passed": true,
+      "statistics": {
+        "total_requests": 15,
+        "avg_response_time_ms": 17416.02,
+        "max_response_time_ms": 20919.57,
+        "min_response_time_ms": 11160.43,
+        "requests_per_second": 0.0
+      }
+    },
+    "stress_testing": {
+      "test_name": "Stress Testing",
+      "scenarios": [
+        {
+          "concurrency": 50,
+          "label": "50 concurrent",
+          "total_time_seconds": 89.22,
+          "successes": 50,
+          "failures": 0,
+          "success_rate_percent": 100.0,
+          "response_times": [
+            85833.16540718079,
+            86460.94536781311,
+            87041.41974449158,
+            87316.16806983948,
+            87408.21480751038,
+            87491.5201663971,
+            87554.77499961853,
+            87568.12596321106,
+            87625.93913078308,
+            87562.65759468079,
+            87848.459482193,
+            87846.43316268921,
+            87837.3634815216,
+            87814.2466545105,
+            87911.31544113159,
+            88080.72781562805,
+            88036.02766990662,
+            88136.5716457367,
+            88080.56807518005,
+            88173.9559173584,
+            88220.18885612488,
+            88261.96479797363,
+            88314.30745124817,
+            88446.52485847473,
+            88496.69313430786,
+            88538.54036331177,
+            88481.45627975464,
+            88493.8862323761,
+            88547.1305847168,
+            88564.16940689087,
+            88520.2260017395,
+            88596.08697891235,
+            88460.11114120483,
+            88527.78100967407,
+            88616.0945892334,
+            88666.33534431458,
+            88778.70345115662,
+            88887.09497451782,
+            88855.9501171112,
+            88849.17545318604,
+            88923.34365844727,
+            88960.02292633057,
+            89034.70277786255,
+            88976.9196510315,
+            88972.44548797607,
+            89077.30507850647,
+            89111.49334907532,
+            89051.93710327148,
+            89119.92311477661,
+            89190.85884094238
+          ],
+          "errors": [],
+          "success": true
+        },
+        {
+          "request_count": 100,
+          "total_time_seconds": 158.29,
+          "successes": 100,
+          "failures": 0,
+          "requests_per_second": 0.63,
+          "success": true
+        }
+      ],
+      "passed": true
+    },
+    "edge_cases": {
+      "test_name": "Edge Case Testing",
+      "scenarios": [
+        {
+          "scenario": "Large dataset (8,779 messages)",
+          "success": true,
+          "response_code": 201,
+          "message": "Export approved and ready for download"
+        },
+        {
+          "scenario": "Empty/missing data handling",
+          "scenarios_passed": 3,
+          "total_scenarios": 3,
+          "success": true
+        },
+        {
+          "scenario": "Malformed input handling",
+          "scenarios_passed": 2,
+          "total_scenarios": 2,
+          "success": true
+        }
+      ],
+      "passed": true
+    },
+    "compliance": {
+      "test_name": "Compliance Testing",
+      "scenarios": [
+        {
+          "scenario": "72-hour deadline enforcement",
+          "created_at": "2026-05-17T07:46:32.467436",
+          "deadline_at": "2026-05-20T07:46:32.467436",
+          "deadline_hours": 72,
+          "accuracy_seconds": 0.0,
+          "success": true
+        },
+        {
+          "scenario": "Idempotency blocking",
+          "first_request_status": 201,
+          "second_request_status": 409,
+          "first_succeeded": true,
+          "second_blocked": true,
+          "success": true
+        },
+        {
+          "scenario": "Certificate structure validation",
+          "request_id": "d27ce2ef-7a27-436d-a104-b9c6485accf3",
+          "certificate_id": "cert_d27ce2ef-7a27-436d-a104-b9c6485accf3_20260517_074635",
+          "missing_fields": [],
+          "w11_structure_valid": true,
+          "overall_verdict": "APPROVED",
+          "success": true
+        }
+      ],
+      "passed": true
+    }
+  },
+  "summary": {
+    "total_duration_seconds": 285.95,
+    "categories_tested": 4,
+    "categories_passed": 4,
+    "overall_pass_rate_percent": 100.0,
+    "all_tests_passed": true
+  }
+}
