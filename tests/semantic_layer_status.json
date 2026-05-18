@@ -1,0 +1,44 @@
+{
+  "semantic_layer": {
+    "status": "NOT_ENABLED_BY_DESIGN",
+    "version": "v1.0.0-core",
+    "reason": "Semantic features require S1-S7 safety gates before implementation",
+    
+    "test_suite": {
+      "file": "tests/test_semantic_fidelity_validation.py",
+      "tests": 18,
+      "categories": 6,
+      "pass_rate": "0/6",
+      "interpretation": "INTENTIONAL - defines specification for Phase 6 (v2.0+)",
+      "not_failure": true
+    },
+    
+    "safety_gates": {
+      "S1": "No person replacement - documented",
+      "S2": "No emotional certainty - documented",
+      "S3": "Source traceability - documented",
+      "S4": "Layer separation - documented",
+      "S5": "Consent boundary - documented",
+      "S6": "Repair humility - documented",
+      "S7": "Reversibility - documented"
+    },
+    
+    "enforcement": {
+      "v1.0.0-core": "Documentation only",
+      "v2.0+": "Full enforcement required before deployment"
+    },
+    
+    "next_phase": {
+      "phase": 6,
+      "version": "v2.0.0+",
+      "trigger": "After 30-day observation of v1.0.0-core",
+      "prerequisites": [
+        "S1-S7 gates documented ✓",
+        "Anchor Registry designed ✓",
+        "Evidence linking specified ✓",
+        "Operator approval workflow designed ✓",
+        "Test suite created ✓"
+      ]
+    }
+  }
+}
