@@ -1,9 +1,0 @@
-{
-  "timestamp": "2026-05-07T07:53:10",
-  "tables": "verified",
-  "size_bytes": 184390,
-  "database": "pos_operational",
-  "status": "success",
-  "file": "D:\\pos7\\data\\backups\\daily\\pos_operational_20260507_075309.sql",
-  "size_mb": 0.18
-}

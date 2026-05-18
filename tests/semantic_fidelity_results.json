@@ -1,0 +1,235 @@
+{
+  "timestamp": "2026-05-17T11:12:37.708062",
+  "test_categories": {
+    "gravity_well_determinism": {
+      "test_name": "Gravity Well Determinism",
+      "tests": [
+        {
+          "test_name": "Gravity Well Hash Stability",
+          "description": "Same messages must produce identical gravity wells across 10 runs",
+          "runs": [
+            {
+              "run_number": 1,
+              "hash": "778a1b29405d73c7c2c8fb54ab8ca5553f44483d1bc121739d536c467a7b6383"
+            },
+            {
+              "run_number": 2,
+              "hash": "6ef6e468f8c9d4e22927efcad5d424c3d4a51d95350942f4fc08628b0d6b611f"
+            },
+            {
+              "run_number": 3,
+              "hash": "b80af4c89983427419cefecc27e03ad4b7c287950fa435e7a530a175e0aa892e"
+            },
+            {
+              "run_number": 4,
+              "hash": "c654103f7b0a94572adb10999d1ae4004331e60c478c9324de22c895b144e01c"
+            },
+            {
+              "run_number": 5,
+              "hash": "4b8cb7373d1f6a0d28471d638722d6b7c0494aba636069732b432cc5e0190e9c"
+            },
+            {
+              "run_number": 6,
+              "hash": "6fe2ecb4b77bc15eb03c381ebe00cfd6053a463b5eb4e9413e7d459b35d8bb8f"
+            },
+            {
+              "run_number": 7,
+              "hash": "425b9bd137b5bb163836e9f3a1078562eff0a3c65e88c861480faf11a4f91a59"
+            },
+            {
+              "run_number": 8,
+              "hash": "a74e0a27c454a6df4d967a35fdd3325bb04502491f9eca182313c28f78d35656"
+            },
+            {
+              "run_number": 9,
+              "hash": "f831745ab4293400782f5aedf698950748ac718f2ba3b10a878828589553fc76"
+            },
+            {
+              "run_number": 10,
+              "hash": "7c777fa9804b411947ff0263c996008c324a7ab1b6ed0128f3a05aff66786346"
+            }
+          ],
+          "passed": false
+        },
+        {
+          "test_name": "Wersalka Gravity Well Identification",
+          "description": "System must identify \"wersalka\" as semantic anchor, not furniture entity",
+          "passed": false
+        },
+        {
+          "test_name": "Somatic Grounding",
+          "description": "Every emotional marker must have corresponding body signals in messages",
+          "passed": false
+        }
+      ],
+      "passed": false
+    },
+    "collapse_vector_accuracy": {
+      "test_name": "Collapse Vector Accuracy",
+      "tests": [
+        {
+          "test_name": "Collapse Vector Presence",
+          "description": "System must identify actual breakdown mechanisms",
+          "expected_collapses": [
+            "emigracja_psychiczna_2010_2015",
+            "bieda_ekonomiczna_post_2008",
+            "utrata_relacji",
+            "alkohol_jako_coping"
+          ],
+          "found_collapses": [],
+          "passed": false
+        },
+        {
+          "test_name": "Collapse Vector Empirical Grounding",
+          "description": "Each collapse vector must appear in actual conversation history",
+          "passed": false
+        },
+        {
+          "test_name": "Temporal Phase Alignment",
+          "description": "Collapse timing must match actual message chronology",
+          "passed": false
+        }
+      ],
+      "passed": false
+    },
+    "repair_vector_completeness": {
+      "test_name": "Repair Vector Completeness",
+      "tests": [
+        {
+          "test_name": "Repair Vector Identification",
+          "description": "Every collapse must have corresponding repair vector",
+          "expected_repairs": [
+            "Mija_as_anchor",
+            "Punkt_Zerowy",
+            "memory_reconstruction",
+            "need_for_relief"
+          ],
+          "found_repairs": [],
+          "passed": false
+        },
+        {
+          "test_name": "Repair Vector Grounding",
+          "description": "Repair vectors must appear in actual messages",
+          "passed": false
+        },
+        {
+          "test_name": "Repair Vector Plausibility",
+          "description": "Repairs must be specific, not generic healing narratives",
+          "passed": false
+        }
+      ],
+      "passed": false
+    },
+    "hallucination_detection": {
+      "test_name": "Hallucination Detection",
+      "tests": [
+        {
+          "test_name": "No False Gravity Wells",
+          "description": "All gravity well symbols must appear in actual messages",
+          "passed": false
+        },
+        {
+          "test_name": "Narrative Drift Detection",
+          "description": "System must detect and reject romanticization",
+          "passed": false
+        },
+        {
+          "test_name": "Factual Integrity",
+          "description": "Extraction must be subtractive, not additive",
+          "passed": false
+        }
+      ],
+      "passed": false
+    },
+    "deterministic_reconstruction": {
+      "test_name": "Deterministic Reconstruction",
+      "tests": [
+        {
+          "test_name": "Gravity Well Hash Stability",
+          "description": "Same messages must produce identical gravity wells across 10 runs",
+          "runs": [
+            {
+              "run_number": 1,
+              "hash": "778a1b29405d73c7c2c8fb54ab8ca5553f44483d1bc121739d536c467a7b6383"
+            },
+            {
+              "run_number": 2,
+              "hash": "6ef6e468f8c9d4e22927efcad5d424c3d4a51d95350942f4fc08628b0d6b611f"
+            },
+            {
+              "run_number": 3,
+              "hash": "b80af4c89983427419cefecc27e03ad4b7c287950fa435e7a530a175e0aa892e"
+            },
+            {
+              "run_number": 4,
+              "hash": "c654103f7b0a94572adb10999d1ae4004331e60c478c9324de22c895b144e01c"
+            },
+            {
+              "run_number": 5,
+              "hash": "4b8cb7373d1f6a0d28471d638722d6b7c0494aba636069732b432cc5e0190e9c"
+            },
+            {
+              "run_number": 6,
+              "hash": "6fe2ecb4b77bc15eb03c381ebe00cfd6053a463b5eb4e9413e7d459b35d8bb8f"
+            },
+            {
+              "run_number": 7,
+              "hash": "425b9bd137b5bb163836e9f3a1078562eff0a3c65e88c861480faf11a4f91a59"
+            },
+            {
+              "run_number": 8,
+              "hash": "a74e0a27c454a6df4d967a35fdd3325bb04502491f9eca182313c28f78d35656"
+            },
+            {
+              "run_number": 9,
+              "hash": "f831745ab4293400782f5aedf698950748ac718f2ba3b10a878828589553fc76"
+            },
+            {
+              "run_number": 10,
+              "hash": "7c777fa9804b411947ff0263c996008c324a7ab1b6ed0128f3a05aff66786346"
+            }
+          ],
+          "passed": false
+        },
+        {
+          "test_name": "Somatization Consistency",
+          "description": "Emotional-somatic links must be identical across runs",
+          "passed": false
+        },
+        {
+          "test_name": "No Random Drift",
+          "description": "Results must not gradually change across sequential runs",
+          "passed": false
+        }
+      ],
+      "passed": false
+    },
+    "no_romanticization": {
+      "test_name": "No Romanticization",
+      "tests": [
+        {
+          "test_name": "Refuses False Positive Meaning",
+          "description": "System must not insert positive meaning absent from messages",
+          "passed": false
+        },
+        {
+          "test_name": "Extraction is Subtractive",
+          "description": "System removes noise without adding narrative",
+          "passed": false
+        },
+        {
+          "test_name": "Temporal Accuracy",
+          "description": "System must not blur timeline for narrative convenience",
+          "passed": false
+        }
+      ],
+      "passed": false
+    }
+  },
+  "summary": {
+    "total_categories": 6,
+    "categories_passed": 0,
+    "overall_pass_rate_percent": 0.0,
+    "all_tests_passed": false
+  }
+}

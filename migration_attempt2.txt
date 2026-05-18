@@ -1,0 +1,214 @@
+======================================================================
+EXECUTING FORENSIC MIGRATION EVENT
+======================================================================
+Database: milejczyce_operational
+User: pos_admin
+Host: localhost:5432
+======================================================================
+
+======================================================================
+P-OS v8.0 - FORENSIC MIGRATION EVENT
+Migration Session ID: 34cbb4d9-f069-4c5b-abbb-537b8b23cc2d
+Dry Run: False
+Start Timestamp (UTC): 2026-05-12T14:51:22.034566+00:00
+Source Hashset ID: migration_snapshot.json
+Schema Signature: MILEJCZYCE_POSTGRESQL_SCHEMA.sql v1.0
+Dry Run Reference: 831a3f08-4a36-4036-9812-6a8f44dff1b8
+======================================================================
+
+Γ£à Migration session logged to operational_audit_log
+
+[LOCKED] citizen_feedback_test.db is read-only (frozen archive) - OK for extraction
+
+======================================================================
+Migrating: citizen_feedback -> citizen_feedback
+======================================================================
+Step 1: Extracting from SQLite...
+  Extracted 200 records
+  Source hash: f58ae7ee50533dfb...
+Step 2: Transforming to canonical schema...
+  Transformed 200 records
+Step 3: Loading to PostgreSQL...
+  Γ¥î Transaction rolled back for citizen_feedback: B┼ü─äD:  nowy rekord dla relacji "citizen_feedback" narusza ograniczenie sprawdzaj─àce "citizen_feedback_priority_check"
+DETAIL:  Niepoprawne ograniczenia wiersza (003d46cb-4cdf-4d07-b76d-d0559eb48773, CIT-004, request, environment, Nielegalne wysypisko smieci w lesie za domem., closed, urgent, null, Milejczyce, 2026-03-07 08:01:00+00, null, 2026-03-11 08:01:00+00, migration_pipeline, null, 2026-05-12 14:51:22.137338+00, 2026-05-12 14:51:22.137339+00, 4a8d5625d6435cb8642a23a096e26885, null, 8a3da0732a863b3027837f433203417830c1745ac3af07e641692a999b8601f1).
+
+Γ¥î Error migrating citizen_feedback -> citizen_feedback: B┼ü─äD:  nowy rekord dla relacji "citizen_feedback" narusza ograniczenie sprawdzaj─àce "citizen_feedback_priority_check"
+DETAIL:  Niepoprawne ograniczenia wiersza (003d46cb-4cdf-4d07-b76d-d0559eb48773, CIT-004, request, environment, Nielegalne wysypisko smieci w lesie za domem., closed, urgent, null, Milejczyce, 2026-03-07 08:01:00+00, null, 2026-03-11 08:01:00+00, migration_pipeline, null, 2026-05-12 14:51:22.137338+00, 2026-05-12 14:51:22.137339+00, 4a8d5625d6435cb8642a23a096e26885, null, 8a3da0732a863b3027837f433203417830c1745ac3af07e641692a999b8601f1).
+
+
+[LOCKED] municipal_projects_test.db is read-only (frozen archive) - OK for extraction
+
+======================================================================
+Migrating: municipal_projects -> municipal_projects
+======================================================================
+Step 1: Extracting from SQLite...
+  Extracted 180 records
+  Source hash: 559ff742e32060a5...
+Step 2: Transforming to canonical schema...
+  Transformed 180 records
+Step 3: Loading to PostgreSQL...
+  Γ£à Transaction committed for municipal_projects (180 records)
+  Loaded 180 records
+  Target hash: 2f4112aed3ad03ab...
+Step 4: Verifying migration...
+Γ£à Verification passed for municipal_projects: 180 records
+Γ£à Migration successful: municipal_projects
+
+[LOCKED] geospatial_registry_test.db is read-only (frozen archive) - OK for extraction
+
+======================================================================
+Migrating: geospatial_nodes -> geospatial_registry
+======================================================================
+Step 1: Extracting from SQLite...
+  Extracted 70 records
+  Source hash: 7750a89f50c31df6...
+Step 2: Transforming to canonical schema...
+  Transformed 70 records
+Step 3: Loading to PostgreSQL...
+  Γ¥î Transaction rolled back for geospatial_registry: B┼ü─äD:  nieprawid┼éowa sk┼éadnia wej┼¢cia dla typu numeric: ""
+LINE 3: ...  VALUES ('SOL_MILEJCZYCE_I', 'Milejczyce I', '', '', '', 'p...
+                                                             ^
+
+Γ¥î Error migrating geospatial_nodes -> geospatial_registry: B┼ü─äD:  nieprawid┼éowa sk┼éadnia wej┼¢cia dla typu numeric: ""
+LINE 3: ...  VALUES ('SOL_MILEJCZYCE_I', 'Milejczyce I', '', '', '', 'p...
+                                                             ^
+
+
+[LOCKED] org_structure_test.db is read-only (frozen archive) - OK for extraction
+
+======================================================================
+Migrating: employees -> gmina_staff
+======================================================================
+Step 1: Extracting from SQLite...
+  Extracted 150 records
+  Source hash: 9d8d23e518eab588...
+Step 2: Transforming to canonical schema...
+  Transformed 150 records
+Step 3: Loading to PostgreSQL...
+  Γ¥î Transaction rolled back for gmina_staff: B┼ü─äD:  wstawianie lub modyfikacja na tabeli "gmina_staff" narusza klucz obcy "fk_gmina_staff_unit"
+DETAIL:  Klucz (unit_id)=(00000000-0000-0000-0000-000000000001) nie wyst─Öpuje w tabeli "org_structure".
+
+Γ¥î Error migrating employees -> gmina_staff: B┼ü─äD:  wstawianie lub modyfikacja na tabeli "gmina_staff" narusza klucz obcy "fk_gmina_staff_unit"
+DETAIL:  Klucz (unit_id)=(00000000-0000-0000-0000-000000000001) nie wyst─Öpuje w tabeli "org_structure".
+
+
+[LOCKED] gmina_staff_test.db is read-only (frozen archive) - OK for extraction
+
+======================================================================
+Migrating: staff_directory -> gmina_staff
+======================================================================
+Step 1: Extracting from SQLite...
+  Extracted 45 records
+  Source hash: 17644af6a245a8e4...
+Step 2: Transforming to canonical schema...
+  Transformed 45 records
+Step 3: Loading to PostgreSQL...
+  Γ¥î Transaction rolled back for gmina_staff: B┼ü─äD:  wstawianie lub modyfikacja na tabeli "gmina_staff" narusza klucz obcy "fk_gmina_staff_unit"
+DETAIL:  Klucz (unit_id)=(00000000-0000-0000-0000-000000000001) nie wyst─Öpuje w tabeli "org_structure".
+
+Γ¥î Error migrating staff_directory -> gmina_staff: B┼ü─äD:  wstawianie lub modyfikacja na tabeli "gmina_staff" narusza klucz obcy "fk_gmina_staff_unit"
+DETAIL:  Klucz (unit_id)=(00000000-0000-0000-0000-000000000001) nie wyst─Öpuje w tabeli "org_structure".
+
+
+[LOCKED] noi_core.db is read-only (frozen archive) - OK for extraction
+
+======================================================================
+Migrating: semantic_records -> noi_core_entities
+======================================================================
+Step 1: Extracting from SQLite...
+  Extracted 16 records
+  Source hash: b9764c5d5dd2d3c1...
+Step 2: Transforming to canonical schema...
+  Transformed 16 records
+Step 3: Loading to PostgreSQL...
+  Γ¥î Transaction rolled back for noi_core_entities: can't adapt type 'dict'
+Γ¥î Error migrating semantic_records -> noi_core_entities: can't adapt type 'dict'
+
+[LOCKED] service_requests_test.db is read-only (frozen archive) - OK for extraction
+
+======================================================================
+Migrating: service_requests_backup -> service_requests
+======================================================================
+Step 1: Extracting from SQLite...
+  Extracted 150 records
+  Source hash: c19ba1a6c5846333...
+Step 2: Transforming to canonical schema...
+  Transformed 150 records
+Step 3: Loading to PostgreSQL...
+  Γ£à Transaction committed for service_requests (150 records)
+  Loaded 150 records
+  Target hash: 314fc8b27e064afb...
+Step 4: Verifying migration...
+Γ£à Verification passed for service_requests: 150 records
+Γ£à Migration successful: service_requests
+
+[LOCKED] semantic_tokens_test.db is read-only (frozen archive) - OK for extraction
+
+======================================================================
+Migrating: semantic_tokens -> semantic_tokens
+======================================================================
+Step 1: Extracting from SQLite...
+  Extracted 45 records
+  Source hash: c507716bf0533db4...
+Step 2: Transforming to canonical schema...
+  Transformed 45 records
+Step 3: Loading to PostgreSQL...
+  Γ£à Transaction committed for semantic_tokens (45 records)
+  Loaded 45 records
+  Target hash: d71ccd1d650793b7...
+Step 4: Verifying migration...
+Γ£à Verification passed for semantic_tokens: 45 records
+Γ£à Migration successful: semantic_tokens
+
+[LOCKED] token_ingestion_test.db is read-only (frozen archive) - OK for extraction
+
+======================================================================
+Migrating: ingested_tokens -> token_ingestion_log
+======================================================================
+Step 1: Extracting from SQLite...
+  Extracted 36 records
+  Source hash: 54fdc0db9307115a...
+Step 2: Transforming to canonical schema...
+  Transformed 36 records
+Step 3: Loading to PostgreSQL...
+  Γ£à Transaction committed for token_ingestion_log (36 records)
+  Loaded 36 records
+  Target hash: 84c1199932a806c2...
+Step 4: Verifying migration...
+Γ£à Verification passed for token_ingestion_log: 36 records
+Γ£à Migration successful: token_ingestion_log
+
+======================================================================
+MIGRATION SUMMARY
+======================================================================
+Total tables: 8
+Successful: 4
+Failed: 4
+Success rate: 50.0%
+
+ΓÜá∩╕Å  4 table(s) failed. Check logs for details.
+
+
+======================================================================
+LAST 20 LINES (MIGRATION SUMMARY)
+======================================================================
+  Source hash: 54fdc0db9307115a...
+Step 2: Transforming to canonical schema...
+  Transformed 36 records
+Step 3: Loading to PostgreSQL...
+  Γ£à Transaction committed for token_ingestion_log (36 records)
+  Loaded 36 records
+  Target hash: 84c1199932a806c2...
+Step 4: Verifying migration...
+Γ£à Verification passed for token_ingestion_log: 36 records
+Γ£à Migration successful: token_ingestion_log
+
+======================================================================
+MIGRATION SUMMARY
+======================================================================
+Total tables: 8
+Successful: 4
+Failed: 4
+Success rate: 50.0%
+
+ΓÜá∩╕Å  4 table(s) failed. Check logs for details.

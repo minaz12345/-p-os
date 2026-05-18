@@ -42,6 +42,16 @@ DESIGN_NOTE_P-OS_v8.0_ENFORCEMENT_SEMANTICS.md
 data/prometheus/
 *.tsdb
 
+# Runtime Data (stored externally in D:\P-OS-DATA)
+data/exports/
+data/backups/
+data/snapshots/
+data/capsules/
+data/export_queue/
+data/forensic_export/
+data/emergency_backups/
+data/temp/
+data/temp_pg_*/
 
 # Database credential backups (rotated)
 .env.db.backup*

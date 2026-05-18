@@ -1,1 +1,2 @@
 {"date": "2026-05-13", "timestamp": "2026-05-13T00:00:00Z", "file": "pos/OBSERVATION_LOG.jsonl", "algorithm": "SHA-256", "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855", "file_size_bytes": 0, "label": "INITIAL_PLACEHOLDER", "note": "CI validation stub - SHA-256 of empty string"}
+{"date": "2026-05-18", "timestamp": "2026-05-18T09:35:33.280334Z", "file": "D:\\pos7\\pos\\OBSERVATION_LOG.jsonl", "algorithm": "SHA-256", "hash": "be7a01b1ff4cc63bd825ad4691542d63637043eeeba7fa440a6896366aa37cd8", "file_size_bytes": 1600}

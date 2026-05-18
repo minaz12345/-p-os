@@ -1,0 +1,216 @@
+======================================================================
+EXECUTING FORENSIC MIGRATION EVENT
+======================================================================
+Database: milejczyce_operational
+User: pos_admin
+Host: localhost:5432
+======================================================================
+
+======================================================================
+P-OS v8.0 - FORENSIC MIGRATION EVENT
+Migration Session ID: 428bb933-b6e2-4840-89b5-d5a5af737248
+Dry Run: False
+Start Timestamp (UTC): 2026-05-12T14:56:24.092680+00:00
+Source Hashset ID: migration_snapshot.json
+Schema Signature: MILEJCZYCE_POSTGRESQL_SCHEMA.sql v1.0
+Dry Run Reference: 831a3f08-4a36-4036-9812-6a8f44dff1b8
+======================================================================
+
+Γ£à Migration session logged to operational_audit_log
+
+[LOCKED] citizen_feedback_test.db is read-only (frozen archive) - OK for extraction
+
+======================================================================
+Migrating: citizen_feedback -> citizen_feedback
+======================================================================
+Step 1: Extracting from SQLite...
+  Extracted 200 records
+  Source hash: f58ae7ee50533dfb...
+Step 2: Transforming to canonical schema...
+  Transformed 200 records
+Step 3: Loading to PostgreSQL...
+  Γ£à Transaction committed for citizen_feedback (200 records)
+  Loaded 200 records
+  Target hash: 558b0168ac591d46...
+Step 4: Verifying migration...
+Γ£à Verification passed for citizen_feedback: 200 records
+Γ£à Migration successful: citizen_feedback
+
+[LOCKED] municipal_projects_test.db is read-only (frozen archive) - OK for extraction
+
+======================================================================
+Migrating: municipal_projects -> municipal_projects
+======================================================================
+Step 1: Extracting from SQLite...
+  Extracted 180 records
+  Source hash: 559ff742e32060a5...
+Step 2: Transforming to canonical schema...
+  Transformed 180 records
+Step 3: Loading to PostgreSQL...
+  Γ£à Transaction committed for municipal_projects (180 records)
+  Loaded 180 records
+  Target hash: d7a614eb16038312...
+Step 4: Verifying migration...
+Γ£à Verification passed for municipal_projects: 180 records
+Γ£à Migration successful: municipal_projects
+
+[LOCKED] geospatial_registry_test.db is read-only (frozen archive) - OK for extraction
+
+======================================================================
+Migrating: geospatial_nodes -> geospatial_registry
+======================================================================
+Step 1: Extracting from SQLite...
+  Extracted 70 records
+  Source hash: 7750a89f50c31df6...
+Step 2: Transforming to canonical schema...
+  Transformed 70 records
+Step 3: Loading to PostgreSQL...
+  Γ£à Transaction committed for geospatial_registry (70 records)
+  Loaded 70 records
+  Target hash: a937b2e3a2a5ec48...
+Step 4: Verifying migration...
+Γ£à Verification passed for geospatial_registry: 70 records
+Γ£à Migration successful: geospatial_registry
+
+[LOCKED] org_structure_test.db is read-only (frozen archive) - OK for extraction
+
+======================================================================
+Migrating: employees -> gmina_staff
+======================================================================
+Step 1: Extracting from SQLite...
+  Extracted 150 records
+  Source hash: 9d8d23e518eab588...
+Step 2: Transforming to canonical schema...
+  Transformed 150 records
+Step 3: Loading to PostgreSQL...
+  Γ£à Transaction committed for gmina_staff (150 records)
+  Loaded 150 records
+  Target hash: f0a835be2c678b77...
+Step 4: Verifying migration...
+Γ£à Verification passed for gmina_staff: 150 records
+Γ£à Migration successful: gmina_staff
+
+[LOCKED] gmina_staff_test.db is read-only (frozen archive) - OK for extraction
+
+======================================================================
+Migrating: staff_directory -> gmina_staff
+======================================================================
+Step 1: Extracting from SQLite...
+  Extracted 45 records
+  Source hash: 17644af6a245a8e4...
+Step 2: Transforming to canonical schema...
+  Transformed 45 records
+Step 3: Loading to PostgreSQL...
+  Γ£à Transaction committed for gmina_staff (45 records)
+  Loaded 45 records
+  Target hash: 94daff9d3ac80e58...
+Step 4: Verifying migration...
+Γ£à Verification passed for gmina_staff: 45 records
+Γ£à Migration successful: gmina_staff
+
+[LOCKED] noi_core.db is read-only (frozen archive) - OK for extraction
+
+======================================================================
+Migrating: semantic_records -> noi_core_entities
+======================================================================
+Step 1: Extracting from SQLite...
+  Extracted 16 records
+  Source hash: b9764c5d5dd2d3c1...
+Step 2: Transforming to canonical schema...
+  Transformed 16 records
+Step 3: Loading to PostgreSQL...
+  Γ¥î Transaction rolled back for noi_core_entities: B┼ü─äD:  nowy rekord dla relacji "noi_core_entities" narusza ograniczenie sprawdzaj─àce "noi_core_entities_entity_type_check"
+DETAIL:  Niepoprawne ograniczenia wiersza (afe30435-f7cb-4701-8cf3-db9b8ce1ce04, CORE_IDENTITY, Centralna to┼╝samo┼¢─ç u┼╝ytkownika systemu, 9, null, {"user_id": "P-OS-USER-001", "components": ["user_id", "personal..., [], 2026-04-28 13:02:08+00, 2026-04-28 13:02:08+00, migration_pipeline, null, 2026-05-12 14:56:25.9673+00, 2026-05-12 14:56:25.967302+00, 548c5c87059dd6df946713b21c8121d6, null, 9982662cd676e1cd9c3ee3db85311113da4c2204ac3825ff9ff20bec68da521c).
+
+Γ¥î Error migrating semantic_records -> noi_core_entities: B┼ü─äD:  nowy rekord dla relacji "noi_core_entities" narusza ograniczenie sprawdzaj─àce "noi_core_entities_entity_type_check"
+DETAIL:  Niepoprawne ograniczenia wiersza (afe30435-f7cb-4701-8cf3-db9b8ce1ce04, CORE_IDENTITY, Centralna to┼╝samo┼¢─ç u┼╝ytkownika systemu, 9, null, {"user_id": "P-OS-USER-001", "components": ["user_id", "personal..., [], 2026-04-28 13:02:08+00, 2026-04-28 13:02:08+00, migration_pipeline, null, 2026-05-12 14:56:25.9673+00, 2026-05-12 14:56:25.967302+00, 548c5c87059dd6df946713b21c8121d6, null, 9982662cd676e1cd9c3ee3db85311113da4c2204ac3825ff9ff20bec68da521c).
+
+
+[LOCKED] service_requests_test.db is read-only (frozen archive) - OK for extraction
+
+======================================================================
+Migrating: service_requests_backup -> service_requests
+======================================================================
+Step 1: Extracting from SQLite...
+  Extracted 150 records
+  Source hash: c19ba1a6c5846333...
+Step 2: Transforming to canonical schema...
+  Transformed 150 records
+Step 3: Loading to PostgreSQL...
+  Γ¥î Transaction rolled back for service_requests: B┼ü─äD:  nowy rekord dla relacji "service_requests" narusza ograniczenie sprawdzaj─àce "service_requests_priority_check"
+DETAIL:  Niepoprawne ograniczenia wiersza (300d387e-49bc-459f-a63b-d5f487c79d8a, REQ-2025-003, CIT-004, environment, Smieci w parku, completed, critical, null, 2025-01-22 17:06:00+00, Sprawdzono legalnosc, 2025-02-01 17:06:00+00, null, migration_pipeline, null, 2026-05-12 14:56:26.070372+00, 2026-05-12 14:56:26.070373+00, 4f5f762fda606af40809c57d807fbe82, null, 296954878cddadbc16515c5ff56a5da97802b276e97570d2fd9de8019c97178c).
+
+Γ¥î Error migrating service_requests_backup -> service_requests: B┼ü─äD:  nowy rekord dla relacji "service_requests" narusza ograniczenie sprawdzaj─àce "service_requests_priority_check"
+DETAIL:  Niepoprawne ograniczenia wiersza (300d387e-49bc-459f-a63b-d5f487c79d8a, REQ-2025-003, CIT-004, environment, Smieci w parku, completed, critical, null, 2025-01-22 17:06:00+00, Sprawdzono legalnosc, 2025-02-01 17:06:00+00, null, migration_pipeline, null, 2026-05-12 14:56:26.070372+00, 2026-05-12 14:56:26.070373+00, 4f5f762fda606af40809c57d807fbe82, null, 296954878cddadbc16515c5ff56a5da97802b276e97570d2fd9de8019c97178c).
+
+
+[LOCKED] semantic_tokens_test.db is read-only (frozen archive) - OK for extraction
+
+======================================================================
+Migrating: semantic_tokens -> semantic_tokens
+======================================================================
+Step 1: Extracting from SQLite...
+  Extracted 45 records
+  Source hash: c507716bf0533db4...
+Step 2: Transforming to canonical schema...
+  Transformed 45 records
+Step 3: Loading to PostgreSQL...
+  Γ£à Transaction committed for semantic_tokens (45 records)
+  Loaded 45 records
+  Target hash: b7e623b1563ac1ab...
+Step 4: Verifying migration...
+Γ£à Verification passed for semantic_tokens: 45 records
+Γ£à Migration successful: semantic_tokens
+
+[LOCKED] token_ingestion_test.db is read-only (frozen archive) - OK for extraction
+
+======================================================================
+Migrating: ingested_tokens -> token_ingestion_log
+======================================================================
+Step 1: Extracting from SQLite...
+  Extracted 36 records
+  Source hash: 54fdc0db9307115a...
+Step 2: Transforming to canonical schema...
+  Transformed 36 records
+Step 3: Loading to PostgreSQL...
+  Γ£à Transaction committed for token_ingestion_log (36 records)
+  Loaded 36 records
+  Target hash: 376e282c063861f9...
+Step 4: Verifying migration...
+Γ£à Verification passed for token_ingestion_log: 36 records
+Γ£à Migration successful: token_ingestion_log
+
+======================================================================
+MIGRATION SUMMARY
+======================================================================
+Total tables: 8
+Successful: 6
+Failed: 2
+Success rate: 75.0%
+
+ΓÜá∩╕Å  2 table(s) failed. Check logs for details.
+
+
+======================================================================
+LAST 20 LINES (MIGRATION SUMMARY)
+======================================================================
+  Source hash: 54fdc0db9307115a...
+Step 2: Transforming to canonical schema...
+  Transformed 36 records
+Step 3: Loading to PostgreSQL...
+  Γ£à Transaction committed for token_ingestion_log (36 records)
+  Loaded 36 records
+  Target hash: 376e282c063861f9...
+Step 4: Verifying migration...
+Γ£à Verification passed for token_ingestion_log: 36 records
+Γ£à Migration successful: token_ingestion_log
+
+======================================================================
+MIGRATION SUMMARY
+======================================================================
+Total tables: 8
+Successful: 6
+Failed: 2
+Success rate: 75.0%
+
+ΓÜá∩╕Å  2 table(s) failed. Check logs for details.
