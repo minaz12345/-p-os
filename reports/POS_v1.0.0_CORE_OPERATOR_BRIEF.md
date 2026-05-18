@@ -94,6 +94,7 @@ Bezpieczeństwo (v1.0.0-core scope):
   Rate limiting: ✅ działające
   Audit trail: ✅ kompletny
   Constitutional validation: ✅ R1-R7 enforced
+  Credential rotation: ✅ COMPLETE FOR STAGING (2026-05-17 post-audit; re-verify before production)
   
 Bezpieczeństwo (v2.0 requirements):
   S1-S7 gates: ⏳ dokumentowane, egzekwowanie w v2.0
@@ -132,8 +133,29 @@ tail -f logs/audit.jsonl            # Linux/Mac
 ### **Bezpieczeństwo:**
 ✅ Zweryfikowane w zakresie v1.0.0-core (API, hash chain, audit trail)  
 ⚠️ Konieczne security review dla środowiska docelowego przed produkcją  
-⚠️ Hasła muszą być zrotowane pre-deployment (credentials rotation pending)  
+✅ Credential rotation: COMPLETE FOR STAGING (2026-05-17 post-audit; re-verify before production)  
 ⚠️ S1-S7 nie są jeszcze egzekwowane — tylko udokumentowane jako wymaganie v2.0  
+
+### **Flagi W11:**
+✅ Sprawdź brak aktywnych flag blokujących przed deploymentem:
+```powershell
+$activeFlags = Get-ChildItem D:\pos7\flags\*.flag -ErrorAction SilentlyContinue | 
+  Where-Object { Select-String "ACTIVE|BLOCKING" -Quiet $_ }
+
+if ($activeFlags.Count -eq 0) {
+    Write-Host "[OK] Brak aktywnych flag W11 blokujących" -ForegroundColor Green
+} else {
+    Write-Host "[WARN] Aktywne flagi W11 wymagają przeglądu" -ForegroundColor Yellow
+    $activeFlags | ForEach-Object { Write-Host "  - $_" }
+}
+```
+
+### **Semantic Layer Status:**
+✅ Celowo wyłączone w v1.0.0-core (NOT_ENABLED_BY_DESIGN)  
+📋 Status dokumentowany w: `tests/semantic_layer_status.json`  
+📊 Test suite: 0/6 pass jest INTENCJONALNE (definiuje specyfikację dla Phase 6)  
+⚠️ Nie wdrażaj bez pełnego spełnienia S1-S7  
+⚠️ System bez S1-S7 = worse than no system (syntetyczna mitologia)  
 
 ### **Deployment:**
 ✅ Ready for staging environment  
@@ -201,6 +223,34 @@ tail -f logs/audit.jsonl            # Linux/Mac
 🔐 Flagi W11 → `D:\pos7\flags\`  
 💾 Dane eksport → `D:\P-OS-DATA\exports\` (external storage)  
 📋 Test results → `tests/semantic_fidelity_results.json` (0/6 pass by design)  
+📋 Semantic layer status → `tests/semantic_layer_status.json` (NOT_ENABLED_BY_DESIGN)
+
+---
+
+## 📋 **Gotowość do Deploymentu**
+
+| Etap | Status | Komentarz |
+|------|--------|-----------|
+| Staging preparation | ✅ READY | PostgreSQL 18, Python 3.11+, requirements.txt |
+| v1.0.0-core core features | ✅ VERIFIED | GDPR (Art. 15/20/17), hash chain, audit trail |
+| GDPR API (Art. 15/20/17) | ✅ VERIFIED | 9/9 tests PASS |
+| Production hardening | ✅ VERIFIED | 4/4 categories PASS, 318.41s runtime |
+| Flagi W11 | ✅ VERIFY | Brak aktywnych flag blokujących po deployu |
+| Credential rotation | ✅ COMPLETE | Post-audit (2026-05-17); re-verify before production |
+| S1-S7 enforcement | ⏳ v2.0+ | Dokumentacja i brama projektowa; enforcement dopiero przed semantic layer |
+| Semantic layer | ⏳ NOT_ENABLED | Celowe wyłączenie; specyfikacja w `tests/semantic_layer_status.json` |
+
+---
+
+## ⚠️ **Rekomendacje Pre-Deployment**
+
+**REC-01**: Verify credential rotation dla docelowego środowiska (hasła mogą być inne)
+
+**REC-02**: Confirm brak aktywnych W11 flags: `Get-ChildItem D:\pos7\flags\*.flag`
+
+**REC-03**: Review `tests/semantic_layer_status.json` — potwierdza że 0/6 pass jest CELOWE
+
+**REC-04**: 72-hour observation period po deployu na staging — zbierz metryki before production go/no-go  
 
 ---
 
